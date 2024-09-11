@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="ie6 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 7]><html class="ie7 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 8]><html class="ie8 ie678" lang="fr"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="fr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]<!--><html lang="fr"><!--<![endif]-->
+<head>
+<meta charset="UTF-8"/>
+<title>Archive Octobre 2007 - The Best of DBA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Maîtriser les bases de données, maximiser les performances."/>
+<meta name="keywords" content="Octobre 2007, Oracle, Postgresql, Sqlserver, MySQL, database, RMAN, Cassandra"/>
+<meta name="robots" content="index,follow"/>
+<link rel="stylesheet" href="025395.css"/>
+<link rel="stylesheet" href="style.css?1722328855"/>
+<!--[if (gt IE 8)|!(IE)]<!-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic|" rel="stylesheet"/>
+<!--<![endif]-->
+<!--[if lte IE 8]>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400italic" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700italic" rel="stylesheet"/>
+<![endif]-->
+<link rel="stylesheet" href="font-awesome.min.css"/>
+<!--[if IE 7]><link rel="stylesheet" href="https://static.hautetfort.com/backend/css/font/font-awesome-ie7.min.css"/><![endif]--><link rel="shortcut icon" href="favicon.ico"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hautetfort.com/admin/rsd/71687"/>
+<link rel="start" href="index-0.html" title="Home"/>
+<link rel="canonical" href="index.html.190"/>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- start script --><!-- end script -->
+<script type="text/javascript">
+
+function popupCenter(url,width,height,xtr) {
+    var top=(screen.height-height)/2;
+    var left=(screen.width-width)/2;
+    window.open(url,"",xtr+",top="+top+",left="+left+",width="+width+",height="+height);
+}
+
+</script>
+
+    <style type="text/css">
+body {
+    margin-bottom: 0px;
+}
+#toppub { display: block; width: 555px; height: 140px; margin: 0 auto;}
+.content a img {border:0px;}
+#footer {
+    text-align: center;
+    font-size: 65%;
+    width: auto;
+    margin: 2em auto 0px auto;
+    color: #000;
+    line-height: 210%;
+    display: block;
+
+    padding: 15px 15px 35px ;
+    background: #fff url("hetf-background.png") no-repeat 45% 10%;
+    border-top: 3px solid #D20000;
+        
+}
+#footer a {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+    display: inline;
+}
+#footer a:hover {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+    display: inline;
+}
+#sponsored-links {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    margin-bottom: -5px;
+}
+</style>
+
+</head><body id="page-archive" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<div data-cookie="off"><p data-close><a href="index.html.190#" title="J'ai lu ce message"><span class="ui-icon ui-icon-check">Ok</span></a></p><p data-text>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies. Ces derniers assurent le bon fonctionnement de nos services. <a href="https://www.hautetfort.com/cookies.html" title="En savoir plus sur les cookies" target="_blank">En savoir plus</a>.</p></div><style>[data-cookie]{display:none;position:fixed;backface-visibility:hidden;bottom:0;left:0;width:100%;background:black;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGDYDAAAvQC1UcyxoAAAAABJRU5ErkJggg==);color:white;padding:.5em 0;text-align:center;z-index:9999;}
+[data-cookie~="on"]{display:block;}
+[data-cookie] p{color:white;font-size:12px;margin:0;padding:0 .5em;line-height:1.3em;text-shadow:1px 0 3px rgba(0,0,0,1);}
+[data-cookie] a{color:white;}
+[data-cookie] [data-text]{margin:1px auto 0;text-align:left;max-width:980px;}
+[data-cookie] [data-close]{float:right;margin:0 .5em;}
+[data-cookie] .ui-icon{background-image: url(http://download.jqueryui.com/themeroller/images/ui-icons_ffffff_256x240.png);}
+.ui-icon-check {background-position: -64px -144px;}
+.ui-icon {height: 16px;width: 16px;}
+.ui-icon {background-repeat: no-repeat;display: block;overflow: hidden;text-indent: -99999px;}
+@media print {[data-cookie]{display:none;}}
+</style>
+<div class="wrapper">
+<div class="container">
+<!--[if lte IE 7><p class="alert">Votre navigateur est <strong>périmé</strong>. <a href="http://browsehappy.com/" target="_blank">Veuillez mettre votre navigateur à jour.</a></p><![endif]-->
+<a href="index.html.190#content" class="skip-link" accesskey="s">Aller au contenu</a>
+<header class="header-main" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<div class="main-inner">
+<!-- start top --><div class="row-fluid"><div class="span9"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101343">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div></div><div class="row-fluid"><div class="span12"><!-- widget menu on -->
+<div role="navigation" class="box box-menu box-menu-sticky" id="box-menu-101345">
+<div class="box-body">
+<span class="menu-switcher" id="display-navigation"><i class="icon icon-reorder"></i></span><nav role="navigation" id="navigation-to-display">
+<ul role="menu">
+<li role="menuitem"><a href="index-0.html">Accueil</a></li>
+<li class="masked-on-mobile" role="menuitem"><a href="archives">Archives</a></li>
+<li role="menuitem"><a href="about.html">À propos</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="index-0.html">Notes</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-categories">Catégories</a></li><li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-months">Archives</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- widget menu off --></div></div><!-- end top --></div>
+</header>
+<div class="body-main" role="main">
+<div class="main-inner">
+<div class="row-fluid">
+<div class="span4">
+<aside role="complementary" class="aside aside-1" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<!-- start column 1 --><!-- widget search on -->
+<article class="box box-search" id="box-search-101337">
+<header class="box-header">
+<h1><i class="icon icon-search"></i><span class="box-title-text">Rechercher</span></h1>
+</header>
+<div class="box-body">
+<form class="form-search" name="form-box-search-101337" id="form-box-search-101337" role="search" method="get" action="http://lefetard.hautetfort.com/apps/search">
+<p class="form-submit">
+<span class="row-fluid">
+<span class="span10">
+<span class="form-field">
+<input name="s" id="search-field-box-search-101337" type="search" placeholder="Entrer votre recherche" required="required"/>
+<label class="error" for="search-field-box-search-101337" style="display:none"></label>
+</span>
+</span>
+<span class="span2">
+<span class="form-button">
+<input name="search-submit-box-search-101337" id="search-submit-box-search-101337" class="button" type="submit" value="OK"/>
+</span>
+</span>
+</span>
+</p>
+</form>
+</div>
+</article>
+<!-- widget search off --><!-- widget list on -->
+<article class="box box-list box-list-document" id="box-list-457254">
+<header class="box-header">
+<h1><i class="icon icon-ellipsis-vertical"></i><span class="box-title-text">CV</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="lists-list">
+<li role="listitem">
+<a href="dba-freelance.html">
+<span>DBA Freelance</span>
+</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget list off --><!-- widget about on -->
+<article class="box box-about" id="box-about-101313">
+<header class="box-header">
+<h1><i class="icon icon-info-sign"></i><span class="box-title-text">À propos</span></h1>
+</header>
+<div class="box-body">
+<p class="description" itemscope="itemscope" itemtype="http://schema.org/AboutPage">
+<span itemprop="description">  - Dynamique, rigoureux, pédagogue, à l'écoute des besoins de mes clients ;...</span>
+<a href="about.html" itemprop="url">
+Lire la suite</a>
+</p>
+</div>
+</article>
+<!-- widget about off --><!-- widget authors on -->
+<article class="box box-author" id="box-author-101318" style="display:none">
+<header class="box-header">
+<h1><i class="icon icon-quote-right"></i><span class="box-title-text">Auteurs</span></h1>
+</header>
+<div class="box-body">
+<h2>Propriétaire du blog</h2>
+<a href="about.html">
+<figure class="inline-picture author-main">
+<span class="picture">
+<img src="https://size.blogspirit.net/hautetfort.com/lefetard/50/media/01/01/3775567719.png" alt=""/>
+</span>
+<figcaption class="description">
+<p>joguess - 767 notes</p>
+</figcaption>
+</figure>
+</a>
+<ul role="list" class="authors-list">
+</ul>
+</div>
+</article>
+<!-- widget authors off --><!-- widget category on -->
+<article class="box box-category" id="box-category-101322">
+<header class="box-header">
+<h1><i class="icon icon-level-down"></i><span class="box-title-text">Catégories</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="categories-list">
+
+<li role="listitem">
+<a href="index.html.21">Professionnel</a>
+<ul>
+<li role="listitem">
+<a href="index.html.22">BIG DATA - hadoop -spark</a>
+</li>
+<li role="listitem">
+<a href="index.html.23">Cassandra</a>
+</li>
+<li role="listitem">
+<a href="index.html.24">Cloud Control 13C</a>
+</li>
+<li role="listitem">
+<a href="index.html.25">Cloud db</a>
+</li>
+<li role="listitem">
+<a href="index.html.26">HVAULT</a>
+</li>
+<li role="listitem">
+<a href="index.html.27">MongoDB</a>
+</li>
+<li role="listitem">
+<a href="index.html.28">monitoring</a>
+</li>
+<li role="listitem">
+<a href="index.html.29">Ora2pg</a>
+</li>
+<li role="listitem">
+<a href="index.html.30">Oracle RAC</a>
+</li>
+<li role="listitem">
+<a href="index.html.31">Oracle12C,19C</a>
+</li>
+<li role="listitem">
+<a href="index.html.32">Postgresql</a>
+</li>
+<li role="listitem">
+<a href="index.html.33">RMAN</a>
+</li>
+<li role="listitem">
+<a href="index.html.34">Scripts</a>
+</li>
+<li role="listitem">
+<a href="index.html.35">Soluce</a>
+</li>
+<li role="listitem">
+<a href="index.html.36">SQLServer</a>
+</li>
+<li role="listitem">
+<a href="index.html.37">Système</a>
+</li>
+<li role="listitem">
+<a href="index.html.38">tuning</a>
+</li>
+</ul>
+</li>
+
+</ul>
+</div>
+</article>
+<!-- widget category off --><!-- widget links on -->
+<article class="box box-link" id="box-custom-236539">
+<header class="box-header">
+<h1><i class="icon icon-link"></i><span class="box-title-text">Référencement</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="links-list">
+<li role="listitem"><a href="http://www.extremecarving.com/index_fr.html" target="_blank">SURF</a></li>
+<li role="listitem"><a href="http://secretebase.free.fr/" target="_blank">Base Secrète</a></li>
+<li role="listitem"><a href="http://newzealand.over-blog.com/" target="_blank">Le blog de Mat</a></li>
+<li role="listitem"><a href="http://missdactari-blog.blogspot.com/" target="_blank">Le Blog de Camille</a></li>
+<li role="listitem"><a href="http://www.bobbydurrettdba.com/" target="_blank">Le Blog de Bobby DBA</a></li>
+<li role="listitem"><a href="https://oraclue.com/" target="_blank">Miladin Modrakovic's Blog</a></li>
+<li role="listitem"><a href="http://oradbastuff.blogspot.fr/" target="_blank">Sfaturi Oracle / Tips and tricks OracleDBA</a></li>
+<li role="listitem"><a href="http://orababy.blogspot.fr/" target="_blank">ORACLE DBA Knowledge Share</a></li>
+<li role="listitem"><a href="http://www.drazzib.com/docs/bdd/oracle/" target="_blank">Site de Damien Raude Morvan</a></li>
+<li role="listitem"><a href="http://www.database-expert.com/" target="_blank">Edward Stoever DBA</a></li>
+<li role="listitem"><a href="https://www.dba-scripts.com" target="_blank">Oracle DBA (Cyrille Modiano)</a></li>
+</ul>
+</div>
+</article>
+<!-- widget links off --><!-- widget archives on -->
+<article class="box box-archive" id="box-archive-101316">
+<header class="box-header">
+<h1><i class="icon icon-archive"></i><span class="box-title-text">Archives</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="archives-list">
+<li role="listitem">
+<a href="index.html.46">lun. 29 juil. - dim. 04 août</a>
+</li>
+<li role="listitem">
+<a href="index.html.47">lun. 08 juil. - dim. 14 juil.</a>
+</li>
+<li role="listitem">
+<a href="index.html.48">lun. 17 juin - dim. 23 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.49">lun. 10 juin - dim. 16 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.50">lun. 27 mai - dim. 02 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.51">lun. 20 mai - dim. 26 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.52">lun. 13 mai - dim. 19 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.53">lun. 29 avril - dim. 05 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.54">lun. 22 avril - dim. 28 avril</a>
+</li>
+<li role="listitem">
+<a href="index.html.55">lun. 15 avril - dim. 21 avril</a>
+</li>
+</ul>
+</div>
+<footer class="box-footer">
+<p><a href="index.html.56">Toutes les archives</a></p>
+</footer>
+</article>
+<!-- widget archives off --><!-- widget lastupdatedblogs on -->
+<article class="box box-blog" id="box-blog-101319">
+<header class="box-header">
+<h1><i class="icon icon-external-link-sign"></i><span class="box-title-text">Derniers blogs mis à jour</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="last-posts-list">
+<li role="listitem"><a href="http://linformationnationaliste.hautetfort.com/archive/2024/07/30/ouverture-des-jo-ces-sportifs-qui-n-ont-pas-aime-la-cene-6508849.html">Ouverture des JO : ces sportifs qui n’ont pas...</a> sur <a href="http://linformationnationaliste.hautetfort.com/">l'information nationaliste</a></li>
+<li role="listitem"><a href="http://lactualitedessocialistes.hautetfort.com/archive/2024/07/31/le-recap-de-splann-un-rattrapage-de-l-actualite-bretonne-en-6508736.html">Le récap' de « Splann ! », un rattrapage de...</a> sur <a href="http://lactualitedessocialistes.hautetfort.com/">Actualités socialistes</a></li>
+<li role="listitem"><a href="http://metapoinfos.hautetfort.com/archive/2024/07/20/j-d-vance-colistier-de-trump-et-figure-de-proue-des-nationau-6507781.html">J. D. Vance, colistier de Trump et figure de...</a> sur <a href="http://metapoinfos.hautetfort.com/">Métapo infos</a></li>
+<li role="listitem"><a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/archive/2024/07/26/la-france-annoncent-la-reconnaissance-de-la-marocanite-du-sa-6508408.html">La France annonce la reconnaissance de la...</a> sur <a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/">«-Le Royaume Chérifien du Maroc -Chihab 25...</a></li>
+<li role="listitem"><a href="http://formesetcouleurs.hautetfort.com/archive/2024/07/30/stage-adultes-2024-6508829.html">STAGE ADULTES JUILLET 2024</a> sur <a href="http://formesetcouleurs.hautetfort.com/">Formes & Couleurs</a></li>
+<li role="listitem"><a href="http://cfdt-centrale-auchan.hautetfort.com/archive/2024/07/30/avis-cfdt-ari-sur-le-projet-d-organisation-de-la-direction-digitale.html">Avis CFDT ARI sur le projet d'organisation de...</a> sur <a href="http://cfdt-centrale-auchan.hautetfort.com/">CFDT Auchan Centrale ARS, ARA, ARI et OIA</a></li>
+<li role="listitem"><a href="http://synthesenationale.hautetfort.com/archive/2024/07/30/lyon-suite-a-une-agression-gauchiste-un-jeune-nationaliste-temoigne.html">Lyon : suite à une agression gauchiste, un...</a> sur <a href="http://synthesenationale.hautetfort.com/">SYNTHESE NATIONALE</a></li>
+<li role="listitem"><a href="http://www.belgicatho.be/archive/2024/07/30/tres-etrange-la-facon-dont-la-presse-mainstream-a-rendu-comp-6508818.html">Très étrange : la façon dont la presse...</a> sur <a href="http://www.belgicatho.be/">BELGICATHO</a></li>
+<li role="listitem"><a href="http://www.cuisine-toulousaine.com/archive/2024/07/30/salade-de-saucisse-de-toulouse-et-lentilles-6508814.html">Salade de Saucisse de Toulouse et lentilles</a> sur <a href="http://www.cuisine-toulousaine.com/">Cuisine Toulousaine et Occitane</a></li>
+<li role="listitem"><a href="http://lionelbaland.hautetfort.com/archive/2024/07/30/lionel-baland-dans-le-reportage-de-tv-libertes-sur-le-passag-6508813.html">Lionel Baland dans le reportage de TV Libertés...</a> sur <a href="http://lionelbaland.hautetfort.com/">Lionel Baland</a></li>
+</ul>
+</div>
+</article>
+<!-- widget lastupdatedblogs off --><!-- widget calendar on -->
+<article class="box box-calendar" id="box-calendar-101321">
+<header class="box-header">
+<h1><i class="icon icon-calendar"></i><span class="box-title-text">Octobre 2007</span></h1>
+</header>
+<div class="box-body">
+<table>
+<caption>Calendrier des notes en Octobre 2007</caption>
+<tr>
+<th><abbr title="Dimanche">D</abbr></th>
+<th><abbr title="Lundi">L</abbr></th>
+<th><abbr title="Mardi">M</abbr></th>
+<th><abbr title="Mercredi">M</abbr></th>
+<th><abbr title="Jeudi">J</abbr></th>
+<th><abbr title="Vendredi">V</abbr></th>
+<th><abbr title="Samedi">S</abbr></th>
+</tr>
+<tr>
+<td></td>
+<td><span> 1</span></td>
+<td><span> 2</span></td>
+<td><span> 3</span></td>
+<td><span> 4</span></td>
+<td><span> 5</span></td>
+<td><span> 6</span></td>
+</tr>
+<tr>
+<td><span> 7</span></td>
+<td><span> 8</span></td>
+<td><span> 9</span></td>
+<td><span>10</span></td>
+<td><span>11</span></td>
+<td><span>12</span></td>
+<td><span>13</span></td>
+</tr>
+<tr>
+<td><span>14</span></td>
+<td><span>15</span></td>
+<td><span>16</span></td>
+<td><span>17</span></td>
+<td><span>18</span></td>
+<td><span>19</span></td>
+<td><span>20</span></td>
+</tr>
+<tr>
+<td><span>21</span></td>
+<td><span>22</span></td>
+<td><span>23</span></td>
+<td><span>24</span></td>
+<td><span>25</span></td>
+<td><span>26</span></td>
+<td><span>27</span></td>
+</tr>
+<tr>
+<td><span>28</span></td>
+<td><span>29</span></td>
+<td><span>30</span></td>
+<td><span>31</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</div>
+</article>
+<!-- widget calendar off --><!-- widget comments on -->
+<article class="box box-comment" id="box-comment-101324">
+<header class="box-header">
+<h1><i class="icon icon-comments"></i><span class="box-title-text">Commentaires récents</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-comments-list">
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment9030164" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-12-22T18:29:12" itemprop="datePublished">
+<span class="date-hour-minute">18h29</span>
+<span class="date-day">22</span>
+<span class="date-month-year">déc. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">collignon</a> sur <a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html">Intermédiation</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>"Confidentielles" au féminin pluriel, merci.<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8994604" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/01/27/tuning-ora2pg-6362720.html#c8994604">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-01-27T09:27:05" itemprop="datePublished">
+<span class="date-hour-minute">09h27</span>
+<span class="date-day">27</span>
+<span class="date-month-year">janv. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="tuning-ora2pg-6362720.html#c8994604">Le boss</a> sur <a href="tuning-ora2pg-6362720.html">Tuning ora2pg</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>1- bah ouais poto si tu vides les data source ça va plus...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8626826" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/06/29/forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-06-29T17:31:31" itemprop="datePublished">
+<span class="date-hour-minute">17h31</span>
+<span class="date-day">29</span>
+<span class="date-month-year">juin 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">joguess</a> sur <a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html">Forcer le refresh de la vue...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>peut etre rajouter cela : 
+BEGIN...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8579037" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/01/31/purger-fichiers-logs-5905505.html#c8579037">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-01-31T14:59:55" itemprop="datePublished">
+<span class="date-hour-minute">14h59</span>
+<span class="date-day">31</span>
+<span class="date-month-year">janv. 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="purger-fichiers-logs-5905505.html#c8579037">joguess</a> sur <a href="purger-fichiers-logs-5905505.html">Purger fichiers logs</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>voir aussi :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518755" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518755">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:14:31" itemprop="datePublished">
+<span class="date-hour-minute">16h14</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518755">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>La solution se trouve ici :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518754" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518754">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:12:03" itemprop="datePublished">
+<span class="date-hour-minute">16h12</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518754">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>http://www.dba-oracle.com/t_asm_disk_does_not_exist_or_is...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518753" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/10/installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T15:59:29" itemprop="datePublished">
+<span class="date-hour-minute">15h59</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">JJO</a> sur <a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html">Installation ASM et configuration de l'instance...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>https://taliphakanozturken.wordpress.com/2012/03/12/confi...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518135" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/07/outil-de-benchmark-oracle-orion-5834320.html#c8518135">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-09T08:19:40" itemprop="datePublished">
+<span class="date-hour-minute">08h19</span>
+<span class="date-day">09</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="outil-de-benchmark-oracle-orion-5834320.html#c8518135">jjo</a> sur <a href="outil-de-benchmark-oracle-orion-5834320.html">Outil de benchmark Oracle - ORION</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>Orion Usage:$ORACLE_HOME/bin/orion -run simple -testname...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8314452" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2015/04/19/sego-dans-c-politique-5606540.html#c8314452">
+
+<!-- widget comments off -->
+<!-- widget pages on -->
+<article class="box box-page" id="box-page-101331">
+<header class="box-header">
+<h1><i class="icon icon-file-text-alt"></i><span class="box-title-text">Pages</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="pages-list">
+<li role="listitem">
+<a href="jesako.html">PAGE HTML</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget pages off --><!-- widget posts on -->
+<article class="box box-post" id="box-post-101336">
+<header class="box-header">
+<h1><i class="icon icon-comment"></i><span class="box-title-text">Notes récentes</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-posts-list">
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6508824" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/30/postgres-monitor-autovacuum-freeze-max-age-6508824.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-30T10:40:49" itemprop="datePublished">
+<span class="date-hour-minute">10h40</span>
+<span class="date-day">30</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-autovacuum-freeze-max-age-6508824.html">[Postgres] Monitor autovacuum_freeze_max_age</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to monitor the :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506680" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/12/postgres-monitor-wait-event-6506680.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-12T11:28:00" itemprop="datePublished">
+<span class="date-hour-minute">11h28</span>
+<span class="date-day">12</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-wait-event-6506680.html">[Postgres] Monitor wait event</a></h1>
+</header>
+<div class="recent-post-body">
+<p> \t select wait_event_type, wait_event from...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506515" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/11/postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-11T10:02:00" itemprop="datePublished">
+<span class="date-hour-minute">10h02</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">[Postgres] Solve PostgreSQL DataFileRead and...</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Click her to see the next. <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506355" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/10/postgres-tuto-tuning-6506355.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-10T07:59:04" itemprop="datePublished">
+<span class="date-hour-minute">07h59</span>
+<span class="date-day">10</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-tuto-tuning-6506355.html">[Postgres] Tuto tuning</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This site helped to resolve IPC wait event :  Postgres...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6503410" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/18/postgres-identifier-les-privileges-6503410.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-18T10:03:31" itemprop="datePublished">
+<span class="date-hour-minute">10h03</span>
+<span class="date-day">18</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-privileges-6503410.html">[Postgres] Identifier les privilèges</a></h1>
+</header>
+<div class="recent-post-body">
+<p> SELECT * &nbsp; FROM...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6502501" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/11/postgres-identifier-les-attentes-6502501.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-11T14:21:00" itemprop="datePublished">
+<span class="date-hour-minute">14h21</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-attentes-6502501.html">[Postgres] Identifier les attentes</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to identify the wait events on...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500731" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/30/postgres-pg-partman-6500731.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-30T10:56:00" itemprop="datePublished">
+<span class="date-hour-minute">10h56</span>
+<span class="date-day">30</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-pg-partman-6500731.html">[Postgres] PG_PARTMAN</a></h1>
+</header>
+<div class="recent-post-body">
+<p> pg_partman v4 vs pg_partman v5&nbsp; 
+ Une fonction...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500641" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-extensions-6500641.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T17:27:00" itemprop="datePublished">
+<span class="date-hour-minute">17h27</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-extensions-6500641.html">[Postgres] Extensions</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Extensions en prd indispensables :&nbsp; <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500591" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-monitor-cloud-db-azure-ibm-6500591.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T10:59:00" itemprop="datePublished">
+<span class="date-hour-minute">10h59</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-cloud-db-azure-ibm-6500591.html">[Postgres] Monitor cloud DB (AZURE / IBM)</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Quand on n'a pas d'outils pour faire le monitoring des...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6499803" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/24/postgres-locker-une-base-6499803.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-24T10:01:00" itemprop="datePublished">
+<span class="date-hour-minute">10h01</span>
+<span class="date-day">24</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-locker-une-base-6499803.html">[Postgres] Locker une base</a></h1>
+</header>
+<div class="recent-post-body">
+<p> On ne peut pas locker une base nativement alors comment...<p>
+</div>
+</article>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget posts off --><!-- widget sharing on -->
+<article class="box box-sharing" id="box-sharing-101338">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</article>
+<!-- widget sharing off --><!-- widget populartags on -->
+<article class="box box-tag" id="box-tag-101340">
+<header class="box-header">
+<h1><i class="icon icon-tags"></i><span class="box-title-text">Tags populaires</span></h1>
+</header>
+<div class="box-body">
+<ul class="popular-tags-list" role="list">
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dieudonn%C3%A9" class="tag-10">dieudonné</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/strasbourg" class="tag-10">strasbourg</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/star" class="tag-10">star</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surf" class="tag-9">surf</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salsa" class="tag-1">salsa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sexy" class="tag-10">sexy</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/danse" class="tag-9">danse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/webcam" class="tag-9">webcam</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blog" class="tag-10">blog</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/oracle" class="tag-8">oracle</a></li>
+</ul>
+</div>
+</article>
+<!-- widget populartags off --><!-- end column 1 --></aside>
+</div>
+<div class="span8">
+<main role="main">
+<section class="content-intro">
+<nav role="navigation" itemprop="breadcrumb">
+<ul role="menu" class="article-nav">
+<li role="menuitem" class="breadcrumb-previous"><a href="index.html.191">septembre 2007</a></li><li role="menuitem" class="breadcrumb-root"><a href="index-0.html">Page d'accueil</a></li>
+<li role="menuitem" class="breadcrumb-next"><a href="index.html.189">novembre 2007</a></li></ul>
+</nav>
+</section>
+
+<section class="content" id="content" itemprop="mainContentOfPage">
+<header class="content-header">
+<h1><time datetime="2007-10">Octobre 2007</time></h1>
+</header>
+<div class="content-body">
+<ul role="list" class="articles-list">
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1293635" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/31/lecteur-hd-dvd-toshiba-hd-a2-a-198.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-31T15:35:05" itemprop="datePublished">
+<span class="date-hour-minute">15h35</span>
+<span class="date-day">31</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="lecteur-hd-dvd-toshiba-hd-a2-a-198.html">Lecteur HD DVD Toshiba HD-A2 à 198 $ !</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F31%2Flecteur-hd-dvd-toshiba-hd-a2-a-198.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Oui vous ne rêvez pas le lecteur de dvd nouvelle génération dit HD DVD est vendu à 198 dollars (soit 142 euros).</p> <p>Il est vendu sur Amazon à <a href="http://www.amazon.com/exec/obidos/ASIN/B000IJV4BC/">cette adresse</a>.&nbsp;</p> <div style="text-align: left"><a href="http://www.amazon.com/exec/obidos/ASIN/B000IJV4BC/"><img src="6ecd4a383455b078c6868ce7f8ec8bf9.jpg" id="media-636394" alt="6ecd4a383455b078c6868ce7f8ec8bf9.jpg" style="border-width: 0pt; margin: 0.7em 0pt" /><img src="b186f95c42e3d42439e574c4cacf8a60.jpg" id="media-636398" alt="b186f95c42e3d42439e574c4cacf8a60.jpg" style="border-width: 0pt; margin: 0.2em 1.4em 0.7em 0pt; float: left" /></a></div> <div style="text-align: left">Si vous êtes ricains vous pouvez l'acheter sinon pour les autres faudra attendre.</div> <div style="text-align: left">Amazon ne livre pas outre-atlantique, de quoi nous dégoutter d'être européen!</div> <div style="text-align: left">&nbsp;</div> <div style="text-align: left">Jo~&nbsp;</div> <div style="text-align: left">&nbsp;</div> <p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F31%2Flecteur-hd-dvd-toshiba-hd-a2-a-198.html&amp;t=Lecteur+HD+DVD+Toshiba+HD-A2+%C3%A0+198+%24+%21" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="lecteur-hd-dvd-toshiba-hd-a2-a-198.html" id="a0"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="hi-tech">Hi-Tech</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/TOSHIBA">TOSHIBA</a>, <a href="http://lefetard.hautetfort.com/tag/HD+DVD">HD DVD</a>, <a href="http://lefetard.hautetfort.com/tag/Toshiba+HD-A2">Toshiba HD-A2</a>, <a href="http://lefetard.hautetfort.com/tag/HD+DVD+Player">HD DVD Player</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="lecteur-hd-dvd-toshiba-hd-a2-a-198.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1293549" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/31/deja-la.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-31T14:45:00" itemprop="datePublished">
+<span class="date-hour-minute">14h45</span>
+<span class="date-day">31</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="deja-la.html">Déjà là!</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F31%2Fdeja-la.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Hé bé! ça va vite! Le graveur <a href="http://fr.wikipedia.org/wiki/Disque_holographique_polyvalent">HVD</a> (Holographic Versatile Disc pour disque holographique polyvalent) existe déjà.</p> <div style="text-align: left"><img src="0f1fef928ea861264bc453cdffe60b76.jpg" id="media-636336" alt="0f1fef928ea861264bc453cdffe60b76.jpg" style="border-width: 0pt; margin: 0.7em 0pt" /></div> <div style="text-align: left">"C'est à l'occasion du salon IBC qui s'est tenu du 8 au 12 septembre 2006 à Amsterdam, que le groupe <b>InPhase Technologies</b>, a présenté en exclusivité son <b>graveur HVD</b> annoncé comme étant capable de stocker jusqu'à 300 Go de données..."</div> <div style="text-align: left"><a href="http://www.hdnumerique.com/actualite/articles/18092006-in-phase-presente-son-graveur-hvd-destine-usage-hd-professionel.html">En savoir plus!&nbsp;</a></div> <p><a href="http://www.01net.com/editorial/346099/le-disque-holographique-equivalent-de-830-dvd-arrive-en-europe/">Il débarque en Europe (article d'avril 2007).<br /></a></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F31%2Fdeja-la.html&amp;t=D%C3%A9j%C3%A0+l%C3%A0%21" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="deja-la.html" id="a1"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="hi-tech">Hi-Tech</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/graveur">graveur</a>, <a href="http://lefetard.hautetfort.com/tag/holographique">holographique</a>, <a href="http://lefetard.hautetfort.com/tag/300Go">300Go</a>, <a href="http://lefetard.hautetfort.com/tag/HVD">HVD</a>, <a href="http://lefetard.hautetfort.com/tag/europe">europe</a>, <a href="http://lefetard.hautetfort.com/tag/disque">disque</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="deja-la.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1293466" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/31/a-venir.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-31T14:00:00" itemprop="datePublished">
+<span class="date-hour-minute">14h00</span>
+<span class="date-day">31</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="a-venir.html">A-venir</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F31%2Fa-venir.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>C'est par hasard que je suis tombé ce matin sur un vieil article de décembre 2005 :</p> <p>"Après sept années de travaux et plusieurs partenariat, le DVD holographique semble sur la voie d'une commercialisation. Ce DVD, de 300 Go, pourrait enregistrer <span class="important">35 heures de vidéo en haute résolution ou 700 heures de musique</span>… Mais son prix pourrait l'écarter un moment des applications grand public, laissant le champ libre aux Blu-Ray et HD-DVD."</p> <p><a href="http://www.futura-sciences.com/fr/sinformer/actualites/news/t/informatique/d/un-dvd-holographique-de-300-go-blu-ray-et-hd-dvd-deja-ringards_7893/">En savoir plus!&nbsp;</a></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F31%2Fa-venir.html&amp;t=A-venir" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="a-venir.html" id="a2"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="hi-tech">Hi-Tech</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/dvd">dvd</a>, <a href="http://lefetard.hautetfort.com/tag/holographique">holographique</a>, <a href="http://lefetard.hautetfort.com/tag/avenir">avenir</a>, <a href="http://lefetard.hautetfort.com/tag/300+go">300 go</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="a-venir.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1293165" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/31/hd-vmd-player.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-31T10:55:00" itemprop="datePublished">
+<span class="date-hour-minute">10h55</span>
+<span class="date-day">31</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="hd-vmd-player.html">HD VMD Player</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F31%2Fhd-vmd-player.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Si vous ne savez pas quoi vous acheter à Noël, offrez-vous un lecteur HD VMD. Pour 182 euros vous aurez le pack lecteur HD VMD + 4 films "La Planète Blanche, Pulp Fiction , Sahara La princesse au petit pois et you’ve never seen them before". Sans les films le lecteur HD VMD coûte 140 euros. Personnellement je trouve que ça vaut le coup, bon il fait pas graveur HD VMD ne révez pas.</p> <p><a href="http://nmestore.com/product_info.php?cPath=13&amp;products_id=139"><img src="39a4fd000d3ca2e5d5e1e4850e935c61.jpg" id="media-635968" alt="39a4fd000d3ca2e5d5e1e4850e935c61.jpg" style="border-width: 0pt; margin: 0.2em 1.4em 0.7em 0pt; float: left" /></a> Le VMD (Versatile Multilayer Disk) est le nouveau format de stockage optique. Sa technologie lui permet de superposer 4 couches de 5 Go. Il est en concurrence direct avec le Blu-Ray et le HD DVD. Il peut sotcker de 20 à 48 Go de vidéos Haute Définition. La liste des films dispo au format HD VMD est <a href="http://nmestore.com/allprods.php">ici</a>. Plus de détails techniques sur les lecteurs HD VMD <a href="http://www.nmeinc.fr/ML777S.htm">ici</a>.</p> <p>Entre HD VMD, HD DVD et Blu-Ray lequel choisirez-vous? Moi j'ai fait mon choix...</p> <p>Jo~</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F31%2Fhd-vmd-player.html&amp;t=HD+VMD+Player" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="hd-vmd-player.html" id="a3"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="hi-tech">Hi-Tech</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/BLU">BLU</a>, <a href="http://lefetard.hautetfort.com/tag/RAY">RAY</a>, <a href="http://lefetard.hautetfort.com/tag/blu+ray">blu ray</a>, <a href="http://lefetard.hautetfort.com/tag/dvd">dvd</a>, <a href="http://lefetard.hautetfort.com/tag/HD+VMD">HD VMD</a>, <a href="http://lefetard.hautetfort.com/tag/vmd">vmd</a>, <a href="http://lefetard.hautetfort.com/tag/player">player</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="hd-vmd-player.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1291578" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/30/salon-de-l-erotisme-de-belfort.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-30T12:45:00" itemprop="datePublished">
+<span class="date-hour-minute">12h45</span>
+<span class="date-day">30</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="salon-de-l-erotisme-de-belfort.html">Salon de l'érotisme de Belfort</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F30%2Fsalon-de-l-erotisme-de-belfort.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Moi et Estelle Desanges au salon de l'érotisme.</p> <div style="text-align: left"><img src="7bdf88f02b1a99cb4cf0fc44bcc3c320.jpg" id="media-634114" alt="7bdf88f02b1a99cb4cf0fc44bcc3c320.jpg" style="border-width: 0pt; margin: 0.7em 0pt" />&nbsp;</div> <p>Avec Miss Amal <img src="f452127f4217d589693739df9e1007a1.jpg" id="media-634109" alt="f452127f4217d589693739df9e1007a1.jpg" style="border-width: 0pt; margin: 0.2em 1.4em 0.7em 0pt; float: left" /></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F30%2Fsalon-de-l-erotisme-de-belfort.html&amp;t=Salon+de+l%27%C3%A9rotisme+de+Belfort" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="salon-de-l-erotisme-de-belfort.html" id="a4"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="blog">Blog</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/estelle">estelle</a>, <a href="http://lefetard.hautetfort.com/tag/amal">amal</a>, <a href="http://lefetard.hautetfort.com/tag/salon">salon</a>, <a href="http://lefetard.hautetfort.com/tag/%C3%A9rotisme">érotisme</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="salon-de-l-erotisme-de-belfort.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1291350" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/30/salsa.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-30T10:40:00" itemprop="datePublished">
+<span class="date-hour-minute">10h40</span>
+<span class="date-day">30</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="salsa.html">Salsa</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F30%2Fsalsa.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Un site sur la salsa avec explication des termes utilisés en salsa.</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F30%2Fsalsa.html&amp;t=Salsa" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="salsa.html" id="a5"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="danse_soirees">DANSE & Soirées</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/explication">explication</a>, <a href="http://lefetard.hautetfort.com/tag/termes">termes</a>, <a href="http://lefetard.hautetfort.com/tag/salsa">salsa</a>, <a href="http://lefetard.hautetfort.com/tag/fetard">fetard</a>, <a href="http://lefetard.hautetfort.com/tag/blog">blog</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="salsa.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1291339" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/30/figure-de-salsa-debutant-et-intermediaire.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-30T10:35:00" itemprop="datePublished">
+<span class="date-hour-minute">10h35</span>
+<span class="date-day">30</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="figure-de-salsa-debutant-et-intermediaire.html">Figures de Salsa, débutant et intermédiaire</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F30%2Ffigure-de-salsa-debutant-et-intermediaire.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><div align="center">Hé oui vous l'aurez compris je me suis mis à la Salsa!</div>
+<div style="text-align: center;"><img id="media-633876" style="border-width: 0pt; margin: 0.7em 0pt;" src="ae0639b7361af8528551358083119e93.jpg" alt="ae0639b7361af8528551358083119e93.jpg" name="media-633876" /></div></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F30%2Ffigure-de-salsa-debutant-et-intermediaire.html&amp;t=Figures+de+Salsa%2C+d%C3%A9butant+et+interm%C3%A9diaire" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="figure-de-salsa-debutant-et-intermediaire.html" id="a6"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="danse_soirees">DANSE & Soirées</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/salsa">salsa</a>, <a href="http://lefetard.hautetfort.com/tag/sombrero">sombrero</a>, <a href="http://lefetard.hautetfort.com/tag/complicado">complicado</a>, <a href="http://lefetard.hautetfort.com/tag/figure">figure</a>, <a href="http://lefetard.hautetfort.com/tag/confirm%C3%A9">confirmé</a>, <a href="http://lefetard.hautetfort.com/tag/vid%C3%A9o">vidéo</a>, <a href="http://lefetard.hautetfort.com/tag/d%C3%A9butant">débutant</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="figure-de-salsa-debutant-et-intermediaire.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1291322" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/30/sombrero-complicado.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-30T10:25:00" itemprop="datePublished">
+<span class="date-hour-minute">10h25</span>
+<span class="date-day">30</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="sombrero-complicado.html">Sombrero complicado</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F30%2Fsombrero-complicado.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Vidéo de la figure du Sombrero complicado et explication.</p>
+<div style="text-align: left;"><img src="7f3e450ea868c1d23a214eeadce47e5b.jpg" /></div>
+<p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F30%2Fsombrero-complicado.html&amp;t=Sombrero+complicado" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="sombrero-complicado.html" id="a7"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="danse_soirees">DANSE & Soirées</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/salsa">salsa</a>, <a href="http://lefetard.hautetfort.com/tag/sombrero">sombrero</a>, <a href="http://lefetard.hautetfort.com/tag/complicado">complicado</a>, <a href="http://lefetard.hautetfort.com/tag/figure">figure</a>, <a href="http://lefetard.hautetfort.com/tag/confirm%C3%A9">confirmé</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="sombrero-complicado.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1289567" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/29/estelle-desanges.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-29T10:35:00" itemprop="datePublished">
+<span class="date-hour-minute">10h35</span>
+<span class="date-day">29</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="estelle-desanges.html">Estelle Desanges</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F29%2Festelle-desanges.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Estelle Desanges star du X international.Elle a arrêté sa carrière en 2002.</p>
+<div style="text-align: left;"><img id="media-631635" style="border-width: 0px; margin: 0.7em 0px;" src="4bab7f419333a96692e923c7181f8c94.jpg" alt="4bab7f419333a96692e923c7181f8c94.jpg" /></div>
+<div style="text-align: left;">Son <a href="http://www.e-desanges.com">site offciel, heu non maintenant c'est un site de cul chinois.</a></div>
+<div style="text-align: left;">
+<div style="text-align: left;"><img id="media-631645" style="border-width: 0px; margin: 0.7em 0px;" src="838d871fb42fc61359f0e2d4a1d1a129.jpg" alt="838d871fb42fc61359f0e2d4a1d1a129.jpg" /></div>
+<div style="text-align: left;">Son <a href="http://www.estelle-desanges.vcomblog.com/">blog officiel</a>.=&gt; n'existe plus mdr</div>
+<div style="text-align: left;">
+<div style="text-align: left;"><img id="media-631649" style="border-width: 0px; margin: 0.7em 0px;" src="c91d1be118aae7fbb5e9a0b14f6d47a3.jpg" alt="c91d1be118aae7fbb5e9a0b14f6d47a3.jpg" /></div>
+</div>
+<div style="text-align: left;">&nbsp;</div>
+<div style="text-align: left;"><img id="media-631657" style="border-width: 0px; margin: 0.7em 0px;" src="36b8168c169b377f55836ca2d8e08f0e.jpg" alt="36b8168c169b377f55836ca2d8e08f0e.jpg" /></div>
+</div>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F29%2Festelle-desanges.html&amp;t=Estelle+Desanges" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="estelle-desanges.html" id="a8"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="miss_stars_du_x">Miss & Stars du X</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/estelle">estelle</a>, <a href="http://lefetard.hautetfort.com/tag/star">star</a>, <a href="http://lefetard.hautetfort.com/tag/x">x</a>, <a href="http://lefetard.hautetfort.com/tag/desanges">desanges</a>, <a href="http://lefetard.hautetfort.com/tag/porno">porno</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="estelle-desanges.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">3</span>&nbsp;<span class="article-comments-post">commentaires</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1289521" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/29/miss-amal.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-29T10:05:00" itemprop="datePublished">
+<span class="date-hour-minute">10h05</span>
+<span class="date-day">29</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="miss-amal.html">Miss Amal</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F29%2Fmiss-amal.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Miss Amal a été élue Miss Maximal international...</p>
+<p>&nbsp;</p>
+<div style="text-align: left;"><img id="media-631607" style="margin: 0.7em 0px; border-width: 0px;" src="4e916fcf37f03405db2814272e5e6bd3.jpg" alt="4e916fcf37f03405db2814272e5e6bd3.jpg" /></div>
+<p>&nbsp;</p>
+<p><img id="media-631596" style="float: left; margin: 0.2em 1.4em 0.7em 0px; border-width: 0px;" src="a7dd546d2167c798da6330390697484a.jpg" alt="a7dd546d2167c798da6330390697484a.jpg" /> Pour voir ses clips et sa biographie, cherchez bien, elle n'a plus de site.</p>
+<p><img id="media-631598" style="float: left; margin: 0.2em 1.4em 0.7em 0px; border-width: 0px;" src="218ba4c891c78ac692e75ddd19bbefa8.jpg" alt="218ba4c891c78ac692e75ddd19bbefa8.jpg" /></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F29%2Fmiss-amal.html&amp;t=Miss+Amal" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="miss-amal.html" id="a9"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="miss_stars_du_x">Miss & Stars du X</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/miss">miss</a>, <a href="http://lefetard.hautetfort.com/tag/amal">amal</a>, <a href="http://lefetard.hautetfort.com/tag/star">star</a>, <a href="http://lefetard.hautetfort.com/tag/maximal">maximal</a>, <a href="http://lefetard.hautetfort.com/tag/%C3%A9rotique">érotique</a>, <a href="http://lefetard.hautetfort.com/tag/photo">photo</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="miss-amal.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1285489" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/26/assistance-de-merde.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-26T16:20:00" itemprop="datePublished">
+<span class="date-hour-minute">16h20</span>
+<span class="date-day">26</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="assistance-de-merde.html">Assistance de merde!</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F26%2Fassistance-de-merde.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Je viens de pêter un cable avec l'assistance de FREE. Quel daube! J'ai eu une marocaine au téléphone qui comprenait rien à&nbsp;ce que je disais, du&nbsp; coup je me suis exité et je lui ai raccroché à la gueule.</p> <p>En fait je voulais savoir ce qu'ils entendaient par "dégroupage prévu second semestre 2007"...</p> <p>Petite explication. La zone (la rue) où j'habite n'est pas dégroupée si si ca existe encore. Pourtant j'habite BELFORT mais je ne dépend pas de l'émetteur de Belfort -</p> <p>Pour les connaisseurs celui-ci:</p> <p>NRA (1) : STR90<br /> Longueur : 1617 mètres<br /> Affaiblissement (2) : 24 dB</p> <p>-mais de l'émetteur de Valdoie qui n'est pas dégroupé, d'où mon coup de gueule!</p> <p>Voila en fait la seule zone (en rouge) qui n'est pas dégroupé et qui appartient à Belfort, moi j'habite au petit point noir (vous n'aurez pas ma rue!) :</p> <div style="text-align: center"><img src="bc403b0731356ef760f284d765904c26.jpg" alt="bc403b0731356ef760f284d765904c26.jpg" style="margin: 0.7em 0px; border-width: 0px" id="media-626401" /></div> <p>En&nbsp;gris foncé : zone complétement dégroupée</p> <p>En gris moyen : zone en cours de dégroupage</p> <p>En gris clair (moi!) : dégroupage prévu au second semestre 2007</p> <p>&nbsp;Putain quel merde!</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F26%2Fassistance-de-merde.html&amp;t=Assistance+de+merde%21" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="assistance-de-merde.html" id="a10"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="blog">Blog</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/d%C3%A9groupage">dégroupage</a>, <a href="http://lefetard.hautetfort.com/tag/free">free</a>, <a href="http://lefetard.hautetfort.com/tag/adsl">adsl</a>, <a href="http://lefetard.hautetfort.com/tag/internet">internet</a>, <a href="http://lefetard.hautetfort.com/tag/belfort">belfort</a>, <a href="http://lefetard.hautetfort.com/tag/valdoie">valdoie</a>, <a href="http://lefetard.hautetfort.com/tag/haut-d%C3%A9bit">haut-débit</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="assistance-de-merde.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1284830" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/26/soiree-salsa.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-26T09:10:00" itemprop="datePublished">
+<span class="date-hour-minute">09h10</span>
+<span class="date-day">26</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="soiree-salsa.html">Soirée Salsa</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F26%2Fsoiree-salsa.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Hier la soirée salsa au banana's c'était super.</p> <p>On a bien dansé bien rigolé et bien bu! On remet ça ce soir à audincourt...</p> <p>Et puis ce week end , anniversaire de mon cousin Gwenaël, ca va donner encore.</p> <p>Enfin dimanche salon de l'érotisme, ouf!</p> <p>Enfin pour finir je rajoutte que le spectacle Belladone à la maison du peuple était très réussi (streapteases).</p> <p>@++</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F26%2Fsoiree-salsa.html&amp;t=Soir%C3%A9e+Salsa" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="soiree-salsa.html" id="a11"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="danse_soirees">DANSE & Soirées</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/danse">danse</a>, <a href="http://lefetard.hautetfort.com/tag/streaptease">streaptease</a>, <a href="http://lefetard.hautetfort.com/tag/belladone">belladone</a>, <a href="http://lefetard.hautetfort.com/tag/spectacle">spectacle</a>, <a href="http://lefetard.hautetfort.com/tag/salsa">salsa</a>, <a href="http://lefetard.hautetfort.com/tag/soir%C3%A9e">soirée</a>, <a href="http://lefetard.hautetfort.com/tag/erotism">erotism</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="soiree-salsa.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1281741" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/24/nouvelle-caisse.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-24T10:55:00" itemprop="datePublished">
+<span class="date-hour-minute">10h55</span>
+<span class="date-day">24</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="nouvelle-caisse.html">Nouvelle caisse</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F24%2Fnouvelle-caisse.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Ca y est j'ai ma nouvelle voiture, une belle 206 2.0 HDI ! Voici quelques photos en exclusivité :</p> <div style="text-align: left"><img src="1c09d5ca8d74a6924ff793d45562e7b5.jpg" alt="1c09d5ca8d74a6924ff793d45562e7b5.jpg" style="margin: 0.7em 0px; border-width: 0px" id="media-632168" /></div> <div style="text-align: left"><img src="b4bef591fd0790878837731a2deb0eb1.jpg" alt="b4bef591fd0790878837731a2deb0eb1.jpg" style="margin: 0.7em 0px; border-width: 0px" id="media-632169" /></div> <p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F24%2Fnouvelle-caisse.html&amp;t=Nouvelle+caisse" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="nouvelle-caisse.html" id="a12"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="blog">Blog</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/206">206</a>, <a href="http://lefetard.hautetfort.com/tag/hdi">hdi</a>, <a href="http://lefetard.hautetfort.com/tag/2.0">2.0</a>, <a href="http://lefetard.hautetfort.com/tag/caisse">caisse</a>, <a href="http://lefetard.hautetfort.com/tag/voiture">voiture</a>, <a href="http://lefetard.hautetfort.com/tag/occasion">occasion</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="nouvelle-caisse.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1278250" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/22/divx-en-live.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-22T10:45:00" itemprop="datePublished">
+<span class="date-hour-minute">10h45</span>
+<span class="date-day">22</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="divx-en-live.html">DivX en LIVE</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F22%2Fdivx-en-live.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><em>Note : Bien que ce ne soit pas de la web tv j'ai mis cette note dans cette catégorie car je ne tiens pas à créer une rubrique pour chaque note.</em></p> <p>Oui le titre est bien explicite, on peut désormais regarder des films (en entiers!) en&nbsp;live sans interuption, bas -débit accpeté via un plugin divx et real player&nbsp;ou le dernier windows media player d'installé.</p> <p>Très fluide et qualité dvd, je mets 3 étoiles à ce <a href="http://torrents-high-speed-fr.com">site</a>.</p> <div style="text-align: center"><a href="http://torrents-high-speed-fr.com"><img name="media-617710" src="78ff98130498c0e5c8206b7e5037ee30.jpg" alt="78ff98130498c0e5c8206b7e5037ee30.jpg" style="margin: 0.7em 0px; border-width: 0px" id="media-617710" /></a></div>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F22%2Fdivx-en-live.html&amp;t=DivX+en+LIVE" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="divx-en-live.html" id="a13"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="webtv">Webtv</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/torrent">torrent</a>, <a href="http://lefetard.hautetfort.com/tag/tracker">tracker</a>, <a href="http://lefetard.hautetfort.com/tag/divx">divx</a>, <a href="http://lefetard.hautetfort.com/tag/live">live</a>, <a href="http://lefetard.hautetfort.com/tag/direct">direct</a>, <a href="http://lefetard.hautetfort.com/tag/streaming">streaming</a>, <a href="http://lefetard.hautetfort.com/tag/t%C3%A9l%C3%A9chargement">téléchargement</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="divx-en-live.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1277634" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/21/nouvelle-star-du-x-caroline-eden.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-21T21:30:00" itemprop="datePublished">
+<span class="date-hour-minute">21h30</span>
+<span class="date-day">21</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="nouvelle-star-du-x-caroline-eden.html">Caroline Eden</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F21%2Fnouvelle-star-du-x-caroline-eden.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Une vidéo chez Cauet - Attention aux yeux! Interdit aux moins de 16 ans.</p>
+<div><object width="425" height="335" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"><param name="movie" value="http://www.dailymotion.com/swf/6UpoUYVnXBtxER7d" /> <param name="quality" value="high" /> <param name="menu" value="false" /> <param name="wmode" value="" /> <embed src="http://www.dailymotion.com/swf/6UpoUYVnXBtxER7d" wmode="" quality="high" menu="false" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="425" height="335" /></object><br /><strong><a href="https://www.dailymotion.com/video/x4djn">Emission Cauet | ZioupiX.com</a></strong><br /><em>envoyé par <a href="http://www.dailymotion.com/joguess">Joguess</a></em></div>
+<div>&nbsp;</div>
+<div>Le site de Caroline Eden(interdit aux mineurs) :</div>
+<div>
+<div style="text-align: center;"><a href="http://www.caroline-eden.tk/"><img id="media-616891" style="border-width: 0pt; margin: 0.7em 0pt;" src="b1693f6fd93da1fa7ab7f9ad98d6bd68.jpg" alt="b1693f6fd93da1fa7ab7f9ad98d6bd68.jpg" /></a></div>
+</div>
+<div>&nbsp;Le blog&nbsp; de Caroline Eden(interdit aux mineurs) :</div>
+<div>
+<div style="text-align: center;"><a href="http://carolineeden.canalblog.com/"><img id="media-616903" style="border-width: 0pt; margin: 0.7em 0pt;" src="0e349dd19edf5602e42bf27dbafc4d82.jpg" alt="0e349dd19edf5602e42bf27dbafc4d82.jpg" /></a></div>
+</div>
+<div>Le nouveau film de Caroline Eden "Le Sanctuaire" :</div>
+<div>
+<div style="text-align: center;"><a href="http://www.lesanctuaire-lefilm.com/"><img id="media-616954" style="border-width: 0pt; margin: 0.7em 0pt;" src="066b92cf96a88af343eab84c5c1a0b7e.jpg" alt="066b92cf96a88af343eab84c5c1a0b7e.jpg" /></a></div>
+&nbsp;</div>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F21%2Fnouvelle-star-du-x-caroline-eden.html&amp;t=Caroline+Eden" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="nouvelle-star-du-x-caroline-eden.html" id="a14"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="miss_stars_du_x">Miss & Stars du X</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/caroline">caroline</a>, <a href="http://lefetard.hautetfort.com/tag/eden">eden</a>, <a href="http://lefetard.hautetfort.com/tag/x">x</a>, <a href="http://lefetard.hautetfort.com/tag/porno">porno</a>, <a href="http://lefetard.hautetfort.com/tag/star">star</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="nouvelle-star-du-x-caroline-eden.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1277626" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/21/crut-j-embrasse-pas.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-21T21:26:34" itemprop="datePublished">
+<span class="date-hour-minute">21h26</span>
+<span class="date-day">21</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="crut-j-embrasse-pas.html">Crüt - J'embrasse pas</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F21%2Fcrut-j-embrasse-pas.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>A prendre au troisième degré. <div><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="425" height="335"><param name="movie" value="http://www.dailymotion.com/swf/1EML2rUF0MoJj7k9V" /> <param name="quality" value="high" /> <param name="menu" value="false" /> <param name="wmode" value="" /> <embed src="http://www.dailymotion.com/swf/1EML2rUF0MoJj7k9V" wmode="" quality="high" menu="false" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="425" height="335" /></object><br /> <b><a href="http://www.dailymotion.com/video/x11f27_crut-jembrasse-pas_fun">Crüt - J'embrasse pas</a></b><br /> <i>envoyé par <a href="http://www.dailymotion.com/joguess">Joguess</a></i></div></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F21%2Fcrut-j-embrasse-pas.html&amp;t=Cr%C3%BCt+-+J%27embrasse+pas" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="crut-j-embrasse-pas.html" id="a15"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="blog">Blog</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/baise">baise</a>, <a href="http://lefetard.hautetfort.com/tag/crut">crut</a>, <a href="http://lefetard.hautetfort.com/tag/j%27embrasse+pas">j'embrasse pas</a>, <a href="http://lefetard.hautetfort.com/tag/pute">pute</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="crut-j-embrasse-pas.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1276801" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/21/nouvelle-tv-sur-internet-cnn-tf1-skynews.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-21T12:40:00" itemprop="datePublished">
+<span class="date-hour-minute">12h40</span>
+<span class="date-day">21</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="nouvelle-tv-sur-internet-cnn-tf1-skynews.html">Nouvelle TV sur internet - CNN, TF1, SkyNews</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F21%2Fnouvelle-tv-sur-internet-cnn-tf1-skynews.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Voici deux nouveaux sites de WEBTV sur internent où vous trouverez les chaînes tel que Sky news, TF1, CNN, BFMTV et des chaînes internationales.</p> <div style="text-align: center"><a href="http://www.inner-live.com/"><img src="b48d046637f293d05215b69842002c32.jpg" /></a> <div style="text-align: center"><a href="http://www.tv-direct.fr/"><img src="4449ca8f9e1dcbb21c2fe54a60de36b4.jpg" id="media-615695" alt="4449ca8f9e1dcbb21c2fe54a60de36b4.jpg" style="border-width: 0pt; margin: 0.7em 0pt" /></a></div> </div>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F21%2Fnouvelle-tv-sur-internet-cnn-tf1-skynews.html&amp;t=Nouvelle+TV+sur+internet+-+CNN%2C+TF1%2C+SkyNews" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="nouvelle-tv-sur-internet-cnn-tf1-skynews.html" id="a16"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="webtv">Webtv</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/web">web</a>, <a href="http://lefetard.hautetfort.com/tag/tv">tv</a>, <a href="http://lefetard.hautetfort.com/tag/radio">radio</a>, <a href="http://lefetard.hautetfort.com/tag/webtv">webtv</a>, <a href="http://lefetard.hautetfort.com/tag/webradio">webradio</a>, <a href="http://lefetard.hautetfort.com/tag/webcam">webcam</a>, <a href="http://lefetard.hautetfort.com/tag/streaming">streaming</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="nouvelle-tv-sur-internet-cnn-tf1-skynews.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1276055" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/20/de-gouden-kooi-quand-la-tv-reality-frole-le-porno.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-20T19:25:00" itemprop="datePublished">
+<span class="date-hour-minute">19h25</span>
+<span class="date-day">20</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="de-gouden-kooi-quand-la-tv-reality-frole-le-porno.html">De Gouden Kooi - Quand la Tv Reality frôle le Porno!</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F20%2Fde-gouden-kooi-quand-la-tv-reality-frole-le-porno.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><div><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="425" height="335"><param name="movie" value="http://www.dailymotion.com/swf/3r1LCI8yU5vlDal22" /> <param name="quality" value="high" /> <param name="menu" value="false" /> <param name="wmode" value="" /> <embed src="http://www.dailymotion.com/swf/3r1LCI8yU5vlDal22" wmode="" quality="high" menu="false" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="425" height="335" /></object><br /> <b><a href="http://www.dailymotion.com/video/x1gtc2_gouden-kooi-jacuzzi-zioupixcom_blog">Gouden Kooi - Jacuzzi | ZioupiX.com</a></b><br /> <i>envoyé par <a href="http://www.dailymotion.com/joguess">joguess</a></i></div></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F20%2Fde-gouden-kooi-quand-la-tv-reality-frole-le-porno.html&amp;t=De+Gouden+Kooi+-+Quand+la+Tv+Reality+fr%C3%B4le+le+Porno%21" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="de-gouden-kooi-quand-la-tv-reality-frole-le-porno.html" id="a17"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="emission_-_tv_reality">Emission - TV REALITY</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/tv">tv</a>, <a href="http://lefetard.hautetfort.com/tag/r%C3%A9alit%C3%A9">réalité</a>, <a href="http://lefetard.hautetfort.com/tag/reality">reality</a>, <a href="http://lefetard.hautetfort.com/tag/de+gouden+koi">de gouden koi</a>, <a href="http://lefetard.hautetfort.com/tag/la+cage+dor%C3%A9e">la cage dorée</a>, <a href="http://lefetard.hautetfort.com/tag/hollandais">hollandais</a>, <a href="http://lefetard.hautetfort.com/tag/fetaard">fetaard</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="de-gouden-kooi-quand-la-tv-reality-frole-le-porno.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1258747" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/10/france-all-blacks-le-choc.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-10T08:50:00" itemprop="datePublished">
+<span class="date-hour-minute">08h50</span>
+<span class="date-day">10</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="france-all-blacks-le-choc.html">France - All-Blacks : le choc!</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F10%2Ffrance-all-blacks-le-choc.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>C'est le samedi 6 octobre 2007 que les rugbymen français affrontent les all-blacks en 1/4 de final.<br /> Devant les français au regard tenace et extrèment motivés les all- blacks avec leur haka traditionnel font pour une fois figurent de guignols.</p> <div style="text-align: center"><img src="cf0825856deafc15c90b34f86b45c496.jpg" alt="cf0825856deafc15c90b34f86b45c496.jpg" style="border-width: 0px; margin: 0.7em 0px" id="media-594176" /></div> <p>Non sans difficulté les français remportent ce match 20-18 très attendu par les fans de rugby.<br /> L'équipe française affontera les anglais pour une demi-finale revancharde.</p> <div style="text-align: center"><img src="41ea1d48e4da1dd2e78f11760f5adc9b.jpg" alt="41ea1d48e4da1dd2e78f11760f5adc9b.jpg" style="border-width: 0px; margin: 0.7em 0px" id="media-594177" /> <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="425" height="356"><param name="movie" value="http://www.dailymotion.com/swf/5AyU7sOfLll7BmcRP" /> <param name="quality" value="high" /> <param name="menu" value="false" /> <param name="wmode" value="" /> <embed src="http://www.dailymotion.com/swf/5AyU7sOfLll7BmcRP" wmode="" quality="high" menu="false" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="425" height="356" /></object><br /> <b><a href="http://www.dailymotion.com/video/x35fux_resume-du-match-france-nouvelle-zel_news">Résumé du match France - Nouvelle Zélande</a></b><br /> <i>ajouté par <a href="index-0.html">Josselin</a></i></div>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F10%2Ffrance-all-blacks-le-choc.html&amp;t=France+-+All-Blacks+%3A+le+choc%21" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="france-all-blacks-le-choc.html" id="a18"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="blog">Blog</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/france">france</a>, <a href="http://lefetard.hautetfort.com/tag/all">all</a>, <a href="http://lefetard.hautetfort.com/tag/black">black</a>, <a href="http://lefetard.hautetfort.com/tag/victoire">victoire</a>, <a href="http://lefetard.hautetfort.com/tag/rugby">rugby</a>, <a href="http://lefetard.hautetfort.com/tag/all-black">all-black</a>, <a href="http://lefetard.hautetfort.com/tag/haka">haka</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="france-all-blacks-le-choc.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1249457" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/04/nouvelles-propositions.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-04T09:10:00" itemprop="datePublished">
+<span class="date-hour-minute">09h10</span>
+<span class="date-day">04</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="nouvelles-propositions.html">Nouvelles propositions</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F04%2Fnouvelles-propositions.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Voici deux nouvelles propositions d'embauche qui m'ont été faite à la suite de ma mise à jour de CV sur monster , comme quoi!</p> <p>&nbsp;La première, le recruteur m'a appelé et proposé de travailler pour Altran SSII sur Strasbourg. Métier: DBA avec expérience, je connais. Je lui dis qu'il m'envoit son mail, ses coordonnées et que je le recontacterai si je suis intéressé.<br /> Salaire : dans les 35 000 euros je pense y a moyen de négocier.</p> <p>Deuxième proposition, une boite à Paris m'envoit un mail avec description du job et me convit à leur répondre en joignant mon cv et lettre de motivation , même métier, même salaire voire plius élevé car Paris.</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F04%2Fnouvelles-propositions.html&amp;t=Nouvelles+propositions" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="nouvelles-propositions.html" id="a19"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="blog">Blog</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/dba">dba</a>, <a href="http://lefetard.hautetfort.com/tag/salaire">salaire</a>, <a href="http://lefetard.hautetfort.com/tag/proposition">proposition</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="nouvelles-propositions.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1247804" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/03/la-verite-sur-la-foi-chretienne.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-03T10:40:00" itemprop="datePublished">
+<span class="date-hour-minute">10h40</span>
+<span class="date-day">03</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="la-verite-sur-la-foi-chretienne.html">La vérité sur la foi chrétienne</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F03%2Fla-verite-sur-la-foi-chretienne.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Jesus christ n'a pas sacrifié sa vie , on l'a crucifié.</p> <p>Les païens ont condamnés les chrétiens et les chrétiens se sont rebellés.<br /> Constantin qui était païen, a décidé, pour calmer la tourmente, de fonder le christiannisme.<br /> Le concil de Nicée a rassemblé la majorité des éveques et établit le fondement de ce qu'on connait aujourd'hui sous le nom de Bible. Nombreux sont les évangiles qui ont été écarté de ce document. Au final, Jésus n'était plusprésenté comme homme mortel mais comme une personne sacrée, immortel, le fils de dieu, résucité d'entre les morts.</p> <p>Ce que l'Eglise a caché est le fait que Jésus Christ a eu une descendance. Connu principalement sous le nom de Saint Graal, cette descandance était la personnification même de la lignée Royal de Jésus Christ.<br /> Dans le tableau la cène de da Vinci la personne représenté à la gauche de Jésus est Marie Madeleine qui était en réalité le femme de Jésus. Saint Graal à l'origine écrit SangReal signifie Sang Royal. En réalité l'Eglise ne cherche pas à cacher la coupe sacrée qui a recuilli le sang de Jésus Christ mais la lignée de Jésus Christ de sang royal engendrée par la femme de Jésus Marie Madeleine. A la mort de Jésus, Marie Madelaine fuit en France pour accoucher d'une fille Sarah. Longtemps après la mort de Marie Madeleine, les templiers retrouvent le Saint Graal c'est à dire le tombeau de Marie Madeleine en Jérusalem lors de la Guerre Sainte des croisées. En 1307, les templiers devenus trop puissants face à l'Eglise Catholique, le pape par lettre de missive décide d'exterminer tous les templiers. Ce massacre a lieu le vendredi 13 octobre 1307, d'où la superstition du vendredi 13 qui porte malheur.</p> <p>Les templiers survivants jurent de protéger le tombeau de Marie Madeleine ainsi que le secret de la descendance de Jésus Christ. Se forme le Prieuré de Sion, dont les membres gardent et protègent le secret de la divité chrétienne. De nos jours le Prieuré de Sion n'existe plus mais le secret demeure.</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F03%2Fla-verite-sur-la-foi-chretienne.html&amp;t=La+v%C3%A9rit%C3%A9+sur+la+foi+chr%C3%A9tienne" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="la-verite-sur-la-foi-chretienne.html" id="a20"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="blog">Blog</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/foi">foi</a>, <a href="http://lefetard.hautetfort.com/tag/chr%C3%A9tien">chrétien</a>, <a href="http://lefetard.hautetfort.com/tag/chr%C3%A9tienne">chrétienne</a>, <a href="http://lefetard.hautetfort.com/tag/v%C3%A9rit%C3%A9">vérité</a>, <a href="http://lefetard.hautetfort.com/tag/catholique">catholique</a>, <a href="http://lefetard.hautetfort.com/tag/pape">pape</a>, <a href="http://lefetard.hautetfort.com/tag/templiers">templiers</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="la-verite-sur-la-foi-chretienne.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1245615" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/02/compo-guitare.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-02T09:24:47" itemprop="datePublished">
+<span class="date-hour-minute">09h24</span>
+<span class="date-day">02</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="compo-guitare.html.1">Compo guitare</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F02%2Fcompo-guitare.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Ma composition 'Obstinément', chant + guitare :</p> <p><br /> <a href="9737a9ca358cebdfbab95b9ce17d6635.mp3"><img src="podcast.jpg" border="0" alt="podcast"/></a><audio controls style="width:200px;height:20px"><source src="9737a9ca358cebdfbab95b9ce17d6635.mp3" type="audio/mpeg"></audio></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F02%2Fcompo-guitare.html&amp;t=Compo+guitare" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="compo-guitare.html.1" id="a21"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="podcast">PODCAST</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/composition">composition</a>, <a href="http://lefetard.hautetfort.com/tag/guitare">guitare</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="compo-guitare.html.1#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1245561" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/02/info-ou-intox.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-02T08:37:05" itemprop="datePublished">
+<span class="date-hour-minute">08h37</span>
+<span class="date-day">02</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="info-ou-intox.html">Info ou intox</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F02%2Finfo-ou-intox.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<div style="text-align: center"><font size="2" face="Verdana"><strong>Château de Josselin</strong>&nbsp;</font></div> <div style="text-align: center"><font size="2" face="Verdana"><img name="media-579283" src="95a59019e8618e624daf469bfc896dcc.jpg" alt="95a59019e8618e624daf469bfc896dcc.jpg" style="margin: 0.7em 0px; border-width: 0px" id="media-579283" /></font></div> <p align="center">Cliquez sur l'une des rubriques ci-dessous</p> <ol> <li><a href="http://www.casteland.com/pfr/chateau/bretagne/morbihan/josselin/josselin_histoire.htm"><font size="2" face="Verdana"><b>L'histoire du château</b></font></a></li> <li><a href="http://www.casteland.com/pfr/chateau/bretagne/morbihan/josselin/josselin_visite.htm"><b>Descriptif de la visite du château</b></a></li> <li><b><a href="http://www.casteland.com/pfr/chateau/bretagne/morbihan/josselin/josselin_diaporama.htm">Diaporama</a></b></li> </ol> <p align="justify"><font size="2" face="Verdana">La vaste forteresse de Josselin, construite au XIe siècle, fut rebâtie par Olivier de Clisson au XIVe siècle. A la fin du XVe siècle, Alain de Rohan et Jean II travaillent à l'embellissement de leur château. On leur doit la façade de style flamboyant, préfiguration de la renaissance bretonne, qui contraste avec les tours et murailles défensives. L'intérieur, restauré au XIXe siècle, abrite de rares pièces de mobilier. Le château appartient depuis l'origine à la famille des ducs de Rohan. Pour avoir une bonne vue du château, se placer sur le pont Sainte-Croix qui&nbsp; enjambe l'Oust. L'à-pic des murailles est saisissant. L'édifice se présente ici sous son aspect de forteresse, avec de hautes tours, des courtines et des mâchicoulis.</font></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F02%2Finfo-ou-intox.html&amp;t=Info+ou+intox" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="info-ou-intox.html" id="a22"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="blog">Blog</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/josselin">josselin</a>, <a href="http://lefetard.hautetfort.com/tag/chateau">chateau</a>, <a href="http://lefetard.hautetfort.com/tag/histoire">histoire</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="info-ou-intox.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1244261" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/10/01/des-liens-coquins.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-10-01T15:30:00" itemprop="datePublished">
+<span class="date-hour-minute">15h30</span>
+<span class="date-day">01</span>
+<span class="date-month-year">oct. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="des-liens-coquins.html">Des liens coquins</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F01%2Fdes-liens-coquins.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><a target="_blank" href="http://www.arabgirlsex.net/"><font color="#0068CF">http://www.arabgirlsex.net/</font></a><br /> <br /> <a target="_blank" href="http://www.interacial-cum.info/"><font color="#0068CF">http://www.interacial-cum.info/</font></a><br /> &nbsp;<br /> <a href="http://www.melissa-joan-heart-nude.info/nude-arab-celebrities/"><font color="#0068CF">www.melissa-joan-heart-nude.info/nude-arab-celebrities/&nbsp;<br /> &nbsp;<br /></font></a><a target="_blank" href="http://www.jamasp.com/q.asp?q=nude+arab+photos&amp;s=171&amp;e=180&amp;p=18"><font color="#0068CF">http://www.jamasp.com/q.asp?q=nude+arab+photos&amp;s=171&amp;e=180&amp;p=18</font></a><br /> &nbsp;&nbsp;<br /> <a target="_blank" href="http://groups.google.fr/group/movie-babes-adult-movies/topics?hl=fr"><font color="#0068CF">http://groups.google.fr/group/movie-babes-adult-movies/topics?hl=fr</font></a><br /> |<br /> |<br /> <a target="_blank" href="http://groups.google.com/group/mallu-masala"><font color="#0068CF">http://groups.google.com/group/mallu-masala</font></a> |<br /> <a target="_blank" href="http://movies.groups.yahoo.com/group/indianmasalamovies/"><font color="#0068CF">http://movies.groups.yahoo.com/group/indianmasalamovies/</font></a> |<br /> |<br /> |<br /> Visit our other Masala Network Blogs and web pages: |<br /> <a target="_blank" href="http://indianmasalamovies.googlegroups.com/web/movieticket.htm"><font color="#0068CF">http://indianmasalamovies.googlegroups.com/web/movieticket.htm</font></a> |<br /> <a target="_blank" href="http://indian-actress-image.blogspot.com/"><font color="#0068CF">http://indian-actress-image.blogspot.com/</font></a> |<br /> <a target="_blank" href="http://indian-beauty-queens.blogspot.com/"><font color="#0068CF">http://indian-beauty-queens.blogspot.com/</font></a> |<br /> <a target="_blank" href="http://indian-beauties.blogspot.com/"><font color="#0068CF">http://indian-beauties.blogspot.com/</font></a> |<br /> <a target="_blank" href="http://jayalalitha-actress.blogspot.com/"><font color="#0068CF">http://jayalalitha-actress.blogspot.com/</font></a> |<br /> <a target="_blank" href="http://indianmovieticket.googlepages.com/movie-1.htm"><font color="#0068CF">http://indianmovieticket.googlepages.com/movie-1.htm</font></a> |<br /> <a target="_blank" href="http://indianmoviechannel.googlegroups.com/web/movie-1.htm"><font color="#0068CF">http://indianmoviechannel.googlegroups.com/web/movie-1.htm</font></a> |<br /> <a target="_blank" href="http://mallu-masala.blogspot.com/"><font color="#0068CF">http://mallu-masala.blogspot.com/</font></a> |<br /> <a target="_blank" href="http://indian-movies-live.blogspot.com/"><font color="#0068CF">http://indian-movies-live.blogspot.com/</font></a> |<br /> <a target="_blank" href="http://indian-beauty.googlegroups.com/web/image-1.htm"><font color="#0068CF">http://indian-beauty.googlegroups.com/web/image-1.htm</font></a> |<br /> <a target="_blank" href="http://reduce-weight.googlegroups.com/web/loose-your-weight.htm"><font color="#0068CF">http://reduce-weight.googlegroups.com/web/loose-your-weight.htm</font></a>|<br /> |<br /> <a target="_blank" href="http://indian-beauty.googlegroups.com/web/searchweb.htm"><font color="#0068CF">http://indian-beauty.googlegroups.com/web/searchweb.htm</font></a> |<br /> <a target="_blank" href="http://reduce-weight.googlegroups.com/web/channel.htm"><font color="#0068CF">http://reduce-weight.googlegroups.com/web/channel.htm</font></a> |<br /> <a target="_blank" href="http://mallumasalamovies.googlepages.com/image-1.htm"><font color="#0068CF">http://mallumasalamovies.googlepages.com/image-1.htm</font></a> |<br /> <a target="_blank" href="http://mallumasalamovies.googlepages.com/searchweb.htm"><font color="#0068CF">http://mallumasalamovies.googlepages.com/searchweb.htm</font></a> |<br /> <a target="_blank" href="http://groups.google.com/group/mallu-masala"><font color="#0068CF">http://groups.google.com/group/mallu-masala</font></a> |<br /> |<br /> |<br /> ---------------------------------------------------------------|<br /> <br /> <br /> <a target="_blank" href="http://groups.google.com/group/mallu-masala/files"><font color="#0068CF">http://groups.google.com/group/mallu-masala/files</font></a><br /> <br /> <a target="_blank" href="http://indian-movies-live.blogspot.com/"><font color="#0068CF">http://indian-movies-live.blogspot.com/</font></a><br /> &nbsp;<br /> |<br /> <a target="_blank" href="http://bathvideo.notlong.com/"><font color="#0068CF">http://bathvideo.notlong.com/</font></a>|<br /> |<br /> &nbsp;-------------------------------------------------------|<br /> &nbsp;<br /> <br /> video de violet à télécharger (100mo):<br /> <a target="_blank" href="http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/7929068ef50ed93d?hl=fr"><font color="#0068CF">http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/7929068ef50ed93d?hl=fr</font></a><br /> <br /> photo de cul amaterur :<br /> <a target="_blank" href="http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/751f3e0b8591914d?hl=fr"><font color="#0068CF">http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/751f3e0b8591914d?hl=fr</font></a><br /> <br /> Video beauté teen 92mo :<br /> <a target="_blank" href="http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/be84dbf11f4d7dc6?hl=fr"><font color="#0068CF">http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/be84dbf11f4d7dc6?hl=fr</font></a><br /> <br /> video nichol et jodi 100 mo :<br /> <a target="_blank" href="http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/4a6faa1cef5eb018?hl=fr"><font color="#0068CF">http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/4a6faa1cef5eb018?hl=fr</font></a><br /> <br /> rapidshare à télécharger :<br /> <a target="_blank" href="http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/4077f8776162fcc6?hl=fr"><font color="#0068CF">http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/4077f8776162fcc6?hl=fr</font></a><br /> <br /> photos nude blonde babe :<br /> <a target="_blank" href="http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/cdf17fb44b535d78?hl=fr"><font color="#0068CF">http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/cdf17fb44b535d78?hl=fr</font></a><br /> <br /> russe de 19 ans video à télécharger de 100 mo :<br /> <a target="_blank" href="http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/14107c5ac764a020?hl=fr"><font color="#0068CF">http://groups.google.fr/group/movie-babes-adult-movies/browse_thread/thread/14107c5ac764a020?hl=fr</font></a><br /> &nbsp;<br /> &nbsp;<br /> &nbsp;<br /> Blog avec de jolies filles:<br /> <br /> <a target="_blank" href="http://beautifulhollywoodbabes.blogspot.com/"><font color="#0068CF">http://beautifulhollywoodbabes.blogspot.com/</font></a><br /> <br /> <a target="_blank" href="http://bikinibathingbeauties.blogspot.com/"><font color="#0068CF">http://bikinibathingbeauties.blogspot.com/</font></a><br /> <br /> <a target="_blank" href="http://beautifulswimsuitmodels.blogspot.com/"><font color="#0068CF">http://beautifulswimsuitmodels.blogspot.com/</font></a><br /> &nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F10%2F01%2Fdes-liens-coquins.html&amp;t=Des+liens+coquins" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="des-liens-coquins.html" id="a23"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="divers">Divers</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/liens">liens</a>, <a href="http://lefetard.hautetfort.com/tag/coquins">coquins</a>, <a href="http://lefetard.hautetfort.com/tag/r%C3%A9f%C3%A9rence">référence</a>, <a href="http://lefetard.hautetfort.com/tag/filles">filles</a>, <a href="http://lefetard.hautetfort.com/tag/babe">babe</a>, <a href="http://lefetard.hautetfort.com/tag/amateur">amateur</a>, <a href="http://lefetard.hautetfort.com/tag/indian">indian</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="des-liens-coquins.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+</ul>
+</div>
+<footer class="content-footer">
+
+</footer>
+</section>
+</main>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer-main" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="main-inner">
+<!-- start bottom --><div class="row-fluid"><div class="span6"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101347">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div><div class="span6"><!-- widget sharing on -->
+<div class="box box-sharing" id="box-sharing-101349">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</div>
+<!-- widget sharing off --></div></div><!-- end bottom --></div>
+</footer>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages_fr.js"></script><script src="bs.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="https://static.hautetfort.com/backend/javascript/front/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<script src="https://static.hautetfort.com/backend/javascript/front/jquery.placeholder.js"></script>
+<script>
+jQuery('input, textarea').placeholder();
+</script>
+<![endif]-->
+<!-- start script -->
+<script>
+(function() {
+var po = document.createElement('script'); po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js?onload=onLoadCallback';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<!-- end script --><script>
+if(typeof jQuery == 'function' && jQuery('div[data-cookie]').length) {
+  jQuery('p[data-close] a').on('click', function (event) {
+    event.preventDefault();
+    jQuery('div[data-cookie]').attr('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+} else if(typeof $$ == 'function' && $$('div[data-cookie]').length) {
+  $$('p[data-close] a')[0].observe('click', function (event) {
+    event.preventDefault();
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+}
+if (!document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*cookies_message\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) {
+  if(typeof jQuery == 'function') {
+    jQuery('div[data-cookie]').attr('data-cookie', 'on');
+  } else if(typeof $$ == 'function') {
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'on');
+  }
+}
+</script>
+    
+    <input type='hidden' id='_videoStepTitleText+11' value=' Videos We Recommend' /><input type='hidden' id='_videoStepTitleStyle+11' value='font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-size: 16px;color: #FFFFFF;text-align: center;font-weight: normal;font-style: normal;text-decoration: none;' /><input type='hidden' id='_videoStepBackgroundColor+11' value='#404d55' /><input type='hidden' id='_videoStepHasBorder+11' value='True' /><input type='hidden' id='_videoStepCountry+11' value='FR' /><input type='hidden' id='_videoStepScriptType' value='3' /><div id='divVideoStep+11' class='divVideoStep'></div><script type='text/javascript'>(function (){var vs = document.createElement('script'); vs.type = 'text/javascript';vs.async = true;vs.src = 'http://kweb.videostep.com/GetLink';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vs, s);})();</script>
+    <input type='hidden' id='_videoStepPublisherId' value='111' />
+    
+    <div id="footer">
+    <a href="http://www.hautetfort.com/create_account.php">Créer un blog</a> sur <a href="http://www.hautetfort.com/">Hautetfort</a>
+    <br />
+    <a href="http://www.hautetfort.com/explore/blogs">Les derniers blogs mis à jour</a>&nbsp;|
+    <a href="http://www.hautetfort.com/explore/posts">Les dernières notes publiées</a>&nbsp;|
+    <a href="http://www.hautetfort.com/explore/posts/tags">Les tags les plus populaires</a>
+    <br />
+    <a href="http://www.hautetfort.com/moderate.php?blog_url=http%3A%2F%2Flefetard.hautetfort.com%2F">Déclarer un contenu illicite</a>&nbsp;|
+    <a href="mentions-legales.html">Mentions légales de ce blog</a>
+    &nbsp;|
+    <a href="http://www.hautetfort.com/">Hautetfort</a> est une marque déposée de la société talkSpirit
+    &nbsp;|
+    Créez votre <a href="http://www.hautetfort.com/">blog</a> !
+    </div>
+        
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-351048-6']);
+  _gaq.push(['_trackPageview']);
+_gaq.push(['_trackEvent', 'Free plan', 'Rencontres, Amour', 'lefetard.hautetfort.com']);
+_gaq.push(['_trackEvent', 'Free plan1', 'MultiCategories', 'lefetard.hautetfort.com']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/proc_affiche_espace_occupe.sql
+-- Author       : Josselin Joly
+-- Description  : Affiche l'espace occupé dans une table.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @proc_affiche_espace_occupe.sql
+-- Last Modified: 25-SEP-2016
+-- -----------------------------------------------------------------------------------
+
+create or replace procedure affiche_espace_occupe
+	(a_table varchar2) is
+		l_unformatted_blocks number;
+		l_unformatted_bytes number;
+		l_fs1_blocks number; l_fs1_bytes number;
+		l_fs2_blocks number; l_fs2_bytes number;
+		l_fs3_blocks number; l_fs3_bytes number;
+		l_fs4_blocks number; l_fs4_bytes number;
+		l_full_blocks number; l_full_bytes number;
+		procedure affiche( a_nom in varchar2,
+						   a_valeur in number) is
+		begin
+				dbms_output.put_line( rpad(a_nom,40,'.')||
+				to_char(a_valeur,'999G999G999G999') );
+		end;
+	begin 
+		dbms_space.space_usage ( user,upper(a_table),'TABLE',
+			l_unformatted_blocks,l_unformatted_bytes,
+			l_fs1_blocks,l_fs1_bytes,l_fs2_blocks,l_fs2_bytes,
+			l_fs3_blocks,l_fs3_bytes,l_fs4_blocks,l_fs4_bytes,
+			l_full_blocks,l_full_bytes);
+				affiche('Non formatée		:',l_unformatted_blocks);
+				affiche('Blocs 0 à 25%		:',l_fs1_blocks);
+				affiche('Blocs 25 à 50%		:',l_fs2_blocks);
+				affiche('Blocs 50 à 75%     :',l_fs3_blocks);
+				affiche('Blocs 75 à 100%    :',l_fs4_blocks);
+				affiche('Blocs complete		:',l_full_blocks);
+	end;
+/

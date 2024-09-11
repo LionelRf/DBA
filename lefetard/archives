@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="ie6 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 7]><html class="ie7 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 8]><html class="ie8 ie678" lang="fr"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="fr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]<!--><html lang="fr"><!--<![endif]-->
+<head>
+<meta charset="UTF-8"/>
+<title>Archives - The Best of DBA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Maîtriser les bases de données, maximiser les performances."/>
+<meta name="keywords" content="Oracle, Postgresql, Sqlserver, MySQL, database, RMAN, Cassandra"/>
+<meta name="robots" content="index,follow"/>
+<link rel="stylesheet" href="025395.css"/>
+<link rel="stylesheet" href="style.css?1722328855"/>
+<!--[if (gt IE 8)|!(IE)]<!-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic|" rel="stylesheet"/>
+<!--<![endif]-->
+<!--[if lte IE 8]>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400italic" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700italic" rel="stylesheet"/>
+<![endif]-->
+<link rel="stylesheet" href="font-awesome.min.css"/>
+<!--[if IE 7]><link rel="stylesheet" href="https://static.hautetfort.com/backend/css/font/font-awesome-ie7.min.css"/><![endif]--><link rel="shortcut icon" href="favicon.ico"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hautetfort.com/admin/rsd/71687"/>
+<link rel="start" href="index-0.html" title="Home"/>
+<link rel="canonical" href="archives"/>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- start script --><!-- end script -->
+<script type="text/javascript">
+
+function popupCenter(url,width,height,xtr) {
+    var top=(screen.height-height)/2;
+    var left=(screen.width-width)/2;
+    window.open(url,"",xtr+",top="+top+",left="+left+",width="+width+",height="+height);
+}
+
+</script>
+
+    <style type="text/css">
+body {
+    margin-bottom: 0px;
+}
+#toppub { display: block; width: 555px; height: 140px; margin: 0 auto;}
+.content a img {border:0px;}
+#footer {
+    text-align: center;
+    font-size: 65%;
+    width: auto;
+    margin: 2em auto 0px auto;
+    color: #000;
+    line-height: 210%;
+    display: block;
+
+    padding: 15px 15px 35px ;
+    background: #fff url("hetf-background.png") no-repeat 45% 10%;
+    border-top: 3px solid #D20000;
+        
+}
+#footer a {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+    display: inline;
+}
+#footer a:hover {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+    display: inline;
+}
+#sponsored-links {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    margin-bottom: -5px;
+}
+</style>
+
+</head><body id="page-archives_total" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<div data-cookie="off"><p data-close><a href="archives#" title="J'ai lu ce message"><span class="ui-icon ui-icon-check">Ok</span></a></p><p data-text>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies. Ces derniers assurent le bon fonctionnement de nos services. <a href="https://www.hautetfort.com/cookies.html" title="En savoir plus sur les cookies" target="_blank">En savoir plus</a>.</p></div><style>[data-cookie]{display:none;position:fixed;backface-visibility:hidden;bottom:0;left:0;width:100%;background:black;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGDYDAAAvQC1UcyxoAAAAABJRU5ErkJggg==);color:white;padding:.5em 0;text-align:center;z-index:9999;}
+[data-cookie~="on"]{display:block;}
+[data-cookie] p{color:white;font-size:12px;margin:0;padding:0 .5em;line-height:1.3em;text-shadow:1px 0 3px rgba(0,0,0,1);}
+[data-cookie] a{color:white;}
+[data-cookie] [data-text]{margin:1px auto 0;text-align:left;max-width:980px;}
+[data-cookie] [data-close]{float:right;margin:0 .5em;}
+[data-cookie] .ui-icon{background-image: url(http://download.jqueryui.com/themeroller/images/ui-icons_ffffff_256x240.png);}
+.ui-icon-check {background-position: -64px -144px;}
+.ui-icon {height: 16px;width: 16px;}
+.ui-icon {background-repeat: no-repeat;display: block;overflow: hidden;text-indent: -99999px;}
+@media print {[data-cookie]{display:none;}}
+</style>
+<div class="wrapper">
+<div class="container">
+<!--[if lte IE 7><p class="alert">Votre navigateur est <strong>périmé</strong>. <a href="http://browsehappy.com/" target="_blank">Veuillez mettre votre navigateur à jour.</a></p><![endif]-->
+<a href="archives#content" class="skip-link" accesskey="s">Aller au contenu</a>
+<header class="header-main" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<div class="main-inner">
+<!-- start top --><div class="row-fluid"><div class="span9"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101343">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div></div><div class="row-fluid"><div class="span12"><!-- widget menu on -->
+<div role="navigation" class="box box-menu box-menu-sticky" id="box-menu-101345">
+<div class="box-body">
+<span class="menu-switcher" id="display-navigation"><i class="icon icon-reorder"></i></span><nav role="navigation" id="navigation-to-display">
+<ul role="menu">
+<li role="menuitem"><a href="index-0.html">Accueil</a></li>
+<li class="masked-on-mobile" role="menuitem"><a href="archives" class="current">Archives</a></li>
+<li role="menuitem"><a href="about.html">À propos</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="index-0.html">Notes</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-categories">Catégories</a></li><li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-months">Archives</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- widget menu off --></div></div><!-- end top --></div>
+</header>
+<div class="body-main" role="main">
+<div class="main-inner">
+<div class="row-fluid">
+<div class="span4">
+<aside role="complementary" class="aside aside-1" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<!-- start column 1 --><!-- widget search on -->
+<article class="box box-search" id="box-search-101337">
+<header class="box-header">
+<h1><i class="icon icon-search"></i><span class="box-title-text">Rechercher</span></h1>
+</header>
+<div class="box-body">
+<form class="form-search" name="form-box-search-101337" id="form-box-search-101337" role="search" method="get" action="http://lefetard.hautetfort.com/apps/search">
+<p class="form-submit">
+<span class="row-fluid">
+<span class="span10">
+<span class="form-field">
+<input name="s" id="search-field-box-search-101337" type="search" placeholder="Entrer votre recherche" required="required"/>
+<label class="error" for="search-field-box-search-101337" style="display:none"></label>
+</span>
+</span>
+<span class="span2">
+<span class="form-button">
+<input name="search-submit-box-search-101337" id="search-submit-box-search-101337" class="button" type="submit" value="OK"/>
+</span>
+</span>
+</span>
+</p>
+</form>
+</div>
+</article>
+<!-- widget search off --><!-- widget list on -->
+<article class="box box-list box-list-document" id="box-list-457254">
+<header class="box-header">
+<h1><i class="icon icon-ellipsis-vertical"></i><span class="box-title-text">CV</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="lists-list">
+<li role="listitem">
+<a href="dba-freelance.html">
+<span>DBA Freelance</span>
+</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget list off --><!-- widget about on -->
+<article class="box box-about" id="box-about-101313">
+<header class="box-header">
+<h1><i class="icon icon-info-sign"></i><span class="box-title-text">À propos</span></h1>
+</header>
+<div class="box-body">
+<p class="description" itemscope="itemscope" itemtype="http://schema.org/AboutPage">
+<span itemprop="description">  - Dynamique, rigoureux, pédagogue, à l'écoute des besoins de mes clients ;...</span>
+<a href="about.html" itemprop="url">
+Lire la suite</a>
+</p>
+</div>
+</article>
+<!-- widget about off --><!-- widget authors on -->
+<article class="box box-author" id="box-author-101318" style="display:none">
+<header class="box-header">
+<h1><i class="icon icon-quote-right"></i><span class="box-title-text">Auteurs</span></h1>
+</header>
+<div class="box-body">
+<h2>Propriétaire du blog</h2>
+<a href="about.html">
+<figure class="inline-picture author-main">
+<span class="picture">
+<img src="https://size.blogspirit.net/hautetfort.com/lefetard/50/media/01/01/3775567719.png" alt=""/>
+</span>
+<figcaption class="description">
+<p>joguess - 767 notes</p>
+</figcaption>
+</figure>
+</a>
+<ul role="list" class="authors-list">
+</ul>
+</div>
+</article>
+<!-- widget authors off --><!-- widget category on -->
+<article class="box box-category" id="box-category-101322">
+<header class="box-header">
+<h1><i class="icon icon-level-down"></i><span class="box-title-text">Catégories</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="categories-list">
+
+<li role="listitem">
+<a href="index.html.21">Professionnel</a>
+<ul>
+<li role="listitem">
+<a href="index.html.22">BIG DATA - hadoop -spark</a>
+</li>
+<li role="listitem">
+<a href="index.html.23">Cassandra</a>
+</li>
+<li role="listitem">
+<a href="index.html.24">Cloud Control 13C</a>
+</li>
+<li role="listitem">
+<a href="index.html.25">Cloud db</a>
+</li>
+<li role="listitem">
+<a href="index.html.26">HVAULT</a>
+</li>
+<li role="listitem">
+<a href="index.html.27">MongoDB</a>
+</li>
+<li role="listitem">
+<a href="index.html.28">monitoring</a>
+</li>
+<li role="listitem">
+<a href="index.html.29">Ora2pg</a>
+</li>
+<li role="listitem">
+<a href="index.html.30">Oracle RAC</a>
+</li>
+<li role="listitem">
+<a href="index.html.31">Oracle12C,19C</a>
+</li>
+<li role="listitem">
+<a href="index.html.32">Postgresql</a>
+</li>
+<li role="listitem">
+<a href="index.html.33">RMAN</a>
+</li>
+<li role="listitem">
+<a href="index.html.34">Scripts</a>
+</li>
+<li role="listitem">
+<a href="index.html.35">Soluce</a>
+</li>
+<li role="listitem">
+<a href="index.html.36">SQLServer</a>
+</li>
+<li role="listitem">
+<a href="index.html.37">Système</a>
+</li>
+<li role="listitem">
+<a href="index.html.38">tuning</a>
+</li>
+</ul>
+</li>
+
+</ul>
+</div>
+</article>
+<!-- widget category off --><!-- widget links on -->
+<article class="box box-link" id="box-custom-236539">
+<header class="box-header">
+<h1><i class="icon icon-link"></i><span class="box-title-text">Référencement</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="links-list">
+<li role="listitem"><a href="http://www.extremecarving.com/index_fr.html" target="_blank">SURF</a></li>
+<li role="listitem"><a href="http://secretebase.free.fr/" target="_blank">Base Secrète</a></li>
+<li role="listitem"><a href="http://newzealand.over-blog.com/" target="_blank">Le blog de Mat</a></li>
+<li role="listitem"><a href="http://missdactari-blog.blogspot.com/" target="_blank">Le Blog de Camille</a></li>
+<li role="listitem"><a href="http://www.bobbydurrettdba.com/" target="_blank">Le Blog de Bobby DBA</a></li>
+<li role="listitem"><a href="https://oraclue.com/" target="_blank">Miladin Modrakovic's Blog</a></li>
+<li role="listitem"><a href="http://oradbastuff.blogspot.fr/" target="_blank">Sfaturi Oracle / Tips and tricks OracleDBA</a></li>
+<li role="listitem"><a href="http://orababy.blogspot.fr/" target="_blank">ORACLE DBA Knowledge Share</a></li>
+<li role="listitem"><a href="http://www.drazzib.com/docs/bdd/oracle/" target="_blank">Site de Damien Raude Morvan</a></li>
+<li role="listitem"><a href="http://www.database-expert.com/" target="_blank">Edward Stoever DBA</a></li>
+<li role="listitem"><a href="https://www.dba-scripts.com" target="_blank">Oracle DBA (Cyrille Modiano)</a></li>
+</ul>
+</div>
+</article>
+<!-- widget links off --><!-- widget archives on -->
+<article class="box box-archive" id="box-archive-101316">
+<header class="box-header">
+<h1><i class="icon icon-archive"></i><span class="box-title-text">Archives</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="archives-list">
+<li role="listitem">
+<a href="index.html.46">lun. 29 juil. - dim. 04 août</a>
+</li>
+<li role="listitem">
+<a href="index.html.47">lun. 08 juil. - dim. 14 juil.</a>
+</li>
+<li role="listitem">
+<a href="index.html.48">lun. 17 juin - dim. 23 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.49">lun. 10 juin - dim. 16 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.50">lun. 27 mai - dim. 02 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.51">lun. 20 mai - dim. 26 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.52">lun. 13 mai - dim. 19 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.53">lun. 29 avril - dim. 05 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.54">lun. 22 avril - dim. 28 avril</a>
+</li>
+<li role="listitem">
+<a href="index.html.55">lun. 15 avril - dim. 21 avril</a>
+</li>
+</ul>
+</div>
+<footer class="box-footer">
+<p><a href="index.html.56">Toutes les archives</a></p>
+</footer>
+</article>
+<!-- widget archives off --><!-- widget lastupdatedblogs on -->
+<article class="box box-blog" id="box-blog-101319">
+<header class="box-header">
+<h1><i class="icon icon-external-link-sign"></i><span class="box-title-text">Derniers blogs mis à jour</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="last-posts-list">
+<li role="listitem"><a href="http://linformationnationaliste.hautetfort.com/archive/2024/07/30/ouverture-des-jo-ces-sportifs-qui-n-ont-pas-aime-la-cene-6508849.html">Ouverture des JO : ces sportifs qui n’ont pas...</a> sur <a href="http://linformationnationaliste.hautetfort.com/">l'information nationaliste</a></li>
+<li role="listitem"><a href="http://lactualitedessocialistes.hautetfort.com/archive/2024/07/31/le-recap-de-splann-un-rattrapage-de-l-actualite-bretonne-en-6508736.html">Le récap' de « Splann ! », un rattrapage de...</a> sur <a href="http://lactualitedessocialistes.hautetfort.com/">Actualités socialistes</a></li>
+<li role="listitem"><a href="http://metapoinfos.hautetfort.com/archive/2024/07/20/j-d-vance-colistier-de-trump-et-figure-de-proue-des-nationau-6507781.html">J. D. Vance, colistier de Trump et figure de...</a> sur <a href="http://metapoinfos.hautetfort.com/">Métapo infos</a></li>
+<li role="listitem"><a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/archive/2024/07/26/la-france-annoncent-la-reconnaissance-de-la-marocanite-du-sa-6508408.html">La France annonce la reconnaissance de la...</a> sur <a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/">«-Le Royaume Chérifien du Maroc -Chihab 25...</a></li>
+<li role="listitem"><a href="http://formesetcouleurs.hautetfort.com/archive/2024/07/30/stage-adultes-2024-6508829.html">STAGE ADULTES JUILLET 2024</a> sur <a href="http://formesetcouleurs.hautetfort.com/">Formes & Couleurs</a></li>
+<li role="listitem"><a href="http://cfdt-centrale-auchan.hautetfort.com/archive/2024/07/30/avis-cfdt-ari-sur-le-projet-d-organisation-de-la-direction-digitale.html">Avis CFDT ARI sur le projet d'organisation de...</a> sur <a href="http://cfdt-centrale-auchan.hautetfort.com/">CFDT Auchan Centrale ARS, ARA, ARI et OIA</a></li>
+<li role="listitem"><a href="http://synthesenationale.hautetfort.com/archive/2024/07/30/lyon-suite-a-une-agression-gauchiste-un-jeune-nationaliste-temoigne.html">Lyon : suite à une agression gauchiste, un...</a> sur <a href="http://synthesenationale.hautetfort.com/">SYNTHESE NATIONALE</a></li>
+<li role="listitem"><a href="http://www.belgicatho.be/archive/2024/07/30/tres-etrange-la-facon-dont-la-presse-mainstream-a-rendu-comp-6508818.html">Très étrange : la façon dont la presse...</a> sur <a href="http://www.belgicatho.be/">BELGICATHO</a></li>
+<li role="listitem"><a href="http://www.cuisine-toulousaine.com/archive/2024/07/30/salade-de-saucisse-de-toulouse-et-lentilles-6508814.html">Salade de Saucisse de Toulouse et lentilles</a> sur <a href="http://www.cuisine-toulousaine.com/">Cuisine Toulousaine et Occitane</a></li>
+<li role="listitem"><a href="http://lionelbaland.hautetfort.com/archive/2024/07/30/lionel-baland-dans-le-reportage-de-tv-libertes-sur-le-passag-6508813.html">Lionel Baland dans le reportage de TV Libertés...</a> sur <a href="http://lionelbaland.hautetfort.com/">Lionel Baland</a></li>
+</ul>
+</div>
+</article>
+<!-- widget lastupdatedblogs off --><!-- widget calendar on -->
+<article class="box box-calendar" id="box-calendar-101321">
+<header class="box-header">
+<h1><i class="icon icon-calendar"></i><span class="box-title-text">Juillet 2024</span></h1>
+</header>
+<div class="box-body">
+<table>
+<caption>Calendrier des notes en Juillet 2024</caption>
+<tr>
+<th><abbr title="Dimanche">D</abbr></th>
+<th><abbr title="Lundi">L</abbr></th>
+<th><abbr title="Mardi">M</abbr></th>
+<th><abbr title="Mercredi">M</abbr></th>
+<th><abbr title="Jeudi">J</abbr></th>
+<th><abbr title="Vendredi">V</abbr></th>
+<th><abbr title="Samedi">S</abbr></th>
+</tr>
+<tr>
+<td></td>
+<td><span> 1</span></td>
+<td><span> 2</span></td>
+<td><span> 3</span></td>
+<td><span> 4</span></td>
+<td><span> 5</span></td>
+<td><span> 6</span></td>
+</tr>
+<tr>
+<td><span> 7</span></td>
+<td><span> 8</span></td>
+<td><span> 9</span></td>
+<td class="has-post"><a href="index.html.57">10</a></td>
+<td class="has-post"><a href="index.html.58">11</a></td>
+<td class="has-post"><a href="index.html.59">12</a></td>
+<td><span>13</span></td>
+</tr>
+<tr>
+<td><span>14</span></td>
+<td><span>15</span></td>
+<td><span>16</span></td>
+<td><span>17</span></td>
+<td><span>18</span></td>
+<td><span>19</span></td>
+<td><span>20</span></td>
+</tr>
+<tr>
+<td><span>21</span></td>
+<td><span>22</span></td>
+<td><span>23</span></td>
+<td><span>24</span></td>
+<td><span>25</span></td>
+<td><span>26</span></td>
+<td><span>27</span></td>
+</tr>
+<tr>
+<td><span>28</span></td>
+<td><span>29</span></td>
+<td class="has-post today"><a href="index.html.60">30</a></td>
+<td><span>31</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</div>
+</article>
+<!-- widget calendar off --><!-- widget comments on -->
+<article class="box box-comment" id="box-comment-101324">
+<header class="box-header">
+<h1><i class="icon icon-comments"></i><span class="box-title-text">Commentaires récents</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-comments-list">
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment9030164" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-12-22T18:29:12" itemprop="datePublished">
+<span class="date-hour-minute">18h29</span>
+<span class="date-day">22</span>
+<span class="date-month-year">déc. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">collignon</a> sur <a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html">Intermédiation</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>"Confidentielles" au féminin pluriel, merci.<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8994604" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/01/27/tuning-ora2pg-6362720.html#c8994604">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-01-27T09:27:05" itemprop="datePublished">
+<span class="date-hour-minute">09h27</span>
+<span class="date-day">27</span>
+<span class="date-month-year">janv. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="tuning-ora2pg-6362720.html#c8994604">Le boss</a> sur <a href="tuning-ora2pg-6362720.html">Tuning ora2pg</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>1- bah ouais poto si tu vides les data source ça va plus...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8626826" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/06/29/forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-06-29T17:31:31" itemprop="datePublished">
+<span class="date-hour-minute">17h31</span>
+<span class="date-day">29</span>
+<span class="date-month-year">juin 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">joguess</a> sur <a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html">Forcer le refresh de la vue...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>peut etre rajouter cela : 
+BEGIN...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8579037" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/01/31/purger-fichiers-logs-5905505.html#c8579037">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-01-31T14:59:55" itemprop="datePublished">
+<span class="date-hour-minute">14h59</span>
+<span class="date-day">31</span>
+<span class="date-month-year">janv. 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="purger-fichiers-logs-5905505.html#c8579037">joguess</a> sur <a href="purger-fichiers-logs-5905505.html">Purger fichiers logs</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>voir aussi :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518755" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518755">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:14:31" itemprop="datePublished">
+<span class="date-hour-minute">16h14</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518755">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>La solution se trouve ici :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518754" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518754">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:12:03" itemprop="datePublished">
+<span class="date-hour-minute">16h12</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518754">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>http://www.dba-oracle.com/t_asm_disk_does_not_exist_or_is...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518753" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/10/installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T15:59:29" itemprop="datePublished">
+<span class="date-hour-minute">15h59</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">JJO</a> sur <a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html">Installation ASM et configuration de l'instance...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>https://taliphakanozturken.wordpress.com/2012/03/12/confi...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518135" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/07/outil-de-benchmark-oracle-orion-5834320.html#c8518135">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-09T08:19:40" itemprop="datePublished">
+<span class="date-hour-minute">08h19</span>
+<span class="date-day">09</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="outil-de-benchmark-oracle-orion-5834320.html#c8518135">jjo</a> sur <a href="outil-de-benchmark-oracle-orion-5834320.html">Outil de benchmark Oracle - ORION</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>Orion Usage:$ORACLE_HOME/bin/orion -run simple -testname...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8314452" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2015/04/19/sego-dans-c-politique-5606540.html#c8314452">
+
+<!-- widget comments off -->
+<!-- widget pages on -->
+<article class="box box-page" id="box-page-101331">
+<header class="box-header">
+<h1><i class="icon icon-file-text-alt"></i><span class="box-title-text">Pages</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="pages-list">
+<li role="listitem">
+<a href="jesako.html">PAGE HTML</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget pages off --><!-- widget posts on -->
+<article class="box box-post" id="box-post-101336">
+<header class="box-header">
+<h1><i class="icon icon-comment"></i><span class="box-title-text">Notes récentes</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-posts-list">
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6508824" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/30/postgres-monitor-autovacuum-freeze-max-age-6508824.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-30T10:40:49" itemprop="datePublished">
+<span class="date-hour-minute">10h40</span>
+<span class="date-day">30</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-autovacuum-freeze-max-age-6508824.html">[Postgres] Monitor autovacuum_freeze_max_age</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to monitor the :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506680" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/12/postgres-monitor-wait-event-6506680.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-12T11:28:00" itemprop="datePublished">
+<span class="date-hour-minute">11h28</span>
+<span class="date-day">12</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-wait-event-6506680.html">[Postgres] Monitor wait event</a></h1>
+</header>
+<div class="recent-post-body">
+<p> \t select wait_event_type, wait_event from...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506515" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/11/postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-11T10:02:00" itemprop="datePublished">
+<span class="date-hour-minute">10h02</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">[Postgres] Solve PostgreSQL DataFileRead and...</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Click her to see the next. <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506355" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/10/postgres-tuto-tuning-6506355.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-10T07:59:04" itemprop="datePublished">
+<span class="date-hour-minute">07h59</span>
+<span class="date-day">10</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-tuto-tuning-6506355.html">[Postgres] Tuto tuning</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This site helped to resolve IPC wait event :  Postgres...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6503410" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/18/postgres-identifier-les-privileges-6503410.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-18T10:03:31" itemprop="datePublished">
+<span class="date-hour-minute">10h03</span>
+<span class="date-day">18</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-privileges-6503410.html">[Postgres] Identifier les privilèges</a></h1>
+</header>
+<div class="recent-post-body">
+<p> SELECT * &nbsp; FROM...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6502501" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/11/postgres-identifier-les-attentes-6502501.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-11T14:21:00" itemprop="datePublished">
+<span class="date-hour-minute">14h21</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-attentes-6502501.html">[Postgres] Identifier les attentes</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to identify the wait events on...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500731" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/30/postgres-pg-partman-6500731.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-30T10:56:00" itemprop="datePublished">
+<span class="date-hour-minute">10h56</span>
+<span class="date-day">30</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-pg-partman-6500731.html">[Postgres] PG_PARTMAN</a></h1>
+</header>
+<div class="recent-post-body">
+<p> pg_partman v4 vs pg_partman v5&nbsp; 
+ Une fonction...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500641" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-extensions-6500641.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T17:27:00" itemprop="datePublished">
+<span class="date-hour-minute">17h27</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-extensions-6500641.html">[Postgres] Extensions</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Extensions en prd indispensables :&nbsp; <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500591" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-monitor-cloud-db-azure-ibm-6500591.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T10:59:00" itemprop="datePublished">
+<span class="date-hour-minute">10h59</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-cloud-db-azure-ibm-6500591.html">[Postgres] Monitor cloud DB (AZURE / IBM)</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Quand on n'a pas d'outils pour faire le monitoring des...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6499803" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/24/postgres-locker-une-base-6499803.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-24T10:01:00" itemprop="datePublished">
+<span class="date-hour-minute">10h01</span>
+<span class="date-day">24</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-locker-une-base-6499803.html">[Postgres] Locker une base</a></h1>
+</header>
+<div class="recent-post-body">
+<p> On ne peut pas locker une base nativement alors comment...<p>
+</div>
+</article>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget posts off --><!-- widget sharing on -->
+<article class="box box-sharing" id="box-sharing-101338">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</article>
+<!-- widget sharing off --><!-- widget populartags on -->
+<article class="box box-tag" id="box-tag-101340">
+<header class="box-header">
+<h1><i class="icon icon-tags"></i><span class="box-title-text">Tags populaires</span></h1>
+</header>
+<div class="box-body">
+<ul class="popular-tags-list" role="list">
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dieudonn%C3%A9" class="tag-10">dieudonné</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/strasbourg" class="tag-10">strasbourg</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/star" class="tag-10">star</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surf" class="tag-9">surf</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salsa" class="tag-1">salsa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sexy" class="tag-10">sexy</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/danse" class="tag-9">danse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/webcam" class="tag-9">webcam</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blog" class="tag-10">blog</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/oracle" class="tag-8">oracle</a></li>
+</ul>
+</div>
+</article>
+<!-- widget populartags off --><!-- end column 1 --></aside>
+</div>
+<div class="span8">
+<main role="main">
+
+<article class="content" id="content" itemprop="mainContentOfPage">
+<header class="content-header">
+<h1>Archives</h1>
+</header>
+<div class="content-body">
+<article class="archive-categories" id="archive-categories">
+<header class="archive-header">
+<h1>Archives par catégories</h1>
+</header>
+<div class="archive-body">
+<ul role="list">
+<li role="listitem"><a href="index.html.1">Actualité</a>
+</li>
+<li role="listitem"><a href="index.html.2">Blog</a>
+</li>
+<li role="listitem"><a href="index.html.3">Bons plans</a>
+</li>
+<li role="listitem"><a href="index.html.4">CINEMA</a>
+</li>
+<li role="listitem"><a href="index.html.5">DANSE & Soirées</a>
+</li>
+<li role="listitem"><a href="index.html.6">Divers</a>
+</li>
+<li role="listitem"><a href="index.html.7">DIVERTISSEMENT</a>
+</li>
+<li role="listitem"><a href="index.html.8">Emission - TV REALITY</a>
+</li>
+<li role="listitem"><a href="index.html.9">Espace coquins</a>
+</li>
+<li role="listitem"><a href="index.html.10">Espace photo</a>
+</li>
+<li role="listitem"><a href="index.html.11">Espace X - Adulte</a>
+</li>
+<li role="listitem"><a href="index.html.12">Hi-Tech</a>
+</li>
+<li role="listitem"><a href="index.html.13">Illusion d'optique & divers tricks</a>
+</li>
+<li role="listitem"><a href="index.html.14">Libertinage</a>
+</li>
+<li role="listitem"><a href="index.html.15">Livre & BD</a>
+</li>
+<li role="listitem"><a href="index.html.16">Loisirs</a>
+</li>
+<li role="listitem"><a href="index.html.17">Miss & Stars du X</a>
+</li>
+<li role="listitem"><a href="index.html.18">Musique</a>
+</li>
+<li role="listitem"><a href="index.html.19">PODCAST</a>
+</li>
+<li role="listitem"><a href="index.html.20">Privé</a>
+</li>
+<li role="listitem"><a href="index.html.21">Professionnel</a>
+<ul class="subcat">
+<li role="listitem"><a href="index.html.22">BIG DATA - hadoop -spark</a>
+</li>
+<li role="listitem"><a href="index.html.23">Cassandra</a>
+</li>
+<li role="listitem"><a href="index.html.24">Cloud Control 13C</a>
+</li>
+<li role="listitem"><a href="index.html.25">Cloud db</a>
+</li>
+<li role="listitem"><a href="index.html.26">HVAULT</a>
+</li>
+<li role="listitem"><a href="index.html.27">MongoDB</a>
+</li>
+<li role="listitem"><a href="index.html.28">monitoring</a>
+</li>
+<li role="listitem"><a href="index.html.29">Ora2pg</a>
+</li>
+<li role="listitem"><a href="index.html.30">Oracle RAC</a>
+</li>
+<li role="listitem"><a href="index.html.31">Oracle12C,19C</a>
+</li>
+<li role="listitem"><a href="index.html.32">Postgresql</a>
+</li>
+<li role="listitem"><a href="index.html.33">RMAN</a>
+</li>
+<li role="listitem"><a href="index.html.34">Scripts</a>
+</li>
+<li role="listitem"><a href="index.html.35">Soluce</a>
+</li>
+<li role="listitem"><a href="index.html.36">SQLServer</a>
+</li>
+<li role="listitem"><a href="index.html.37">Système</a>
+</li>
+<li role="listitem"><a href="index.html.38">tuning</a>
+</li>
+</ul>
+</li>
+<li role="listitem"><a href="index.html.39">Shopping</a>
+</li>
+<li role="listitem"><a href="index.html.40">Songe et plénitude</a>
+</li>
+<li role="listitem"><a href="index.html.41">Sport</a>
+</li>
+<li role="listitem"><a href="index.html.42">SURF</a>
+</li>
+<li role="listitem"><a href="index.html.43">Tchat</a>
+</li>
+<li role="listitem"><a href="index.html.44">TUTO VIDEO</a>
+</li>
+<li role="listitem"><a href="index.html.45">Webtv</a>
+</li>
+</ul>
+</div>
+<footer class="archive-footer">
+</footer>
+</article>
+<article class="archive-months" id="archive-months">
+<header class="archive-header">
+<h1>Archives par mois</h1>
+</header>
+<div class="archive-body">
+<ul role="list">
+<li role="listitem"><span class="archive-year">2024</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.61">juillet</a></li>
+<li role="listitem"><a href="index.html.62">juin</a></li>
+<li role="listitem"><a href="index.html.63">mai</a></li>
+<li role="listitem"><a href="index.html.64">avril</a></li>
+<li role="listitem"><a href="index.html.65">février</a></li>
+<li role="listitem"><a href="index.html.66">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2023</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.67">décembre</a></li>
+<li role="listitem"><a href="index.html.68">octobre</a></li>
+<li role="listitem"><a href="index.html.69">septembre</a></li>
+<li role="listitem"><a href="index.html.70">août</a></li>
+<li role="listitem"><a href="index.html.71">juillet</a></li>
+<li role="listitem"><a href="index.html.72">mai</a></li>
+<li role="listitem"><a href="index.html.73">avril</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2021</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.74">juillet</a></li>
+<li role="listitem"><a href="index.html.75">juin</a></li>
+<li role="listitem"><a href="index.html.76">mai</a></li>
+<li role="listitem"><a href="index.html.77">avril</a></li>
+<li role="listitem"><a href="index.html.78">mars</a></li>
+<li role="listitem"><a href="index.html.79">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2020</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.80">novembre</a></li>
+<li role="listitem"><a href="index.html.81">juillet</a></li>
+<li role="listitem"><a href="index.html.82">juin</a></li>
+<li role="listitem"><a href="index.html.83">mai</a></li>
+<li role="listitem"><a href="index.html.84">avril</a></li>
+<li role="listitem"><a href="index.html.85">mars</a></li>
+<li role="listitem"><a href="index.html.86">février</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2019</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.87">décembre</a></li>
+<li role="listitem"><a href="index.html.88">novembre</a></li>
+<li role="listitem"><a href="index.html.89">octobre</a></li>
+<li role="listitem"><a href="index.html.90">septembre</a></li>
+<li role="listitem"><a href="index.html.91">août</a></li>
+<li role="listitem"><a href="index.html.92">juillet</a></li>
+<li role="listitem"><a href="index.html.93">juin</a></li>
+<li role="listitem"><a href="index.html.94">mai</a></li>
+<li role="listitem"><a href="index.html.95">avril</a></li>
+<li role="listitem"><a href="index.html.96">mars</a></li>
+<li role="listitem"><a href="index.html.97">février</a></li>
+<li role="listitem"><a href="index.html.98">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2018</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.99">décembre</a></li>
+<li role="listitem"><a href="index.html.100">novembre</a></li>
+<li role="listitem"><a href="index.html.101">octobre</a></li>
+<li role="listitem"><a href="index.html.102">septembre</a></li>
+<li role="listitem"><a href="index.html.103">août</a></li>
+<li role="listitem"><a href="index.html.104">juillet</a></li>
+<li role="listitem"><a href="index.html.105">juin</a></li>
+<li role="listitem"><a href="index.html.106">mai</a></li>
+<li role="listitem"><a href="index.html.107">avril</a></li>
+<li role="listitem"><a href="index.html.108">mars</a></li>
+<li role="listitem"><a href="index.html.109">février</a></li>
+<li role="listitem"><a href="index.html.110">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2017</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.111">décembre</a></li>
+<li role="listitem"><a href="index.html.112">novembre</a></li>
+<li role="listitem"><a href="index.html.113">octobre</a></li>
+<li role="listitem"><a href="index.html.114">septembre</a></li>
+<li role="listitem"><a href="index.html.115">août</a></li>
+<li role="listitem"><a href="index.html.116">juin</a></li>
+<li role="listitem"><a href="index.html.117">avril</a></li>
+<li role="listitem"><a href="index.html.118">mars</a></li>
+<li role="listitem"><a href="index.html.119">février</a></li>
+<li role="listitem"><a href="index.html.120">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2016</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.121">novembre</a></li>
+<li role="listitem"><a href="index.html.122">octobre</a></li>
+<li role="listitem"><a href="index.html.123">septembre</a></li>
+<li role="listitem"><a href="index.html.124">août</a></li>
+<li role="listitem"><a href="index.html.125">juillet</a></li>
+<li role="listitem"><a href="index.html.126">juin</a></li>
+<li role="listitem"><a href="index.html.127">mai</a></li>
+<li role="listitem"><a href="index.html.128">avril</a></li>
+<li role="listitem"><a href="index.html.129">mars</a></li>
+<li role="listitem"><a href="index.html.130">février</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2015</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.131">décembre</a></li>
+<li role="listitem"><a href="index.html.132">novembre</a></li>
+<li role="listitem"><a href="index.html.133">août</a></li>
+<li role="listitem"><a href="index.html.134">avril</a></li>
+<li role="listitem"><a href="index.html.135">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2014</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.136">novembre</a></li>
+<li role="listitem"><a href="index.html.137">octobre</a></li>
+<li role="listitem"><a href="index.html.138">juillet</a></li>
+<li role="listitem"><a href="index.html.139">juin</a></li>
+<li role="listitem"><a href="index.html.140">mai</a></li>
+<li role="listitem"><a href="index.html.141">avril</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2013</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.142">septembre</a></li>
+<li role="listitem"><a href="index.html.143">août</a></li>
+<li role="listitem"><a href="index.html.144">juin</a></li>
+<li role="listitem"><a href="index.html.145">mai</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2012</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.146">novembre</a></li>
+<li role="listitem"><a href="index.html.147">avril</a></li>
+<li role="listitem"><a href="index.html.148">février</a></li>
+<li role="listitem"><a href="index.html.149">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2011</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.150">novembre</a></li>
+<li role="listitem"><a href="index.html.151">septembre</a></li>
+<li role="listitem"><a href="index.html.152">août</a></li>
+<li role="listitem"><a href="index.html.153">juillet</a></li>
+<li role="listitem"><a href="index.html.154">juin</a></li>
+<li role="listitem"><a href="index.html.155">mai</a></li>
+<li role="listitem"><a href="index.html.156">février</a></li>
+<li role="listitem"><a href="index.html.157">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2010</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.158">novembre</a></li>
+<li role="listitem"><a href="index.html.159">octobre</a></li>
+<li role="listitem"><a href="index.html.160">septembre</a></li>
+<li role="listitem"><a href="index.html.161">juillet</a></li>
+<li role="listitem"><a href="index.html.162">avril</a></li>
+<li role="listitem"><a href="index.html.163">mars</a></li>
+<li role="listitem"><a href="index.html.164">février</a></li>
+<li role="listitem"><a href="index.html.165">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2009</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.166">décembre</a></li>
+<li role="listitem"><a href="index.html.167">novembre</a></li>
+<li role="listitem"><a href="index.html.168">octobre</a></li>
+<li role="listitem"><a href="index.html.169">septembre</a></li>
+<li role="listitem"><a href="index.html.170">août</a></li>
+<li role="listitem"><a href="index.html.171">juillet</a></li>
+<li role="listitem"><a href="index.html.172">juin</a></li>
+<li role="listitem"><a href="index.html.173">avril</a></li>
+<li role="listitem"><a href="index.html.174">février</a></li>
+<li role="listitem"><a href="index.html.175">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2008</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.176">décembre</a></li>
+<li role="listitem"><a href="index.html.177">novembre</a></li>
+<li role="listitem"><a href="index.html.178">octobre</a></li>
+<li role="listitem"><a href="index.html.179">septembre</a></li>
+<li role="listitem"><a href="index.html.180">août</a></li>
+<li role="listitem"><a href="index.html.181">juillet</a></li>
+<li role="listitem"><a href="index.html.182">juin</a></li>
+<li role="listitem"><a href="index.html.183">mai</a></li>
+<li role="listitem"><a href="index.html.184">avril</a></li>
+<li role="listitem"><a href="index.html.185">mars</a></li>
+<li role="listitem"><a href="index.html.186">février</a></li>
+<li role="listitem"><a href="index.html.187">janvier</a></li>
+</ul>
+</li>
+<li role="listitem"><span class="archive-year">2007</span>
+<ul role="list">
+<li role="listitem"><a href="index.html.188">décembre</a></li>
+<li role="listitem"><a href="index.html.189">novembre</a></li>
+<li role="listitem"><a href="index.html.190">octobre</a></li>
+<li role="listitem"><a href="index.html.191">septembre</a></li>
+<li role="listitem"><a href="index.html.192">août</a></li>
+<li role="listitem"><a href="index.html.193">juin</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<footer class="archive-footer">
+</footer>
+</article>
+<article class="archive-tags" id="archive-tags">
+<header class="archive-header">
+<h1>Archives par tags</h1>
+</header>
+<div class="archive-body">
+<ul role="list">
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/09-f9-11-02-9d-74-e3-5b-d8-41-56-c5-63-56-88-c0" class="tag-10">09-f9-11-02-9d-74-e3-5b-d8-41-56-c5-63-56-88-c0</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/10g" class="tag-10">10g</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/11g" class="tag-10">11g</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/1993" class="tag-10">1993</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/2.0" class="tag-10">2.0</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/2007" class="tag-10">2007</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/206" class="tag-10">206</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/285" class="tag-10">285</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/3" class="tag-10">3</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/300+go" class="tag-10">300 go</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/300Go" class="tag-10">300Go</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/3D" class="tag-10">3D</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/8" class="tag-10">8</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/about+a+girl" class="tag-10">about a girl</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ac" class="tag-10">ac</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/academy" class="tag-10">academy</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/accident" class="tag-10">accident</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/achat" class="tag-10">achat</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/acoustique" class="tag-10">acoustique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/actrice" class="tag-10">actrice</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/admin" class="tag-10">admin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/admin+oracle" class="tag-10">admin oracle</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Administrateur+de+bases+de+donn%C3%A9es" class="tag-10">Administrateur de bases de données</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/adsl" class="tag-10">adsl</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/adulte" class="tag-9">adulte</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/africaine" class="tag-10">africaine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/agression" class="tag-10">agression</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/alertsid" class="tag-10">alertsid</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/alice" class="tag-10">alice</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/all" class="tag-10">all</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/all-black" class="tag-10">all-black</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/alpin" class="tag-7">alpin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/alpine" class="tag-8">alpine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/alpine+surf" class="tag-10">alpine surf</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/amal" class="tag-10">amal</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/amateur" class="tag-10">amateur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/amies" class="tag-10">amies</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/amusant" class="tag-10">amusant</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/amusing" class="tag-10">amusing</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/angine" class="tag-10">angine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/angular" class="tag-10">angular</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/animation" class="tag-10">animation</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Anna+Ciriani" class="tag-10">Anna Ciriani</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/anniversaire" class="tag-10">anniversaire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/annonces" class="tag-10">annonces</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/annuaire" class="tag-10">annuaire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/antibes" class="tag-10">antibes</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/antique" class="tag-10">antique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/apache" class="tag-10">apache</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/apologize" class="tag-10">apologize</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/apple" class="tag-10">apple</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/argent" class="tag-10">argent</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/art" class="tag-10">art</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/artistique" class="tag-10">artistique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ascension" class="tag-10">ascension</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ashley" class="tag-10">ashley</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/atlantide" class="tag-10">atlantide</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/atroce" class="tag-10">atroce</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/attente" class="tag-10">attente</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/attractif" class="tag-10">attractif</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/avenir" class="tag-10">avenir</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/averybeautifulnoel" class="tag-10">averybeautifulnoel</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/avignon" class="tag-10">avignon</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/babe" class="tag-10">babe</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/baise" class="tag-10">baise</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bald%C3%A9" class="tag-10">baldé</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/banana%27s" class="tag-8">banana's</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/banana%27s+cafe" class="tag-10">banana's cafe</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bande+dessin%C3%A9e" class="tag-10">bande dessinée</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bases" class="tag-10">bases</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/battle" class="tag-10">battle</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/battle+rap" class="tag-10">battle rap</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bd+en+ligne" class="tag-10">bd en ligne</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bds" class="tag-10">bds</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/beautiful" class="tag-10">beautiful</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/b%C3%A9b%C3%A9" class="tag-10">bébé</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/beflort" class="tag-10">beflort</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/belfort" class="tag-8">belfort</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/belladone" class="tag-10">belladone</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/belle" class="tag-10">belle</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Berlin" class="tag-10">Berlin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/beurette" class="tag-10">beurette</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bigdata" class="tag-10">bigdata</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bilderberg" class="tag-10">bilderberg</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/biology" class="tag-10">biology</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/black" class="tag-10">black</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blaine" class="tag-10">blaine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blane" class="tag-10">blane</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blog" class="tag-7">blog</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blogging" class="tag-10">blogging</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/BLU" class="tag-10">BLU</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blu+ray" class="tag-10">blu ray</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bluffant" class="tag-10">bluffant</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bolocco" class="tag-10">bolocco</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bon+plans" class="tag-10">bon plans</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bonne+ann%C3%A9e" class="tag-10">bonne année</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bons" class="tag-10">bons</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/boobs" class="tag-10">boobs</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/bossa" class="tag-10">bossa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/britney" class="tag-10">britney</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/burger" class="tag-10">burger</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/buzz%3Bnue" class="tag-10">buzz;nue</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cac40" class="tag-10">cac40</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/caisse" class="tag-10">caisse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cam" class="tag-9">cam</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/camp" class="tag-10">camp</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/campagne" class="tag-10">campagne</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cannes" class="tag-10">cannes</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/carnaval" class="tag-10">carnaval</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/caroline" class="tag-10">caroline</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/carr%C3%A9+coquin" class="tag-10">carré coquin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cartes" class="tag-10">cartes</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/carving" class="tag-10">carving</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/catholique" class="tag-10">catholique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cauet" class="tag-10">cauet</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cecile" class="tag-10">cecile</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/celib" class="tag-10">celib</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/CES+2008" class="tag-10">CES 2008</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/chaines+tv" class="tag-10">chaines tv</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/chandelier" class="tag-10">chandelier</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/changement" class="tag-10">changement</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/chant" class="tag-10">chant</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/chant%3Bguitare" class="tag-10">chant;guitare</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/chateau" class="tag-10">chateau</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/chaussure+de+danse" class="tag-10">chaussure de danse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cher" class="tag-10">cher</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/chr%C3%A9tien" class="tag-10">chrétien</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/chr%C3%A9tienne" class="tag-10">chrétienne</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cindy" class="tag-10">cindy</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cindy+lopes" class="tag-10">cindy lopes</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/civilisation" class="tag-10">civilisation</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/clara" class="tag-10">clara</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Clara+Morgane" class="tag-10">Clara Morgane</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/clip" class="tag-10">clip</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/clip+censur%C3%A9" class="tag-10">clip censuré</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/club" class="tag-9">club</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cochon" class="tag-10">cochon</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cocotier" class="tag-10">cocotier</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/comete" class="tag-10">comete</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/commercial" class="tag-10">commercial</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/complicado" class="tag-10">complicado</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/compo" class="tag-10">compo</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/composition" class="tag-10">composition</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/compteur" class="tag-10">compteur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/concert" class="tag-10">concert</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/confirm%C3%A9" class="tag-10">confirmé</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/connectivity" class="tag-10">connectivity</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/conseilnational" class="tag-10">conseilnational</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/consultant" class="tag-10">consultant</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cool" class="tag-10">cool</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/copine" class="tag-10">copine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/coquin" class="tag-10">coquin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/coquins" class="tag-10">coquins</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/couleur" class="tag-10">couleur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/courteney" class="tag-10">courteney</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/courtney" class="tag-10">courtney</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cox" class="tag-10">cox</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/crash" class="tag-10">crash</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cr%C3%A9atif" class="tag-10">créatif</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cr%C3%A9ativit%C3%A9" class="tag-10">créativité</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/crise" class="tag-10">crise</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/crut" class="tag-10">crut</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cubaine" class="tag-10">cubaine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/cul" class="tag-10">cul</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/curseur" class="tag-10">curseur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/danse" class="tag-6">danse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/database" class="tag-10">database</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/databricks" class="tag-10">databricks</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dataguard" class="tag-10">dataguard</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/david" class="tag-10">david</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dba" class="tag-7">dba</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/de+gouden+koi" class="tag-10">de gouden koi</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/d%C3%A9butant" class="tag-10">débutant</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/d%C3%A9couverte" class="tag-10">découverte</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/d%C3%A9groupage" class="tag-10">dégroupage</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/desanges" class="tag-10">desanges</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/d%C3%A9sir" class="tag-10">désir</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dessin" class="tag-10">dessin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/d%C3%A9tente" class="tag-10">détente</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/devin" class="tag-10">devin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/diablotine" class="tag-10">diablotine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dieudo" class="tag-10">dieudo</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dieudonn%C3%A9" class="tag-7">dieudonné</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/digg" class="tag-10">digg</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/direct" class="tag-10">direct</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/disque" class="tag-10">disque</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/divinatoire" class="tag-10">divinatoire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/divx" class="tag-10">divx</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/donn%C3%A9es" class="tag-10">données</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dow" class="tag-10">dow</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/drole" class="tag-10">drole</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dvd" class="tag-10">dvd</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ebay" class="tag-10">ebay</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/eden" class="tag-10">eden</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/edgar+cayce" class="tag-10">edgar cayce</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/egypte" class="tag-10">egypte</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/elie" class="tag-10">elie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/embauche" class="tag-10">embauche</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ench%C3%A8re" class="tag-10">enchère</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/encryption" class="tag-10">encryption</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/engine" class="tag-10">engine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/enseigne+mon+cul" class="tag-10">enseigne mon cul</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/entretien" class="tag-10">entretien</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/%C3%A9rotique" class="tag-10">érotique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/erotism" class="tag-10">erotism</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/%C3%A9rotisme" class="tag-10">érotisme</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/espace" class="tag-10">espace</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/estelle" class="tag-9">estelle</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/esterel" class="tag-10">esterel</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/%C3%A9toile" class="tag-10">étoile</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/%C3%A9tonnant" class="tag-8">étonnant</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/etreme" class="tag-10">etreme</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/%C3%A9tudes" class="tag-10">études</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/europe" class="tag-10">europe</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/euros" class="tag-10">euros</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Eva" class="tag-10">Eva</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/exhib" class="tag-10">exhib</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/experience" class="tag-10">experience</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/explication" class="tag-10">explication</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/extrem" class="tag-10">extrem</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/extreme" class="tag-10">extreme</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Extreme+Carving+Alpine+Snowboarders+%2F+Mt+Rose" class="tag-10">Extreme Carving Alpine Snowboarders / Mt Rose</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Extreme+Carving+Session+2007+%28ECS+2007%29" class="tag-10">Extreme Carving Session 2007 (ECS 2007)</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/F2" class="tag-10">F2</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/facile" class="tag-10">facile</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/fashion+side+boobs" class="tag-10">fashion side boobs</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/faurisson" class="tag-10">faurisson</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/femme" class="tag-10">femme</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/fermeture" class="tag-10">fermeture</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/fetaard" class="tag-10">fetaard</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/fetard" class="tag-10">fetard</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/fete" class="tag-10">fete</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/fiction" class="tag-10">fiction</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/figure" class="tag-10">figure</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/filles" class="tag-7">filles</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/fillon" class="tag-10">fillon</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/film" class="tag-10">film</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/financi%C3%A8re" class="tag-10">financière</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/flash" class="tag-10">flash</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/flo" class="tag-10">flo</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/flo+d%27esterel" class="tag-10">flo d'esterel</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/flores" class="tag-10">flores</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/foi" class="tag-10">foi</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/fourniret" class="tag-10">fourniret</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/france" class="tag-10">france</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/france+coquine" class="tag-10">france coquine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/free" class="tag-10">free</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/french" class="tag-10">french</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/friends" class="tag-10">friends</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/futur" class="tag-10">futur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/gagner" class="tag-10">gagner</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/galaxie" class="tag-10">galaxie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/game" class="tag-10">game</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/geoportail" class="tag-10">geoportail</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/girl" class="tag-10">girl</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/girls" class="tag-10">girls</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/gonzalez" class="tag-10">gonzalez</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/gonzo" class="tag-10">gonzo</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/google" class="tag-10">google</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/gourdel" class="tag-10">gourdel</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/gratuit" class="tag-10">gratuit</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/gratuite" class="tag-10">gratuite</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/grau+du+roi" class="tag-10">grau du roi</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/graveur" class="tag-10">graveur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/grossesse" class="tag-10">grossesse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/groupe" class="tag-10">groupe</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/grunge" class="tag-10">grunge</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/guide" class="tag-10">guide</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/guitare" class="tag-8">guitare</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hadoop" class="tag-10">hadoop</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/haka" class="tag-10">haka</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/happy+new+year" class="tag-10">happy new year</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/haut-d%C3%A9bit" class="tag-10">haut-débit</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hautetfort" class="tag-10">hautetfort</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/HD+DVD" class="tag-10">HD DVD</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/HD+DVD+Player" class="tag-10">HD DVD Player</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/HD+VMD" class="tag-10">HD VMD</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/HD-DVD" class="tag-10">HD-DVD</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hdi" class="tag-10">hdi</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/heartbeats" class="tag-10">heartbeats</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/h%C3%A9t%C3%A9ro" class="tag-10">hétéro</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hi+tech" class="tag-10">hi tech</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/histoire" class="tag-10">histoire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/historique" class="tag-10">historique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hive" class="tag-9">hive</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hollandais" class="tag-10">hollandais</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hollande" class="tag-10">hollande</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hollywood" class="tag-10">hollywood</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/holo" class="tag-10">holo</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/holocaust" class="tag-10">holocaust</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/holocauste" class="tag-10">holocauste</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/holographique" class="tag-10">holographique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/horloge" class="tag-10">horloge</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hot" class="tag-10">hot</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/humanity" class="tag-10">humanity</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/humour" class="tag-10">humour</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/hvault" class="tag-10">hvault</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/HVD" class="tag-10">HVD</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ibm" class="tag-10">ibm</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ibmcloud" class="tag-10">ibmcloud</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/illusion" class="tag-8">illusion</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/illusion+d%27optique" class="tag-8">illusion d'optique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/image" class="tag-10">image</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/images" class="tag-10">images</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/implant" class="tag-10">implant</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/indian" class="tag-10">indian</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/info" class="tag-10">info</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/infos" class="tag-10">infos</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/install" class="tag-10">install</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/instit" class="tag-10">instit</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/interdit+au+moins+de+16+ans" class="tag-10">interdit au moins de 16 ans</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/interdit+de+rire" class="tag-10">interdit de rire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/internet" class="tag-9">internet</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/interville" class="tag-10">interville</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/investiture" class="tag-10">investiture</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ipanema" class="tag-10">ipanema</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/iphone" class="tag-10">iphone</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/israel" class="tag-10">israel</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/j%27embrasse+pas" class="tag-10">j'embrasse pas</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jackson+pollock" class="tag-10">jackson pollock</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jail" class="tag-10">jail</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jay" class="tag-10">jay</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/je+veux+te+voir" class="tag-10">je veux te voir</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jeu" class="tag-8">jeu</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jeux+olympiques" class="tag-10">jeux olympiques</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jjlogdb" class="tag-10">jjlogdb</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jo" class="tag-10">jo</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/job" class="tag-10">job</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jones" class="tag-10">jones</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/jos%C3%A9" class="tag-10">josé</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/josselin" class="tag-10">josselin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/journal" class="tag-10">journal</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/joyeux" class="tag-10">joyeux</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/juif" class="tag-10">juif</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/juifs" class="tag-10">juifs</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/juive" class="tag-10">juive</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/kadhafi" class="tag-10">kadhafi</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/keep" class="tag-10">keep</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/key" class="tag-10">key</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/kilometre" class="tag-10">kilometre</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/kitewing" class="tag-10">kitewing</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/la+cage+dor%C3%A9e" class="tag-10">la cage dorée</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/latino" class="tag-10">latino</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/le+film" class="tag-10">le film</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/le+match" class="tag-10">le match</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/le+pays" class="tag-10">le pays</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/lessons" class="tag-10">lessons</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/leverybeautifulnoel" class="tag-10">leverybeautifulnoel</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/libertin" class="tag-7">libertin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/libetinage" class="tag-10">libetinage</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/liens" class="tag-10">liens</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/live" class="tag-8">live</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/live+webcam" class="tag-10">live webcam</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/log" class="tag-10">log</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/logical" class="tag-10">logical</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/loi+du+travail" class="tag-10">loi du travail</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/loi+m%27komery" class="tag-10">loi m'komery</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/loisir" class="tag-10">loisir</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/loisirs" class="tag-10">loisirs</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/lolotte" class="tag-10">lolotte</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Longoria" class="tag-10">Longoria</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/lopes" class="tag-10">lopes</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/loup" class="tag-10">loup</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/love" class="tag-10">love</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/lyc%C3%A9enne" class="tag-10">lycéenne</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/maddie" class="tag-10">maddie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/magie" class="tag-10">magie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/magie+de+rue" class="tag-10">magie de rue</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/maitres+de+l%27univers" class="tag-10">maitres de l'univers</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/maladie" class="tag-10">maladie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/maman" class="tag-10">maman</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/maniac" class="tag-10">maniac</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/marseille" class="tag-10">marseille</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/mathis" class="tag-10">mathis</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/maximal" class="tag-10">maximal</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/maya" class="tag-10">maya</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/meeting" class="tag-10">meeting</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/m%C3%A9moire" class="tag-10">mémoire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/merde" class="tag-10">merde</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/michel" class="tag-10">michel</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/minibus" class="tag-10">minibus</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/miss" class="tag-10">miss</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/mod%C3%A8le" class="tag-10">modèle</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/modeles" class="tag-10">modeles</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/models" class="tag-10">models</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/modenit%C3%A9" class="tag-10">modenité</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/moderne" class="tag-10">moderne</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/monaco" class="tag-9">monaco</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/monique" class="tag-10">monique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/morgane" class="tag-10">morgane</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/moteur" class="tag-10">moteur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/msn" class="tag-10">msn</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Mu" class="tag-10">Mu</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/mulhouse" class="tag-10">mulhouse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/musclor" class="tag-10">musclor</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/music" class="tag-10">music</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/musique" class="tag-10">musique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/myst%C3%A8re" class="tag-10">mystère</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/N92" class="tag-10">N92</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nabilla" class="tag-10">nabilla</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nano%C3%A9lectroniques." class="tag-10">nanoélectroniques.</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nanotubes" class="tag-10">nanotubes</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/n%C3%A9gatif" class="tag-10">négatif</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/neige" class="tag-10">neige</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/network" class="tag-10">network</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/new+feature" class="tag-10">new feature</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/news" class="tag-10">news</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nice" class="tag-9">nice</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ni%C3%A7oises" class="tag-10">niçoises</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nirvana" class="tag-10">nirvana</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/noel" class="tag-10">noel</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/noir" class="tag-10">noir</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/noir+d%C3%A9sir" class="tag-10">noir désir</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Nokia" class="tag-10">Nokia</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/non+censure" class="tag-10">non censure</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nourisson" class="tag-10">nourisson</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nouveau" class="tag-10">nouveau</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nouveaut%C3%A9s" class="tag-10">nouveautés</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nova" class="tag-10">nova</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/novembre" class="tag-10">novembre</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nu" class="tag-10">nu</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nues" class="tag-10">nues</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/nuits+coquines" class="tag-10">nuits coquines</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/obama" class="tag-10">obama</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/occasion" class="tag-10">occasion</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/occident" class="tag-10">occident</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/odoul" class="tag-10">odoul</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/oksana" class="tag-10">oksana</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/olivier" class="tag-10">olivier</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/online" class="tag-10">online</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/optique" class="tag-8">optique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/oracle" class="tag-5">oracle</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/orange" class="tag-10">orange</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/orange+is+the+new+black" class="tag-10">orange is the new black</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/orelson" class="tag-10">orelson</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/original" class="tag-10">original</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ouverture" class="tag-10">ouverture</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ovs" class="tag-10">ovs</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pac+man" class="tag-10">pac man</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/papa" class="tag-10">papa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/paparazzi" class="tag-10">paparazzi</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pape" class="tag-10">pape</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pas+cher" class="tag-10">pas cher</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/paulina" class="tag-10">paulina</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/peinture" class="tag-10">peinture</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pens%C3%A9e" class="tag-9">pensée</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pens%C3%A9es" class="tag-10">pensées</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/perso" class="tag-10">perso</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/perte" class="tag-10">perte</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/peur" class="tag-10">peur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pgfouine" class="tag-10">pgfouine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pgsql" class="tag-10">pgsql</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pgtune" class="tag-10">pgtune</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/phila%C3%A9" class="tag-10">philaé</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/philosophie" class="tag-10">philosophie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/photo" class="tag-8">photo</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/photos" class="tag-10">photos</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/picking" class="tag-10">picking</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pics" class="tag-10">pics</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pirate" class="tag-10">pirate</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pirates" class="tag-10">pirates</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/plaisirs" class="tag-10">plaisirs</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/plans" class="tag-10">plans</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/player" class="tag-10">player</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pl%C3%A9nitude" class="tag-10">plénitude</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/podcast" class="tag-10">podcast</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/po%C3%A8me" class="tag-10">poème</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/po%C3%A9sie" class="tag-10">poésie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/po%C3%A9tique" class="tag-10">poétique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/police" class="tag-10">police</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/politique" class="tag-10">politique</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/porn" class="tag-9">porn</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/porno" class="tag-7">porno</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pornoprof" class="tag-10">pornoprof</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/port+camargue" class="tag-10">port camargue</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/postgres" class="tag-10">postgres</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/postgresql" class="tag-8">postgresql</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pr%C3%A9sentatrice" class="tag-10">présentatrice</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pr%C3%A9sident" class="tag-10">président</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/prison" class="tag-10">prison</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/prisonnier" class="tag-10">prisonnier</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/private" class="tag-10">private</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/priv%C3%A9" class="tag-10">privé</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/prono" class="tag-10">prono</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/proposition" class="tag-10">proposition</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/prostitution" class="tag-10">prostitution</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/pute" class="tag-10">pute</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/quiche" class="tag-10">quiche</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/quiche+lorraine" class="tag-10">quiche lorraine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/radio" class="tag-8">radio</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rap" class="tag-10">rap</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rapidshare" class="tag-10">rapidshare</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rappelz" class="tag-10">rappelz</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/RAY" class="tag-10">RAY</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rayon" class="tag-10">rayon</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/r%C3%A9alit%C3%A9" class="tag-10">réalité</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/reality" class="tag-10">reality</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/recette" class="tag-10">recette</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/recherche" class="tag-10">recherche</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/r%C3%A9cup" class="tag-10">récup</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/r%C3%A9cup%C3%A9rer" class="tag-10">récupérer</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/r%C3%A9f%C3%A9rence" class="tag-10">référence</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/r%C3%A9gion" class="tag-10">région</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/relief" class="tag-10">relief</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rencontre" class="tag-10">rencontre</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ren%C3%A9" class="tag-10">rené</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/r%C3%A9p%C3%A9tition" class="tag-10">répétition</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/replication" class="tag-10">replication</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/revisionism" class="tag-10">revisionism</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/r%C3%A9visionisme" class="tag-10">révisionisme</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/revolta" class="tag-10">revolta</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rires" class="tag-10">rires</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/robert" class="tag-10">robert</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rock" class="tag-10">rock</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/roman+noir" class="tag-10">roman noir</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/roxanne" class="tag-10">roxanne</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rpm" class="tag-10">rpm</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rs" class="tag-10">rs</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rubio" class="tag-10">rubio</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rue" class="tag-10">rue</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/rugby" class="tag-10">rugby</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sable" class="tag-10">sable</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salaire" class="tag-10">salaire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salon" class="tag-10">salon</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salope" class="tag-10">salope</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salsa" class="tag-1">salsa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salsera" class="tag-10">salsera</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salsero" class="tag-10">salsero</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sarko" class="tag-10">sarko</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/saumon" class="tag-10">saumon</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sauna" class="tag-10">sauna</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sauvegarder" class="tag-10">sauvegarder</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/scala" class="tag-10">scala</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/script" class="tag-10">script</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/search" class="tag-10">search</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/secret" class="tag-9">secret</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/secret+story+3" class="tag-10">secret story 3</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/seins" class="tag-10">seins</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/semoun" class="tag-10">semoun</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/s%C3%A9rie" class="tag-10">série</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/service+TV" class="tag-10">service TV</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/session+2007" class="tag-10">session 2007</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/session+2008" class="tag-10">session 2008</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Sex" class="tag-8">Sex</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sexe" class="tag-10">sexe</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sexy" class="tag-7">sexy</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sexy+video" class="tag-10">sexy video</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sgbd" class="tag-10">sgbd</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/shoah" class="tag-10">shoah</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/shopping" class="tag-10">shopping</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sia" class="tag-10">sia</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/side" class="tag-10">side</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sioniste" class="tag-10">sioniste</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sionniste" class="tag-10">sionniste</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/smells+like+teen+spirit" class="tag-10">smells like teen spirit</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/snowboard" class="tag-10">snowboard</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/soci%C3%A9t%C3%A9" class="tag-10">société</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sociologie" class="tag-10">sociologie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/soir%C3%A9e" class="tag-7">soirée</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/soir%C3%A9es" class="tag-8">soirées</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/soleil" class="tag-10">soleil</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/solitude" class="tag-10">solitude</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sombrero" class="tag-10">sombrero</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/songe" class="tag-10">songe</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sorties" class="tag-10">sorties</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/spark" class="tag-8">spark</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/spears" class="tag-10">spears</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/spectacle" class="tag-10">spectacle</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/speedster" class="tag-10">speedster</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sql" class="tag-10">sql</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/squeletor" class="tag-10">squeletor</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/standby" class="tag-10">standby</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/star" class="tag-7">star</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/star+du+x" class="tag-10">star du x</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/starlette" class="tag-10">starlette</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sting" class="tag-10">sting</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/story" class="tag-10">story</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/strasbourg" class="tag-7">strasbourg</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/streaming" class="tag-8">streaming</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/streap+t-ease" class="tag-10">streap t-ease</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/streaptase" class="tag-10">streaptase</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/streaptease" class="tag-10">streaptease</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/string" class="tag-10">string</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/striptease" class="tag-10">striptease</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/su+doku" class="tag-10">su doku</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sujet" class="tag-10">sujet</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surf" class="tag-6">surf</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surf+alpin" class="tag-10">surf alpin</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surf+alpin+chamrousse+snowboard" class="tag-10">surf alpin chamrousse snowboard</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surfer" class="tag-10">surfer</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/synth%C3%A8se" class="tag-10">synthèse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/system" class="tag-10">system</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/taff" class="tag-10">taff</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Tape" class="tag-10">Tape</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/taupe" class="tag-10">taupe</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tchat" class="tag-9">tchat</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/teach+my+ass" class="tag-10">teach my ass</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/techno" class="tag-10">techno</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tecno" class="tag-10">tecno</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/t%C3%A9l%C3%A9chargement" class="tag-10">téléchargement</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/telephone" class="tag-10">telephone</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/templiers" class="tag-10">templiers</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/temps" class="tag-10">temps</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/termes" class="tag-10">termes</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tetesaclaques" class="tag-10">tetesaclaques</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/timbaland" class="tag-10">timbaland</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tits" class="tag-10">tits</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tlmp" class="tag-10">tlmp</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/too+late" class="tag-10">too late</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/top+50" class="tag-10">top 50</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/torrent" class="tag-10">torrent</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/TOSHIBA" class="tag-10">TOSHIBA</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/Toshiba+HD-A2" class="tag-10">Toshiba HD-A2</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tostaky" class="tag-10">tostaky</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/trace" class="tag-10">trace</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tracker" class="tag-10">tracker</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/travail" class="tag-10">travail</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/truc" class="tag-10">truc</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tueur" class="tag-10">tueur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tuning" class="tag-10">tuning</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tv" class="tag-7">tv</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/tv+r%C3%A9alit%C3%A9" class="tag-10">tv réalité</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/twitter" class="tag-10">twitter</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/un+raryon+de+soleil" class="tag-10">un raryon de soleil</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/usa" class="tag-10">usa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vacances" class="tag-10">vacances</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vacuumdb" class="tag-10">vacuumdb</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/valdoie" class="tag-10">valdoie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/valls" class="tag-10">valls</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vancouver" class="tag-10">vancouver</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/verichip" class="tag-10">verichip</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/v%C3%A9rit%C3%A9" class="tag-10">vérité</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/victoire" class="tag-10">victoire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vid" class="tag-10">vid</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/video" class="tag-8">video</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vid%C3%A9os" class="tag-10">vidéos</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vie" class="tag-10">vie</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vie+morose" class="tag-10">vie morose</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vincent" class="tag-10">vincent</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vine" class="tag-10">vine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/violeur" class="tag-10">violeur</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/virus" class="tag-10">virus</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/visionnaire" class="tag-10">visionnaire</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/vmd" class="tag-10">vmd</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/voile" class="tag-10">voile</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/voiture" class="tag-10">voiture</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/web" class="tag-10">web</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/web+tv" class="tag-10">web tv</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/webcam" class="tag-6">webcam</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/webradio" class="tag-10">webradio</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/webtv" class="tag-9">webtv</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/wii+attitude" class="tag-10">wii attitude</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/william" class="tag-10">william</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/windwos" class="tag-10">windwos</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/x" class="tag-7">x</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/yasmine" class="tag-10">yasmine</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/yelle" class="tag-10">yelle</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/zero" class="tag-10">zero</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/ziegler" class="tag-10">ziegler</a></li>
+</ul>
+</div>
+<footer class="archive-footer">
+</footer>
+</article>
+<article class="archive-pages" id="archive-pages">
+<header class="archive-header">
+<h1>Pages</h1>
+</header>
+<div class="archive-body">
+<ul role="list">
+<li role="listitem"><a href="jesako.html">PAGE HTML</a>
+</li>
+</ul>
+</div>
+<footer class="archive-footer">
+</footer>
+</article>
+</div>
+</article>
+</main>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer-main" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="main-inner">
+<!-- start bottom --><div class="row-fluid"><div class="span6"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101347">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div><div class="span6"><!-- widget sharing on -->
+<div class="box box-sharing" id="box-sharing-101349">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</div>
+<!-- widget sharing off --></div></div><!-- end bottom --></div>
+</footer>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages_fr.js"></script><script src="bs.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="https://static.hautetfort.com/backend/javascript/front/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<script src="https://static.hautetfort.com/backend/javascript/front/jquery.placeholder.js"></script>
+<script>
+jQuery('input, textarea').placeholder();
+</script>
+<![endif]-->
+<!-- start script -->
+<script>
+(function() {
+var po = document.createElement('script'); po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js?onload=onLoadCallback';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<!-- end script --><script>
+if(typeof jQuery == 'function' && jQuery('div[data-cookie]').length) {
+  jQuery('p[data-close] a').on('click', function (event) {
+    event.preventDefault();
+    jQuery('div[data-cookie]').attr('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+} else if(typeof $$ == 'function' && $$('div[data-cookie]').length) {
+  $$('p[data-close] a')[0].observe('click', function (event) {
+    event.preventDefault();
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+}
+if (!document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*cookies_message\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) {
+  if(typeof jQuery == 'function') {
+    jQuery('div[data-cookie]').attr('data-cookie', 'on');
+  } else if(typeof $$ == 'function') {
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'on');
+  }
+}
+</script>
+    
+    <input type='hidden' id='_videoStepTitleText+11' value=' Videos We Recommend' /><input type='hidden' id='_videoStepTitleStyle+11' value='font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-size: 16px;color: #FFFFFF;text-align: center;font-weight: normal;font-style: normal;text-decoration: none;' /><input type='hidden' id='_videoStepBackgroundColor+11' value='#404d55' /><input type='hidden' id='_videoStepHasBorder+11' value='True' /><input type='hidden' id='_videoStepCountry+11' value='FR' /><input type='hidden' id='_videoStepScriptType' value='3' /><div id='divVideoStep+11' class='divVideoStep'></div><script type='text/javascript'>(function (){var vs = document.createElement('script'); vs.type = 'text/javascript';vs.async = true;vs.src = 'http://kweb.videostep.com/GetLink';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vs, s);})();</script>
+    <input type='hidden' id='_videoStepPublisherId' value='111' />
+    
+    <div id="footer">
+    <a href="http://www.hautetfort.com/create_account.php">Créer un blog</a> sur <a href="http://www.hautetfort.com/">Hautetfort</a>
+    <br />
+    <a href="http://www.hautetfort.com/explore/blogs">Les derniers blogs mis à jour</a>&nbsp;|
+    <a href="http://www.hautetfort.com/explore/posts">Les dernières notes publiées</a>&nbsp;|
+    <a href="http://www.hautetfort.com/explore/posts/tags">Les tags les plus populaires</a>
+    <br />
+    <a href="http://www.hautetfort.com/moderate.php?blog_url=http%3A%2F%2Flefetard.hautetfort.com%2F">Déclarer un contenu illicite</a>&nbsp;|
+    <a href="mentions-legales.html">Mentions légales de ce blog</a>
+    &nbsp;|
+    <a href="http://www.hautetfort.com/">Hautetfort</a> est une marque déposée de la société talkSpirit
+    &nbsp;|
+    Créez votre <a href="http://www.hautetfort.com/">blog</a> !
+    </div>
+        
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-351048-6']);
+  _gaq.push(['_trackPageview']);
+_gaq.push(['_trackEvent', 'Free plan', 'Rencontres, Amour', 'lefetard.hautetfort.com']);
+_gaq.push(['_trackEvent', 'Free plan1', 'MultiCategories', 'lefetard.hautetfort.com']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

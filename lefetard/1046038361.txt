@@ -1,0 +1,16 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/modifpara.sql
+-- Author       : Josselin Joly
+-- Description  : Affiche les paramètres modifiables pour chaque bases de données insérées.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @modifpara.sql
+-- Last Modified: 30-AUG-2016
+-- -----------------------------------------------------------------------------------
+set lines 150
+set pages 50
+col VALUE for a50
+col NAME for a50
+
+SELECT  name, isinstance_modifiable i, value
+FROM v$parameter
+WHERE ispdb_modifiable='TRUE' order by name;

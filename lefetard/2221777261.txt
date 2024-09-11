@@ -1,0 +1,260 @@
+deploy_HA.sh
+
+#!/bin/bash
+#script de deploiement de solution HA pour postgres
+# JJY
+# 2021
+######################################################
+HA_LIST_SERVER_PRIM=(toto)
+
+HA_LIST_SERVER_STBY=(titi)
+
+HA_LIST_SERVER_RO=(tata)
+
+SRC=$HOME/adm/dba/sh
+
+#Deploiement sur serveur primaire
+
+for ((i = 0; i < ${#HA_LIST_SERVER_PRIM[@]}; i++)); do
+ssh ${HA_LIST_SERVER_PRIM[i]} "mkdir -p $HOME/adm/dba/sh;mkdir -p $HOME/adm/dba/sql;mkdir -p $HOME/adm/dba/log"
+scp pg_install_HA_primary.sh ${HA_LIST_SERVER_PRIM[i]}:$HOME/adm/dba/sh/install.sh
+state=${HA_LIST_SERVER_PRIM[i]:0:1}
+
+if [ $state = "v" ]
+then
+scp ../sql/config_val.sql ${HA_LIST_SERVER_PRIM[i]}:$HOME/adm/dba/sql/config.sql
+echo "Environnement de VAL"
+else
+scp ../sql/config_prd.sql ${HA_LIST_SERVER_PRIM[i]}:$HOME/adm/dba/sql/config.sql
+echo "Environnement de PROD"
+fi
+done
+
+for ((i = 0; i < ${#HA_LIST_SERVER_PRIM[@]}; i++)); do
+ssh ${HA_LIST_SERVER_PRIM[i]} << EOFSSH1
+cd $SRC
+echo " "
+echo "Configuration du serveur ${HA_LIST_SERVER_PRIM[i]}."
+echo " "
+./install.sh
+EOFSSH1
+done
+
+#Deploiement sur serveur secondaire
+
+for ((i = 0; i < ${#HA_LIST_SERVER_STBY[@]}; i++)); do
+ssh ${HA_LIST_SERVER_STBY[i]} "mkdir -p $HOME/adm/dba/sh;mkdir -p $HOME/adm/dba/sql;mkdir -p $HOME/adm/dba/log"
+scp pg_install_HA_standby.sh ${HA_LIST_SERVER_STBY[i]}:$HOME/adm/dba/sh/install.sh
+done
+
+for ((i = 0; i < ${#HA_LIST_SERVER_STBY[@]}; i++)); do
+ssh  ${HA_LIST_SERVER_STBY[i]} <<  EOFSSH2
+cd $SRC
+echo " "
+echo "Configuration du serveur ${HA_LIST_SERVER_STBY[i]}."
+echo " "
+./install.sh ${HA_LIST_SERVER_PRIM[i]}
+EOFSSH2
+echo "finscr"
+done
+
+#Deploiement sur serveur read/only
+
+for ((i = 0; i < ${#HA_LIST_SERVER_RO[@]}; i++)); do
+ssh ${HA_LIST_SERVER_RO[i]} "mkdir -p $HOME/adm/dba/sh;mkdir -p $HOME/adm/dba/sql;mkdir -p $HOME/adm/dba/log"
+scp pg_install_HA_readonly.sh ${HA_LIST_SERVER_RO[i]}:$HOME/adm/dba/sh/install.sh
+done
+
+for ((i = 0; i < ${#HA_LIST_SERVER_RO[@]}; i++)); do
+ssh ${HA_LIST_SERVER_RO[i]} << EOFSSH3
+cd $SRC
+echo "Configuration du serveur ${HA_LIST_SERVER_RO[i]}."
+./install.sh ${HA_LIST_SERVER_STBY[i]} ${HA_LIST_SERVER_RO[i]}
+EOFSSH3
+done
+exit;
+______________________________________________________________________________
+pg_install_HA_primary.sh
+
+
+
+#!/bin/bash
+# script de configuration
+# pour une installation en HA postgres
+# JJY
+# 2021
+########################################
+. $HOME/.bash_profile
+export CLIENT_ENCODING=UTF8
+export LANG=fr_FR.UTF-8
+export NLS_LANG=${LANG}
+
+cd $(dirname $0)
+
+DB=${HOSTNAME:5:3}
+pg_ctl stop
+cp $PGDATA/*.conf $HOME
+rm -rf /pgdata/*
+rm -rf /pgindx/*
+rm -rf /pgtmp/*
+rm -rf /pgwal/pg_wal/*
+rm -rf /pgarchive/*
+rm -rf /pgcluster/data/*
+
+
+mkdir -p /pgdata/tbs_repmgr_data
+mkdir -p /pgdata/tbs_${DB}_data
+mkdir -p /pgindx/tbs_${DB}_indx
+mkdir -p /pgtmp/pgsql_tmp
+
+initdb -D /pgcluster/data --wal-segsize=512 --waldir=/pgwal/pg_wal
+
+cp $HOME/pg_hba.conf $PGDATA
+echo "max_connections=400" >>$HOME/postgresql.conf
+echo "min_wal_size=1GB" >>$HOME/postgresql.conf
+echo "max_wal_size=2GB" >>$HOME/postgresql.conf
+cp $HOME/postgresql.conf $PGDATA
+cp $HOME/postgresql.replication.conf $PGDATA
+#cp $HOME/pg_ident.conf $PGDATA
+
+pg_ctl -D /pgcluster/data -l /pglog/postgresql-logfile_start.log start -o "--log_duration=off --log_line_prefix='%t:%r:%u@%d:[%p]: ' --log_directory='/pglog' --log_filename='postgresql-%Y-%m-%d_%H%M%S.log' --shared_buffers=10GB --max_connections=400 --maintenance_work_mem=2GB --effective_cache_size=4GB --checkpoint_completion_target=0.9  --wal_buffers=32MB --max_wal_size=2GB --min_wal_size=1GB"
+
+psql < ../sql/config.sql
+
+repmgr -f /etc/repmgr.conf primary register
+
+repmgr cluster show
+
+________________________________________________________________________________________________________
+
+pg_install_HA_standby.sh
+
+#!/bin/bash
+# script de configuration
+# pour une installation en HA postgres
+# JJY
+# 2021
+########################################
+
+. $HOME/.bash_profile
+export CLIENT_ENCODING=UTF8
+export LANG=fr_FR.UTF-8
+export NLS_LANG=${LANG}
+
+cd $(dirname $0)
+
+DB=${HOSTNAME:5:3}
+
+pg_ctl stop
+
+rm -rf /pgdata/*
+rm -rf /pgindx/*
+rm -rf /pgtmp/*
+rm -rf /pgwal/pg_wal/*
+rm -rf /pgarchive/*
+rm -rf /pgcluster/data/*
+
+mkdir -p /pgdata/tbs_repmgr_data
+mkdir -p /pgdata/tbs_${DB}_data
+mkdir -p /pgindx/tbs_${DB}_indx
+mkdir -p /pgtmp/pgsql_tmp
+
+repmgr -h $1 -U repuser -d repmgr -f /etc/repmgr.conf standby clone
+
+/usr/lib/postgresql/11/bin/pg_ctl start -D /pgcluster/data
+
+repmgr -f /etc/repmgr.conf standby register
+sleep 2
+repmgr cluster show
+
+# Wait for 2 seconds
+sleep 2
+
+echo "Faire ctrl-C si le script de rend pas la main!"
+
+________________________________________________________________
+
+pg_install_HA_readonly.sh
+
+
+
+#!/bin/bash
+# script de configuration
+# pour une installation en HA postgres
+# JJY
+# 2021
+########################################
+
+. $HOME/.bash_profile
+export CLIENT_ENCODING=UTF8
+export LANG=fr_FR.UTF-8
+export NLS_LANG=${LANG}
+
+cd $(dirname $0)
+
+DB=${HOSTNAME:5:3}
+
+# Get its PID
+PID=$!
+
+pg_ctl stop
+
+rm -rf /pgdata/*
+rm -rf /pgindx/*
+rm -rf /pgtmp/*
+rm -rf /pgwal/pg_wal/*
+rm -rf /pgarchive/*
+rm -rf /pgcluster/data/*
+
+mkdir -p /pgdata/tbs_repmgr_data
+mkdir -p /pgdata/tbs_${DB}_data
+mkdir -p /pgindx/tbs_${DB}_indx
+mkdir -p /pgtmp/pgsql_tmp
+
+$PGHOME/bin/pg_basebackup -D /pgcluster/data -h $1 -U repuser -X stream --waldir=/pgwal/pg_wal -v
+
+cat /dev/null > $PGDATA/recovery.conf
+
+echo "standby_mode = 'on'" > $PGDATA/recovery.conf
+echo "primary_conninfo = 'host=$1 user=repuser application_name=$2 port=5432 passfile=''/home/postgres/.pgpass'''" >> $PGDATA/recovery.conf
+echo "recovery_target_timeline = 'latest'" >> $PGDATA/recovery.conf
+echo "archive_cleanup_command = 'pg_archivecleanup /pgarchive %r'" >> $PGDATA/recovery.conf
+
+mkdir -p /home/postgres/adm/pg_conf
+cp $PGDATA/*.conf /home/postgres/adm/pg_conf
+ln -f -s  /home/postgres/adm/pg_conf/postgresql.conf /pgcluster/data/postgresql.conf
+ln -f -s /home/postgres/adm/pg_conf/postgresql.replication.conf /pgcluster/data/postgresql.replication.conf
+ln -f -s  /home/postgres/adm/pg_conf/pg_hba.conf /pgcluster/data/pg_hba.conf
+ln -f -s  /home/postgres/adm/pg_conf/recovery.conf /pgcluster/data/recovery.conf
+
+echo "shared_preload_libraries='pg_stat_statements' ">> $PGDATA/postgresql.replication.conf
+
+pg_ctl start
+echo "Faire ctrl-C si le script de rend pas la main!"
+exit
+
+
+
+
+_________________________________________________
+
+config_val.sql ou config_val.sql (seul le mot de passe change!)
+
+o configHA.log
+CREATE ROLE repuser;
+ALTER ROLE repuser WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION NOBYPASSRLS;
+ALTER ROLE repuser WITH PASSWORD 'lemotdepasse';
+
+CREATE TABLESPACE temp OWNER postgres LOCATION '<temp_dir>';
+CREATE TABLESPACE tbs_repmgr_data OWNER postgres LOCATION '<repmgr_dir_data>';
+
+GRANT ALL ON TABLESPACE tbs_repmgr_data TO repuser;
+CREATE DATABASE repmgr WITH TEMPLATE = template0 ENCODING = 'UTF8' TABLESPACE = 'tbs_repmgr_data';
+ALTER DATABASE repmgr SET temp_tablespaces TO 'temp';
+ALTER DATABASE repmgr OWNER TO repuser;
+c repmgr
+CREATE SCHEMA repmgr;
+ALTER SCHEMA repmgr OWNER TO repuser;
+CREATE EXTENSION IF NOT EXISTS repmgr WITH SCHEMA repmgr;
+c postgres
+ALTER ROLE repuser SET search_path TO repuser,repmgr, "$user", public;

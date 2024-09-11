@@ -1,0 +1,25 @@
+Pour un standalone, non cluster (non RAC) :
+
+/OraData/app/oragridinfra/perl/bin/perl -I/OraData/app/oragridinfra/perl/lib -I/OraData/app/oragridinfra/crs/install /OraData/app/oragridinfra/crs/install/roothas.pl
+
+2016-08-17 16:19:21: Checking for super user privileges
+2016-08-17 16:19:21: User has super user privileges
+2016-08-17 16:19:21: Parsing the host name
+Using configuration parameter file: /OraData/app/oragridinfra/crs/install/crsconfig_params
+LOCAL ADD MODE 
+Creating OCR keys for user 'grid', privgrp 'oinstall'..
+Operation successful.
+CRS-4664: Node localhost successfully pinned.
+Adding daemon to inittab
+CRS-4124: Oracle High Availability Services startup failed.
+CRS-4000: Command Start failed, or completed with errors.
+ohasd failed to start: Ioctl() inappropré pour un périphérique
+ohasd failed to start: Ioctl() inappropré pour un périphérique at /OraData/app/oragridinfra/crs
+
+[root@localhost bin]# /OraData/app/oragridinfra/bin/crsctl check has
+CRS-4639: Could not contact Oracle High Availability Services
+
+en root
+crsctl enable has
+crsctl start has
+

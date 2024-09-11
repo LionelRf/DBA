@@ -1,0 +1,140 @@
+Il est possible d'utiliser le meme binaire mysql pour gérer plusieurs instances mysql sur des ports et/ou ip differentes sur le même serveur.
+
+==Installation==
+L'installation se fait via le systeme de paquet habituel
+<pre># yum install mysql-server</pre>
+
+Une fois installé nous allons crée les repertoires qui contiendront les nouvelles instances
+<pre># mkdir -p /export/data/mysql_33023
+# mkdir -p /export/data/mysql_33024</pre>
+
+Puis nous allons faire des liens depuis /var/lib (optionnel car les chemins plus haut peuvent être défini en dur sur le fichier de configuration):
+<pre># cd /var/lib
+# ln -s /export/data/mysql_33023
+# ln -s /export/data/mysql_33024</pre>
+
+Enfin, nous allons installer les bases
+<pre># mysql_install_db --user=mysql --datadir=/var/lib/mysql_33023/
+# mysql_install_db --user=mysql --datadir=/var/lib/mysql_33024/</pre>
+
+==Configuration==
+Dans le fichier my.cnf
+<source lang="text">
+[mysqld_multi]
+mysqld     = /usr/bin/mysqld_safe
+mysqladmin = /usr/bin/mysqladmin
+user       = multi_admin
+password   = xxxxxxx
+log        = /var/log/mysqld_multi.log
+
+[mysqld33023]
+socket     = /var/lib/mysql_33023/mysql.sock
+port       = 33023
+pid-file   = /var/lib/mysql_33023/mrs-prd-ossbdd-1.pid
+datadir    = /var/lib/mysql_33023
+language   = /usr/share/mysql/english
+user       = mysql
+mysqld     = /usr/libexec/mysqld
+log-error  = /var/lib/mysql_33023/mrs-prd-ossbdd-1.err
+
+[mysqld33024]
+socket     = /var/lib/mysql_33024/mysql.sock
+port       = 33024
+pid-file   = /var/lib/mysql_33024/mrs-prd-ossbdd-1.pid
+datadir    = /var/lib/mysql_33024
+language   = /usr/share/mysql/english
+user       = mysql
+mysqld     = /usr/libexec/mysqld
+log-error  = /var/lib/mysql_33024/mrs-prd-ossbdd-1.err
+</source>
+
+Il est possible de lancer les instances
+<pre># mysqld_multi start 33023
+# mysqld_multi start 33024</pre>
+
+Enfin, il faut créer l'utilisateur multi_admin afin de lui permettre d'éteindre les instances. Nous allons aussi modifier l'utilisateur root
+<pre># mysql -u root -S /var/lib/mysql_33023/mysql.sock -p
+mysql> GRANT SHUTDOWN ON *.* TO 'multi_admin'@'localhost' IDENTIFIED BY 'xxxxxxx';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' identified by "yyyyyyy" WITH GRANT OPTION;
+mysql> flush privileges;
+# mysql -u root -S /var/lib/mysql_33024/mysql.sock -p
+mysql> GRANT SHUTDOWN ON *.* TO 'multi_admin'@'localhost' IDENTIFIED BY 'xxxxxxx';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' identified by "yyyyyyy" WITH GRANT OPTION;
+mysql> flush privileges;</pre>
+
+Il est désormais possible d'éteindre les instances
+<pre># mysqld_multi stop 33023
+# mysqld_multi stop 33024</pre>
+
+==Lancement au boot==
+Copier le scripts dans /etc/init.d/mysqld_multi.server
+<source lang="bash">
+#!/bin/sh
+#
+# A simple startup script for mysqld_multi by Tim Smith and Jani Tolonen.
+# This script assumes that my.cnf file exists either in /etc/my.cnf or
+# /root/.my.cnf and has groups [mysqld_multi] and [mysqldN]. See the
+# mysqld_multi documentation for detailed instructions.
+#
+# This script can be used as /etc/init.d/mysql.server
+#
+# Comments to support chkconfig on RedHat Linux
+# chkconfig: 2345 64 36
+# description: A very fast and reliable SQL database engine.
+#
+# Version 1.0
+#
+
+basedir=/var/lib/mysql/mysql
+bindir=/usr/bin/
+
+if test -x $bindir/mysqld_multi
+then
+  mysqld_multi="$bindir/mysqld_multi";
+else
+  echo "Can't execute $bindir/mysqld_multi from dir $basedir";
+  exit;
+fi
+
+case "$1" in
+    'start' )
+        "$mysqld_multi" start $2
+        ;;
+    'stop' )
+        "$mysqld_multi" stop $2
+        ;;
+    'report' )
+        "$mysqld_multi" report $2
+        ;;
+    'restart' )
+        "$mysqld_multi" stop $2
+        "$mysqld_multi" start $2
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|report|restart}" >&2
+        ;;
+esac</source>
+
+On rajoute les droits d'execution.
+Puis on test que toutes les instances se lancent et s'arrêtent correctement via le script :
+<pre># /etc/init.d/mysqld_multi.server start
+# /etc/init.d/mysqld_multi.server stop</pre>
+
+Puis configurer chkconfig
+<pre># chkconfig mysqld_multi.server on</pre>
+
+==Administration==
+===Lancement de l'instance 33024===
+<pre># mysqld_multi start 33024</pre>
+ou
+<pre># /etc/init.d/mysqld_multi.server start 33024</pre>
+===Extinction de l'instance 33024===
+<pre># mysqld_multi stop 33024</pre>
+ou
+<pre># /etc/init.d/mysqld_multi.server stop 33024</pre>
+===Status de l'instance 33024===
+<pre># mysqld_multi report 33024</pre>
+ou
+<pre># /etc/init.d/mysqld_multi.server start 33024</pre>
+===Connexion à l'instance 33024===
+<pre># mysql -S /export/data/mysql_33024/mysql.sock -u root -p</pre>

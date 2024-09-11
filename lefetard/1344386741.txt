@@ -1,0 +1,14 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/listall.sql
+-- Author       : Josselin Joly
+-- Description  : Liste les datafiles, control files, redologs.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @listall.sql
+-- Last Modified: 30-AUG-2016
+-- -----------------------------------------------------------------------------------
+col fichier for a80
+SELECT con_id id, name fichier FROM (
+SELECT con_id, name FROM V$CONTROLFILE UNION ALL 
+SELECT con_id, name FROM V$DATAFILE UNION ALL
+SELECT con_id, name FROM V$TEMPFILE UNION ALL
+SELECT con_id, member FROM V$LOGFILE ) ORDER BY con_id, fichier;

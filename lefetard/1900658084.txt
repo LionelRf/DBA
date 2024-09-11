@@ -1,0 +1,12 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/sPDB.sql
+-- Author       : Josselin Joly
+-- Description  : Afficher les bases de données insérées dans le conteneur mutualisé depuis la vue statique.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @sPDB.sql
+-- Last Modified: 30-AUG-2016
+-- -----------------------------------------------------------------------------------
+col PDB_NAME for a50
+
+SELECT con_id, pdb_id, pdb_name, dbid, creation_scn
+FROM cdb_pdbs;

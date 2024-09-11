@@ -1,0 +1,8 @@
+lspv | awk '{ print $1, $3 }' |egrep "data|redo|back"| while read hd vg
+ do
+         lspv -l $hd                     \
+                 | grep -v "N/A"         \
+                 | grep -v ":"           \
+                 | grep -v NAME          \
+                 | awk -v vg="$vg" -v hd="$hd" '{ l=length($1); t="\t"; if (l<9) { t="\t\t" } ; print "HD:", hd, " VG:", vg, "  VOL:", $1, t,"Mount:", $5 }'
+ done

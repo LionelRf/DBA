@@ -1,0 +1,10 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/dPDB.sql
+-- Author       : Josselin Joly
+-- Description  : Afficher les bases de données insérées dans le conteneur mutualisé depuis la vue dynamique.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @dPDB.sql
+-- Last Modified: 30-AUG-2016
+-- -----------------------------------------------------------------------------------
+SELECT con_id,name,open_mode,restricted, total_size/1048576 Total_size_en_MB 
+FROM v$pdbs;

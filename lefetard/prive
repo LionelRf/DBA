@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="ie6 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 7]><html class="ie7 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 8]><html class="ie8 ie678" lang="fr"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="fr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]<!--><html lang="fr"><!--<![endif]-->
+<head>
+<meta charset="UTF-8"/>
+<title>Privé - The Best of DBA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Maîtriser les bases de données, maximiser les performances."/>
+<meta name="keywords" content="Privé, prive, Oracle, Postgresql, Sqlserver, MySQL, database, RMAN, Cassandra"/>
+<meta name="robots" content="index,follow"/>
+<link rel="stylesheet" href="025395.css"/>
+<link rel="stylesheet" href="style.css?1722328855"/>
+<!--[if (gt IE 8)|!(IE)]<!-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic|" rel="stylesheet"/>
+<!--<![endif]-->
+<!--[if lte IE 8]>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400italic" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700italic" rel="stylesheet"/>
+<![endif]-->
+<link rel="stylesheet" href="font-awesome.min.css"/>
+<!--[if IE 7]><link rel="stylesheet" href="https://static.hautetfort.com/backend/css/font/font-awesome-ie7.min.css"/><![endif]--><link rel="shortcut icon" href="favicon.ico"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hautetfort.com/admin/rsd/71687"/>
+<link rel="start" href="index-0.html" title="Home"/>
+<link rel="canonical" href="index.html.20"/>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- start script --><!-- end script -->
+<script type="text/javascript">
+
+function popupCenter(url,width,height,xtr) {
+    var top=(screen.height-height)/2;
+    var left=(screen.width-width)/2;
+    window.open(url,"",xtr+",top="+top+",left="+left+",width="+width+",height="+height);
+}
+
+</script>
+
+    <style type="text/css">
+body {
+    margin-bottom: 0px;
+}
+#toppub { display: block; width: 555px; height: 140px; margin: 0 auto;}
+.content a img {border:0px;}
+#footer {
+    text-align: center;
+    font-size: 65%;
+    width: auto;
+    margin: 2em auto 0px auto;
+    color: #000;
+    line-height: 210%;
+    display: block;
+
+    padding: 15px 15px 35px ;
+    background: #fff url("hetf-background.png") no-repeat 45% 10%;
+    border-top: 3px solid #D20000;
+        
+}
+#footer a {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+    display: inline;
+}
+#footer a:hover {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+    display: inline;
+}
+#sponsored-links {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    margin-bottom: -5px;
+}
+</style>
+
+</head><body id="page-category" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<div data-cookie="off"><p data-close><a href="prive#" title="J'ai lu ce message"><span class="ui-icon ui-icon-check">Ok</span></a></p><p data-text>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies. Ces derniers assurent le bon fonctionnement de nos services. <a href="https://www.hautetfort.com/cookies.html" title="En savoir plus sur les cookies" target="_blank">En savoir plus</a>.</p></div><style>[data-cookie]{display:none;position:fixed;backface-visibility:hidden;bottom:0;left:0;width:100%;background:black;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGDYDAAAvQC1UcyxoAAAAABJRU5ErkJggg==);color:white;padding:.5em 0;text-align:center;z-index:9999;}
+[data-cookie~="on"]{display:block;}
+[data-cookie] p{color:white;font-size:12px;margin:0;padding:0 .5em;line-height:1.3em;text-shadow:1px 0 3px rgba(0,0,0,1);}
+[data-cookie] a{color:white;}
+[data-cookie] [data-text]{margin:1px auto 0;text-align:left;max-width:980px;}
+[data-cookie] [data-close]{float:right;margin:0 .5em;}
+[data-cookie] .ui-icon{background-image: url(http://download.jqueryui.com/themeroller/images/ui-icons_ffffff_256x240.png);}
+.ui-icon-check {background-position: -64px -144px;}
+.ui-icon {height: 16px;width: 16px;}
+.ui-icon {background-repeat: no-repeat;display: block;overflow: hidden;text-indent: -99999px;}
+@media print {[data-cookie]{display:none;}}
+</style>
+<div class="wrapper">
+<div class="container">
+<!--[if lte IE 7><p class="alert">Votre navigateur est <strong>périmé</strong>. <a href="http://browsehappy.com/" target="_blank">Veuillez mettre votre navigateur à jour.</a></p><![endif]-->
+<a href="prive#content" class="skip-link" accesskey="s">Aller au contenu</a>
+<header class="header-main" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<div class="main-inner">
+<!-- start top --><div class="row-fluid"><div class="span9"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101343">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div></div><div class="row-fluid"><div class="span12"><!-- widget menu on -->
+<div role="navigation" class="box box-menu box-menu-sticky" id="box-menu-101345">
+<div class="box-body">
+<span class="menu-switcher" id="display-navigation"><i class="icon icon-reorder"></i></span><nav role="navigation" id="navigation-to-display">
+<ul role="menu">
+<li role="menuitem"><a href="index-0.html">Accueil</a></li>
+<li class="masked-on-mobile" role="menuitem"><a href="archives">Archives</a></li>
+<li role="menuitem"><a href="about.html">À propos</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="index-0.html">Notes</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-categories">Catégories</a></li><li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-months">Archives</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- widget menu off --></div></div><!-- end top --></div>
+</header>
+<div class="body-main" role="main">
+<div class="main-inner">
+<div class="row-fluid">
+<div class="span4">
+<aside role="complementary" class="aside aside-1" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<!-- start column 1 --><!-- widget search on -->
+<article class="box box-search" id="box-search-101337">
+<header class="box-header">
+<h1><i class="icon icon-search"></i><span class="box-title-text">Rechercher</span></h1>
+</header>
+<div class="box-body">
+<form class="form-search" name="form-box-search-101337" id="form-box-search-101337" role="search" method="get" action="http://lefetard.hautetfort.com/apps/search">
+<p class="form-submit">
+<span class="row-fluid">
+<span class="span10">
+<span class="form-field">
+<input name="s" id="search-field-box-search-101337" type="search" placeholder="Entrer votre recherche" required="required"/>
+<label class="error" for="search-field-box-search-101337" style="display:none"></label>
+</span>
+</span>
+<span class="span2">
+<span class="form-button">
+<input name="search-submit-box-search-101337" id="search-submit-box-search-101337" class="button" type="submit" value="OK"/>
+</span>
+</span>
+</span>
+</p>
+</form>
+</div>
+</article>
+<!-- widget search off --><!-- widget list on -->
+<article class="box box-list box-list-document" id="box-list-457254">
+<header class="box-header">
+<h1><i class="icon icon-ellipsis-vertical"></i><span class="box-title-text">CV</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="lists-list">
+<li role="listitem">
+<a href="dba-freelance.html">
+<span>DBA Freelance</span>
+</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget list off --><!-- widget about on -->
+<article class="box box-about" id="box-about-101313">
+<header class="box-header">
+<h1><i class="icon icon-info-sign"></i><span class="box-title-text">À propos</span></h1>
+</header>
+<div class="box-body">
+<p class="description" itemscope="itemscope" itemtype="http://schema.org/AboutPage">
+<span itemprop="description">  - Dynamique, rigoureux, pédagogue, à l'écoute des besoins de mes clients ;...</span>
+<a href="about.html" itemprop="url">
+Lire la suite</a>
+</p>
+</div>
+</article>
+<!-- widget about off --><!-- widget authors on -->
+<article class="box box-author" id="box-author-101318" style="display:none">
+<header class="box-header">
+<h1><i class="icon icon-quote-right"></i><span class="box-title-text">Auteurs</span></h1>
+</header>
+<div class="box-body">
+<h2>Propriétaire du blog</h2>
+<a href="about.html">
+<figure class="inline-picture author-main">
+<span class="picture">
+<img src="https://size.blogspirit.net/hautetfort.com/lefetard/50/media/01/01/3775567719.png" alt=""/>
+</span>
+<figcaption class="description">
+<p>joguess - 767 notes</p>
+</figcaption>
+</figure>
+</a>
+<ul role="list" class="authors-list">
+</ul>
+</div>
+</article>
+<!-- widget authors off --><!-- widget category on -->
+<article class="box box-category" id="box-category-101322">
+<header class="box-header">
+<h1><i class="icon icon-level-down"></i><span class="box-title-text">Catégories</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="categories-list">
+<li role="listitem">
+<a href="index.html.1">Actualité</a>
+</li>
+<li role="listitem">
+<a href="index.html.2">Blog</a>
+</li>
+<li role="listitem">
+<a href="index.html.3">Bons plans</a>
+</li>
+<li role="listitem">
+<a href="index.html.4">CINEMA</a>
+</li>
+<li role="listitem">
+<a href="index.html.21">Professionnel</a>
+<ul>
+<li role="listitem">
+<a href="index.html.22">BIG DATA - hadoop -spark</a>
+</li>
+<li role="listitem">
+<a href="index.html.23">Cassandra</a>
+</li>
+<li role="listitem">
+<a href="index.html.24">Cloud Control 13C</a>
+</li>
+<li role="listitem">
+<a href="index.html.25">Cloud db</a>
+</li>
+<li role="listitem">
+<a href="index.html.26">HVAULT</a>
+</li>
+<li role="listitem">
+<a href="index.html.27">MongoDB</a>
+</li>
+<li role="listitem">
+<a href="index.html.28">monitoring</a>
+</li>
+<li role="listitem">
+<a href="index.html.29">Ora2pg</a>
+</li>
+<li role="listitem">
+<a href="index.html.30">Oracle RAC</a>
+</li>
+<li role="listitem">
+<a href="index.html.31">Oracle12C,19C</a>
+</li>
+<li role="listitem">
+<a href="index.html.32">Postgresql</a>
+</li>
+<li role="listitem">
+<a href="index.html.33">RMAN</a>
+</li>
+<li role="listitem">
+<a href="index.html.34">Scripts</a>
+</li>
+<li role="listitem">
+<a href="index.html.35">Soluce</a>
+</li>
+<li role="listitem">
+<a href="index.html.36">SQLServer</a>
+</li>
+<li role="listitem">
+<a href="index.html.37">Système</a>
+</li>
+<li role="listitem">
+<a href="index.html.38">tuning</a>
+</li>
+</ul>
+</li>
+
+</ul>
+</div>
+</article>
+<!-- widget category off --><!-- widget links on -->
+<article class="box box-link" id="box-custom-236539">
+<header class="box-header">
+<h1><i class="icon icon-link"></i><span class="box-title-text">Référencement</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="links-list">
+<li role="listitem"><a href="http://www.extremecarving.com/index_fr.html" target="_blank">SURF</a></li>
+<li role="listitem"><a href="http://secretebase.free.fr/" target="_blank">Base Secrète</a></li>
+<li role="listitem"><a href="http://newzealand.over-blog.com/" target="_blank">Le blog de Mat</a></li>
+<li role="listitem"><a href="http://missdactari-blog.blogspot.com/" target="_blank">Le Blog de Camille</a></li>
+<li role="listitem"><a href="http://www.bobbydurrettdba.com/" target="_blank">Le Blog de Bobby DBA</a></li>
+<li role="listitem"><a href="https://oraclue.com/" target="_blank">Miladin Modrakovic's Blog</a></li>
+<li role="listitem"><a href="http://oradbastuff.blogspot.fr/" target="_blank">Sfaturi Oracle / Tips and tricks OracleDBA</a></li>
+<li role="listitem"><a href="http://orababy.blogspot.fr/" target="_blank">ORACLE DBA Knowledge Share</a></li>
+<li role="listitem"><a href="http://www.drazzib.com/docs/bdd/oracle/" target="_blank">Site de Damien Raude Morvan</a></li>
+<li role="listitem"><a href="http://www.database-expert.com/" target="_blank">Edward Stoever DBA</a></li>
+<li role="listitem"><a href="https://www.dba-scripts.com" target="_blank">Oracle DBA (Cyrille Modiano)</a></li>
+</ul>
+</div>
+</article>
+<!-- widget links off --><!-- widget archives on -->
+<article class="box box-archive" id="box-archive-101316">
+<header class="box-header">
+<h1><i class="icon icon-archive"></i><span class="box-title-text">Archives</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="archives-list">
+<li role="listitem">
+<a href="index.html.46">lun. 29 juil. - dim. 04 août</a>
+</li>
+<li role="listitem">
+<a href="index.html.47">lun. 08 juil. - dim. 14 juil.</a>
+</li>
+<li role="listitem">
+<a href="index.html.48">lun. 17 juin - dim. 23 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.49">lun. 10 juin - dim. 16 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.50">lun. 27 mai - dim. 02 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.51">lun. 20 mai - dim. 26 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.52">lun. 13 mai - dim. 19 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.53">lun. 29 avril - dim. 05 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.54">lun. 22 avril - dim. 28 avril</a>
+</li>
+<li role="listitem">
+<a href="index.html.55">lun. 15 avril - dim. 21 avril</a>
+</li>
+</ul>
+</div>
+<footer class="box-footer">
+<p><a href="index.html.56">Toutes les archives</a></p>
+</footer>
+</article>
+<!-- widget archives off --><!-- widget lastupdatedblogs on -->
+<article class="box box-blog" id="box-blog-101319">
+<header class="box-header">
+<h1><i class="icon icon-external-link-sign"></i><span class="box-title-text">Derniers blogs mis à jour</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="last-posts-list">
+<li role="listitem"><a href="http://linformationnationaliste.hautetfort.com/archive/2024/07/30/ouverture-des-jo-ces-sportifs-qui-n-ont-pas-aime-la-cene-6508849.html">Ouverture des JO : ces sportifs qui n’ont pas...</a> sur <a href="http://linformationnationaliste.hautetfort.com/">l'information nationaliste</a></li>
+<li role="listitem"><a href="http://lactualitedessocialistes.hautetfort.com/archive/2024/07/31/le-recap-de-splann-un-rattrapage-de-l-actualite-bretonne-en-6508736.html">Le récap' de « Splann ! », un rattrapage de...</a> sur <a href="http://lactualitedessocialistes.hautetfort.com/">Actualités socialistes</a></li>
+<li role="listitem"><a href="http://metapoinfos.hautetfort.com/archive/2024/07/20/j-d-vance-colistier-de-trump-et-figure-de-proue-des-nationau-6507781.html">J. D. Vance, colistier de Trump et figure de...</a> sur <a href="http://metapoinfos.hautetfort.com/">Métapo infos</a></li>
+<li role="listitem"><a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/archive/2024/07/26/la-france-annoncent-la-reconnaissance-de-la-marocanite-du-sa-6508408.html">La France annonce la reconnaissance de la...</a> sur <a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/">«-Le Royaume Chérifien du Maroc -Chihab 25...</a></li>
+<li role="listitem"><a href="http://formesetcouleurs.hautetfort.com/archive/2024/07/30/stage-adultes-2024-6508829.html">STAGE ADULTES JUILLET 2024</a> sur <a href="http://formesetcouleurs.hautetfort.com/">Formes & Couleurs</a></li>
+<li role="listitem"><a href="http://cfdt-centrale-auchan.hautetfort.com/archive/2024/07/30/avis-cfdt-ari-sur-le-projet-d-organisation-de-la-direction-digitale.html">Avis CFDT ARI sur le projet d'organisation de...</a> sur <a href="http://cfdt-centrale-auchan.hautetfort.com/">CFDT Auchan Centrale ARS, ARA, ARI et OIA</a></li>
+<li role="listitem"><a href="http://synthesenationale.hautetfort.com/archive/2024/07/30/lyon-suite-a-une-agression-gauchiste-un-jeune-nationaliste-temoigne.html">Lyon : suite à une agression gauchiste, un...</a> sur <a href="http://synthesenationale.hautetfort.com/">SYNTHESE NATIONALE</a></li>
+<li role="listitem"><a href="http://www.belgicatho.be/archive/2024/07/30/tres-etrange-la-facon-dont-la-presse-mainstream-a-rendu-comp-6508818.html">Très étrange : la façon dont la presse...</a> sur <a href="http://www.belgicatho.be/">BELGICATHO</a></li>
+<li role="listitem"><a href="http://www.cuisine-toulousaine.com/archive/2024/07/30/salade-de-saucisse-de-toulouse-et-lentilles-6508814.html">Salade de Saucisse de Toulouse et lentilles</a> sur <a href="http://www.cuisine-toulousaine.com/">Cuisine Toulousaine et Occitane</a></li>
+<li role="listitem"><a href="http://lionelbaland.hautetfort.com/archive/2024/07/30/lionel-baland-dans-le-reportage-de-tv-libertes-sur-le-passag-6508813.html">Lionel Baland dans le reportage de TV Libertés...</a> sur <a href="http://lionelbaland.hautetfort.com/">Lionel Baland</a></li>
+</ul>
+</div>
+</article>
+<!-- widget lastupdatedblogs off --><!-- widget calendar on -->
+<article class="box box-calendar" id="box-calendar-101321">
+<header class="box-header">
+<h1><i class="icon icon-calendar"></i><span class="box-title-text">Juillet 2024</span></h1>
+</header>
+<div class="box-body">
+<table>
+<caption>Calendrier des notes en Juillet 2024</caption>
+<tr>
+<th><abbr title="Dimanche">D</abbr></th>
+<th><abbr title="Lundi">L</abbr></th>
+<th><abbr title="Mardi">M</abbr></th>
+<th><abbr title="Mercredi">M</abbr></th>
+<th><abbr title="Jeudi">J</abbr></th>
+<th><abbr title="Vendredi">V</abbr></th>
+<th><abbr title="Samedi">S</abbr></th>
+</tr>
+<tr>
+<td></td>
+<td><span> 1</span></td>
+<td><span> 2</span></td>
+<td><span> 3</span></td>
+<td><span> 4</span></td>
+<td><span> 5</span></td>
+<td><span> 6</span></td>
+</tr>
+<tr>
+<td><span> 7</span></td>
+<td><span> 8</span></td>
+<td><span> 9</span></td>
+<td class="has-post"><a href="index.html.57">10</a></td>
+<td class="has-post"><a href="index.html.58">11</a></td>
+<td class="has-post"><a href="index.html.59">12</a></td>
+<td><span>13</span></td>
+</tr>
+<tr>
+<td><span>14</span></td>
+<td><span>15</span></td>
+<td><span>16</span></td>
+<td><span>17</span></td>
+<td><span>18</span></td>
+<td><span>19</span></td>
+<td><span>20</span></td>
+</tr>
+<tr>
+<td><span>21</span></td>
+<td><span>22</span></td>
+<td><span>23</span></td>
+<td><span>24</span></td>
+<td><span>25</span></td>
+<td><span>26</span></td>
+<td><span>27</span></td>
+</tr>
+<tr>
+<td><span>28</span></td>
+<td><span>29</span></td>
+<td class="has-post today"><a href="index.html.60">30</a></td>
+<td><span>31</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</div>
+</article>
+<!-- widget calendar off --><!-- widget comments on -->
+<article class="box box-comment" id="box-comment-101324">
+<header class="box-header">
+<h1><i class="icon icon-comments"></i><span class="box-title-text">Commentaires récents</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-comments-list">
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment9030164" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-12-22T18:29:12" itemprop="datePublished">
+<span class="date-hour-minute">18h29</span>
+<span class="date-day">22</span>
+<span class="date-month-year">déc. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">collignon</a> sur <a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html">Intermédiation</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>"Confidentielles" au féminin pluriel, merci.<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8994604" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/01/27/tuning-ora2pg-6362720.html#c8994604">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-01-27T09:27:05" itemprop="datePublished">
+<span class="date-hour-minute">09h27</span>
+<span class="date-day">27</span>
+<span class="date-month-year">janv. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="tuning-ora2pg-6362720.html#c8994604">Le boss</a> sur <a href="tuning-ora2pg-6362720.html">Tuning ora2pg</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>1- bah ouais poto si tu vides les data source ça va plus...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8626826" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/06/29/forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-06-29T17:31:31" itemprop="datePublished">
+<span class="date-hour-minute">17h31</span>
+<span class="date-day">29</span>
+<span class="date-month-year">juin 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">joguess</a> sur <a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html">Forcer le refresh de la vue...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>peut etre rajouter cela : 
+BEGIN...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8579037" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/01/31/purger-fichiers-logs-5905505.html#c8579037">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-01-31T14:59:55" itemprop="datePublished">
+<span class="date-hour-minute">14h59</span>
+<span class="date-day">31</span>
+<span class="date-month-year">janv. 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="purger-fichiers-logs-5905505.html#c8579037">joguess</a> sur <a href="purger-fichiers-logs-5905505.html">Purger fichiers logs</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>voir aussi :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518755" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518755">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:14:31" itemprop="datePublished">
+<span class="date-hour-minute">16h14</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518755">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>La solution se trouve ici :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518754" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518754">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:12:03" itemprop="datePublished">
+<span class="date-hour-minute">16h12</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518754">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>http://www.dba-oracle.com/t_asm_disk_does_not_exist_or_is...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518753" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/10/installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T15:59:29" itemprop="datePublished">
+<span class="date-hour-minute">15h59</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">JJO</a> sur <a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html">Installation ASM et configuration de l'instance...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>https://taliphakanozturken.wordpress.com/2012/03/12/confi...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518135" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/07/outil-de-benchmark-oracle-orion-5834320.html#c8518135">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-09T08:19:40" itemprop="datePublished">
+<span class="date-hour-minute">08h19</span>
+<span class="date-day">09</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="outil-de-benchmark-oracle-orion-5834320.html#c8518135">jjo</a> sur <a href="outil-de-benchmark-oracle-orion-5834320.html">Outil de benchmark Oracle - ORION</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>Orion Usage:$ORACLE_HOME/bin/orion -run simple -testname...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8314452" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2015/04/19/sego-dans-c-politique-5606540.html#c8314452">
+
+<!-- widget comments off -->
+<!-- widget pages on -->
+<article class="box box-page" id="box-page-101331">
+<header class="box-header">
+<h1><i class="icon icon-file-text-alt"></i><span class="box-title-text">Pages</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="pages-list">
+<li role="listitem">
+<a href="jesako.html">PAGE HTML</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget pages off --><!-- widget posts on -->
+<article class="box box-post" id="box-post-101336">
+<header class="box-header">
+<h1><i class="icon icon-comment"></i><span class="box-title-text">Notes récentes</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-posts-list">
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6508824" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/30/postgres-monitor-autovacuum-freeze-max-age-6508824.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-30T10:40:49" itemprop="datePublished">
+<span class="date-hour-minute">10h40</span>
+<span class="date-day">30</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-autovacuum-freeze-max-age-6508824.html">[Postgres] Monitor autovacuum_freeze_max_age</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to monitor the :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506680" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/12/postgres-monitor-wait-event-6506680.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-12T11:28:00" itemprop="datePublished">
+<span class="date-hour-minute">11h28</span>
+<span class="date-day">12</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-wait-event-6506680.html">[Postgres] Monitor wait event</a></h1>
+</header>
+<div class="recent-post-body">
+<p> \t select wait_event_type, wait_event from...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506515" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/11/postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-11T10:02:00" itemprop="datePublished">
+<span class="date-hour-minute">10h02</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">[Postgres] Solve PostgreSQL DataFileRead and...</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Click her to see the next. <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506355" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/10/postgres-tuto-tuning-6506355.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-10T07:59:04" itemprop="datePublished">
+<span class="date-hour-minute">07h59</span>
+<span class="date-day">10</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-tuto-tuning-6506355.html">[Postgres] Tuto tuning</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This site helped to resolve IPC wait event :  Postgres...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6503410" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/18/postgres-identifier-les-privileges-6503410.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-18T10:03:31" itemprop="datePublished">
+<span class="date-hour-minute">10h03</span>
+<span class="date-day">18</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-privileges-6503410.html">[Postgres] Identifier les privilèges</a></h1>
+</header>
+<div class="recent-post-body">
+<p> SELECT * &nbsp; FROM...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6502501" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/11/postgres-identifier-les-attentes-6502501.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-11T14:21:00" itemprop="datePublished">
+<span class="date-hour-minute">14h21</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-attentes-6502501.html">[Postgres] Identifier les attentes</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to identify the wait events on...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500731" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/30/postgres-pg-partman-6500731.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-30T10:56:00" itemprop="datePublished">
+<span class="date-hour-minute">10h56</span>
+<span class="date-day">30</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-pg-partman-6500731.html">[Postgres] PG_PARTMAN</a></h1>
+</header>
+<div class="recent-post-body">
+<p> pg_partman v4 vs pg_partman v5&nbsp; 
+ Une fonction...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500641" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-extensions-6500641.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T17:27:00" itemprop="datePublished">
+<span class="date-hour-minute">17h27</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-extensions-6500641.html">[Postgres] Extensions</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Extensions en prd indispensables :&nbsp; <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500591" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-monitor-cloud-db-azure-ibm-6500591.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T10:59:00" itemprop="datePublished">
+<span class="date-hour-minute">10h59</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-cloud-db-azure-ibm-6500591.html">[Postgres] Monitor cloud DB (AZURE / IBM)</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Quand on n'a pas d'outils pour faire le monitoring des...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6499803" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/24/postgres-locker-une-base-6499803.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-24T10:01:00" itemprop="datePublished">
+<span class="date-hour-minute">10h01</span>
+<span class="date-day">24</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-locker-une-base-6499803.html">[Postgres] Locker une base</a></h1>
+</header>
+<div class="recent-post-body">
+<p> On ne peut pas locker une base nativement alors comment...<p>
+</div>
+</article>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget posts off --><!-- widget sharing on -->
+<article class="box box-sharing" id="box-sharing-101338">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</article>
+<!-- widget sharing off --><!-- widget populartags on -->
+<article class="box box-tag" id="box-tag-101340">
+<header class="box-header">
+<h1><i class="icon icon-tags"></i><span class="box-title-text">Tags populaires</span></h1>
+</header>
+<div class="box-body">
+<ul class="popular-tags-list" role="list">
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dieudonn%C3%A9" class="tag-10">dieudonné</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/strasbourg" class="tag-10">strasbourg</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/star" class="tag-10">star</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surf" class="tag-9">surf</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salsa" class="tag-1">salsa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sexy" class="tag-10">sexy</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/danse" class="tag-9">danse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/webcam" class="tag-9">webcam</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blog" class="tag-10">blog</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/oracle" class="tag-8">oracle</a></li>
+</ul>
+</div>
+</article>
+<!-- widget populartags off --><!-- end column 1 --></aside>
+</div>
+<div class="span8">
+<main role="main">
+
+<article class="content" id="content" itemprop="mainContentOfPage">
+<header class="content-header">
+<h1>Privé</h1>
+</header>
+<div class="content-body">
+<ul role="list" class="articles-list">
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6418308" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/12/22/oh-mon-bateau-ohohoho-6418308.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2023-10-01T07:35:49" itemprop="datePublished">
+<span class="date-hour-minute">07h35</span>
+<span class="date-day">01</span>
+<span class="date-month-year">oct. 2023</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="oh-mon-bateau-ohohoho-6418308.html">Oh mon bateau ohohoho</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2022%2F12%2F22%2Foh-mon-bateau-ohohoho-6418308.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Vous choisiriez lequel :&nbsp;</p>
+<p><a href="https://www.pacific-craft.com/portfolio-item/pacific-craft-545-open/">Pacific Craft 545 Open - Pacific Craft (pacific-craft.com)</a></p>
+<p><a id="media-6411092" href="249055404.pdf">FT 545 Open_.pdf</a></p>
+<p style="text-align: center;"><img id="media-6411094" style="margin: 0.7em 0;" title="" src="431962774.jpg" alt="CRAFT.jpg" /></p>
+<p style="text-align: center;"><img id="media-6411095" style="margin: 0.7em 0;" title="" src="2157292628.jpg" alt="CRAFT3.jpg" /></p>
+<p style="text-align: center;"><img id="media-6411096" style="margin: 0.7em 0;" title="" src="3186984420.jpg" alt="CRAFT2.jpg" /></p>
+<p style="text-align: center;">OU</p>
+<p><a href="https://www.jeanneau.fr/boats/powerboat/5-cap-camarat-center-console/2-cap-camarat-5-5-cc/#gallery-exterior_2">Cap Camarat 5.5 CC | Bateau à moteur 5.48m | Jeanneau</a></p>
+<p><a id="media-6411093" href="3391504544.pdf">Inventory_-_Cap_Camarat_CC_range_-_2023.pdf</a></p>
+<p style="text-align: center;"><img id="media-6411097" style="margin: 0.7em 0;" title="" src="2094622450.jpg" alt="cd1cacbfc3ca7d7565a02dfebf2794bf.jpg" /></p>
+<p style="text-align: center;"><img id="media-6411099" style="margin: 0.7em 0;" title="" src="181465826.jpg" alt="07f29241aff50fcb70f93def92c08959.jpg" /></p>
+<p style="text-align: center;"><img id="media-6411101" style="margin: 0.7em 0;" title="" src="585462094.jpg" alt="c815fd891acdd70ac6dc35ee96da11eb.jpg" /></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">Finalement j'ai pris le Quicksilver 555 Open:</p>
+<p style="text-align: center;"><a href="https://www.quicksilver-boats.com/fr/fr/activ-555-open">Activ 555 Open | Bateaux Quicksilver (quicksilver-boats.com)</a></p>
+<p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2022%2F12%2F22%2Foh-mon-bateau-ohohoho-6418308.html&amp;t=Oh+mon+bateau+ohohoho" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="oh-mon-bateau-ohohoho-6418308.html" id="a0"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="oh-mon-bateau-ohohoho-6418308.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6438441" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2023/04/15/fais-divers-6438441.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2023-04-15T15:45:12" itemprop="datePublished">
+<span class="date-hour-minute">15h45</span>
+<span class="date-day">15</span>
+<span class="date-month-year">avril 2023</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="fais-divers-6438441.html">Fais divers</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2023%2F04%2F15%2Ffais-divers-6438441.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Quand tu te rends comptes que tu aurais dû payer 50€ au lieu de 40€ la passe.&nbsp;</p>
+<p>C'est 40€ une position, 50€ deux positions.&nbsp;</p>
+<p>Au bout de 10 minutes le téléphone sonne. Vous avez terminé Monsieur. Heu non je n'ai pas joui. C'était pas 15 min ??</p>
+<p>&nbsp;</p>
+<p>Nan! 15 min c'est 50€ , 40€ c'est 10min.&nbsp;</p>
+<p>Svp finis moi lui dis , désemparé. Je te redonne 10€ après promis.&nbsp;</p>
+<p>Bon ok me dit elle , mais on change de position, tu choisis ?&nbsp;</p>
+<p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2023%2F04%2F15%2Ffais-divers-6438441.html&amp;t=Fais+divers" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="fais-divers-6438441.html" id="a1"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="fais-divers-6438441.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6288504" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2021/01/04/lmnp-chapitre-1-2-6288504.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2021-01-04T23:02:46" itemprop="datePublished">
+<span class="date-hour-minute">23h02</span>
+<span class="date-day">04</span>
+<span class="date-month-year">janv. 2021</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="lmnp-chapitre-1-2-6288504.html">LMNP chapitre 1&2</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2021%2F01%2F04%2Flmnp-chapitre-1-2-6288504.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Chap 1 : https://louer-en-courte-duree.fr/location-courte-duree-fiscalite/</p>
+<p>Chap 2 https://louer-en-courte-duree.fr/location-courte-duree-demarches-administratives/</p>
+<p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2021%2F01%2F04%2Flmnp-chapitre-1-2-6288504.html&amp;t=LMNP+chapitre+1%262" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="lmnp-chapitre-1-2-6288504.html" id="a2"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="lmnp-chapitre-1-2-6288504.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6223045" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2020/03/23/location-resiliation-6223045.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2020-03-23T17:57:23" itemprop="datePublished">
+<span class="date-hour-minute">17h57</span>
+<span class="date-day">23</span>
+<span class="date-month-year">mars 2020</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="location-resiliation-6223045.html">Location résiliation</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2020%2F03%2F23%2Flocation-resiliation-6223045.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>https://www.locatme.fr/guide-du-proprietaire/la-resiliation-du-bail-par-le-proprietaire</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2020%2F03%2F23%2Flocation-resiliation-6223045.html&amp;t=Location+r%C3%A9siliation" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="location-resiliation-6223045.html" id="a3"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="location-resiliation-6223045.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6214550" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2020/02/22/cette-recette-c-est-pour-toi-mon-bb-d-amour-6214550.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2020-02-22T08:24:00" itemprop="datePublished">
+<span class="date-hour-minute">08h24</span>
+<span class="date-day">22</span>
+<span class="date-month-year">févr. 2020</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="cette-recette-c-est-pour-toi-mon-bb-d-amour-6214550.html">Cette recette c'est pour toi mon BB d'amour</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2020%2F02%2F22%2Fcette-recette-c-est-pour-toi-mon-bb-d-amour-6214550.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body article-intro" itemprop="articleBody">
+<p>Les Beignets de Carnaval !</p>
+<p class="read-more"><a href="cette-recette-c-est-pour-toi-mon-bb-d-amour-6214550.html#more">Lire la suite</a></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2020%2F02%2F22%2Fcette-recette-c-est-pour-toi-mon-bb-d-amour-6214550.html&amp;t=Cette+recette+c%27est+pour+toi+mon+BB+d%27amour" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="cette-recette-c-est-pour-toi-mon-bb-d-amour-6214550.html" id="a4"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="cette-recette-c-est-pour-toi-mon-bb-d-amour-6214550.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6071634" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2018/08/10/spring-mvc-and-spring-jdbc-transaction-tutorial-6071634.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2018-08-10T10:29:21" itemprop="datePublished">
+<span class="date-hour-minute">10h29</span>
+<span class="date-day">10</span>
+<span class="date-month-year">août 2018</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="spring-mvc-and-spring-jdbc-transaction-tutorial-6071634.html">Spring MVC and Spring JDBC Transaction Tutorial</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2018%2F08%2F10%2Fspring-mvc-and-spring-jdbc-transaction-tutorial-6071634.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>https://o7planning.org/en/10311/spring-mvc-and-spring-jdbc-transaction-tutorial</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2018%2F08%2F10%2Fspring-mvc-and-spring-jdbc-transaction-tutorial-6071634.html&amp;t=Spring+MVC+and+Spring+JDBC+Transaction+Tutorial" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="spring-mvc-and-spring-jdbc-transaction-tutorial-6071634.html" id="a5"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="spring-mvc-and-spring-jdbc-transaction-tutorial-6071634.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6071470" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2018/08/09/config-tomcat-et-config-connecion-oracle-6071470.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2018-08-09T14:59:15" itemprop="datePublished">
+<span class="date-hour-minute">14h59</span>
+<span class="date-day">09</span>
+<span class="date-month-year">août 2018</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="config-tomcat-et-config-connecion-oracle-6071470.html">Config Tomcat et config connecion oracle</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2018%2F08%2F09%2Fconfig-tomcat-et-config-connecion-oracle-6071470.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html</p>
+<p>&nbsp;</p>
+<p>https://confluence.atlassian.com/conf59/configuring-an-oracle-datasource-in-apache-tomcat-792499575.html</p>
+<p>&nbsp;</p>
+<p>https://docs.oracle.com/cd/F49540_01/DOC/java.815/a64685/basic1.htm</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2018%2F08%2F09%2Fconfig-tomcat-et-config-connecion-oracle-6071470.html&amp;t=Config+Tomcat+et+config+connecion+oracle" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="config-tomcat-et-config-connecion-oracle-6071470.html" id="a6"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="config-tomcat-et-config-connecion-oracle-6071470.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6071446" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2018/08/09/vae-6071446.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2018-08-09T13:32:30" itemprop="datePublished">
+<span class="date-hour-minute">13h32</span>
+<span class="date-day">09</span>
+<span class="date-month-year">août 2018</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="vae-6071446.html">VAE</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2018%2F08%2F09%2Fvae-6071446.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Le git de Regis :</p>
+<p>&nbsp;</p>
+<p>https://github.com/regis1512/tutoriel-web-spring</p>
+<p>tuto de regis : https://rpouiller.developpez.com/tutoriels/spring/application-web-spring-hibernate/</p>
+<p>&nbsp;</p>
+<p>Tuto spring : du prof : http://jean-luc.massat.perso.luminy.univ-amu.fr/ens/vae-jee/tp-mvc.html</p>
+<p>&nbsp;</p>
+<p>jdbc du prof : http://jean-luc.massat.perso.luminy.univ-amu.fr/ens/vae-jee/jdbc.html</p>
+<p>ORacle <span style="font-size: 10pt;">Using JdbcRowSet Objects</span></p>
+<p>https://docs.oracle.com/javase/tutorial/jdbc/basics/jdbcrowset.html</p>
+<p>&nbsp;</p>
+<h1 class="entry-title"><span style="font-size: 10pt;">Spring ORM example – JPA, Hibernate, Transaction</span></h1>
+<p>https://www.journaldev.com/7655/spring-orm-example-jpa-hibernate-transaction</p>
+<p>Object Relational Mapping (ORM) Data Access</p>
+<p>https://docs.spring.io/spring/docs/3.0.x/reference/orm.html</p>
+<p>Data access with JDBC</p>
+<p>https://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/jdbc.html</p>
+<p>&nbsp;</p>
+<h1 class="js-topic-title ibm-h2 ibm-padding-content" dir="auto" tabindex="0">Configuring Apache Tomcat for Oracle manually</h1>
+<p>https://www.ibm.com/support/knowledgecenter/en/SSHS8R_7.1.0/com.ibm.worklight.deploy.doc/admin/t_configuring_apache_tomcat_for_oracle_manually.html</p>
+<p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2018%2F08%2F09%2Fvae-6071446.html&amp;t=VAE" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="vae-6071446.html" id="a7"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="vae-6071446.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5771127" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/03/08/ma-vie-en-2014-5771127.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2016-03-08T13:20:31" itemprop="datePublished">
+<span class="date-hour-minute">13h20</span>
+<span class="date-day">08</span>
+<span class="date-month-year">mars 2016</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="ma-vie-en-2014-5771127.html">Ma vie en 2014</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2016%2F03%2F08%2Fma-vie-en-2014-5771127.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><iframe width="320" height="180" src="https://onedrive.live.com/embed?cid=CBDBBE980A646B24&amp;resid=CBDBBE980A646B24%214661&amp;authkey=ADZgJaPoENxlRyU" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2016%2F03%2F08%2Fma-vie-en-2014-5771127.html&amp;t=Ma+vie+en+2014" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="ma-vie-en-2014-5771127.html" id="a8"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="loisirs">Loisirs</a>, <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="ma-vie-en-2014-5771127.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5724167" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2015/11/30/cv-lettre-de-motivation-5724167.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2015-11-30T10:44:00" itemprop="datePublished">
+<span class="date-hour-minute">10h44</span>
+<span class="date-day">30</span>
+<span class="date-month-year">nov. 2015</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="cv-lettre-de-motivation-5724167.html">CV + lettre de motivation</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2015%2F11%2F30%2Fcv-lettre-de-motivation-5724167.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>MOTIVATION</p>
+<p>&nbsp;</p>
+<p>http://share.jaguar-network.com/JNziHOqAa6</p>
+<p>&nbsp;</p>
+<p>CV</p>
+<p>&nbsp;</p>
+<p>http://share.jaguar-network.com/JNYMAa2P6r</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2015%2F11%2F30%2Fcv-lettre-de-motivation-5724167.html&amp;t=CV+%2B+lettre+de+motivation" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="cv-lettre-de-motivation-5724167.html" id="a9"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="cv-lettre-de-motivation-5724167.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5472752" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2014/10/21/martine-5472752.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2014-10-21T00:51:00" itemprop="datePublished">
+<span class="date-hour-minute">00h51</span>
+<span class="date-day">21</span>
+<span class="date-month-year">oct. 2014</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="martine-5472752.html">Martine</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2014%2F10%2F21%2Fmartine-5472752.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p style="text-align: center;"><img id="media-4730971" style="margin: 0.7em 0;" title="" src="1130221711.JPG" alt="IMG_4727.JPG" /></p>
+<p><a href="http://www.allopass.com/check/red.php4?CA=X44437B9B9776" target="_blank"><img class="lnkdolctnmqcdckaayyw fcxarddaypoilpdyrymt" src="http://www.lenetremunere.eu/img/ban1.png" alt="" border="0" /></a></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2014%2F10%2F21%2Fmartine-5472752.html&amp;t=Martine" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="martine-5472752.html" id="a10"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="martine-5472752.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5392656" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2014/06/16/plage-5392656.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2014-06-16T22:25:00" itemprop="datePublished">
+<span class="date-hour-minute">22h25</span>
+<span class="date-day">16</span>
+<span class="date-month-year">juin 2014</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="plage-5392656.html">PLage</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2014%2F06%2F16%2Fplage-5392656.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p style="text-align: center;"><img id="media-4597639" style="margin: 0.7em 0;" title="" src="3388778501.JPG" alt="DSCF4069.JPG" /></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2014%2F06%2F16%2Fplage-5392656.html&amp;t=PLage" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="plage-5392656.html" id="a11"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="plage-5392656.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">1</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5392635" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2014/06/16/nissa-5392635.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2014-06-16T22:13:00" itemprop="datePublished">
+<span class="date-hour-minute">22h13</span>
+<span class="date-day">16</span>
+<span class="date-month-year">juin 2014</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="nissa-5392635.html">Nissa</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2014%2F06%2F16%2Fnissa-5392635.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><img id="media-4597600" style="float: left; margin: 0.2em 1.4em 0.7em 0;" title="" src="812667720.jpg" alt="Image19.jpg" /></p>
+<p style="text-align: center;"><img id="media-4597601" style="margin: 0.7em 0;" title="" src="1890095154.jpg" alt="Image30.jpg" /></p>
+<p style="text-align: center;"><img id="media-4597603" style="margin: 0.7em 0;" title="" src="164929415.jpg" alt="Image27.jpg" /></p>
+<p style="text-align: center;"><img id="media-4597604" style="margin: 0.7em 0;" title="" src="4118855241.jpg" alt="Image15.jpg" /></p>
+<p style="text-align: center;"><img id="media-4597971" style="margin: 0.7em 0;" title="" src="2955675098.jpg" alt="nissa.jpg" /></p>
+<p style="text-align: center;"><img id="media-4597605" style="margin: 0.7em 0;" title="" src="2607895816.JPG" alt="IMG_3869.JPG" /></p>
+<p style="text-align: center;"><img id="media-4597606" style="margin: 0.7em 0;" title="" src="1881033509.jpg" alt="ims.jpg" /></p>
+<p style="text-align: center;"><img id="media-4597607" style="margin: 0.7em 0;" title="" src="3424981288.jpg" alt="Image7.jpg" /></p>
+<p style="text-align: center;"><img id="media-4597610" style="margin: 0.7em 0;" title="" src="3199425926.jpg" alt="marches2.jpg" /></p>
+<p style="text-align: center;"><img id="media-4597625" style="margin: 0.7em 0;" title="" src="3015431345.jpg" alt="imms.jpg" /></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2014%2F06%2F16%2Fnissa-5392635.html&amp;t=Nissa" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="nissa-5392635.html" id="a12"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="nissa-5392635.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5144504" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2013/08/20/marineland-antibes-5144504.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2013-09-02T14:06:27" itemprop="datePublished">
+<span class="date-hour-minute">14h06</span>
+<span class="date-day">02</span>
+<span class="date-month-year">sept. 2013</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="marineland-antibes-5144504.html">Marineland (Antibes)</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F08%2F20%2Fmarineland-antibes-5144504.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p style="text-align: center;"><img id="media-4235515" style="margin: 0.7em 0;" title="" src="464692977.jpg" alt="IMG1012.jpg" /></p>
+<p style="text-align: center;"><img id="media-4235517" style="margin: 0.7em 0;" title="" src="2844949217.jpg" alt="IMG1015.jpg" /></p>
+<p style="text-align: center;"><img id="media-4235518" style="margin: 0.7em 0;" title="" src="1818400736.jpg" alt="IMG1019.jpg" /></p>
+<p style="text-align: center;"><img id="media-4235519" style="margin: 0.7em 0;" title="" src="2978688332.jpg" alt="IMG992.jpg" /></p>
+<p>Photos de ma sortie avec les enfants Mathis et Zoé à Marineland !!!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F08%2F20%2Fmarineland-antibes-5144504.html&amp;t=Marineland+%28Antibes%29" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="marineland-antibes-5144504.html" id="a13"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="marineland-antibes-5144504.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5154254" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2013/09/02/ma-nouvelle-femme-5154254.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2013-09-02T13:57:37" itemprop="datePublished">
+<span class="date-hour-minute">13h57</span>
+<span class="date-day">02</span>
+<span class="date-month-year">sept. 2013</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="ma-nouvelle-femme-5154254.html">Ma nouvelle femme</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F09%2F02%2Fma-nouvelle-femme-5154254.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Ma nouvelle femme (et j'espère que c'est la bonne) s'appelle Priscilla !!!</p>
+<p>&nbsp;</p>
+<p>Je l'aime à en mourir....</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F09%2F02%2Fma-nouvelle-femme-5154254.html&amp;t=Ma+nouvelle+femme" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="ma-nouvelle-femme-5154254.html" id="a14"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="ma-nouvelle-femme-5154254.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5137307" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2013/08/08/mon-pire-cauchemar-est-bien-reel-5137307.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2013-08-08T09:49:40" itemprop="datePublished">
+<span class="date-hour-minute">09h49</span>
+<span class="date-day">08</span>
+<span class="date-month-year">août 2013</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="mon-pire-cauchemar-est-bien-reel-5137307.html">Mon pire cauchemar est bien réél</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F08%2F08%2Fmon-pire-cauchemar-est-bien-reel-5137307.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Josselin tu es dans le faux le déni de toi meme <br /><br />julie t'a trompé deux jours de suite avec d'autres mecs que tu ne connais pas<br /><br />elle etait sincère<br /><br />elle t'a trompé<br /><br />plusieurs fois <br /> <br />la journée elle te voyait pendant le déménagement et le soir elle allait baiser avec d'autres mecs<br />en tout elle a baisé avec 3 mecs différents se rappellent elles seulement des noms?<br /><br />pendant que je me branlais , elle, me trompait avec d'autres mecs.<br /> <br />Putain quelle salope!!!<br /><br />Elle m'a tout avoué sur le pallier<br /><br />le 5 aout 2013.</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F08%2F08%2Fmon-pire-cauchemar-est-bien-reel-5137307.html&amp;t=Mon+pire+cauchemar+est+bien+r%C3%A9%C3%A9l" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="mon-pire-cauchemar-est-bien-reel-5137307.html" id="a15"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="mon-pire-cauchemar-est-bien-reel-5137307.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5108481" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2013/06/27/nouvelle-acquisition.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2013-06-27T14:52:29" itemprop="datePublished">
+<span class="date-hour-minute">14h52</span>
+<span class="date-day">27</span>
+<span class="date-month-year">juin 2013</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="nouvelle-acquisition.html">Nouvelle acquisition</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F06%2F27%2Fnouvelle-acquisition.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Hello à tous</p>
+<p>&nbsp;</p>
+<p>Ce jour est un grand jour.</p>
+<p>&nbsp;</p>
+<p>Ce soir je signe chez le notaire l'acquisition de mon futur appartement.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Le rêve devient réalité, moi expatrié de la Franche Comté, j'achète pour la première fois mon propre appartement dans le Sud Est.</p>
+<p>&nbsp;</p>
+<p>Ou comment je passe du statut de paysan à celui de Seigneur...</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>~Enjoy~</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F06%2F27%2Fnouvelle-acquisition.html&amp;t=Nouvelle+acquisition" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="nouvelle-acquisition.html" id="a16"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="nouvelle-acquisition.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5084095" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2013/05/30/joss-is-back-from-nowhere.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2013-05-30T11:41:08" itemprop="datePublished">
+<span class="date-hour-minute">11h41</span>
+<span class="date-day">30</span>
+<span class="date-month-year">mai 2013</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="joss-is-back-from-nowhere.html">Joss is back from nowhere</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F05%2F30%2Fjoss-is-back-from-nowhere.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Hi boys !!!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Every thing is fine for you????&nbsp; For me too :)</p>
+<p>&nbsp;</p>
+<p>I am in training period learning how to query sqlserver 2012 .</p>
+<p>&nbsp;</p>
+<p>Hope you enjoy</p>
+<p>&nbsp;</p>
+<p>Take care !!!</p>
+<p>&nbsp;</p>
+<p>Joss~</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2013%2F05%2F30%2Fjoss-is-back-from-nowhere.html&amp;t=Joss+is+back+from+nowhere" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="joss-is-back-from-nowhere.html" id="a17"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="joss-is-back-from-nowhere.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article4901691" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2012/11/18/josselin-s-back.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2012-11-18T19:58:00" itemprop="datePublished">
+<span class="date-hour-minute">19h58</span>
+<span class="date-day">18</span>
+<span class="date-month-year">nov. 2012</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="josselin-s-back.html">Josselin ' s back</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2012%2F11%2F18%2Fjosselin-s-back.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Hi everyone I am back !!</p>
+<p>&nbsp;</p>
+<p>I have recently been with an active libertine woman : you can see her here :</p>
+<p>&nbsp;</p>
+<p>http://motherless.com/u/joguess06</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>I hope every thing is all right for you mother fucker!!!</p>
+<p>&nbsp;</p>
+<p>~Joss~</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2012%2F11%2F18%2Fjosselin-s-back.html&amp;t=Josselin+%27+s+back" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="josselin-s-back.html" id="a18"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="josselin-s-back.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article4694517" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2012/04/26/un-recit-epique.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2012-04-26T20:22:00" itemprop="datePublished">
+<span class="date-hour-minute">20h22</span>
+<span class="date-day">26</span>
+<span class="date-month-year">avril 2012</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="un-recit-epique.html">Un récit épique</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2012%2F04%2F26%2Fun-recit-epique.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>A la suite de son embauche chez experian,<br id="o9q_" /><br id="o9q_0" />l'apologie du crime a été instauré. Rien ne valait plus qu'une simple autorité arbitraire dirigé par un jeune sans conviction.<br id="o9q_1" />La parole ne faisant plus fois il suffisant de s'inscrire dans des groupe de batailles pour progresser et se faire connaitre.<br id="o9q_2" />L'apologie de la trahison était aussi de mise dans cette société. Peu apres le licenciement du chef de gang, nombreux étaient les petits qui essayaient <br id="o9q_3" />tant bien que mal a trouvé leur place. Le chef trahi par sa horde était devenue machiévélique ce qui lui donnait la force de revenir sans cesse dans un <br id="o9q_4" />nouveau groupe de commun instaurant ainsi des mirrois collectifs de civilisation avancé et sa vision dictatorial des choses.<br id="o9q_5" />L'avènement de l'ère du verseau avait eu lieu et par la présence des esprits de l'ancien monde, la folie atteignait les âmes les plus sensibles.<br id="o9q_6" />Ces dernières se faisaient distinguer par des apparas de toutes sortes en contradiction avec l'esprit qui les avaient crées. Les autres gardaient la parole pour <br id="o9q_7" />exprimer leur souffrance et cela était déjà pas mal. <br id="o9q_8" />Les anciens placés en centre de détention pour leur conviction trop prononcés s'étaient détachés du carcan de leur corps&nbsp; et ne distinguait plus <br id="o9q_9" />très bien le faux du vrai, le réél de l'irréél. Leur coeur était par ailleurs empli de sagesse.<br id="o9q_10" />Pour la bonne cause et l'amélioration de l'entreprise il fallait embaucher. Une directive était annoncée la maison mère et celle-ci devait être appliqué à la lettre<br id="o9q_11" />par des moutons incapable de penser désormais.<br id="o9q_12" /><br id="o9q_13" />Voilà où il en est.<br id="o9q_14" />L'esprit évasif qui m'a créé m'a donc pas permis d'évoluer dans cette société. Plus tard l'embauche se fera de nouveau attendre et c'est mieux ainsi.<br id="x9ks" />Le monde était divisé en deux civilisarions celle des croyants et celle des perdus.<br id="x9ks0" />Les hommes croyants avaient pris conscience qu'ils étaient des dieux pour eux memes, paradoxalement les perdus croyaient en un sauveur qui ne viendraient jamais.<br id="x9ks1" />Les forces du bien de l'ancien monde avait triomphées sur les forces sataniques, mais la victoire avait fait de la plupart des hommes , des hommes sans confessions, perdus ne pouvant plus distinguer la valeur symbolique des choses. Ceux qui étaient restés neutre dans la bataille des consciences pouvaient avoir le recul nécessaire pour comprendre ce qui était arrivé à leur terre.<br id="x9ks2" />Certains d'entre eux étaient devenus pieux et les autres -pour le peu qu'il restait- étaient devenus les moteurs de la civilisation actuelle.<br id="x9ks3" /><br id="x9ks4" />Pour sa part la focalisation de cette jeune fille blonde couvrait sa vision actuelle du réél..Elle n'était qu'une image et pourtant bien réélle mais dans quelle partie de la civilisation se situait-elle? Telle était la quête qu'il s'était fixé. Trouver cette jeune fille blonde et la connaître pour comprendre.<br id="selq" /><br id="selq0" />Le pourquoi du comment, nul d'entre nous avait la réponse, mais la seule question qui persistait dans la conscience universelle était la suivante,<br id="selq1" />qui était à la source de tout ce remue ménage? Les voyages spatio-temporelles ne pouvait plus apporter de réponses.<br id="selq2" />L'inconnu était d'ailleurs. Comme un trou de mémoire dans la conscience du monde, nul n'avait la trace de qui ou quoi avait créé le premier être civilisé.<br id="selq3" />Quelle forme d'intelligence esprit ou matière pouvait avoir une influence assez forte pour entraîner la spirale infernale et ainsi gangrainer<br id="selq4" />les plus sensibles et les plus malchanceux des hommes pour faire de leur vie une voie toute tracée. Un avenir connu et prévisible.<br /><br /><br /><br /><br id="selq5" />Pour l'équipe qui avait organisé la séquence "folie passagère", dans le tournage du dernier "Dare Devil", le réalisateur n'avait pas lésiné sur les acteurs.<br id="selq6" />Il avait choisi les meilleurs protagonsites du moment. Des intellectuels de tout âge, des hommes et des femmes d'esprit , des hommes non évolués et des hommes sans conviction ni raison.</p>
+<p><span style="font-size: small; color: #0000ff;">Ce récit date de 2008 j'ai décidé de le publier seulement maintenant, donnez moi vos impressions SVP.</span></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2012%2F04%2F26%2Fun-recit-epique.html&amp;t=Un+r%C3%A9cit+%C3%A9pique" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="un-recit-epique.html" id="a19"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="un-recit-epique.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article3855556" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2011/11/05/une-visite-impromptu.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2011-11-05T07:26:01" itemprop="datePublished">
+<span class="date-hour-minute">07h26</span>
+<span class="date-day">05</span>
+<span class="date-month-year">nov. 2011</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="une-visite-impromptu.html">Une visite impromptu</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F11%2F05%2Fune-visite-impromptu.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Aujourd'hui c'est l'anniversaire de la mère de mes enfants, j'ai décidé d'aller lui rendre une petite visite avec un gateau histoire de fêter cela ensemble.</p>
+<p>&nbsp;</p>
+<p>J'ai consulté cette vidéo je vous la conseille :</p>
+<p><iframe width="420" height="315" src="http://www.youtube.com/embed/z_3ir8nSvv4" frameborder="0" allowfullscreen=""></iframe></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F11%2F05%2Fune-visite-impromptu.html&amp;t=Une+visite+impromptu" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="une-visite-impromptu.html" id="a20"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="une-visite-impromptu.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">1</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article3782642" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2011/09/17/golfe-juan.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2011-09-17T16:07:00" itemprop="datePublished">
+<span class="date-hour-minute">16h07</span>
+<span class="date-day">17</span>
+<span class="date-month-year">sept. 2011</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="golfe-juan.html">Golfe Juan</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F09%2F17%2Fgolfe-juan.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p style="text-align: center;"><span style="font-family: arial black,avant garde; font-size: small;"><strong>Ma vue à Golfe Juan</strong></span><img id="media-3202080" style="margin: 0.7em 0pt;" title="" src="62351948.jpg" alt="Golfe Juan 001.jpg" /></p>
+<p style="text-align: center;">Depuis ma fenêtre.</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><img id="media-3202082" style="float: center; margin: 0.2em 0pt 1.4em 0.7em;" title="" src="1142362268.jpg" alt="Golfe Juan 002.jpg" /></p>
+<p style="text-align: center;">Depuis ma terrasse.</p>
+<p style="text-align: center;">&nbsp;</p>
+<p><object style="display: block; margin-left: auto; margin-right: auto;" width="320" height="240" data="http://resources.neolao.com/download/flash/components/player_flv.swf" type="application/x-shockwave-flash"><param name="FlashVars" value="flv=http://josselinjoly.free.fr/videos/Golfe Juan 004.MOV&amp;width=320&amp;height=240" /><param name="src" value="http://resources.neolao.com/download/flash/components/player_flv.swf" /></object></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F09%2F17%2Fgolfe-juan.html&amp;t=Golfe+Juan" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="golfe-juan.html" id="a21"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="golfe-juan.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article3744268" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2011/08/17/de-retour-du-cap-d-agde.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2011-08-17T15:35:00" itemprop="datePublished">
+<span class="date-hour-minute">15h35</span>
+<span class="date-day">17</span>
+<span class="date-month-year">août 2011</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="de-retour-du-cap-d-agde.html">De retour du Cap d'agde</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F08%2F17%2Fde-retour-du-cap-d-agde.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Excellente , c'est le terme pour qualifier mes vacances que j'ai passé au Cap D'Agde.</p>
+<p>Passé une nuit au camping naturiste René Oltra, c'est court mais très intense!!!</p>
+<p>L'après midi visite du bord de plage naturiste et quelques peu d'actions si j'ose dire!!! A voir pour le croire...</p>
+<p>Et le soir sortie en club "Jeu de Mains", où j'ai eu la chance d'honorer deux charmantes dames.</p>
+<p>Enfin la reprise du boulot se fait tardive et c'est bien domage que les vacances soient déjà terminées!</p>
+<p>&nbsp;</p>
+<p><a href="http://www.chm-reneoltra.fr/content/fr/chm-rene-oltra/1/" target="_blank">camping naturiste René Oltra sur réservation à partir du mois de Mars.</a></p>
+<p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F08%2F17%2Fde-retour-du-cap-d-agde.html&amp;t=De+retour+du+Cap+d%27agde" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="de-retour-du-cap-d-agde.html" id="a22"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="de-retour-du-cap-d-agde.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">1</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article3705726" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2011/07/08/histoire-natuelle.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2011-07-08T10:11:00" itemprop="datePublished">
+<span class="date-hour-minute">10h11</span>
+<span class="date-day">08</span>
+<span class="date-month-year">juil. 2011</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="histoire-natuelle.html">Histoire natuelle</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F07%2F08%2Fhistoire-natuelle.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Hier j'ai baise ma femme comme un chien en missionnaire.</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F07%2F08%2Fhistoire-natuelle.html&amp;t=Histoire+natuelle" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="histoire-natuelle.html" id="a23"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="histoire-natuelle.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article3692972" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2011/06/27/vacances-juin-2011-isola-d-elba.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2011-06-27T13:40:00" itemprop="datePublished">
+<span class="date-hour-minute">13h40</span>
+<span class="date-day">27</span>
+<span class="date-month-year">juin 2011</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="vacances-juin-2011-isola-d-elba.html">Vacances Juin 2011 Isola d'Elba</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F06%2F27%2Fvacances-juin-2011-isola-d-elba.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><object width="288" height="192" data="https://picasaweb.google.com/s/c/bin/slideshow.swf" type="application/x-shockwave-flash"><param name="src" value="https://picasaweb.google.com/s/c/bin/slideshow.swf" /><param name="flashvars" value="host=picasaweb.google.com&amp;hl=fr&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2Fjoguess1%2Falbumid%2F5622663584493651425%3Falt%3Drss%26kind%3Dphoto%26authkey%3DGv1sRgCMTnu-GDu7Dvbw%26hl%3Dfr" /><param name="pluginspage" value="http://www.macromedia.com/go/getflashplayer" /></object></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F06%2F27%2Fvacances-juin-2011-isola-d-elba.html&amp;t=Vacances+Juin+2011+Isola+d%27Elba" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="vacances-juin-2011-isola-d-elba.html" id="a24"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="vacances-juin-2011-isola-d-elba.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article3558030" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2011/05/19/je-fais-tourner-ma-mere-en-bourrique.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2011-05-19T09:50:15" itemprop="datePublished">
+<span class="date-hour-minute">09h50</span>
+<span class="date-day">19</span>
+<span class="date-month-year">mai 2011</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="je-fais-tourner-ma-mere-en-bourrique.html">Je fais tourner ma mere en bourrique</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F05%2F19%2Fje-fais-tourner-ma-mere-en-bourrique.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Bonjour,<br /><br />Je travaille dans une entreprise de serrurerie,&nbsp; j ai arrêté l'informatique...<br />Ca rapporte mieux et en plus je ne suis pas déclaré je suis paye au black.<br /><br />Sinon je suis content de voir que DSK s'est fait arrêté pour viol il n'a que ce qu'il mérite n'est ce pas?<br /><br /><br /><br />&gt; Date: Thu, 19 May 2011 09:00:32 +0200<br />&gt; <br />&gt; <br />&gt; Subject: coucou besac<br />&gt; <br />&gt; Bonjour josselin<br />&gt; J'aimerai bc t'avoir au tel pour entendre ta voix, je me pose des <br />&gt; questions, si tu veux bien y répondre,<br />&gt; <br />&gt; où travailles-tu en ce moment ?<br />&gt; <br />&gt; tu vas déménager, mais où mettre tes affaires ? c'est juste chez jenny <br />&gt; mais peut-être peut-on serrer un peu ? tu l'as déjà fait, mais elle <br />&gt; n'avait pas bc d'affaires à l'époque,<br />&gt; c'est dommage que l'on soit si loin, car à vellexon il y a de la place<br />&gt; peut-être louer un garage ? un local ?<br />&gt; sinon tu vends, mais après tu n'as plus rien<br />&gt; on ne trouve plus de table comme la tienne qui tient si peu de place et <br />&gt; s'agrandit facilement ! essaye de la garder même démontée<br />&gt; <br />&gt; Financièrement, comment ça va, encore un déménagement, à force c'est <br />&gt; honéreux !<br />&gt; Est-il pris en charge par ton boulot ?<br />&gt; <br />&gt; dis moi si tu as besoin d'argent<br />&gt; <br />&gt; appelle moi ou dis moi qd je peux t'appeler<br />&gt; bisous mam<br />&gt;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: large; font-family: arial black,avant garde;">je sais c'est pas sympa... mais c'est tellement drole!!!</span></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2011%2F05%2F19%2Fje-fais-tourner-ma-mere-en-bourrique.html&amp;t=Je+fais+tourner+ma+mere+en+bourrique" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="je-fais-tourner-ma-mere-en-bourrique.html" id="a25"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="je-fais-tourner-ma-mere-en-bourrique.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article2949941" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2010/10/18/mathis.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2010-10-18T20:54:00" itemprop="datePublished">
+<span class="date-hour-minute">20h54</span>
+<span class="date-day">18</span>
+<span class="date-month-year">oct. 2010</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="mathis.html">Mathis</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2010%2F10%2F18%2Fmathis.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Mon fils :</p>
+<p>https://cid-6e70271b5e0b6ecd.skydrive.live.com/redir.aspx?page=play&amp;resid=6E70271B5E0B6ECD!1068</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2010%2F10%2F18%2Fmathis.html&amp;t=Mathis" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="mathis.html" id="a26"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="mathis.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article2816667" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2010/07/05/koh-lanta.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2010-07-05T18:56:00" itemprop="datePublished">
+<span class="date-hour-minute">18h56</span>
+<span class="date-day">05</span>
+<span class="date-month-year">juil. 2010</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="koh-lanta.html">Koh Lanta</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2010%2F07%2F05%2Fkoh-lanta.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+ <p>Je m'amuse à faire Koh Lanta au parc naturel du Mercantour, l'eau n'est qu'à quelques degrés seulement!</p> <p>&nbsp;</p> <p><object id="monFlash" width="320" height="240" data="http://resources.neolao.com/download/flash/components/player_flv.swf" type="application/x-shockwave-flash"><param name="data" value="http://resources.neolao.com/download/flash/components/player_flv.swf" /> <param name="FlashVars" value="flv=http://josselinjoly.free.fr/videos/Mathis547.flv&amp;width=320&amp;height=240" /> <param name="src" value="http://resources.neolao.com/download/flash/components/player_flv.swf" /></object></p> 
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2010%2F07%2F05%2Fkoh-lanta.html&amp;t=Koh+Lanta" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="koh-lanta.html" id="a27"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="koh-lanta.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article2337458" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2009/08/24/295eea5d9bb3bb7e40c6ff36ae9fb01f.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2010-02-17T18:47:31" itemprop="datePublished">
+<span class="date-hour-minute">18h47</span>
+<span class="date-day">17</span>
+<span class="date-month-year">févr. 2010</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="295eea5d9bb3bb7e40c6ff36ae9fb01f.html">Mathis au bain</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2009%2F08%2F24%2F295eea5d9bb3bb7e40c6ff36ae9fb01f.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Mathis et moi à la séance piscine.</p> <p><img src="1862202342.JPG" alt="P1000497.JPG" id="media-2280983" style="border-width: 0; float: left; margin: 0.2em 1.4em 0.7em 0;" /></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2009%2F08%2F24%2F295eea5d9bb3bb7e40c6ff36ae9fb01f.html&amp;t=Mathis+au+bain" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="295eea5d9bb3bb7e40c6ff36ae9fb01f.html" id="a28"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="295eea5d9bb3bb7e40c6ff36ae9fb01f.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article2478160" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2009/11/21/cv.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2009-11-21T16:50:03" itemprop="datePublished">
+<span class="date-hour-minute">16h50</span>
+<span class="date-day">21</span>
+<span class="date-month-year">nov. 2009</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="cv.html">CV</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2009%2F11%2F21%2Fcv.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p align="justify"><span style="text-decoration: underline;"><b>COMPETENCES</b></span></p> <ul> <li> <p align="justify"><b>Consultant Informatique</b></p> <ul> <li> <ul> <li> <ul> <li> <p align="justify">Débutant en gestion de projet</p> </li> <li> <p align="justify">Intégrateur de logiciel client avec la base de donnée associée</p> </li> <li> <p align="justify">Bonne connaissance des langages orientée objet (C, java)</p> </li> <li> <p align="justify">Méthode Merise permettant une analyse du SI à moindre coût (niveau conceptuel , logique et physique)</p> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <p align="justify">&nbsp;</p> <ul> <li> <p align="justify"><b>Bases de données</b></p> <ul> <li> <ul> <li> <ul> <li> <p align="justify">Installation des SGBDR SQLSERVER, Postgresql, Oracle</p> </li> <li> <p align="justify">Suivi des incidents N3 sur tout type d'environnements</p> </li> <li> <p align="justify">Bonne connaissance du langage SQL et PL/SQL</p> </li> <li> <p align="justify">Possibilité d'intervenir à distance sur des supports VPN,</p> </li> <li> <p align="justify">Prise en main à distance via VNC ou telnet pour intervenir sur des problèmes majeurs bloquants</p> </li> <li> <p align="justify">Aptitude à intégrer le modèle conceptuel du SI au sein d'une base de données relationnelle</p> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <p align="justify">&nbsp;</p> <p align="justify">Matériels : ESX, AS400, PC</p> <p align="justify">Systèmes : Red Hat, AIX, Windows Server2003</p> <p align="justify">Langages : C,java, SQL,php,PL/SQL</p> <p align="justify">Méthodes : UML, MERISE</p> <p align="justify">Outils : RMAN,STATPACK,expdp/impdp,xymon,nagios,CRONTAB</p> <p align="justify">SGBDR : Oracle 10g,9i,8i , SQL Server2005, DB2</p> <p align="justify">Graphique : graphlib pour projet en C, grid control d'oracle</p> <p align="justify"><span style="text-decoration: underline;"><b>EXPERIENCE PROFESSIONNELLE</b></span></p> <p align="justify">&nbsp;</p> <p align="justify"><b>LaserSymag Sophia Antipolis</b></p> <p align="justify">2009</p> <p align="justify">&nbsp;</p> <p align="justify">Au sein de l'équipe projet spécialisé dans le logiciel Visual Leader Loyalty pour la fidélisation de clients (carte de fidélité), dans le cadre des projets GAUMONT,SHOPPI et VIRGIN&nbsp;:</p> <p align="justify">&nbsp;</p> <ul> <li> <p align="justify">Suivi des incidents N3</p> <ul> <li> <p align="justify">erreur de bases de données oracle</p> </li> </ul> </li> <li> <p align="justify">Application de devis</p> <ul> <li> <p align="justify">utilisation de l'utilitaire d'export oracle (expdp et impdp)</p> </li> </ul> </li> <li> <p align="justify">Outil de performance 'PERFMON'</p> <ul> <li> <p align="justify">Optimisation en temps réél des requêtes SQL lancés sur serveur de prod sur SQLSERVER 2005</p> </li> </ul> </li> <li> <p align="justify">Compte rendu d'analyse bases de données</p> <ul> <li> <p align="justify">demande faite par l'équipe étude, la finalité étant la mise en place d'action à mener pour améliorer les performances en base (optimisation des requêtes, réglages des paramètres oracle)</p> </li> </ul> </li> </ul> <p align="justify">&nbsp;</p> <p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2009%2F11%2F21%2Fcv.html&amp;t=CV" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="cv.html" id="a29"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="prive">Privé</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="cv.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+</ul>
+</div>
+<footer class="content-footer">
+<ul class="pages-articles-list"><li class="current"><span class="page-number">1</span></li><li><a href="index-1.html.3" class="page-number">2</a></li><li class="pages-articles-last"><a href="index-1.html.3" class="page-next">Page suivante</a></li></ul>
+</footer>
+</article>
+</main>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer-main" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="main-inner">
+<!-- start bottom --><div class="row-fluid"><div class="span6"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101347">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div><div class="span6"><!-- widget sharing on -->
+<div class="box box-sharing" id="box-sharing-101349">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</div>
+<!-- widget sharing off --></div></div><!-- end bottom --></div>
+</footer>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages_fr.js"></script><script src="bs.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="https://static.hautetfort.com/backend/javascript/front/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<script src="https://static.hautetfort.com/backend/javascript/front/jquery.placeholder.js"></script>
+<script>
+jQuery('input, textarea').placeholder();
+</script>
+<![endif]-->
+<!-- start script -->
+<script>
+(function() {
+var po = document.createElement('script'); po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js?onload=onLoadCallback';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<!-- end script --><script>
+if(typeof jQuery == 'function' && jQuery('div[data-cookie]').length) {
+  jQuery('p[data-close] a').on('click', function (event) {
+    event.preventDefault();
+    jQuery('div[data-cookie]').attr('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+} else if(typeof $$ == 'function' && $$('div[data-cookie]').length) {
+  $$('p[data-close] a')[0].observe('click', function (event) {
+    event.preventDefault();
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+}
+if (!document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*cookies_message\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) {
+  if(typeof jQuery == 'function') {
+    jQuery('div[data-cookie]').attr('data-cookie', 'on');
+  } else if(typeof $$ == 'function') {
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'on');
+  }
+}
+</script>
+    
+    <input type='hidden' id='_videoStepTitleText+11' value=' Videos We Recommend' /><input type='hidden' id='_videoStepTitleStyle+11' value='font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-size: 16px;color: #FFFFFF;text-align: center;font-weight: normal;font-style: normal;text-decoration: none;' /><input type='hidden' id='_videoStepBackgroundColor+11' value='#404d55' /><input type='hidden' id='_videoStepHasBorder+11' value='True' /><input type='hidden' id='_videoStepCountry+11' value='FR' /><input type='hidden' id='_videoStepScriptType' value='3' /><div id='divVideoStep+11' class='divVideoStep'></div><script type='text/javascript'>(function (){var vs = document.createElement('script'); vs.type = 'text/javascript';vs.async = true;vs.src = 'http://kweb.videostep.com/GetLink';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vs, s);})();</script>
+    <input type='hidden' id='_videoStepPublisherId' value='111' />
+    
+    <div id="footer">
+    <a href="http://www.hautetfort.com/create_account.php">Créer un blog</a> sur <a href="http://www.hautetfort.com/">Hautetfort</a>
+    <br />
+    <a href="http://www.hautetfort.com/explore/blogs">Les derniers blogs mis à jour</a>&nbsp;|
+    <a href="http://www.hautetfort.com/explore/posts">Les dernières notes publiées</a>&nbsp;|
+    <a href="http://www.hautetfort.com/explore/posts/tags">Les tags les plus populaires</a>
+    <br />
+    <a href="http://www.hautetfort.com/moderate.php?blog_url=http%3A%2F%2Flefetard.hautetfort.com%2F">Déclarer un contenu illicite</a>&nbsp;|
+    <a href="mentions-legales.html">Mentions légales de ce blog</a>
+    &nbsp;|
+    <a href="http://www.hautetfort.com/">Hautetfort</a> est une marque déposée de la société talkSpirit
+    &nbsp;|
+    Créez votre <a href="http://www.hautetfort.com/">blog</a> !
+    </div>
+        
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-351048-6']);
+  _gaq.push(['_trackPageview']);
+_gaq.push(['_trackEvent', 'Free plan', 'Rencontres, Amour', 'lefetard.hautetfort.com']);
+_gaq.push(['_trackEvent', 'Free plan1', 'MultiCategories', 'lefetard.hautetfort.com']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

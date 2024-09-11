@@ -1,0 +1,20 @@
+﻿-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/chkxml.sql
+-- Author       : Josselin Joly
+-- Description  : Contrôle le fichier xml d'extraction d'une base de données insérée.
+-- Requirements : Avoir les droits DBA, prend en argument le chemin d'extraction
+-- Call Syntax  : @chkxml.sql
+-- Last Modified: 30-AUG-2016
+-- -----------------------------------------------------------------------------------
+set serveroutput on
+declare controle_fichier boolean;
+begin
+	controle_fichier :=
+		DBMS_PDB.CHECK_PLUG_COMPATIBILITY( pdb_descr_file=>'&&file_path');
+		if controle_fichier then
+			dbms_output.put_line('Fichier valide vous pouvez continuer.');
+		else
+			dbms_output.put_line('Fichier invalide arrêtez.');
+		end if;
+end;
+/

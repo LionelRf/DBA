@@ -1,0 +1,11 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/showinst.sql
+-- Author       : Josselin Joly
+-- Description  : Displays the default location for Oracle-managed Datafiles, control files and online redo logs.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @showinst.sql
+-- Last Modified: 30-AUG-2016
+-- -----------------------------------------------------------------------------------
+SELECT i.instance_name instance, i.status, p.name, value
+FROM v$parameter p, v$instance i 
+WHERE p.name in ('db_create_file_dest','db_create_online_log_dest_1');

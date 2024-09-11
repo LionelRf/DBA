@@ -1,0 +1,19 @@
+[root@localhost install]# ./roothas.pl -deconfig -force
+2016-08-17 16:15:31: Checking for super user privileges
+2016-08-17 16:15:31: User has super user privileges
+2016-08-17 16:15:31: Parsing the host name
+Using configuration parameter file: ./crsconfig_params
+Failure to execute: Aucun fichier ou dossier de ce type for command /OraData/app/oragridinfra/bin/crsctl check has
+Failure to execute: Aucun fichier ou dossier de ce type for command /OraData/app/oragridinfra/bin/crsctl check has
+Failure to execute: Aucun fichier ou dossier de ce type for command /OraData/app/oragridinfra/bin/crsctl check has
+You must kill ohasd processes or reboot the system to properly 
+cleanup the processes started by Oracle clusterware
+/OraData/app/oragridinfra/bin/acfsdriverstate: line 51: /OraData/app/oracle/product/lib/acfstoolsdriver.sh: Aucun fichier ou dossier de ce type
+/OraData/app/oragridinfra/bin/acfsdriverstate: line 51: exec: /OraData/app/oracle/product/lib/acfstoolsdriver.sh : impossible d'exécuter : Aucun fichier ou dossier de ce type
+Either /etc/oracle/olr.loc does not exist or is not readable
+Make sure the file exists and it has read and execute access
+/bin/dd: ouverture de «  »: Aucun fichier ou dossier de ce type
+Successfully deconfigured Oracle Restart stack
+
+
+

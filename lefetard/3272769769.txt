@@ -1,0 +1,36 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/proc_affiche_espace_inutilisee.sql
+-- Author       : Josselin Joly
+-- Description  : Affiche l'espace inutilisée dans une table.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @proc_affiche_espace_inutilisee.sql
+-- Last Modified: 25-SEP-2016
+-- -----------------------------------------------------------------------------------
+
+create or replace procedure affiche_espace_inutilisee
+	(a_table varchar2) is
+		l_total_blocks number; l_total_bytes number;
+		l_unused_blocks number; l_unused_bytes number; 
+		l_last_used_extent_file_id number;
+		l_last_used_extent_block_id number;
+		l_last_used_block number;
+		procedure affiche( a_nom in varchar2,
+						   a_valeur in number) is
+		begin
+				dbms_output.put_line( rpad(a_nom,40,'.')||
+				to_char(a_valeur,'999G999G999G999') );
+		end;
+	begin 
+		dbms_space.unused_space ( user,upper(a_table),'TABLE',
+		l_total_blocks,l_total_bytes,l_unused_blocks,
+		l_unused_bytes,l_last_used_extent_file_id,
+		l_last_used_extent_block_id,l_last_used_block);
+				affiche('Total Blocs		:',l_total_blocks);
+				affiche('Total bytes	    :',l_total_bytes);
+				affiche('Blocs inutilisés   :',l_unused_blocks);
+				affiche('Tailles inutilisée :',l_unused_bytes);
+				affiche('FILE# du dernier extent :',l_last_used_extent_file_id);
+				affiche('Le premier bloc du dernier extent		:',l_last_used_extent_block_id);
+				affiche('Le dernier bloc écrit du dernier extent:',l_last_used_block);
+	end;
+/

@@ -1,0 +1,11 @@
+﻿-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/seekpdb.sql
+-- Author       : Josselin Joly
+-- Description  : Affiche les bases de données insérées.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @seekpdb.sql
+-- Last Modified: 30-AUG-2016
+-- -----------------------------------------------------------------------------------
+col username for a30
+SELECT PDB_ID, CON_ID, DBID, PDB_NAME, STATUS, USERNAME 
+FROM CDB_PDBS JOIN CDB_USERS USING (CON_ID) WHERE USERNAME = 'SYSTEM'; 

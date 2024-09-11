@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="ie6 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 7]><html class="ie7 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 8]><html class="ie8 ie678" lang="fr"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="fr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]<!--><html lang="fr"><!--<![endif]-->
+<head>
+<meta charset="UTF-8"/>
+<title>Libertinage - The Best of DBA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Maîtriser les bases de données, maximiser les performances."/>
+<meta name="keywords" content="Libertinage, libertinage, Oracle, Postgresql, Sqlserver, MySQL, database, RMAN, Cassandra"/>
+<meta name="robots" content="index,follow"/>
+<link rel="stylesheet" href="025395.css"/>
+<link rel="stylesheet" href="style.css?1722328855"/>
+<!--[if (gt IE 8)|!(IE)]<!-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic|" rel="stylesheet"/>
+<!--<![endif]-->
+<!--[if lte IE 8]>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400italic" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700italic" rel="stylesheet"/>
+<![endif]-->
+<link rel="stylesheet" href="font-awesome.min.css"/>
+<!--[if IE 7]><link rel="stylesheet" href="https://static.hautetfort.com/backend/css/font/font-awesome-ie7.min.css"/><![endif]--><link rel="shortcut icon" href="favicon.ico"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hautetfort.com/admin/rsd/71687"/>
+<link rel="start" href="index-0.html" title="Home"/>
+<link rel="canonical" href="index.html.14"/>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- start script --><!-- end script -->
+<script type="text/javascript">
+
+function popupCenter(url,width,height,xtr) {
+    var top=(screen.height-height)/2;
+    var left=(screen.width-width)/2;
+    window.open(url,"",xtr+",top="+top+",left="+left+",width="+width+",height="+height);
+}
+
+</script>
+
+    <style type="text/css">
+body {
+    margin-bottom: 0px;
+}
+#toppub { display: block; width: 555px; height: 140px; margin: 0 auto;}
+.content a img {border:0px;}
+#footer {
+    text-align: center;
+    font-size: 65%;
+    width: auto;
+    margin: 2em auto 0px auto;
+    color: #000;
+    line-height: 210%;
+    display: block;
+
+    padding: 15px 15px 35px ;
+    background: #fff url("hetf-background.png") no-repeat 45% 10%;
+    border-top: 3px solid #D20000;
+        
+}
+#footer a {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+    display: inline;
+}
+#footer a:hover {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+    display: inline;
+}
+#sponsored-links {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    margin-bottom: -5px;
+}
+</style>
+
+</head><body id="page-category" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<div data-cookie="off"><p data-close><a href="libertinage#" title="J'ai lu ce message"><span class="ui-icon ui-icon-check">Ok</span></a></p><p data-text>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies. Ces derniers assurent le bon fonctionnement de nos services. <a href="https://www.hautetfort.com/cookies.html" title="En savoir plus sur les cookies" target="_blank">En savoir plus</a>.</p></div><style>[data-cookie]{display:none;position:fixed;backface-visibility:hidden;bottom:0;left:0;width:100%;background:black;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGDYDAAAvQC1UcyxoAAAAABJRU5ErkJggg==);color:white;padding:.5em 0;text-align:center;z-index:9999;}
+[data-cookie~="on"]{display:block;}
+[data-cookie] p{color:white;font-size:12px;margin:0;padding:0 .5em;line-height:1.3em;text-shadow:1px 0 3px rgba(0,0,0,1);}
+[data-cookie] a{color:white;}
+[data-cookie] [data-text]{margin:1px auto 0;text-align:left;max-width:980px;}
+[data-cookie] [data-close]{float:right;margin:0 .5em;}
+[data-cookie] .ui-icon{background-image: url(http://download.jqueryui.com/themeroller/images/ui-icons_ffffff_256x240.png);}
+.ui-icon-check {background-position: -64px -144px;}
+.ui-icon {height: 16px;width: 16px;}
+.ui-icon {background-repeat: no-repeat;display: block;overflow: hidden;text-indent: -99999px;}
+@media print {[data-cookie]{display:none;}}
+</style>
+<div class="wrapper">
+<div class="container">
+<!--[if lte IE 7><p class="alert">Votre navigateur est <strong>périmé</strong>. <a href="http://browsehappy.com/" target="_blank">Veuillez mettre votre navigateur à jour.</a></p><![endif]-->
+<a href="libertinage#content" class="skip-link" accesskey="s">Aller au contenu</a>
+<header class="header-main" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<div class="main-inner">
+<!-- start top --><div class="row-fluid"><div class="span9"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101343">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div></div><div class="row-fluid"><div class="span12"><!-- widget menu on -->
+<div role="navigation" class="box box-menu box-menu-sticky" id="box-menu-101345">
+<div class="box-body">
+<span class="menu-switcher" id="display-navigation"><i class="icon icon-reorder"></i></span><nav role="navigation" id="navigation-to-display">
+<ul role="menu">
+<li role="menuitem"><a href="index-0.html">Accueil</a></li>
+<li class="masked-on-mobile" role="menuitem"><a href="archives">Archives</a></li>
+<li role="menuitem"><a href="about.html">À propos</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="index-0.html">Notes</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-categories">Catégories</a></li><li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-months">Archives</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- widget menu off --></div></div><!-- end top --></div>
+</header>
+<div class="body-main" role="main">
+<div class="main-inner">
+<div class="row-fluid">
+<div class="span4">
+<aside role="complementary" class="aside aside-1" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<!-- start column 1 --><!-- widget search on -->
+<article class="box box-search" id="box-search-101337">
+<header class="box-header">
+<h1><i class="icon icon-search"></i><span class="box-title-text">Rechercher</span></h1>
+</header>
+<div class="box-body">
+<form class="form-search" name="form-box-search-101337" id="form-box-search-101337" role="search" method="get" action="http://lefetard.hautetfort.com/apps/search">
+<p class="form-submit">
+<span class="row-fluid">
+<span class="span10">
+<span class="form-field">
+<input name="s" id="search-field-box-search-101337" type="search" placeholder="Entrer votre recherche" required="required"/>
+<label class="error" for="search-field-box-search-101337" style="display:none"></label>
+</span>
+</span>
+<span class="span2">
+<span class="form-button">
+<input name="search-submit-box-search-101337" id="search-submit-box-search-101337" class="button" type="submit" value="OK"/>
+</span>
+</span>
+</span>
+</p>
+</form>
+</div>
+</article>
+<!-- widget search off --><!-- widget list on -->
+<article class="box box-list box-list-document" id="box-list-457254">
+<header class="box-header">
+<h1><i class="icon icon-ellipsis-vertical"></i><span class="box-title-text">CV</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="lists-list">
+<li role="listitem">
+<a href="dba-freelance.html">
+<span>DBA Freelance</span>
+</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget list off --><!-- widget about on -->
+<article class="box box-about" id="box-about-101313">
+<header class="box-header">
+<h1><i class="icon icon-info-sign"></i><span class="box-title-text">À propos</span></h1>
+</header>
+<div class="box-body">
+<p class="description" itemscope="itemscope" itemtype="http://schema.org/AboutPage">
+<span itemprop="description">  - Dynamique, rigoureux, pédagogue, à l'écoute des besoins de mes clients ;...</span>
+<a href="about.html" itemprop="url">
+Lire la suite</a>
+</p>
+</div>
+</article>
+<!-- widget about off --><!-- widget authors on -->
+<article class="box box-author" id="box-author-101318" style="display:none">
+<header class="box-header">
+<h1><i class="icon icon-quote-right"></i><span class="box-title-text">Auteurs</span></h1>
+</header>
+<div class="box-body">
+<h2>Propriétaire du blog</h2>
+<a href="about.html">
+<figure class="inline-picture author-main">
+<span class="picture">
+<img src="https://size.blogspirit.net/hautetfort.com/lefetard/50/media/01/01/3775567719.png" alt=""/>
+</span>
+<figcaption class="description">
+<p>joguess - 767 notes</p>
+</figcaption>
+</figure>
+</a>
+<ul role="list" class="authors-list">
+</ul>
+</div>
+</article>
+<!-- widget authors off --><!-- widget category on -->
+<article class="box box-category" id="box-category-101322">
+<header class="box-header">
+<h1><i class="icon icon-level-down"></i><span class="box-title-text">Catégories</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="categories-list">
+
+<li role="listitem">
+<a href="index.html.21">Professionnel</a>
+<ul>
+<li role="listitem">
+<a href="index.html.22">BIG DATA - hadoop -spark</a>
+</li>
+<li role="listitem">
+<a href="index.html.23">Cassandra</a>
+</li>
+<li role="listitem">
+<a href="index.html.24">Cloud Control 13C</a>
+</li>
+<li role="listitem">
+<a href="index.html.25">Cloud db</a>
+</li>
+<li role="listitem">
+<a href="index.html.26">HVAULT</a>
+</li>
+<li role="listitem">
+<a href="index.html.27">MongoDB</a>
+</li>
+<li role="listitem">
+<a href="index.html.28">monitoring</a>
+</li>
+<li role="listitem">
+<a href="index.html.29">Ora2pg</a>
+</li>
+<li role="listitem">
+<a href="index.html.30">Oracle RAC</a>
+</li>
+<li role="listitem">
+<a href="index.html.31">Oracle12C,19C</a>
+</li>
+<li role="listitem">
+<a href="index.html.32">Postgresql</a>
+</li>
+<li role="listitem">
+<a href="index.html.33">RMAN</a>
+</li>
+<li role="listitem">
+<a href="index.html.34">Scripts</a>
+</li>
+<li role="listitem">
+<a href="index.html.35">Soluce</a>
+</li>
+<li role="listitem">
+<a href="index.html.36">SQLServer</a>
+</li>
+<li role="listitem">
+<a href="index.html.37">Système</a>
+</li>
+<li role="listitem">
+<a href="index.html.38">tuning</a>
+</li>
+</ul>
+</li>
+
+</ul>
+</div>
+</article>
+<!-- widget category off --><!-- widget links on -->
+<article class="box box-link" id="box-custom-236539">
+<header class="box-header">
+<h1><i class="icon icon-link"></i><span class="box-title-text">Référencement</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="links-list">
+<li role="listitem"><a href="http://www.extremecarving.com/index_fr.html" target="_blank">SURF</a></li>
+<li role="listitem"><a href="http://secretebase.free.fr/" target="_blank">Base Secrète</a></li>
+<li role="listitem"><a href="http://newzealand.over-blog.com/" target="_blank">Le blog de Mat</a></li>
+<li role="listitem"><a href="http://missdactari-blog.blogspot.com/" target="_blank">Le Blog de Camille</a></li>
+<li role="listitem"><a href="http://www.bobbydurrettdba.com/" target="_blank">Le Blog de Bobby DBA</a></li>
+<li role="listitem"><a href="https://oraclue.com/" target="_blank">Miladin Modrakovic's Blog</a></li>
+<li role="listitem"><a href="http://oradbastuff.blogspot.fr/" target="_blank">Sfaturi Oracle / Tips and tricks OracleDBA</a></li>
+<li role="listitem"><a href="http://orababy.blogspot.fr/" target="_blank">ORACLE DBA Knowledge Share</a></li>
+<li role="listitem"><a href="http://www.drazzib.com/docs/bdd/oracle/" target="_blank">Site de Damien Raude Morvan</a></li>
+<li role="listitem"><a href="http://www.database-expert.com/" target="_blank">Edward Stoever DBA</a></li>
+<li role="listitem"><a href="https://www.dba-scripts.com" target="_blank">Oracle DBA (Cyrille Modiano)</a></li>
+</ul>
+</div>
+</article>
+<!-- widget links off --><!-- widget archives on -->
+<article class="box box-archive" id="box-archive-101316">
+<header class="box-header">
+<h1><i class="icon icon-archive"></i><span class="box-title-text">Archives</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="archives-list">
+<li role="listitem">
+<a href="index.html.46">lun. 29 juil. - dim. 04 août</a>
+</li>
+<li role="listitem">
+<a href="index.html.47">lun. 08 juil. - dim. 14 juil.</a>
+</li>
+<li role="listitem">
+<a href="index.html.48">lun. 17 juin - dim. 23 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.49">lun. 10 juin - dim. 16 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.50">lun. 27 mai - dim. 02 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.51">lun. 20 mai - dim. 26 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.52">lun. 13 mai - dim. 19 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.53">lun. 29 avril - dim. 05 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.54">lun. 22 avril - dim. 28 avril</a>
+</li>
+<li role="listitem">
+<a href="index.html.55">lun. 15 avril - dim. 21 avril</a>
+</li>
+</ul>
+</div>
+<footer class="box-footer">
+<p><a href="index.html.56">Toutes les archives</a></p>
+</footer>
+</article>
+<!-- widget archives off --><!-- widget lastupdatedblogs on -->
+<article class="box box-blog" id="box-blog-101319">
+<header class="box-header">
+<h1><i class="icon icon-external-link-sign"></i><span class="box-title-text">Derniers blogs mis à jour</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="last-posts-list">
+<li role="listitem"><a href="http://linformationnationaliste.hautetfort.com/archive/2024/07/30/ouverture-des-jo-ces-sportifs-qui-n-ont-pas-aime-la-cene-6508849.html">Ouverture des JO : ces sportifs qui n’ont pas...</a> sur <a href="http://linformationnationaliste.hautetfort.com/">l'information nationaliste</a></li>
+<li role="listitem"><a href="http://lactualitedessocialistes.hautetfort.com/archive/2024/07/31/le-recap-de-splann-un-rattrapage-de-l-actualite-bretonne-en-6508736.html">Le récap' de « Splann ! », un rattrapage de...</a> sur <a href="http://lactualitedessocialistes.hautetfort.com/">Actualités socialistes</a></li>
+<li role="listitem"><a href="http://metapoinfos.hautetfort.com/archive/2024/07/20/j-d-vance-colistier-de-trump-et-figure-de-proue-des-nationau-6507781.html">J. D. Vance, colistier de Trump et figure de...</a> sur <a href="http://metapoinfos.hautetfort.com/">Métapo infos</a></li>
+<li role="listitem"><a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/archive/2024/07/26/la-france-annoncent-la-reconnaissance-de-la-marocanite-du-sa-6508408.html">La France annonce la reconnaissance de la...</a> sur <a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/">«-Le Royaume Chérifien du Maroc -Chihab 25...</a></li>
+<li role="listitem"><a href="http://formesetcouleurs.hautetfort.com/archive/2024/07/30/stage-adultes-2024-6508829.html">STAGE ADULTES JUILLET 2024</a> sur <a href="http://formesetcouleurs.hautetfort.com/">Formes & Couleurs</a></li>
+<li role="listitem"><a href="http://cfdt-centrale-auchan.hautetfort.com/archive/2024/07/30/avis-cfdt-ari-sur-le-projet-d-organisation-de-la-direction-digitale.html">Avis CFDT ARI sur le projet d'organisation de...</a> sur <a href="http://cfdt-centrale-auchan.hautetfort.com/">CFDT Auchan Centrale ARS, ARA, ARI et OIA</a></li>
+<li role="listitem"><a href="http://synthesenationale.hautetfort.com/archive/2024/07/30/lyon-suite-a-une-agression-gauchiste-un-jeune-nationaliste-temoigne.html">Lyon : suite à une agression gauchiste, un...</a> sur <a href="http://synthesenationale.hautetfort.com/">SYNTHESE NATIONALE</a></li>
+<li role="listitem"><a href="http://www.belgicatho.be/archive/2024/07/30/tres-etrange-la-facon-dont-la-presse-mainstream-a-rendu-comp-6508818.html">Très étrange : la façon dont la presse...</a> sur <a href="http://www.belgicatho.be/">BELGICATHO</a></li>
+<li role="listitem"><a href="http://www.cuisine-toulousaine.com/archive/2024/07/30/salade-de-saucisse-de-toulouse-et-lentilles-6508814.html">Salade de Saucisse de Toulouse et lentilles</a> sur <a href="http://www.cuisine-toulousaine.com/">Cuisine Toulousaine et Occitane</a></li>
+<li role="listitem"><a href="http://lionelbaland.hautetfort.com/archive/2024/07/30/lionel-baland-dans-le-reportage-de-tv-libertes-sur-le-passag-6508813.html">Lionel Baland dans le reportage de TV Libertés...</a> sur <a href="http://lionelbaland.hautetfort.com/">Lionel Baland</a></li>
+</ul>
+</div>
+</article>
+<!-- widget lastupdatedblogs off --><!-- widget calendar on -->
+<article class="box box-calendar" id="box-calendar-101321">
+<header class="box-header">
+<h1><i class="icon icon-calendar"></i><span class="box-title-text">Juillet 2024</span></h1>
+</header>
+<div class="box-body">
+<table>
+<caption>Calendrier des notes en Juillet 2024</caption>
+<tr>
+<th><abbr title="Dimanche">D</abbr></th>
+<th><abbr title="Lundi">L</abbr></th>
+<th><abbr title="Mardi">M</abbr></th>
+<th><abbr title="Mercredi">M</abbr></th>
+<th><abbr title="Jeudi">J</abbr></th>
+<th><abbr title="Vendredi">V</abbr></th>
+<th><abbr title="Samedi">S</abbr></th>
+</tr>
+<tr>
+<td></td>
+<td><span> 1</span></td>
+<td><span> 2</span></td>
+<td><span> 3</span></td>
+<td><span> 4</span></td>
+<td><span> 5</span></td>
+<td><span> 6</span></td>
+</tr>
+<tr>
+<td><span> 7</span></td>
+<td><span> 8</span></td>
+<td><span> 9</span></td>
+<td class="has-post"><a href="index.html.57">10</a></td>
+<td class="has-post"><a href="index.html.58">11</a></td>
+<td class="has-post"><a href="index.html.59">12</a></td>
+<td><span>13</span></td>
+</tr>
+<tr>
+<td><span>14</span></td>
+<td><span>15</span></td>
+<td><span>16</span></td>
+<td><span>17</span></td>
+<td><span>18</span></td>
+<td><span>19</span></td>
+<td><span>20</span></td>
+</tr>
+<tr>
+<td><span>21</span></td>
+<td><span>22</span></td>
+<td><span>23</span></td>
+<td><span>24</span></td>
+<td><span>25</span></td>
+<td><span>26</span></td>
+<td><span>27</span></td>
+</tr>
+<tr>
+<td><span>28</span></td>
+<td><span>29</span></td>
+<td class="has-post today"><a href="index.html.60">30</a></td>
+<td><span>31</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</div>
+</article>
+<!-- widget calendar off --><!-- widget comments on -->
+<article class="box box-comment" id="box-comment-101324">
+<header class="box-header">
+<h1><i class="icon icon-comments"></i><span class="box-title-text">Commentaires récents</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-comments-list">
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment9030164" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-12-22T18:29:12" itemprop="datePublished">
+<span class="date-hour-minute">18h29</span>
+<span class="date-day">22</span>
+<span class="date-month-year">déc. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">collignon</a> sur <a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html">Intermédiation</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>"Confidentielles" au féminin pluriel, merci.<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8994604" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/01/27/tuning-ora2pg-6362720.html#c8994604">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-01-27T09:27:05" itemprop="datePublished">
+<span class="date-hour-minute">09h27</span>
+<span class="date-day">27</span>
+<span class="date-month-year">janv. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="tuning-ora2pg-6362720.html#c8994604">Le boss</a> sur <a href="tuning-ora2pg-6362720.html">Tuning ora2pg</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>1- bah ouais poto si tu vides les data source ça va plus...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8626826" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/06/29/forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-06-29T17:31:31" itemprop="datePublished">
+<span class="date-hour-minute">17h31</span>
+<span class="date-day">29</span>
+<span class="date-month-year">juin 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">joguess</a> sur <a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html">Forcer le refresh de la vue...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>peut etre rajouter cela : 
+BEGIN...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8579037" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/01/31/purger-fichiers-logs-5905505.html#c8579037">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-01-31T14:59:55" itemprop="datePublished">
+<span class="date-hour-minute">14h59</span>
+<span class="date-day">31</span>
+<span class="date-month-year">janv. 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="purger-fichiers-logs-5905505.html#c8579037">joguess</a> sur <a href="purger-fichiers-logs-5905505.html">Purger fichiers logs</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>voir aussi :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518755" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518755">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:14:31" itemprop="datePublished">
+<span class="date-hour-minute">16h14</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518755">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>La solution se trouve ici :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518754" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518754">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:12:03" itemprop="datePublished">
+<span class="date-hour-minute">16h12</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518754">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>http://www.dba-oracle.com/t_asm_disk_does_not_exist_or_is...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518753" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/10/installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T15:59:29" itemprop="datePublished">
+<span class="date-hour-minute">15h59</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">JJO</a> sur <a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html">Installation ASM et configuration de l'instance...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>https://taliphakanozturken.wordpress.com/2012/03/12/confi...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518135" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/07/outil-de-benchmark-oracle-orion-5834320.html#c8518135">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-09T08:19:40" itemprop="datePublished">
+<span class="date-hour-minute">08h19</span>
+<span class="date-day">09</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="outil-de-benchmark-oracle-orion-5834320.html#c8518135">jjo</a> sur <a href="outil-de-benchmark-oracle-orion-5834320.html">Outil de benchmark Oracle - ORION</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>Orion Usage:$ORACLE_HOME/bin/orion -run simple -testname...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8314452" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2015/04/19/sego-dans-c-politique-5606540.html#c8314452">
+
+<!-- widget comments off -->
+<!-- widget pages on -->
+<article class="box box-page" id="box-page-101331">
+<header class="box-header">
+<h1><i class="icon icon-file-text-alt"></i><span class="box-title-text">Pages</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="pages-list">
+<li role="listitem">
+<a href="jesako.html">PAGE HTML</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget pages off --><!-- widget posts on -->
+<article class="box box-post" id="box-post-101336">
+<header class="box-header">
+<h1><i class="icon icon-comment"></i><span class="box-title-text">Notes récentes</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-posts-list">
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6508824" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/30/postgres-monitor-autovacuum-freeze-max-age-6508824.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-30T10:40:49" itemprop="datePublished">
+<span class="date-hour-minute">10h40</span>
+<span class="date-day">30</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-autovacuum-freeze-max-age-6508824.html">[Postgres] Monitor autovacuum_freeze_max_age</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to monitor the :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506680" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/12/postgres-monitor-wait-event-6506680.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-12T11:28:00" itemprop="datePublished">
+<span class="date-hour-minute">11h28</span>
+<span class="date-day">12</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-wait-event-6506680.html">[Postgres] Monitor wait event</a></h1>
+</header>
+<div class="recent-post-body">
+<p> \t select wait_event_type, wait_event from...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506515" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/11/postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-11T10:02:00" itemprop="datePublished">
+<span class="date-hour-minute">10h02</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">[Postgres] Solve PostgreSQL DataFileRead and...</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Click her to see the next. <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506355" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/10/postgres-tuto-tuning-6506355.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-10T07:59:04" itemprop="datePublished">
+<span class="date-hour-minute">07h59</span>
+<span class="date-day">10</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-tuto-tuning-6506355.html">[Postgres] Tuto tuning</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This site helped to resolve IPC wait event :  Postgres...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6503410" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/18/postgres-identifier-les-privileges-6503410.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-18T10:03:31" itemprop="datePublished">
+<span class="date-hour-minute">10h03</span>
+<span class="date-day">18</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-privileges-6503410.html">[Postgres] Identifier les privilèges</a></h1>
+</header>
+<div class="recent-post-body">
+<p> SELECT * &nbsp; FROM...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6502501" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/11/postgres-identifier-les-attentes-6502501.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-11T14:21:00" itemprop="datePublished">
+<span class="date-hour-minute">14h21</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-attentes-6502501.html">[Postgres] Identifier les attentes</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to identify the wait events on...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500731" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/30/postgres-pg-partman-6500731.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-30T10:56:00" itemprop="datePublished">
+<span class="date-hour-minute">10h56</span>
+<span class="date-day">30</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-pg-partman-6500731.html">[Postgres] PG_PARTMAN</a></h1>
+</header>
+<div class="recent-post-body">
+<p> pg_partman v4 vs pg_partman v5&nbsp; 
+ Une fonction...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500641" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-extensions-6500641.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T17:27:00" itemprop="datePublished">
+<span class="date-hour-minute">17h27</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-extensions-6500641.html">[Postgres] Extensions</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Extensions en prd indispensables :&nbsp; <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500591" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-monitor-cloud-db-azure-ibm-6500591.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T10:59:00" itemprop="datePublished">
+<span class="date-hour-minute">10h59</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-cloud-db-azure-ibm-6500591.html">[Postgres] Monitor cloud DB (AZURE / IBM)</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Quand on n'a pas d'outils pour faire le monitoring des...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6499803" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/24/postgres-locker-une-base-6499803.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-24T10:01:00" itemprop="datePublished">
+<span class="date-hour-minute">10h01</span>
+<span class="date-day">24</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-locker-une-base-6499803.html">[Postgres] Locker une base</a></h1>
+</header>
+<div class="recent-post-body">
+<p> On ne peut pas locker une base nativement alors comment...<p>
+</div>
+</article>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget posts off --><!-- widget sharing on -->
+<article class="box box-sharing" id="box-sharing-101338">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</article>
+<!-- widget sharing off --><!-- widget populartags on -->
+<article class="box box-tag" id="box-tag-101340">
+<header class="box-header">
+<h1><i class="icon icon-tags"></i><span class="box-title-text">Tags populaires</span></h1>
+</header>
+<div class="box-body">
+<ul class="popular-tags-list" role="list">
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dieudonn%C3%A9" class="tag-10">dieudonné</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/strasbourg" class="tag-10">strasbourg</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/star" class="tag-10">star</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surf" class="tag-9">surf</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salsa" class="tag-1">salsa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sexy" class="tag-10">sexy</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/danse" class="tag-9">danse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/webcam" class="tag-9">webcam</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blog" class="tag-10">blog</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/oracle" class="tag-8">oracle</a></li>
+</ul>
+</div>
+</article>
+<!-- widget populartags off --><!-- end column 1 --></aside>
+</div>
+<div class="span8">
+<main role="main">
+
+<article class="content" id="content" itemprop="mainContentOfPage">
+<header class="content-header">
+<h1>Libertinage</h1>
+</header>
+<div class="content-body">
+<ul role="list" class="articles-list">
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article5776311" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/03/18/clubs-libertins-region-aixoise-5776311.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2016-03-18T22:50:00" itemprop="datePublished">
+<span class="date-hour-minute">22h50</span>
+<span class="date-day">18</span>
+<span class="date-month-year">mars 2016</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="clubs-libertins-region-aixoise-5776311.html">Clubs libertins région aixoise</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2016%2F03%2F18%2Fclubs-libertins-region-aixoise-5776311.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body article-intro" itemprop="articleBody">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="read-more"><a href="clubs-libertins-region-aixoise-5776311.html#more">Lire la suite</a></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2016%2F03%2F18%2Fclubs-libertins-region-aixoise-5776311.html&amp;t=Clubs+libertins+r%C3%A9gion+aixoise" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="clubs-libertins-region-aixoise-5776311.html" id="a0"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="bons-plans">Bons plans</a>, <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="clubs-libertins-region-aixoise-5776311.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article2914219" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2010/09/24/theatre-erotiqe-le-chochotte.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2010-09-24T08:03:00" itemprop="datePublished">
+<span class="date-hour-minute">08h03</span>
+<span class="date-day">24</span>
+<span class="date-month-year">sept. 2010</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="theatre-erotiqe-le-chochotte.html">Théâtre érotiqe "LE ChoChotte"</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2010%2F09%2F24%2Ftheatre-erotiqe-le-chochotte.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>Hier soir direction place St Michel, pour découvrir le théâtre érotique "Le ChoChotte".</p>
+<p>&nbsp;</p>
+<p>Alors l'entrée coûte 50 euros. Ca faut le savoir.</p>
+<p>Une fois installé des streap-teases défile les unes après les autres.</p>
+<p>Pour ma part j'ai été dollicité plusieurs fois, une fois pour me faire attaché à la barre. La meuf une métisse petite pas mal , m'attaché par le cou à la barre par une&nbsp; ceinture puis la meuf m'a déssapé. C'était assez chaud et je l'avais bien dure!! Limite SM. Elle m'a léchée les&nbsp; tétons un truc de OUF!!! Elle m'a fouété avec la ceinture.. Enfin ça c'était au ChoChotte...</p>
+<p>Puis toujours là bas , j'ai appris à faire de la barre donc je me suis pris pour une cowgirl et j'ai failli mettre un coup de savate au client.</p>
+<p>&nbsp;</p>
+<p>Enfin je garde un bon souvenir de louna ou illona, qui a été la première a se masturbé sous mes yeux.</p>
+<p>En fait tout ce qui se passe n'est pas simulé donc ca rassure, c'est authentique.</p>
+<p>Franchement ca vaut le coup et je vais vous dire parfois je n'osais pas les toucher tellement j'étais impressioné ou intimidé !!</p>
+<p>Et il en faut pourtant...</p>
+<p>La video est <a href="http://www.theatre-chochotte.com/pop_video.php?lien=2" target="_blank">ici.</a></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2010%2F09%2F24%2Ftheatre-erotiqe-le-chochotte.html&amp;t=Th%C3%A9%C3%A2tre+%C3%A9rotiqe+%22LE+ChoChotte%22" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="theatre-erotiqe-le-chochotte.html" id="a1"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="theatre-erotiqe-le-chochotte.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article2900647" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2010/09/15/clubs-libertins-sur-paris.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2010-09-15T16:36:00" itemprop="datePublished">
+<span class="date-hour-minute">16h36</span>
+<span class="date-day">15</span>
+<span class="date-month-year">sept. 2010</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="clubs-libertins-sur-paris.html">CLubs libertins sur PARIS</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2010%2F09%2F15%2Fclubs-libertins-sur-paris.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><span style="text-decoration: underline; font-family: arial black,avant garde;">Les Clubs :</span></p>
+<p><a title="Au 10 Bis" href="http://www.au10bis.com/" target="_blank">Au 10 Bis</a></p>
+<p><a title="Overside" href="http://www.overside.fr" target="_blank">Overside</a></p>
+<p><a title="L'Hyppocampe" href="http://www.hyppocampe.com/" target="_blank">L'Hyppocampe</a></p>
+<p><a title="Le Quai 17" href="http://www.hautetfort.com/admin/posts/www.quai17.net" target="_blank">Le Quai 17</a></p>
+<p><a href="http://www.nocommentclub.com/" target="_blank">Le No Comment</a></p>
+<p>Quelques adresses pour spectacle érotique (50 euros de 12h30à 00h30) :</p>
+<p>Le chochotte : 34, rue St-André-des-Arts &nbsp;<br />75006 Paris Métro St Michel&nbsp; (mention toute particulière au chochotte) <br />&nbsp; <br />Le show-girl : 5 rue des Halles 75001 Paris Tél : 0142338588</p>
+<p>Une bonne cochonne à voir au spectacle érotique : Chloé des Lices</p>
+<p><a href="http://www.sexodrome-paris.fr/" target="_blank">Le sexodrome</a> : <span class="edito"><span class="h4">&nbsp;</span></span></p>
+<p><span class="edito"><span class="h4">Le centre érotique <br /> de Paris, l'immeuble du Sexodrome<br /> 23 bld de Clichy <br /> 75009 Paris<br /> M° Pigalle, Blanche,<br /> </span></span><span class="edito"><span class="h4">St Georges.<br /> Bus : 67, 74, 30 et&nbsp;54<br /> Tél : 01 42 82 11 90</span></span></p>
+<p><a href="http://www.myspace.com/club.88" target="_blank">Le Club 88</a> (<a href="http://www.xstarsworld.com/?L=users.profile&amp;id=LEClub88">adresse)</a></p>
+<p>88 rue St Denis 75001</p>
+<p>Paris</p>
+<p>Téléphone Fixe : 01 44 82 63 00</p>
+<p>Email :<a href="mailto:jo.club88@gmail.com">jo.club88@gmail.com</a></p>
+<p>Hammam et Sauna :</p>
+<p><a href="http://www.sauna-club-libertin.com/sauna_club_libertin_3.php?id=449&amp;d=75" target="_blank">Le Moon City</a></p>
+<p><a href="http://www.sauna-club-libertin.com/sauna_club_libertin_3.php?id=480&amp;d=75" target="_blank">Alina Sauna</a></p>
+<p><a href="http://amphibi.free.fr/cariboost1/crbst_2.html" target="_self">L'Amphibi</a></p>
+<p><a href="http://www.clubechangiste.org/recherche-clubs-echangistes.html" target="_blank">Trouver un club libertin sur PARIS et partout en France.</a></p>
+<p>Pour télécharger des photos coquines voir mon post "<a href="espace-coquins-5604608.html">Espace coquin</a>".</p>
+<p>&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2010%2F09%2F15%2Fclubs-libertins-sur-paris.html&amp;t=CLubs+libertins+sur+PARIS" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="clubs-libertins-sur-paris.html" id="a2"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="clubs-libertins-sur-paris.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1679145" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2008/06/25/clubs-sur-paca.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2008-06-25T15:59:17" itemprop="datePublished">
+<span class="date-hour-minute">15h59</span>
+<span class="date-day">25</span>
+<span class="date-month-year">juin 2008</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="clubs-sur-paca.html">CLubs sur PACA</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F06%2F25%2Fclubs-sur-paca.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p> <table align="center" bgcolor="#9966FF" border="1" cellpadding="4" cellspacing="0" width="90%"> <tbody> <tr> <td width="25%"><font size="2">LE CLUB 06</font></td> <td width="15%"><font color="#9966FF" size="1">..</font></td> <td width="130"><font color="#9966FF" size="1">.</font><font color="#9966FF" size="1">.</font></td> <td width="108"><font size="1">06250 Mougins</font></td> <td width="23%"><font size="1">Tél. : 04 93 18 16 94</font></td> </tr> <tr> <td width="129"><font size="2">3.D.S<br /> <font size="1">(<a href="http://3ds.maxximum.org/%20" target="_blank">site web</a>)</font></font></td> <td width="85"><font size="1">club - discothèque - sauna</font></td> <td width="130"><font size="1">16 rue Smolett</font></td> <td width="108"><font size="1">06000 Nice&nbsp;</font></td> <td width="23%"><font size="1">Tél. : 04 93 55 93 68</font></td> </tr> <tr> <td width="129"><font size="2">LE LADY CLUB</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">10 Rue Dominique Paex</font></td> <td width="108"><font size="1">06000 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 83 30 32</font></td> </tr> <tr> <td width="129"><font size="2">LA CONCA D'ORO&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">15, rue Raimbaldi&nbsp;</font></td> <td width="108"><font size="1">06000 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 56 85 80</font></td> </tr> <tr> <td width="129"><font size="2">L'OUSTAOU DU MOULIN</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">11 rue du Moulin</font></td> <td width="108"><font size="1">06000 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 69 16 20</font></td> </tr> <tr> <td width="129"><font size="2">HOTEL LITLE PALACE</font></td> <td width="85"><font size="1">hôtel - sauna</font></td> <td width="130"><font size="1">9 av. Baquis</font></td> <td width="108"><font size="1">06000 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 97 03 00 19</font></td> </tr> <tr> <td width="129"><font size="2">CHEZ CHRISTIANE&nbsp;</font></td> <td width="85"><font size="1">sauna</font></td> <td width="130"><font size="1">4, rue Papon&nbsp;</font></td> <td width="108"><font size="1">06000 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 26 40 75</font></td> </tr> <tr> <td width="129"><font size="2">LE PAPILLON</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">19 bis, rue Joseph Raybaud</font></td> <td width="108"><font size="1">06000 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 80 21 86</font></td> </tr> <tr> <td width="129"><font size="2">SKAL CLUB&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">9, rue Antoine Gautier&nbsp;</font></td> <td width="108"><font size="1">06000 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 56 85 80</font></td> </tr> <tr> <td width="129"><font size="2">LE LADY CLUB II</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">2, rue Vernier</font></td> <td width="108"><font size="1">06200 Nice</font></td> <td width="136"><font size="1">Tél. : 04 93 16 84 41</font></td> </tr> <tr> <td width="129"><font size="2">Le 606<br /> <font size="1">(<a href="http://www.latelierweb.com/idees-coquines/bar-echangistes/clubs/:%20%20http://www.le606.com/%20" target="_blank">site web</a>)</font></font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">606, chemin des Peupliers</font></td> <td width="108"><font size="1">06250 MOUGINS</font></td> <td width="136"><font size="1">Tél. : 04 92 18 16 00</font></td> </tr> <tr> <td width="129"><font size="2">L'INSOLITE</font></td> <td width="85"><font size="1">club sauna</font></td> <td width="130"><font size="1">50 bld de Stalingrad</font></td> <td width="108"><font size="1">06300 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 55 52 58</font></td> </tr> <tr> <td width="129"><font size="2">CLUB 54&nbsp;</font></td> <td width="85"><font size="1">discothèque - club</font></td> <td width="130"><font size="1">54, rue des Ponchettes&nbsp;</font></td> <td width="108"><font size="1">06300 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 62 10 22</font></td> </tr> <tr> <td width="129"><font size="2">LE CHATEAU&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">17, rue des Ponchettes&nbsp;</font></td> <td width="108"><font size="1">06300 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 85 73 91</font></td> </tr> <tr> <td width="129"><font size="2">AZUR SAUNA&nbsp;CLUB</font></td> <td width="85"><font size="1">sauna</font></td> <td width="130"><font size="1">4, quai Papacino&nbsp;</font></td> <td width="108"><font size="1">06300 Nice&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 56 25 00</font></td> </tr> <tr> <td width="129"><font size="2">LES OUBLIETTES<br /> <font size="1">(<a href="http://www.chez.com/oubliettes" target="_blank"><i>site web</i></a>)</font></font></td> <td width="85"><font size="1">club - discothèque</font></td> <td width="130"><font size="1">8 rue des frères Le Suquet</font></td> <td width="108"><font size="1">06400 Cannes</font></td> <td width="136"><font size="1">Tél. : 04 93 99 69 09</font></td> </tr> <tr> <td width="129"><font size="2">CLUB DU SOLEIL DE GRASSE&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font color="#9966FF" size="1">.</font></td> <td width="108"><font size="1">06460 Saint-Vallier de Thiey&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 42 64 08</font></td> </tr> <tr> <td width="129"><font size="2">AMAZONIA&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">12, avenue Pasteur&nbsp;</font></td> <td width="108"><font size="1">06600 Antibes&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 34 66 20</font></td> </tr> <tr> <td width="129"><font size="2">AMADEUS CLUB&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">67, boulevard Raymond Poincaré&nbsp;</font></td> <td width="108"><font size="1">06600 Antibes&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 61 03 31</font></td> </tr> <tr> <td width="129"><font size="2">CLUB ANTINEA&nbsp;</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">Centre Galaxie - 2793 chemin de St Claude&nbsp;</font></td> <td width="108"><font size="1">06600 Antibes&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 74 69 00</font></td> </tr> <tr> <td width="129"><font size="2">LE SAINT PHAL&nbsp;</font></td> <td width="85"><font size="1">cercle privé</font></td> <td width="130"><font size="1">6, rue des Micocouliers&nbsp;</font></td> <td width="108"><font size="1">06800 Cagnes s Mer&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 07 36 53</font></td> </tr> <tr> <td width="129"><font size="2">LE JARDIN D'EDEN<br /> <font size="1">(<a href="http://lejardindeden.free.fr/" target="_blank">site web</a>)&nbsp;</font></font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">57, boulevard de la Blancarde&nbsp;</font></td> <td width="108"><font size="1">13000 Marseille</font></td> <td width="136"><font size="1">Tél. : 04 91 49 84 36</font></td> </tr> <tr> <td width="129"><font size="2">LE CLUB 95</font></td> <td width="85"><font color="#9966FF" size="1">.</font><font size="1">club</font></td> <td width="130"><font size="1">95 Rue St Jacques</font></td> <td width="108"><font size="1">13000 Marseille</font></td> <td width="136"><font size="1">Tél. : 04 91 81 47 30</font></td> </tr> <tr> <td width="129"><font size="2">HÔTEL BEAUSEJOUR&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">13, rue St Saens&nbsp;</font></td> <td width="108"><font size="1">13001 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 33 80 59</font></td> </tr> <tr> <td width="129"><font size="2">L'AN-BI-GUS&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">144, rue Consolat&nbsp;</font></td> <td width="108"><font size="1">13001 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 62 97 05</font></td> </tr> <tr> <td width="129"><font size="2">LES THERMES&nbsp;</font></td> <td width="85"><font size="1">sauna</font></td> <td width="130"><font size="1">22, rue Mazagran&nbsp;</font></td> <td width="108"><font size="1">13001 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 92 69 41</font></td> </tr> <tr> <td width="129"><font size="2">LE PERLE D'AIL</font></td> <td width="85"><font size="1">restaurant</font></td> <td width="130"><font size="1">27 rue de la Loge</font></td> <td width="108"><font size="1">13002 Marseille</font></td> <td width="136"><font size="1">Tél. : 04 91 90 91 11</font></td> </tr> <tr> <td width="129"><font size="2">NEW 34</font></td> <td width="85"><font size="1">sauna</font></td> <td width="130"><font size="1">34 rue du Chevalier Paul</font></td> <td width="108"><font size="1">13002 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 29 76 64</font></td> </tr> <tr> <td width="129"><font size="2">LE VAHINE</font></td> <td width="85"><font size="1">sauna - club</font></td> <td width="130"><font size="1">35 rue Elemir Bourges</font></td> <td width="108"><font size="1">13004 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 34 76 56</font></td> </tr> <tr> <td width="129"><font size="2">LE LAETITIA&nbsp;</font></td> <td width="85"><font size="1">restaurant</font></td> <td width="130"><font size="1">194, avenue Chartreux&nbsp;</font></td> <td width="108"><font size="1">13004 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 49 19 14</font></td> </tr> <tr> <td width="129"><font size="2">LE 4 SANS COUP FERIR&nbsp;</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">4, rue Devilliers&nbsp;</font></td> <td width="108"><font size="1">13005 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 47 79 06</font></td> </tr> <tr> <td width="129"><font size="2">SAUNA VENUS&nbsp;</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">91, rue Roger BRUN</font></td> <td width="108"><font size="1">13005 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 83 29 59</font></td> </tr> <tr> <td width="129"><font size="2">LE 37 BIS&nbsp;</font></td> <td width="85"><font size="1">hamamm</font></td> <td width="130"><font size="1">37bis, rue Edouard Delalande&nbsp;</font></td> <td width="108"><font size="1">13006 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 81 36 47</font></td> </tr> <tr> <td width="129"><font size="2">LE SAINT-NICOLAS&nbsp;</font></td> <td width="85"><font size="1">discothèque</font></td> <td width="130"><font size="1">63, rue d'Italie&nbsp;</font></td> <td width="108"><font size="1">13006 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 47 19 17</font></td> </tr> <tr> <td width="129"><font size="2">J &amp; R (2)&nbsp;</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">47, bd Paul Peytral&nbsp;</font></td> <td width="108"><font size="1">13006 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 81 32 07</font></td> </tr> <tr> <td width="129"><font size="2">L'OLYMPE&nbsp;</font></td> <td width="85"><font size="1">sauna - club</font></td> <td width="130"><font size="1">29, rue Vallon Montebello&nbsp;</font></td> <td width="108"><font size="1">13006 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 53 18 94</font></td> </tr> <tr> <td width="129"><font size="2">LE THAAM'S</font></td> <td width="85"><font size="1">discothèque</font></td> <td width="130"><font size="1">145 bld Rabateau</font></td> <td width="108"><font size="1">13006 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 91 83 18 96</font></td> </tr> <tr> <td width="129"><font size="2">RELAX EDEN&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">17, cours Julien&nbsp;</font></td> <td width="108"><font size="1">13006 Marseille&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 93 85 73 91</font></td> </tr> <tr> <td width="129"><font size="2">ARLES SAUNA CLUB&nbsp;<br /> <font size="1">(<a href="http://www.arlesaunaclub.com/" target="_blank">site web</a>)</font></font></td> <td width="85"><font size="1">club - sauna</font></td> <td width="130"><font size="1">6, rue Marc Sagnier&nbsp;</font></td> <td width="108"><font size="1">13200 Arles&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 90 93 15 73</font></td> </tr> <tr> <td width="129"><font size="2">LE HOT CLUB&nbsp;</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">36ter, place du Jaï&nbsp;</font></td> <td width="108"><font size="1">13220 Chateauneuf Lès Martigues&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 42 81 33 82</font></td> </tr> <tr> <td width="129"><font size="2">L'ENVOUTEE</font></td> <td width="85"><font size="1">club - restaurant</font></td> <td width="130"><font size="1">13 rue Passoudine</font></td> <td width="108"><font size="1">13300 Pelissanne</font></td> <td width="136"><font size="1">Tél. : 04 90 55 00 36</font></td> </tr> <tr> <td width="129"><font size="2">LA FONTAINE DE JOUVENCE</font></td> <td width="85"><font size="1">club - sauna</font></td> <td width="130"><font size="1">76 rue Charles Serre</font></td> <td width="108"><font size="1">13300 Salon de Provence</font></td> <td width="136"><font size="1">Tél. : 04 90 56 13 49</font></td> </tr> <tr> <td width="129"><font size="2">LE 391</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">391 rueDenfert Rochereau</font></td> <td width="108"><font size="1">13300 Salon de Provence</font></td> <td width="136"><font size="1">Tél. : 04 90 53 79 78</font></td> </tr> <tr> <td width="129"><font size="2">LE MONFOL</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">RN 7<br /> quartier La Bouteille</font></td> <td width="108"><font size="1">13410 Lambesc</font></td> <td width="136"><font size="1">Tél. : 06 67 77 46 20</font></td> </tr> <tr> <td width="129"><font size="2">LE MOULIN AUX ANGES</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">rue Benjamin Raspail</font></td> <td width="108"><font size="1">13410 Lambesc</font></td> <td width="136"><font size="1">Tél. : 04 42 92 83 72</font></td> </tr> <tr> <td width="129"><font size="2">CLUB HÔTEL AMOUR&nbsp;</font></td> <td width="85"><font size="1">hôtel</font></td> <td width="130"><font size="1">Quartier Le Lançon&nbsp;</font></td> <td width="108"><font size="1">83110 Sanary&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 94 74 42 80</font></td> </tr> <tr> <td width="129"><font size="2">L'ORTALINE&nbsp;<br /> <font size="1">(<a href="http://www.lortaline.com/" target="_blank">site web</a>)</font></font></td> <td width="85"><font size="1">sauna - club</font></td> <td width="130"><font size="1">740, avenue du 8 Mai&nbsp;</font></td> <td width="108"><font size="1">83130 La Garde&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 94 14 98 18</font></td> </tr> <tr> <td width="129"><font size="2">L'AMARRE AUX ANGES</font></td> <td width="85"><font size="1">complexe libertin</font></td> <td width="130"><font size="1">1037 chemin de la Plaine</font></td> <td width="108"><font size="1">83131 Monferrat</font></td> <td width="136"><font size="1">Tél. : 04 94 70 93 87</font></td> </tr> <tr> <td width="129"><font size="2">LE CYRANO<br /> <font size="1">(<a href="http://www.chez.com/lecyrano" target="_blank">site web</a>)</font></font></td> <td width="85"><font size="1">cercle privé</font></td> <td width="130"><font size="1">14, rue Nationale&nbsp;</font></td> <td width="108"><font size="1">83190 Ollioules&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 94 63 37 83</font></td> </tr> <tr> <td width="129"><font size="2">LE WAPITI</font></td> <td width="85"><font size="1">sauna Hammam</font></td> <td width="130"><font size="1">BP70</font></td> <td width="108"><font size="1">83340 Le Luc</font></td> <td width="136"><font size="1">Tél. : 04 94 73 40 69</font></td> </tr> <tr> <td width="129"><font size="2">HEMINGWAY CAFE&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">Plage Liberty - avenue des Tamaris&nbsp;</font></td> <td width="108"><font size="1">83350 Ramatuelle&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 94 79 80 62</font></td> </tr> <tr> <td width="129"><font size="2">LE DIVAN JAPONAIS&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">561, Avenue de la Corniche d'Azur&nbsp;</font></td> <td width="108"><font size="1">83370 St Aygulf&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 94 81 21 92</font></td> </tr> <tr> <td width="129"><font size="2">J&amp;R CLUB&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font><font size="1">club - discothèque</font></td> <td width="130"><font size="1">RN. 560 - Quartier de la Foux&nbsp;</font></td> <td width="108"><font size="1">83640 Saint Zacharie&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 42 72 95 28</font></td> </tr> <tr> <td width="129"><font size="2">SAUNA H CLUB</font></td> <td width="85"><font size="1">club masculin</font></td> <td width="130"><font size="1">20 rue Paul Manivet</font></td> <td width="108"><font size="1">84000 Avignon</font></td> <td width="136"><font size="1">Tél. : 04 90 85 00 39</font></td> </tr> <tr> <td width="129"><font size="2">CINE SEX&nbsp;</font></td> <td width="85"><font size="1">cinéma</font></td> <td width="130"><font size="1">7, rue de la Bourse&nbsp;</font></td> <td width="108"><font size="1">84000 Avignon&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 90 85 42 16</font></td> </tr> <tr> <td width="129"><font size="2">L'APHRODITE&nbsp;<br /> <font size="1">(<a href="http://www.aphrodite.fr/" target="_blank">site web</a>)</font></font></td> <td width="85"><font size="1">discothèque</font></td> <td width="130"><font size="1">19, rue du Four-de-la-Terre&nbsp;</font></td> <td width="108"><font size="1">84000 Avignon&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 90 86 20 49</font></td> </tr> <tr> <td width="129"><font size="2">CHÂTEAU DU GRAND VAUCROZE&nbsp;</font></td> <td width="85"><font size="1">hôtel</font></td> <td width="130"><font color="#9966FF" size="1">.</font></td> <td width="108"><font size="1">84000 Avignon&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 90 33 12 82</font></td> </tr> <tr> <td width="129"><font size="2">CLUB DIAMANT</font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">route de Marseille</font></td> <td width="108"><font size="1">84140 Montfalet-Avignon</font></td> <td width="136"><font size="1">Tél. : 06 65 76 03 74</font></td> </tr> <tr> <td width="129"><font size="2">LA PARADISIO</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">20 av. Renée Cassin</font></td> <td width="108"><font size="1">84140 Montreux</font></td> <td width="136"><font size="1">Tél. : 04 90 66 87 76</font></td> </tr> <tr> <td width="129"><font size="2">LA LICORNE D'or</font></td> <td width="85"><font size="1">club - sauna</font></td> <td width="130"><font size="1">466, chemin de Monteux</font></td> <td width="108"><font size="1">84200 Carpentras</font></td> <td width="136"><font size="1">Tél. : 04 90 60 53 39</font></td> </tr> <tr> <td width="129"><font size="2">LE CUPIDON<br /> <font size="1">&nbsp;(<a href="http://www.clubcupidon.fr.st/" target="_blank">site web</a>)</font></font></td> <td width="85"><font size="1">club</font></td> <td width="130"><font size="1">Z.A St Louis -RN 100</font></td> <td width="108"><font size="1">84250 LeThor&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 90 33 74 03</font></td> </tr> <tr> <td width="129"><font size="2">LE BEDWIN HÔTEL&nbsp;</font></td> <td width="85"><font color="#9966FF" size="1">.</font></td> <td width="130"><font size="1">La bréchette-La Broule&nbsp;</font></td> <td width="108"><font size="1">84410 Bedooin&nbsp;</font></td> <td width="136"><font size="1">Tél. : 04 90 65 60 96</font></td> </tr> </tbody> </table> </p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F06%2F25%2Fclubs-sur-paca.html&amp;t=CLubs+sur+PACA" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="clubs-sur-paca.html" id="a3"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="clubs-sur-paca.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">3</span>&nbsp;<span class="article-comments-post">commentaires</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1679109" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2008/06/25/sauna-sur-nice.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2008-06-25T15:35:00" itemprop="datePublished">
+<span class="date-hour-minute">15h35</span>
+<span class="date-day">25</span>
+<span class="date-month-year">juin 2008</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="sauna-sur-nice.html">Sauna sur Nice</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F06%2F25%2Fsauna-sur-nice.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p> <font color="#537195" face="Denmark">SAUNAS :</font> <table align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td height="20" valign="top"><span class="txt01gris"><img src="http://www.canalseduction.com/Structure/Trait-bleu1x100.jpg" height="1" width="520" /></span></td> </tr> </tbody> </table> <table class="geneva11blanc" align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td class="verdana12blancgras" valign="top" width="221">Azur Sauna Club</td> <td class="geneva11blanc" valign="top" width="206"><span class="txt01gris">4, quai Papacino<br /> 06300 NICE</span></td> <td class="txt01gris" valign="top" width="93"> <div align="right">04 93 56 25 00</div> </td> </tr> </tbody> </table> <table align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td height="18"><span class="txt01gris"><img src="http://www.canalseduction.com/Structure/Trait-bleu1x100.jpg" height="1" width="520" /></span></td> </tr> </tbody> </table> <table class="geneva11blanc" align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td class="verdana12blancgras" valign="top" width="221">3.D.S</td> <td valign="top" width="207"><span class="txt01gris">16, rue Smolett<br /> 06000 NICE</span></td> <td valign="top" width="92"> <div align="right">04 93 55 93 68</div> </td> </tr> </tbody> </table> <table align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td height="18"><span class="txt01gris"><img src="http://www.canalseduction.com/Structure/Trait-bleu1x100.jpg" height="1" width="520" /></span></td> </tr> </tbody> </table> <table class="geneva11blanc" align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td class="verdana12blancgras" valign="top" width="221">L'AS</td> <td valign="top" width="207">30, avenue Edouard-Grinda<br /> 06000 NICE</td> <td valign="top" width="92"> <div align="right">06 11 81 34 13</div> </td> </tr> </tbody> </table> <table align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td height="18"><span class="txt01gris"><img src="http://www.canalseduction.com/Structure/Trait-bleu1x100.jpg" height="1" width="520" /></span></td> </tr> </tbody> </table> <table class="geneva11blanc" align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td class="verdana12blancgras" valign="top" width="221">Le Kreisker</td> <td valign="top" width="207">4, rue Papon<br /> 06000 NICE</td> <td valign="top" width="92"> <div align="right">04 93 26 40 75</div> </td> </tr> </tbody> </table> <table align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td height="18"><span class="txt01gris"><img src="http://www.canalseduction.com/Structure/Trait-bleu1x100.jpg" height="1" width="520" /></span></td> </tr> </tbody> </table> <table class="geneva11blanc" align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td class="verdana12blancgras" valign="top" width="221">Sauna du chateau</td> <td valign="top" width="207">17, rue des Ponchettes<br /> 06000 NICE</td> <td valign="top" width="92"> <div align="right">04 93 85 73 91</div> </td> </tr> </tbody> </table> <table align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td height="18"><span class="txt01gris"><img src="http://www.canalseduction.com/Structure/Trait-bleu1x100.jpg" height="1" width="520" /></span></td> </tr> </tbody> </table> <table class="geneva11blanc" align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td class="verdana12blancgras" valign="top" width="221">Sauna le 9</td> <td valign="top" width="207">9, rue Jean-Fellegara<br /> 06400 CANNES</td> <td valign="top" width="92"> <div align="right">06 17 94 29 24</div> </td> </tr> </tbody> </table> <table align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td height="18"><span class="txt01gris"><img src="http://www.canalseduction.com/Structure/Trait-bleu1x100.jpg" height="1" width="520" /></span></td> </tr> </tbody> </table> <table class="geneva11blanc" align="center" border="0" cellpadding="0" cellspacing="0" width="520"> <tbody> <tr> <td class="verdana12blancgras" valign="top" width="221">Chez Christiane</td> <td class="txt01gris" valign="top" width="210">4, rue Papon<br /> 06300 NICE</td> <td class="txt01gris" valign="top" width="89"> <div align="right">04 93 26 40 75</div> </td> </tr> </tbody> </table> <span class="txt01gris"><img src="http://www.canalseduction.com/Structure/Trait-bleu1x100.jpg" height="1" width="520" /></span> </p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F06%2F25%2Fsauna-sur-nice.html&amp;t=Sauna+sur+Nice" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="sauna-sur-nice.html" id="a4"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="sauna-sur-nice.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1639941" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2008/05/30/sortie-sur-nice.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2008-05-30T12:58:30" itemprop="datePublished">
+<span class="date-hour-minute">12h58</span>
+<span class="date-day">30</span>
+<span class="date-month-year">mai 2008</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="sortie-sur-nice.html">Sortie sur Nice</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F05%2F30%2Fsortie-sur-nice.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p> CLUB 54<br /> 54 rue des Ponchettes<br /> 06300 NICE<br /> Tél. : 04 93 62 10 22<br /> <br /> Le plus ancien club libertin de la région.<br /> Strictement réservé aux couples.<br /> Ouvert les vendredis et samedis, et en semaine durant la saison d'été. Ce club est fréquenté par une clientèle franco-italienne haut de gamme et décidée. </p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F05%2F30%2Fsortie-sur-nice.html&amp;t=Sortie+sur+Nice" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="sortie-sur-nice.html" id="a5"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/club">club</a>, <a href="http://lefetard.hautetfort.com/tag/priv%C3%A9">privé</a>, <a href="http://lefetard.hautetfort.com/tag/private">private</a>, <a href="http://lefetard.hautetfort.com/tag/nice">nice</a>, <a href="http://lefetard.hautetfort.com/tag/libertin">libertin</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="sortie-sur-nice.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1512717" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2008/03/13/l-elite1.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2008-03-13T15:40:13" itemprop="datePublished">
+<span class="date-hour-minute">15h40</span>
+<span class="date-day">13</span>
+<span class="date-month-year">mars 2008</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="l-elite1.html">L'Elite</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F03%2F13%2Fl-elite1.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p> <a href="http://www.hautetfort.com/admin/posts/www.clubelite.fr">L'Elite</a> </p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F03%2F13%2Fl-elite1.html&amp;t=L%27Elite" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="l-elite1.html" id="a6"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/club">club</a>, <a href="http://lefetard.hautetfort.com/tag/libertin">libertin</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="l-elite1.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1512689" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2008/03/13/l-elite.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2008-03-13T15:27:00" itemprop="datePublished">
+<span class="date-hour-minute">15h27</span>
+<span class="date-day">13</span>
+<span class="date-month-year">mars 2008</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="l-elite.html">Sauna : L'INOX</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F03%2F13%2Fl-elite.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p> <a href="http://www.inoxsauna.com/">INOX</a> </p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2008%2F03%2F13%2Fl-elite.html&amp;t=Sauna+%3A+L%27INOX" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="l-elite.html" id="a7"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/sauna">sauna</a>, <a href="http://lefetard.hautetfort.com/tag/libertin">libertin</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="l-elite.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1238567" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/09/27/le-petit-guide-coquin.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-09-27T14:50:00" itemprop="datePublished">
+<span class="date-hour-minute">14h50</span>
+<span class="date-day">27</span>
+<span class="date-month-year">sept. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="le-petit-guide-coquin.html">Le petit guide coquin</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F09%2F27%2Fle-petit-guide-coquin.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><a href="http://forum.aufeminin.com/forum_f31_Echangisme_Le_petit_guide_de_la_france_coquine_.html"><img src="coquine24.gif" name="media-571025" alt="deedd35b19ba8358edd5ff2ed663fc3b.gif" style="border-width: 0px; margin: 0.2em 1.4em 0.7em 0px; float: left" id="media-571025" /></a></p> &nbsp;Vu par Josselin.
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F09%2F27%2Fle-petit-guide-coquin.html&amp;t=Le+petit+guide+coquin" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="le-petit-guide-coquin.html" id="a8"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/guide">guide</a>, <a href="http://lefetard.hautetfort.com/tag/france+coquine">france coquine</a>, <a href="http://lefetard.hautetfort.com/tag/coquin">coquin</a>, <a href="http://lefetard.hautetfort.com/tag/blog">blog</a>, <a href="http://lefetard.hautetfort.com/tag/fetard">fetard</a>, <a href="http://lefetard.hautetfort.com/tag/fete">fete</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="le-petit-guide-coquin.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1218468" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/09/14/clubs-libertins-de-la-region.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-09-14T16:45:45" itemprop="datePublished">
+<span class="date-hour-minute">16h45</span>
+<span class="date-day">14</span>
+<span class="date-month-year">sept. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="clubs-libertins-de-la-region.html">Clubs Libertins de la région</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F09%2F14%2Fclubs-libertins-de-la-region.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p><span goog_ds_charindex="196" class="a"><strong>~Les clubs les plus proches de Belfort&nbsp;~</strong></span>&nbsp;</p> <p><u>Distance de Belfort au club :</u></p> <p goog_ds_charindex="439"><span goog_ds_charindex="440" class="a"><font goog_ds_charindex="441" color="#008000">A 33 min</font></span></p> <p goog_ds_charindex="454"></p> <table goog_ds_charindex="456" width="100%" cellpadding="3" cellspacing="1" bordercolor="#000000" style="font-family: Verdana" id="table5" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="457"> <tr goog_ds_charindex="458"> <td goog_ds_charindex="459" width="23%" nowrap="true" class="DataTD-clubechangiste"><b goog_ds_charindex="460"><font goog_ds_charindex="461" color="#5599CC"><u goog_ds_charindex="462">CLUB DIGITALE</u></font></b></td> <td goog_ds_charindex="481" width="7%" align="center" nowrap="true"><font goog_ds_charindex="482" color="#5599CC">68100</font></td> <td goog_ds_charindex="491" width="21%" align="center" nowrap="true"><font goog_ds_charindex="492" color="#5599CC">Mulhouse</font></td> <td goog_ds_charindex="504" width="24%" align="center" nowrap="true"><font goog_ds_charindex="505" color="#5599CC">Haut Rhin</font></td> <td goog_ds_charindex="518" width="20%" align="center" nowrap="true"><font goog_ds_charindex="519" color="#5599CC">Alsace</font></td> </tr> </tbody> </table> <p goog_ds_charindex="534">&nbsp;</p> <table goog_ds_charindex="538" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="539"> <tr goog_ds_charindex="540"> <td goog_ds_charindex="541" class="DataTD-clubechangiste"> <p goog_ds_charindex="542">11, rue Lamartine&nbsp;<br goog_ds_charindex="561" /> 68100 Mulhouse</p> <p goog_ds_charindex="577">&nbsp;</p> </td> <td goog_ds_charindex="579" class="DataTD-clubechangiste"><b goog_ds_charindex="580">Tel.&nbsp;:</b> 03 89 46 12 45<br goog_ds_charindex="603" /> <a goog_ds_charindex="604" target="_blank" href="http://www.hautetfort.com/admin/blog/" class="DataLink-clubechangiste"></a></td> </tr> </tbody> </table> <table goog_ds_charindex="615" align="center" width="100%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="616"> <tr goog_ds_charindex="617"> <td goog_ds_charindex="618" nowrap="true" class="DataTD-clubechangiste"> <p goog_ds_charindex="619">A 41 min</p> <p goog_ds_charindex="630"><a align="center" goog_ds_charindex="631" href="http://www.clubechangiste.org/index.php?id_club=140&amp;page=club_detail&amp;option=bzc_clubechangiste&amp;Itemid=18" class="DataLink-clubechangiste"><font goog_ds_charindex="632" color="#333399">LUNE BLEUE</font></a></p> </td> <td goog_ds_charindex="647" align="center" nowrap="true">68500</td> <td goog_ds_charindex="654" align="center" nowrap="true">Guebwiller</td> <td goog_ds_charindex="666" align="center" nowrap="true">Haut Rhin</td> <td goog_ds_charindex="677" align="center" nowrap="true">Alsace</td> </tr> </tbody> </table> <p goog_ds_charindex="691"></p> <table goog_ds_charindex="694" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="695"> <tr goog_ds_charindex="696"> <td goog_ds_charindex="697" class="DataTD-clubechangiste">169, rue de la République &nbsp;<br goog_ds_charindex="725" /> 68500 Guebwiller</td> <td goog_ds_charindex="743" class="DataTD-clubechangiste"><b goog_ds_charindex="744">Tel.&nbsp;:</b> 03 89 74 12 96<br goog_ds_charindex="767" /> <a goog_ds_charindex="768" target="_blank" href="http://www.lunebleue68.fr/" class="DataLink-clubechangiste"><font goog_ds_charindex="769" color="#FFCC11">http://www.lunebleue68.fr</font></a></td> </tr> </tbody> </table> <p goog_ds_charindex="804">&nbsp;</p> <p goog_ds_charindex="805"><span goog_ds_charindex="806" class="a"><font goog_ds_charindex="807" color="#008000">A 58min&nbsp;&nbsp;&nbsp;&nbsp;<font goog_ds_charindex="819" color="#000000"><b goog_ds_charindex="820"><font goog_ds_charindex="821" color="#6600CC">PANDORA</font></b> entrée couple : 54 euros&nbsp;3 étoiles</font></font></span></p> <p goog_ds_charindex="872"></p> <table goog_ds_charindex="873" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="874"> <tr goog_ds_charindex="875"> <td goog_ds_charindex="876" class="DataTD-clubechangiste">Unterwerkstrasse 4<br goog_ds_charindex="896" /> 4132 Muttenz&nbsp;<br goog_ds_charindex="910" /> ----</td> <td goog_ds_charindex="917" class="DataTD-clubechangiste"><b goog_ds_charindex="918">Tel.&nbsp;:</b> 004161/46177<br goog_ds_charindex="939" /> <a goog_ds_charindex="940" target="_blank" href="http://www.pandora.ch/" class="DataLink-clubechangiste"><font goog_ds_charindex="941" color="#FFCC11">http://www.pandora.ch</font></a></td> </tr> </tbody> </table> <p goog_ds_charindex="970"><span goog_ds_charindex="870" class="a"><font goog_ds_charindex="871" color="#008000">A 1h10</font></span></p> <p goog_ds_charindex="981">&nbsp;</p> <p goog_ds_charindex="982"></p> <table goog_ds_charindex="985" align="center" width="100%" cellpadding="3" cellspacing="1" id="table6" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="986"> <tr goog_ds_charindex="987"> <td goog_ds_charindex="988" nowrap="true" class="DataTD-clubechangiste"><b goog_ds_charindex="989"><font goog_ds_charindex="990" color="#5599CC"><u goog_ds_charindex="991">CLUB AU SOLEIL</u></font></b></td> <td goog_ds_charindex="1011" align="center" nowrap="true"><font goog_ds_charindex="1012" color="#5599CC">67230</font></td> <td goog_ds_charindex="1021" align="center" nowrap="true"><font goog_ds_charindex="1022" color="#5599CC">Kogenheim</font></td> <td goog_ds_charindex="1035" align="center" nowrap="true"><font goog_ds_charindex="1036" color="#5599CC">Bas Rhin</font></td> <td goog_ds_charindex="1048" align="center" nowrap="true"><font goog_ds_charindex="1049" color="#5599CC">Alsace</font></td> </tr> </tbody> </table> <p goog_ds_charindex="1065">&nbsp;</p> <table goog_ds_charindex="1069" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="1070"> <tr goog_ds_charindex="1071"> <td goog_ds_charindex="1072" class="DataTD-clubechangiste"> <p goog_ds_charindex="1073">Tarif : Du mardi au vendredi entrée gratuite jusqu'à 22 h pour les couples puis après 10 euros</p> <p goog_ds_charindex="1170">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;samedi couple uniquement entrée 10 euros</p> <p goog_ds_charindex="1221">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Carte de membre obligatoire 5 euros</p> <p goog_ds_charindex="1268">&nbsp;3 étoiles</p> <p goog_ds_charindex="1280">&nbsp;</p> <p goog_ds_charindex="1281">39, route de Strasbourg&nbsp;<br goog_ds_charindex="1306" /> 67230 Kogenheim</p> </td> <td goog_ds_charindex="1324" class="DataTD-clubechangiste"><b goog_ds_charindex="1325">Tel.&nbsp;:</b> 03 88 58 75 49<br goog_ds_charindex="1348" /> <a goog_ds_charindex="1349" target="_blank" href="http://club.au.soleil.free.fr/" class="DataLink-clubechangiste"><font goog_ds_charindex="1350" color="#FFCC11">http://club.au.soleil.free.fr</font></a></td> </tr> </tbody> </table> <p goog_ds_charindex="1389">&nbsp;</p> <p goog_ds_charindex="1390"><span goog_ds_charindex="1391" class="a"><font goog_ds_charindex="1392" color="#008000">A 1h12</font></span></p> <p goog_ds_charindex="1403"></p> <table goog_ds_charindex="1405" align="center" width="100%" cellpadding="3" cellspacing="1" id="table6" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="1406"> <tr goog_ds_charindex="1407"> <td goog_ds_charindex="1408" nowrap="true" class="DataTD-clubechangiste"><b goog_ds_charindex="1409"><font goog_ds_charindex="1410" color="#5599CC"><u goog_ds_charindex="1411">CLUB LE LADY'S</u></font></b></td> <td goog_ds_charindex="1431" align="center" nowrap="true"><font goog_ds_charindex="1432" color="#5599CC">25410</font></td> <td goog_ds_charindex="1441" align="center" nowrap="true"><font goog_ds_charindex="1442" color="#5599CC">Saint Vit</font></td> <td goog_ds_charindex="1455" align="center" nowrap="true"><font goog_ds_charindex="1456" color="#5599CC">Doubs</font></td> <td goog_ds_charindex="1465" align="center" nowrap="true"><font goog_ds_charindex="1466" color="#5599CC">Franche-Comté</font></td> </tr> </tbody> </table> <p goog_ds_charindex="1488">&nbsp;</p> <p goog_ds_charindex="1489">&nbsp;</p> <p goog_ds_charindex="1490"><span goog_ds_charindex="1491" class="a"><font goog_ds_charindex="1492" color="#008000">A 1h27</font></span></p> <p goog_ds_charindex="1504"></p> <table goog_ds_charindex="1505" width="100%" cellpadding="3" cellspacing="1" bordercolor="#000000" style="font-family: Verdana" id="table5" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="1506"> <tr goog_ds_charindex="1507"> <td goog_ds_charindex="1508" width="23%" nowrap="true" class="DataTD-clubechangiste"><b goog_ds_charindex="1509"><font goog_ds_charindex="1510" color="#5599CC"><u goog_ds_charindex="1511">D.B.X. CLUB</u></font></b>&nbsp; <span goog_ds_charindex="39" class="a"><font goog_ds_charindex="40" color="#008000"><a goog_ds_charindex="41" href="http://www.cerclelibertin.net/dbxclub/">www.cercle<b goog_ds_charindex="52">libertin</b>.net/<b goog_ds_charindex="67">dbx</b><b goog_ds_charindex="72">club</b>/</a>&nbsp; bien</font></span></td> <td goog_ds_charindex="1528" width="7%" align="center" nowrap="true"><font goog_ds_charindex="1529" color="#5599CC">39100</font></td> <td goog_ds_charindex="1538" width="21%" align="center" nowrap="true"><font goog_ds_charindex="1539" color="#5599CC">Dole</font></td> <td goog_ds_charindex="1547" width="24%" align="center" nowrap="true"><font goog_ds_charindex="1548" color="#5599CC">Jura</font></td> <td goog_ds_charindex="1556" width="20%" align="center" nowrap="true"><font goog_ds_charindex="1557" color="#5599CC">Franche-Comté</font></td> </tr> </tbody> </table> <p goog_ds_charindex="1578">&nbsp;</p> <p goog_ds_charindex="1579">A 1h30</p> <p goog_ds_charindex="1588"></p> <table goog_ds_charindex="1589" align="center" width="100%" cellpadding="3" cellspacing="1" id="table6" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="1590"> <tr goog_ds_charindex="1591"> <td goog_ds_charindex="1592" nowrap="true" class="DataTD-clubechangiste"><b goog_ds_charindex="1593"><font goog_ds_charindex="1594" color="#5599CC"><u goog_ds_charindex="1595">CLEOPATRA</u></font></b><u goog_ds_charindex="1608">&nbsp; 3 étoiles</u></td> <td goog_ds_charindex="1622" align="center" nowrap="true"><font goog_ds_charindex="1623" color="#5599CC">67190</font></td> <td goog_ds_charindex="1632" align="center" nowrap="true"><font goog_ds_charindex="1633" color="#5599CC">Still</font></td> <td goog_ds_charindex="1642" align="center" nowrap="true"><font goog_ds_charindex="1643" color="#5599CC">Bas Rhin</font></td> <td goog_ds_charindex="1655" align="center" nowrap="true"><font goog_ds_charindex="1656" color="#5599CC">Alsace</font></td> </tr> </tbody> </table> <p goog_ds_charindex="1670">&nbsp;</p> <p goog_ds_charindex="1671">A 1h33</p> <p goog_ds_charindex="1680"></p> <table goog_ds_charindex="1681" width="100%" cellpadding="3" cellspacing="1" bordercolor="#000000" style="font-family: Verdana" id="table5" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="1682"> <tr goog_ds_charindex="1683"> <td goog_ds_charindex="1684" width="23%" nowrap="true" class="DataTD-clubechangiste"><b goog_ds_charindex="1685"><font goog_ds_charindex="1686" color="#5599CC"><u goog_ds_charindex="1687">LE NOUVEAU CHAT-NOIR</u></font></b></td> <td goog_ds_charindex="1713" width="7%" align="center" nowrap="true"><font goog_ds_charindex="1714" color="#5599CC">67000</font></td> <td goog_ds_charindex="1723" width="21%" align="center" nowrap="true"><font goog_ds_charindex="1724" color="#5599CC">Strasbourg</font></td> <td goog_ds_charindex="1738" width="24%" align="center" nowrap="true"><font goog_ds_charindex="1739" color="#5599CC">Bas Rhin</font></td> <td goog_ds_charindex="1751" width="20%" align="center" nowrap="true"><font goog_ds_charindex="1752" color="#5599CC">Alsace</font></td> </tr> </tbody> </table> <table goog_ds_charindex="1767" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="1768"> <tr goog_ds_charindex="1769"> <td goog_ds_charindex="1770" class="DataTD-clubechangiste"> <p goog_ds_charindex="1771">10, rue Edouard-Teutch&nbsp;<br goog_ds_charindex="1795" /> 67000 Strasbourg</p> <p goog_ds_charindex="1813">&nbsp;</p> </td> <td goog_ds_charindex="1815" class="DataTD-clubechangiste"><b goog_ds_charindex="1816">Tel.&nbsp;:</b> 03 88 36 72 32<br goog_ds_charindex="1839" /></td> </tr> </tbody> </table> <p goog_ds_charindex="1845"><font goog_ds_charindex="1846" color="#000000"><span goog_ds_charindex="1847" class="Style13"><font goog_ds_charindex="1848" color="#000099"><b goog_ds_charindex="1849">A 1h34</b></font></span></font></p> <p goog_ds_charindex="1861">&nbsp;</p> <p goog_ds_charindex="1862"><font goog_ds_charindex="1863" color="#000000"><span goog_ds_charindex="1864" class="Style13"><font goog_ds_charindex="1865" color="#000099"><b goog_ds_charindex="1866">Club Inox Sauna <font goog_ds_charindex="1883" color="#000000">3 étoiles</font></b></font></span><br goog_ds_charindex="1897" /></font><span goog_ds_charindex="2013" class="Style13"><font goog_ds_charindex="2014" color="#000000">71 av de Strasbourg<br goog_ds_charindex="2034" /> 67400 STRASBOURG ILLKIRCH<br goog_ds_charindex="2060" /></font></span><span goog_ds_charindex="2063" class="Style13"><font goog_ds_charindex="2064" color="#000000">tél 03 88 67 02 33 - fax 03 88 64 37 03<br goog_ds_charindex="2105" /></font></span></p> <p goog_ds_charindex="2109">Tarif couple : Vendredi et samedi 25 euros.</p> <p goog_ds_charindex="2154">&nbsp;<a goog_ds_charindex="2156" href="http://www.inoxsauna.com/">http://www.inoxsauna.com/</a></p> <p goog_ds_charindex="2184">&nbsp;</p> <p goog_ds_charindex="2185">&nbsp;</p> <table goog_ds_charindex="2188" border="0" align="center" width="900" class="zeroBorder"> <tbody goog_ds_charindex="2189"> <tr goog_ds_charindex="2190"> <td goog_ds_charindex="2191" colspan="3" bgcolor="#333333" class="Style5l Style24"><font goog_ds_charindex="2192" color="#3366FF" style="background-color: #ccccff">dernier mardi du mois après 20h</font></td> <td goog_ds_charindex="2226" colspan="2" bgcolor="#333333" class="Style5l Style16"><font goog_ds_charindex="2227" color="#3366FF" style="background-color: #ccccff">GANG-BANG</font></td> <td goog_ds_charindex="2240" colspan="3" bgcolor="#999999" class="Style5l Style16"><font goog_ds_charindex="2241" color="#3366FF" style="background-color: #ccccff">Hommes seuls 45€ - Couples OFFERT</font></td> </tr> </tbody> </table> <p goog_ds_charindex="2282">&nbsp;</p> <p goog_ds_charindex="2283">&nbsp;</p> <p goog_ds_charindex="2284">A 1h34</p> <p goog_ds_charindex="2292"><font goog_ds_charindex="2293" color="#3333FF"><b goog_ds_charindex="2294">Le&nbsp;club ASTI</b></font>&nbsp; 3 étoiles&nbsp;&nbsp; couples 30 euros.</p> <p goog_ds_charindex="2341">&nbsp;</p> <p goog_ds_charindex="2342"><b goog_ds_charindex="2343"><i goog_ds_charindex="2344">Asti-Club Pärchenclub</i></b></p> <p goog_ds_charindex="2369"><b goog_ds_charindex="2370"><i goog_ds_charindex="2371">Römerstrasse 82</i></b></p> <p goog_ds_charindex="2390"><b goog_ds_charindex="2391"><i goog_ds_charindex="2392">77694 Kehl-Goldscheuer</i></b></p> <p goog_ds_charindex="2418"><b goog_ds_charindex="2419"><i goog_ds_charindex="2420">Telefon: +49 7854 / 98 06</i></b></p> <p goog_ds_charindex="2450">&nbsp;<font goog_ds_charindex="2452" color="#000000">&nbsp;</font></p> <p goog_ds_charindex="2456">A 1h43</p> <p goog_ds_charindex="2464"></p> <table goog_ds_charindex="2465" align="center" width="100%" cellpadding="3" cellspacing="1" id="table6" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="2466"> <tr goog_ds_charindex="2467"> <td goog_ds_charindex="2468" nowrap="true" class="DataTD-clubechangiste"><b goog_ds_charindex="2469"><font goog_ds_charindex="2470" color="#5599CC"><u goog_ds_charindex="2471">LE MANOIR</u></font></b></td> <td goog_ds_charindex="2485" align="center" nowrap="true"><font goog_ds_charindex="2486" color="#5599CC">39120</font></td> <td goog_ds_charindex="2494" align="center" nowrap="true"><font goog_ds_charindex="2495" color="#5599CC">Villers Robert</font></td> <td goog_ds_charindex="2512" align="center" nowrap="true"><font goog_ds_charindex="2513" color="#5599CC">Jura</font></td> <td goog_ds_charindex="2520" align="center" nowrap="true"><font goog_ds_charindex="2521" color="#5599CC">Franche-Comté</font></td> </tr> </tbody> </table> <p goog_ds_charindex="2541">&nbsp;Site officiel&nbsp;: <span goog_ds_charindex="2559" class="a"><a goog_ds_charindex="2561" href="http://www.lemanoir39.com/"><font goog_ds_charindex="2560" color="#008000">www.le<b goog_ds_charindex="2568">manoir</b>39.com/</font></a></span></p> <p goog_ds_charindex="2587">&nbsp;&nbsp;</p> <table goog_ds_charindex="2602" align="center" width="100%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="2603"> <tr goog_ds_charindex="2604"> <td goog_ds_charindex="2605" nowrap="true" class="DataTD-clubechangiste">&nbsp;A 1h46&nbsp;<a align="center" goog_ds_charindex="2606" href="http://www.clubechangiste.org/index.php?id_club=136&amp;page=club_detail&amp;option=bzc_clubechangiste&amp;Itemid=18" class="DataLink-clubechangiste"></a></td> <td goog_ds_charindex="2623" align="center" nowrap="true"></td> <td goog_ds_charindex="2630" align="center" nowrap="true"></td> <td goog_ds_charindex="2641" align="center" nowrap="true"></td> <td goog_ds_charindex="2651" align="center" nowrap="true"></td> </tr> </tbody> </table> <table goog_ds_charindex="2664" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="2665"> <tr goog_ds_charindex="2666"> <td goog_ds_charindex="2667" class="DataTD-clubechangiste"> <p><a align="center" goog_ds_charindex="2606" href="http://www.clubechangiste.org/index.php?id_club=136&amp;page=club_detail&amp;option=bzc_clubechangiste&amp;Itemid=18" class="DataLink-clubechangiste"><font goog_ds_charindex="2607" color="#6600CC"><b goog_ds_charindex="2608">LE PASSAGE</b></font></a></p> <p>1, route de l'Ill&nbsp;<br goog_ds_charindex="2686" /> 67760 Gambsheim</p> </td> <td goog_ds_charindex="2703" class="DataTD-clubechangiste"><b goog_ds_charindex="2704">Tel.&nbsp;:</b> 06 86 94 07 53<br goog_ds_charindex="2727" /></td> </tr> </tbody> </table> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <p goog_ds_charindex="2746">&nbsp;</p> <p goog_ds_charindex="2747">&nbsp;</p> <table goog_ds_charindex="2769" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="2770"> <tr goog_ds_charindex="2771"> <td goog_ds_charindex="2772" class="DataTD-clubechangiste"> <p goog_ds_charindex="2773"><font color="#6600CC"><strong>Le CASARS CLUB</strong>&nbsp;</font></p> <p goog_ds_charindex="2773">Ueberlandstrasse 101<br goog_ds_charindex="2795" /> CH-8600 Dübendorf / Zürich&nbsp;<br goog_ds_charindex="2823" /></p> <p goog_ds_charindex="2825">&nbsp;</p> <p goog_ds_charindex="2826">&nbsp;</p> </td> <td goog_ds_charindex="2828" class="DataTD-clubechangiste"> <p goog_ds_charindex="2829"><b goog_ds_charindex="2830">Tel.&nbsp;:</b> 0041 448212621<br goog_ds_charindex="2853" /> <a goog_ds_charindex="2854" target="_blank" href="http://www.caesar-sauna.ch/" title="http://www.caesar-sauna.ch/" class="DataLink-clubechangiste"><font goog_ds_charindex="2855" color="#FFCC11">http://www.caesar-sauna.ch/</font></a></p> </td> </tr> </tbody> </table> <table goog_ds_charindex="2892" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="2893"> <tr goog_ds_charindex="2894"> <td goog_ds_charindex="2895" class="DataTD-clubechangiste"> <p goog_ds_charindex="2896"><font goog_ds_charindex="2897" color="#3333FF"><b goog_ds_charindex="2898">MANESSE</b></font></p> <p goog_ds_charindex="2909">Austrasse 19 im 1.Stock<br goog_ds_charindex="2934" /> der Old John Bar<br goog_ds_charindex="2952" /> Kreis 3 (Alt-Wiedikon)<br goog_ds_charindex="2976" /> 8045 Zürich&nbsp;<br goog_ds_charindex="2989" /> ----</p> </td> <td goog_ds_charindex="2997" class="DataTD-clubechangiste"><b goog_ds_charindex="2998">Tel.&nbsp;:</b> 044 / 461 66 88<br goog_ds_charindex="3022" /> <a goog_ds_charindex="3023" target="_blank" href="http://www.saunamanesse.ch/" class="DataLink-clubechangiste"><font goog_ds_charindex="3024" color="#FFCC11">http://www.saunamanesse.ch/</font></a></td> </tr> </tbody> </table> &nbsp;&nbsp; <p goog_ds_charindex="3061">A 1h47&nbsp;&nbsp;&nbsp;&nbsp;<font goog_ds_charindex="3072" color="#6600CC"><b goog_ds_charindex="3073">LE FLIP</b></font></p> <p goog_ds_charindex="3084"></p> <table goog_ds_charindex="3085" align="center" width="90%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="3086"> <tr goog_ds_charindex="3087"> <td goog_ds_charindex="3088" class="DataTD-clubechangiste">im chrummacher 5<br goog_ds_charindex="3106" /> 8604 Volketswil / industrie<br goog_ds_charindex="3135" /> Zufahrt vis à vis Tip-Top&nbsp;<br goog_ds_charindex="3162" /> ----</td> <td goog_ds_charindex="3169" class="DataTD-clubechangiste"><b goog_ds_charindex="3170">Tel.&nbsp;:</b> 019461871<br goog_ds_charindex="3188" /> <a goog_ds_charindex="3189" target="_blank" href="http://www.flip-sauna.ch/" class="DataLink-clubechangiste"><font goog_ds_charindex="3190" color="#FFCC11">http://www.flip-sauna.ch/</font></a></td> </tr> </tbody> </table> <p goog_ds_charindex="3084">&nbsp;</p> <p goog_ds_charindex="3084">&nbsp;A 2h20</p> <p goog_ds_charindex="3230"></p> <table goog_ds_charindex="3234" align="center" width="100%" cellpadding="3" cellspacing="1" class="FormTABLE-clubechangiste"> <tbody goog_ds_charindex="3235"> <tr goog_ds_charindex="3236"> <td goog_ds_charindex="3237" nowrap="true" class="DataTD-clubechangiste"><a align="center" goog_ds_charindex="3238" href="http://www.clubechangiste.org/index.php?id_club=225&amp;page=club_detail&amp;option=bzc_clubechangiste&amp;Itemid=18" class="DataLink-clubechangiste"><font goog_ds_charindex="3239" color="#FFCC11">L'in-interdit</font></a></td> <td goog_ds_charindex="3256" align="center" nowrap="true">54000</td> <td goog_ds_charindex="3263" align="center" nowrap="true">Nancy</td> <td goog_ds_charindex="3270" align="center" nowrap="true">Meurthe et Moselle</td> <td goog_ds_charindex="3290" align="center" nowrap="true">Lorraine</td> </tr> </tbody> </table> <p><span goog_ds_charindex="140" class="a">Liste de clubs libertins : <a goog_ds_charindex="141" href="http://www.clubechangiste.org/liste-clubs.html">http://www.clubechangiste.org/liste-clubs.html</a></span></p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F09%2F14%2Fclubs-libertins-de-la-region.html&amp;t=Clubs+Libertins+de+la+r%C3%A9gion" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="clubs-libertins-de-la-region.html" id="a9"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/club">club</a>, <a href="http://lefetard.hautetfort.com/tag/libertin">libertin</a>, <a href="http://lefetard.hautetfort.com/tag/r%C3%A9gion">région</a>, <a href="http://lefetard.hautetfort.com/tag/belfort">belfort</a>, <a href="http://lefetard.hautetfort.com/tag/strasbourg">strasbourg</a>, <a href="http://lefetard.hautetfort.com/tag/mulhouse">mulhouse</a>, <a href="http://lefetard.hautetfort.com/tag/plaisirs">plaisirs</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="clubs-libertins-de-la-region.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+<li role="listitem">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article1218453" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2007/09/14/libertinage.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2007-09-14T16:30:00" itemprop="datePublished">
+<span class="date-hour-minute">16h30</span>
+<span class="date-day">14</span>
+<span class="date-month-year">sept. 2007</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="libertinage.html">Libertinage</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F09%2F14%2Flibertinage.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p goog_ds_charindex="104"><a goog_ds_charindex="105" href="http://www.lecarrecoquin.com/">- Le carré coquin pour amateurs de libertinage à la recherche du plaisir</a></p> <p goog_ds_charindex="162"><a goog_ds_charindex="163" target="http://www.annonces-libertines.eu/" href="http://www.annonces-libertines.eu/">- annonces libertines</a><br goog_ds_charindex="199" /> <br goog_ds_charindex="200" /></p> <p goog_ds_charindex="224"><a goog_ds_charindex="225" target="http://www.jcharme.com/" href="http://www.jcharme.com/">- le réseau libertin</a> &nbsp;&nbsp;</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2007%2F09%2F14%2Flibertinage.html&amp;t=Libertinage" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="libertinage.html" id="a10"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="libertinage">Libertinage</a></span><!-- widget categories off --><!-- widget tags on -->
+<span class="box-article-link box-article-tags" itemprop="keywords">Tags : <a href="http://lefetard.hautetfort.com/tag/libertin">libertin</a>, <a href="http://lefetard.hautetfort.com/tag/libetinage">libetinage</a>, <a href="http://lefetard.hautetfort.com/tag/carr%C3%A9+coquin">carré coquin</a>, <a href="http://lefetard.hautetfort.com/tag/plaisirs">plaisirs</a></span><!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="libertinage.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+</footer>
+</article>
+<!-- widget article off --></li>
+</ul>
+</div>
+<footer class="content-footer">
+
+</footer>
+</article>
+</main>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer-main" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="main-inner">
+<!-- start bottom --><div class="row-fluid"><div class="span6"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101347">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div><div class="span6"><!-- widget sharing on -->
+<div class="box box-sharing" id="box-sharing-101349">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</div>
+<!-- widget sharing off --></div></div><!-- end bottom --></div>
+</footer>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages_fr.js"></script><script src="bs.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="https://static.hautetfort.com/backend/javascript/front/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<script src="https://static.hautetfort.com/backend/javascript/front/jquery.placeholder.js"></script>
+<script>
+jQuery('input, textarea').placeholder();
+</script>
+<![endif]-->
+<!-- start script -->
+<script>
+(function() {
+var po = document.createElement('script'); po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js?onload=onLoadCallback';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<!-- end script --><script>
+if(typeof jQuery == 'function' && jQuery('div[data-cookie]').length) {
+  jQuery('p[data-close] a').on('click', function (event) {
+    event.preventDefault();
+    jQuery('div[data-cookie]').attr('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+} else if(typeof $$ == 'function' && $$('div[data-cookie]').length) {
+  $$('p[data-close] a')[0].observe('click', function (event) {
+    event.preventDefault();
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+}
+if (!document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*cookies_message\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) {
+  if(typeof jQuery == 'function') {
+    jQuery('div[data-cookie]').attr('data-cookie', 'on');
+  } else if(typeof $$ == 'function') {
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'on');
+  }
+}
+</script>
+    
+    <input type='hidden' id='_videoStepTitleText+11' value=' Videos We Recommend' /><input type='hidden' id='_videoStepTitleStyle+11' value='font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-size: 16px;color: #FFFFFF;text-align: center;font-weight: normal;font-style: normal;text-decoration: none;' /><input type='hidden' id='_videoStepBackgroundColor+11' value='#404d55' /><input type='hidden' id='_videoStepHasBorder+11' value='True' /><input type='hidden' id='_videoStepCountry+11' value='FR' /><input type='hidden' id='_videoStepScriptType' value='3' /><div id='divVideoStep+11' class='divVideoStep'></div><script type='text/javascript'>(function (){var vs = document.createElement('script'); vs.type = 'text/javascript';vs.async = true;vs.src = 'http://kweb.videostep.com/GetLink';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vs, s);})();</script>
+    <input type='hidden' id='_videoStepPublisherId' value='111' />
+    
+    <div id="footer">
+    <a href="http://www.hautetfort.com/create_account.php">Créer un blog</a> sur <a href="http://www.hautetfort.com/">Hautetfort</a>
+    <br />
+    <a href="http://www.hautetfort.com/explore/blogs">Les derniers blogs mis à jour</a>&nbsp;|
+    <a href="http://www.hautetfort.com/explore/posts">Les dernières notes publiées</a>&nbsp;|
+    <a href="http://www.hautetfort.com/explore/posts/tags">Les tags les plus populaires</a>
+    <br />
+    <a href="http://www.hautetfort.com/moderate.php?blog_url=http%3A%2F%2Flefetard.hautetfort.com%2F">Déclarer un contenu illicite</a>&nbsp;|
+    <a href="mentions-legales.html">Mentions légales de ce blog</a>
+    &nbsp;|
+    <a href="http://www.hautetfort.com/">Hautetfort</a> est une marque déposée de la société talkSpirit
+    &nbsp;|
+    Créez votre <a href="http://www.hautetfort.com/">blog</a> !
+    </div>
+        
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-351048-6']);
+  _gaq.push(['_trackPageview']);
+_gaq.push(['_trackEvent', 'Free plan', 'Rencontres, Amour', 'lefetard.hautetfort.com']);
+_gaq.push(['_trackEvent', 'Free plan1', 'MultiCategories', 'lefetard.hautetfort.com']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

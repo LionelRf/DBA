@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="ie6 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 7]><html class="ie7 ie67 ie678" lang="fr"><![endif]-->
+<!--[if IE 8]><html class="ie8 ie678" lang="fr"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="fr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]<!--><html lang="fr"><!--<![endif]-->
+<head>
+<meta charset="UTF-8"/>
+<title>Découverte d'une base mongodb - The Best of DBA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="mongo -u &amp;lt;USERNAME&amp;gt; -p &amp;lt;PASSWORD&amp;gt; --eval &quot;var DATABASE_NAME='&amp;lt;DATABASE_NAME&amp;gt;'&quot; Source_Discovery_V2.js"/>
+<meta name="keywords" content="Oracle, Postgresql, Sqlserver, MySQL, database, RMAN, Cassandra"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Découverte d'une base mongodb - The Best of DBA"/>
+<meta property="og:description" content="mongo -u &amp;lt;USERNAME&amp;gt; -p &amp;lt;PASSWORD&amp;gt; --eval &quot;var DATABASE_NAME='&amp;lt;DATABASE_NAME&amp;gt;'&quot; Source_Discovery_V2.js"/>
+<meta property="og:image" content=""/>
+<link rel="stylesheet" href="025395.css"/>
+<link rel="stylesheet" href="style.css?1722328855"/>
+<!--[if (gt IE 8)|!(IE)]<!-->
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic|" rel="stylesheet"/>
+<!--<![endif]-->
+<!--[if lte IE 8]>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400italic" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:700italic" rel="stylesheet"/>
+<![endif]-->
+<link rel="stylesheet" href="font-awesome.min.css"/>
+<!--[if IE 7]><link rel="stylesheet" href="https://static.hautetfort.com/backend/css/font/font-awesome-ie7.min.css"/><![endif]--><link rel="shortcut icon" href="favicon.ico"/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hautetfort.com/admin/rsd/71687"/>
+<link rel="start" href="index-0.html" title="Home"/>
+<link rel="canonical" href="decouverte-d-une-base-mongodb-6453308.html"/>
+<link rel="prev" href="postgres-backup-restore-6434695.html" title="POSTGRES Backup / restore"/><link rel="next" href="postgres-news-6459037.html" title="[Postgres] NEWS"/><!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!-- start script --><!-- end script -->
+<script type="text/javascript">
+
+function popupCenter(url,width,height,xtr) {
+    var top=(screen.height-height)/2;
+    var left=(screen.width-width)/2;
+    window.open(url,"",xtr+",top="+top+",left="+left+",width="+width+",height="+height);
+}
+
+</script>
+<style type="text/css">
+body {
+margin-bottom: 0px;
+}
+#toppub { display: block; width: 555px; height: 140px; margin: 0 auto;}
+.content a img {border:0px;}
+#footer {
+text-align: center;
+font-size: 65%;
+width: auto;
+margin: 2em auto 0px auto;
+color: #000;
+line-height: 210%;
+display: block;
+padding: 15px 15px 35px ;
+background: #fff url("hetf-background.png") no-repeat 45% 10%;
+border-top: 3px solid #D20000;
+}
+#footer a {
+color: #000;
+text-decoration: underline;
+background-color: transparent;
+display: inline;
+}
+#footer a:hover {
+color: #000;
+text-decoration: underline;
+background-color: transparent;
+display: inline;
+}
+#sponsored-links {
+display: block;
+margin: 0;
+padding: 0;
+border: 0;
+background: transparent;
+margin-bottom: -5px;
+}
+</style>
+</head><body id="page-permalink" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<div data-cookie="off"><p data-close><a href="decouverte-d-une-base-mongodb-6453308.html#" title="J'ai lu ce message"><span class="ui-icon ui-icon-check">Ok</span></a></p><p data-text>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies. Ces derniers assurent le bon fonctionnement de nos services. <a href="https://www.hautetfort.com/cookies.html" title="En savoir plus sur les cookies" target="_blank">En savoir plus</a>.</p></div><style>[data-cookie]{display:none;position:fixed;backface-visibility:hidden;bottom:0;left:0;width:100%;background:black;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGDYDAAAvQC1UcyxoAAAAABJRU5ErkJggg==);color:white;padding:.5em 0;text-align:center;z-index:9999;}
+[data-cookie~="on"]{display:block;}
+[data-cookie] p{color:white;font-size:12px;margin:0;padding:0 .5em;line-height:1.3em;text-shadow:1px 0 3px rgba(0,0,0,1);}
+[data-cookie] a{color:white;}
+[data-cookie] [data-text]{margin:1px auto 0;text-align:left;max-width:980px;}
+[data-cookie] [data-close]{float:right;margin:0 .5em;}
+[data-cookie] .ui-icon{background-image: url(http://download.jqueryui.com/themeroller/images/ui-icons_ffffff_256x240.png);}
+.ui-icon-check {background-position: -64px -144px;}
+.ui-icon {height: 16px;width: 16px;}
+.ui-icon {background-repeat: no-repeat;display: block;overflow: hidden;text-indent: -99999px;}
+@media print {[data-cookie]{display:none;}}
+</style>
+<div class="wrapper">
+<div class="container">
+<!--[if lte IE 7><p class="alert">Votre navigateur est <strong>périmé</strong>. <a href="http://browsehappy.com/" target="_blank">Veuillez mettre votre navigateur à jour.</a></p><![endif]-->
+<a href="decouverte-d-une-base-mongodb-6453308.html#content" class="skip-link" accesskey="s">Aller au contenu</a>
+<header class="header-main" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<div class="main-inner">
+<!-- start top --><div class="row-fluid"><div class="span9"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101343">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div></div><div class="row-fluid"><div class="span12"><!-- widget menu on -->
+<div role="navigation" class="box box-menu box-menu-sticky" id="box-menu-101345">
+<div class="box-body">
+<span class="menu-switcher" id="display-navigation"><i class="icon icon-reorder"></i></span><nav role="navigation" id="navigation-to-display">
+<ul role="menu">
+<li role="menuitem"><a href="index-0.html">Accueil</a></li>
+<li class="masked-on-mobile" role="menuitem"><a href="archives">Archives</a></li>
+<li role="menuitem"><a href="about.html">À propos</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="index-0.html">Notes</a></li>
+<li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-categories">Catégories</a></li><li class="revealed-on-mobile" role="menuitem" tabindex="-1"><a href="archives#archive-months">Archives</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- widget menu off --></div></div><!-- end top --></div>
+</header>
+<div class="body-main" role="main">
+<div class="main-inner">
+<div class="row-fluid">
+<div class="span4">
+<aside role="complementary" class="aside aside-1" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+<!-- start column 1 --><!-- widget search on -->
+<article class="box box-search" id="box-search-101337">
+<header class="box-header">
+<h1><i class="icon icon-search"></i><span class="box-title-text">Rechercher</span></h1>
+</header>
+<div class="box-body">
+<form class="form-search" name="form-box-search-101337" id="form-box-search-101337" role="search" method="get" action="http://lefetard.hautetfort.com/apps/search">
+<p class="form-submit">
+<span class="row-fluid">
+<span class="span10">
+<span class="form-field">
+<input name="s" id="search-field-box-search-101337" type="search" placeholder="Entrer votre recherche" required="required"/>
+<label class="error" for="search-field-box-search-101337" style="display:none"></label>
+</span>
+</span>
+<span class="span2">
+<span class="form-button">
+<input name="search-submit-box-search-101337" id="search-submit-box-search-101337" class="button" type="submit" value="OK"/>
+</span>
+</span>
+</span>
+</p>
+</form>
+</div>
+</article>
+<!-- widget search off --><!-- widget list on -->
+<article class="box box-list box-list-document" id="box-list-457254">
+<header class="box-header">
+<h1><i class="icon icon-ellipsis-vertical"></i><span class="box-title-text">CV</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="lists-list">
+<li role="listitem">
+<a href="dba-freelance.html">
+<span>DBA Freelance</span>
+</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget list off --><!-- widget about on -->
+<article class="box box-about" id="box-about-101313">
+<header class="box-header">
+<h1><i class="icon icon-info-sign"></i><span class="box-title-text">À propos</span></h1>
+</header>
+<div class="box-body">
+<p class="description" itemscope="itemscope" itemtype="http://schema.org/AboutPage">
+<span itemprop="description">  - Dynamique, rigoureux, pédagogue, à l'écoute des besoins de mes clients ;...</span>
+<a href="about.html" itemprop="url">
+Lire la suite</a>
+</p>
+</div>
+</article>
+<!-- widget about off --><!-- widget authors on -->
+<article class="box box-author" id="box-author-101318" style="display:none">
+<header class="box-header">
+<h1><i class="icon icon-quote-right"></i><span class="box-title-text">Auteurs</span></h1>
+</header>
+<div class="box-body">
+<h2>Propriétaire du blog</h2>
+<a href="about.html">
+<figure class="inline-picture author-main">
+<span class="picture">
+<img src="https://size.blogspirit.net/hautetfort.com/lefetard/50/media/01/01/3775567719.png" alt=""/>
+</span>
+<figcaption class="description">
+<p>joguess - 767 notes</p>
+</figcaption>
+</figure>
+</a>
+<ul role="list" class="authors-list">
+</ul>
+</div>
+</article>
+<!-- widget authors off --><!-- widget category on -->
+<article class="box box-category" id="box-category-101322">
+<header class="box-header">
+<h1><i class="icon icon-level-down"></i><span class="box-title-text">Catégories</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="categories-list">
+
+<li role="listitem">
+<a href="index.html.21">Professionnel</a>
+<ul>
+<li role="listitem">
+<a href="index.html.22">BIG DATA - hadoop -spark</a>
+</li>
+<li role="listitem">
+<a href="index.html.23">Cassandra</a>
+</li>
+<li role="listitem">
+<a href="index.html.24">Cloud Control 13C</a>
+</li>
+<li role="listitem">
+<a href="index.html.25">Cloud db</a>
+</li>
+<li role="listitem">
+<a href="index.html.26">HVAULT</a>
+</li>
+<li role="listitem">
+<a href="index.html.27">MongoDB</a>
+</li>
+<li role="listitem">
+<a href="index.html.28">monitoring</a>
+</li>
+<li role="listitem">
+<a href="index.html.29">Ora2pg</a>
+</li>
+<li role="listitem">
+<a href="index.html.30">Oracle RAC</a>
+</li>
+<li role="listitem">
+<a href="index.html.31">Oracle12C,19C</a>
+</li>
+<li role="listitem">
+<a href="index.html.32">Postgresql</a>
+</li>
+<li role="listitem">
+<a href="index.html.33">RMAN</a>
+</li>
+<li role="listitem">
+<a href="index.html.34">Scripts</a>
+</li>
+<li role="listitem">
+<a href="index.html.35">Soluce</a>
+</li>
+<li role="listitem">
+<a href="index.html.36">SQLServer</a>
+</li>
+<li role="listitem">
+<a href="index.html.37">Système</a>
+</li>
+<li role="listitem">
+<a href="index.html.38">tuning</a>
+</li>
+</ul>
+</li>
+
+</ul>
+</div>
+</article>
+<!-- widget category off --><!-- widget links on -->
+<article class="box box-link" id="box-custom-236539">
+<header class="box-header">
+<h1><i class="icon icon-link"></i><span class="box-title-text">Référencement</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="links-list">
+<li role="listitem"><a href="http://www.extremecarving.com/index_fr.html" target="_blank">SURF</a></li>
+<li role="listitem"><a href="http://secretebase.free.fr/" target="_blank">Base Secrète</a></li>
+<li role="listitem"><a href="http://newzealand.over-blog.com/" target="_blank">Le blog de Mat</a></li>
+<li role="listitem"><a href="http://missdactari-blog.blogspot.com/" target="_blank">Le Blog de Camille</a></li>
+<li role="listitem"><a href="http://www.bobbydurrettdba.com/" target="_blank">Le Blog de Bobby DBA</a></li>
+<li role="listitem"><a href="https://oraclue.com/" target="_blank">Miladin Modrakovic's Blog</a></li>
+<li role="listitem"><a href="http://oradbastuff.blogspot.fr/" target="_blank">Sfaturi Oracle / Tips and tricks OracleDBA</a></li>
+<li role="listitem"><a href="http://orababy.blogspot.fr/" target="_blank">ORACLE DBA Knowledge Share</a></li>
+<li role="listitem"><a href="http://www.drazzib.com/docs/bdd/oracle/" target="_blank">Site de Damien Raude Morvan</a></li>
+<li role="listitem"><a href="http://www.database-expert.com/" target="_blank">Edward Stoever DBA</a></li>
+<li role="listitem"><a href="https://www.dba-scripts.com" target="_blank">Oracle DBA (Cyrille Modiano)</a></li>
+</ul>
+</div>
+</article>
+<!-- widget links off --><!-- widget archives on -->
+<article class="box box-archive" id="box-archive-101316">
+<header class="box-header">
+<h1><i class="icon icon-archive"></i><span class="box-title-text">Archives</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="archives-list">
+<li role="listitem">
+<a href="index.html.46">lun. 29 juil. - dim. 04 août</a>
+</li>
+<li role="listitem">
+<a href="index.html.47">lun. 08 juil. - dim. 14 juil.</a>
+</li>
+<li role="listitem">
+<a href="index.html.48">lun. 17 juin - dim. 23 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.49">lun. 10 juin - dim. 16 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.50">lun. 27 mai - dim. 02 juin</a>
+</li>
+<li role="listitem">
+<a href="index.html.51">lun. 20 mai - dim. 26 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.52">lun. 13 mai - dim. 19 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.53">lun. 29 avril - dim. 05 mai</a>
+</li>
+<li role="listitem">
+<a href="index.html.54">lun. 22 avril - dim. 28 avril</a>
+</li>
+<li role="listitem">
+<a href="index.html.55">lun. 15 avril - dim. 21 avril</a>
+</li>
+</ul>
+</div>
+<footer class="box-footer">
+<p><a href="index.html.56">Toutes les archives</a></p>
+</footer>
+</article>
+<!-- widget archives off --><!-- widget lastupdatedblogs on -->
+<article class="box box-blog" id="box-blog-101319">
+<header class="box-header">
+<h1><i class="icon icon-external-link-sign"></i><span class="box-title-text">Derniers blogs mis à jour</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="last-posts-list">
+<li role="listitem"><a href="http://linformationnationaliste.hautetfort.com/archive/2024/07/30/ouverture-des-jo-ces-sportifs-qui-n-ont-pas-aime-la-cene-6508849.html">Ouverture des JO : ces sportifs qui n’ont pas...</a> sur <a href="http://linformationnationaliste.hautetfort.com/">l'information nationaliste</a></li>
+<li role="listitem"><a href="http://lactualitedessocialistes.hautetfort.com/archive/2024/07/31/le-recap-de-splann-un-rattrapage-de-l-actualite-bretonne-en-6508736.html">Le récap' de « Splann ! », un rattrapage de...</a> sur <a href="http://lactualitedessocialistes.hautetfort.com/">Actualités socialistes</a></li>
+<li role="listitem"><a href="http://metapoinfos.hautetfort.com/archive/2024/07/20/j-d-vance-colistier-de-trump-et-figure-de-proue-des-nationau-6507781.html">J. D. Vance, colistier de Trump et figure de...</a> sur <a href="http://metapoinfos.hautetfort.com/">Métapo infos</a></li>
+<li role="listitem"><a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/archive/2024/07/26/la-france-annoncent-la-reconnaissance-de-la-marocanite-du-sa-6508408.html">La France annonce la reconnaissance de la...</a> sur <a href="http://royaumedumaroc-hautetfort-nouvelle-ere.hautetfort.com/">«-Le Royaume Chérifien du Maroc -Chihab 25...</a></li>
+<li role="listitem"><a href="http://formesetcouleurs.hautetfort.com/archive/2024/07/30/stage-adultes-2024-6508829.html">STAGE ADULTES JUILLET 2024</a> sur <a href="http://formesetcouleurs.hautetfort.com/">Formes & Couleurs</a></li>
+<li role="listitem"><a href="http://cfdt-centrale-auchan.hautetfort.com/archive/2024/07/30/avis-cfdt-ari-sur-le-projet-d-organisation-de-la-direction-digitale.html">Avis CFDT ARI sur le projet d'organisation de...</a> sur <a href="http://cfdt-centrale-auchan.hautetfort.com/">CFDT Auchan Centrale ARS, ARA, ARI et OIA</a></li>
+<li role="listitem"><a href="http://synthesenationale.hautetfort.com/archive/2024/07/30/lyon-suite-a-une-agression-gauchiste-un-jeune-nationaliste-temoigne.html">Lyon : suite à une agression gauchiste, un...</a> sur <a href="http://synthesenationale.hautetfort.com/">SYNTHESE NATIONALE</a></li>
+<li role="listitem"><a href="http://www.belgicatho.be/archive/2024/07/30/tres-etrange-la-facon-dont-la-presse-mainstream-a-rendu-comp-6508818.html">Très étrange : la façon dont la presse...</a> sur <a href="http://www.belgicatho.be/">BELGICATHO</a></li>
+<li role="listitem"><a href="http://www.cuisine-toulousaine.com/archive/2024/07/30/salade-de-saucisse-de-toulouse-et-lentilles-6508814.html">Salade de Saucisse de Toulouse et lentilles</a> sur <a href="http://www.cuisine-toulousaine.com/">Cuisine Toulousaine et Occitane</a></li>
+<li role="listitem"><a href="http://lionelbaland.hautetfort.com/archive/2024/07/30/lionel-baland-dans-le-reportage-de-tv-libertes-sur-le-passag-6508813.html">Lionel Baland dans le reportage de TV Libertés...</a> sur <a href="http://lionelbaland.hautetfort.com/">Lionel Baland</a></li>
+</ul>
+</div>
+</article>
+<!-- widget lastupdatedblogs off --><!-- widget calendar on -->
+<article class="box box-calendar" id="box-calendar-101321">
+<header class="box-header">
+<h1><i class="icon icon-calendar"></i><span class="box-title-text">Juillet 2024</span></h1>
+</header>
+<div class="box-body">
+<table>
+<caption>Calendrier des notes en Juillet 2024</caption>
+<tr>
+<th><abbr title="Dimanche">D</abbr></th>
+<th><abbr title="Lundi">L</abbr></th>
+<th><abbr title="Mardi">M</abbr></th>
+<th><abbr title="Mercredi">M</abbr></th>
+<th><abbr title="Jeudi">J</abbr></th>
+<th><abbr title="Vendredi">V</abbr></th>
+<th><abbr title="Samedi">S</abbr></th>
+</tr>
+<tr>
+<td></td>
+<td><span> 1</span></td>
+<td><span> 2</span></td>
+<td><span> 3</span></td>
+<td><span> 4</span></td>
+<td><span> 5</span></td>
+<td><span> 6</span></td>
+</tr>
+<tr>
+<td><span> 7</span></td>
+<td><span> 8</span></td>
+<td><span> 9</span></td>
+<td class="has-post"><a href="index.html.57">10</a></td>
+<td class="has-post"><a href="index.html.58">11</a></td>
+<td class="has-post"><a href="index.html.59">12</a></td>
+<td><span>13</span></td>
+</tr>
+<tr>
+<td><span>14</span></td>
+<td><span>15</span></td>
+<td><span>16</span></td>
+<td><span>17</span></td>
+<td><span>18</span></td>
+<td><span>19</span></td>
+<td><span>20</span></td>
+</tr>
+<tr>
+<td><span>21</span></td>
+<td><span>22</span></td>
+<td><span>23</span></td>
+<td><span>24</span></td>
+<td><span>25</span></td>
+<td><span>26</span></td>
+<td><span>27</span></td>
+</tr>
+<tr>
+<td><span>28</span></td>
+<td><span>29</span></td>
+<td class="has-post today"><a href="index.html.60">30</a></td>
+<td><span>31</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</div>
+</article>
+<!-- widget calendar off --><!-- widget comments on -->
+<article class="box box-comment" id="box-comment-101324">
+<header class="box-header">
+<h1><i class="icon icon-comments"></i><span class="box-title-text">Commentaires récents</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-comments-list">
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment9030164" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-12-22T18:29:12" itemprop="datePublished">
+<span class="date-hour-minute">18h29</span>
+<span class="date-day">22</span>
+<span class="date-month-year">déc. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html#c9030164">collignon</a> sur <a href="http://lefetard.hautetfort.com/archive/2022/12/22/intermediation-6418406.html">Intermédiation</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>"Confidentielles" au féminin pluriel, merci.<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8994604" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2022/01/27/tuning-ora2pg-6362720.html#c8994604">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2022-01-27T09:27:05" itemprop="datePublished">
+<span class="date-hour-minute">09h27</span>
+<span class="date-day">27</span>
+<span class="date-month-year">janv. 2022</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="tuning-ora2pg-6362720.html#c8994604">Le boss</a> sur <a href="tuning-ora2pg-6362720.html">Tuning ora2pg</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>1- bah ouais poto si tu vides les data source ça va plus...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8626826" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/06/29/forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-06-29T17:31:31" itemprop="datePublished">
+<span class="date-hour-minute">17h31</span>
+<span class="date-day">29</span>
+<span class="date-month-year">juin 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html#c8626826">joguess</a> sur <a href="forcer-le-refresh-de-la-vue-dba-feature-usage-statistics-5958652.html">Forcer le refresh de la vue...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>peut etre rajouter cela : 
+BEGIN...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8579037" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2017/01/31/purger-fichiers-logs-5905505.html#c8579037">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2017-01-31T14:59:55" itemprop="datePublished">
+<span class="date-hour-minute">14h59</span>
+<span class="date-day">31</span>
+<span class="date-month-year">janv. 2017</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="purger-fichiers-logs-5905505.html#c8579037">joguess</a> sur <a href="purger-fichiers-logs-5905505.html">Purger fichiers logs</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>voir aussi :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518755" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518755">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:14:31" itemprop="datePublished">
+<span class="date-hour-minute">16h14</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518755">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>La solution se trouve ici :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518754" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/11/oracleasm-createdisk-failed-5835514.html#c8518754">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T16:12:03" itemprop="datePublished">
+<span class="date-hour-minute">16h12</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="oracleasm-createdisk-failed-5835514.html#c8518754">JJO</a> sur <a href="oracleasm-createdisk-failed-5835514.html">oracleasm createdisk failed</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>http://www.dba-oracle.com/t_asm_disk_does_not_exist_or_is...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518753" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/10/installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-11T15:59:29" itemprop="datePublished">
+<span class="date-hour-minute">15h59</span>
+<span class="date-day">11</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html#c8518753">JJO</a> sur <a href="installation-asm-et-configuration-de-l-instance-asm-5835041.html">Installation ASM et configuration de l'instance...</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>https://taliphakanozturken.wordpress.com/2012/03/12/confi...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8518135" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2016/08/07/outil-de-benchmark-oracle-orion-5834320.html#c8518135">
+<header class="recent-comment-header">
+<span class="date recent-comment-date">
+<time pubdate="pubdate" datetime="2016-08-09T08:19:40" itemprop="datePublished">
+<span class="date-hour-minute">08h19</span>
+<span class="date-day">09</span>
+<span class="date-month-year">août 2016</span>
+</time>
+</span>
+<h1 class="recent-comment-title"><a href="outil-de-benchmark-oracle-orion-5834320.html#c8518135">jjo</a> sur <a href="outil-de-benchmark-oracle-orion-5834320.html">Outil de benchmark Oracle - ORION</a></h1>
+</header>
+<div class="recent-comment-body">
+<p>Orion Usage:$ORACLE_HOME/bin/orion -run simple -testname...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-comment" role="article" id="recent-comment8314452" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2015/04/19/sego-dans-c-politique-5606540.html#c8314452">
+
+<!-- widget comments off -->
+<!-- widget pages on -->
+<article class="box box-page" id="box-page-101331">
+<header class="box-header">
+<h1><i class="icon icon-file-text-alt"></i><span class="box-title-text">Pages</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="pages-list">
+<li role="listitem">
+<a href="jesako.html">PAGE HTML</a>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget pages off --><!-- widget posts on -->
+<article class="box box-post" id="box-post-101336">
+<header class="box-header">
+<h1><i class="icon icon-comment"></i><span class="box-title-text">Notes récentes</span></h1>
+</header>
+<div class="box-body">
+<ul role="list" class="list-dated recent-posts-list">
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6508824" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/30/postgres-monitor-autovacuum-freeze-max-age-6508824.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-30T10:40:49" itemprop="datePublished">
+<span class="date-hour-minute">10h40</span>
+<span class="date-day">30</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-autovacuum-freeze-max-age-6508824.html">[Postgres] Monitor autovacuum_freeze_max_age</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to monitor the :...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506680" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/12/postgres-monitor-wait-event-6506680.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-12T11:28:00" itemprop="datePublished">
+<span class="date-hour-minute">11h28</span>
+<span class="date-day">12</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-wait-event-6506680.html">[Postgres] Monitor wait event</a></h1>
+</header>
+<div class="recent-post-body">
+<p> \t select wait_event_type, wait_event from...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506515" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/11/postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-11T10:02:00" itemprop="datePublished">
+<span class="date-hour-minute">10h02</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-solve-postgresql-datafileread-and-buffer-io-with-p-6506515.html">[Postgres] Solve PostgreSQL DataFileRead and...</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Click her to see the next. <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6506355" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/07/10/postgres-tuto-tuning-6506355.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-07-10T07:59:04" itemprop="datePublished">
+<span class="date-hour-minute">07h59</span>
+<span class="date-day">10</span>
+<span class="date-month-year">juil. 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-tuto-tuning-6506355.html">[Postgres] Tuto tuning</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This site helped to resolve IPC wait event :  Postgres...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6503410" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/18/postgres-identifier-les-privileges-6503410.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-18T10:03:31" itemprop="datePublished">
+<span class="date-hour-minute">10h03</span>
+<span class="date-day">18</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-privileges-6503410.html">[Postgres] Identifier les privilèges</a></h1>
+</header>
+<div class="recent-post-body">
+<p> SELECT * &nbsp; FROM...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6502501" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/06/11/postgres-identifier-les-attentes-6502501.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-06-11T14:21:00" itemprop="datePublished">
+<span class="date-hour-minute">14h21</span>
+<span class="date-day">11</span>
+<span class="date-month-year">juin 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-identifier-les-attentes-6502501.html">[Postgres] Identifier les attentes</a></h1>
+</header>
+<div class="recent-post-body">
+<p> This query allows you to identify the wait events on...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500731" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/30/postgres-pg-partman-6500731.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-30T10:56:00" itemprop="datePublished">
+<span class="date-hour-minute">10h56</span>
+<span class="date-day">30</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-pg-partman-6500731.html">[Postgres] PG_PARTMAN</a></h1>
+</header>
+<div class="recent-post-body">
+<p> pg_partman v4 vs pg_partman v5&nbsp; 
+Une fonction...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500641" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-extensions-6500641.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T17:27:00" itemprop="datePublished">
+<span class="date-hour-minute">17h27</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-extensions-6500641.html">[Postgres] Extensions</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Extensions en prd indispensables :&nbsp; <p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6500591" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/29/postgres-monitor-cloud-db-azure-ibm-6500591.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-29T10:59:00" itemprop="datePublished">
+<span class="date-hour-minute">10h59</span>
+<span class="date-day">29</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-monitor-cloud-db-azure-ibm-6500591.html">[Postgres] Monitor cloud DB (AZURE / IBM)</a></h1>
+</header>
+<div class="recent-post-body">
+<p> Quand on n'a pas d'outils pour faire le monitoring des...<p>
+</div>
+</article>
+</li>
+<li role="listitem">
+<article class="recent-post" role="article" id="recent-post6499803" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2024/05/24/postgres-locker-une-base-6499803.html">
+<header class="recent-post-header">
+<span class="date recent-post-date">
+<time pubdate="pubdate" datetime="2024-05-24T10:01:00" itemprop="datePublished">
+<span class="date-hour-minute">10h01</span>
+<span class="date-day">24</span>
+<span class="date-month-year">mai 2024</span>
+</time>
+</span>
+<h1 class="recent-post-title"><a href="postgres-locker-une-base-6499803.html">[Postgres] Locker une base</a></h1>
+</header>
+<div class="recent-post-body">
+<p> On ne peut pas locker une base nativement alors comment...<p>
+</div>
+</article>
+</li>
+</ul>
+</div>
+</article>
+<!-- widget posts off --><!-- widget sharing on -->
+<article class="box box-sharing" id="box-sharing-101338">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</article>
+<!-- widget sharing off --><!-- widget populartags on -->
+<article class="box box-tag" id="box-tag-101340">
+<header class="box-header">
+<h1><i class="icon icon-tags"></i><span class="box-title-text">Tags populaires</span></h1>
+</header>
+<div class="box-body">
+<ul class="popular-tags-list" role="list">
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/dieudonn%C3%A9" class="tag-10">dieudonné</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/strasbourg" class="tag-10">strasbourg</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/star" class="tag-10">star</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/surf" class="tag-9">surf</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/salsa" class="tag-1">salsa</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/sexy" class="tag-10">sexy</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/danse" class="tag-9">danse</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/webcam" class="tag-9">webcam</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/blog" class="tag-10">blog</a></li>
+<li role="listitem"><a href="http://lefetard.hautetfort.com/tag/oracle" class="tag-8">oracle</a></li>
+</ul>
+</div>
+</article>
+<!-- widget populartags off --><!-- end column 1 --></aside>
+</div>
+<div class="span8">
+<main role="main">
+<section class="content-intro">
+<nav role="navigation" itemprop="breadcrumb">
+<ul role="menu" class="article-nav">
+<li role="menuitem" class="breadcrumb-previous"><a href="postgres-backup-restore-6434695.html">POSTGRES Backup / restore</a></li><li role="menuitem" class="breadcrumb-root"><a href="index-0.html">Page d'accueil</a></li>
+<li role="menuitem" class="breadcrumb-next"><a href="postgres-news-6459037.html">[Postgres] NEWS</a></li></ul>
+</nav>
+</section>
+<section class="content" id="content" itemprop="mainContentOfPage">
+<div class="content-body">
+<!-- widget article on -->
+<article class="box box-article" role="article" id="article6453308" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" data-url="http://lefetard.hautetfort.com/archive/2023/07/21/decouverte-d-une-base-mongodb-6453308.html">
+<header class="box-header">
+<div class="pre-article-title">
+<div><!-- start post 1 --><!-- end post 1 --></div>
+</div>
+<span class="date box-article-date">
+<time pubdate="pubdate" datetime="2023-07-21T15:24:00" itemprop="datePublished">
+<span class="date-hour-minute">15h24</span>
+<span class="date-day">21</span>
+<span class="date-month-year">juil. 2023</span>
+</time>
+</span>
+<h1 itemprop="name headline"><a href="decouverte-d-une-base-mongodb-6453308.html">Découverte d'une base mongodb</a></h1>
+<div class="post-article-title">
+<div><!-- start post 2 --><span class="box-article-link box-article-facebook-like">
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2023%2F07%2F21%2Fdecouverte-d-une-base-mongodb-6453308.html&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:100px;height:22px"></iframe>
+</span><!-- end post 2 --></div>
+</div>
+</header>
+<section class="clearfix box-body" itemprop="articleBody">
+<p>mongo -u &lt;USERNAME&gt; -p &lt;PASSWORD&gt; --eval "var DATABASE_NAME='&lt;DATABASE_NAME&gt;'" Source_Discovery_V2.js</p>
+<a id="more"></a>
+<p>VARIABLE_DATABASE= DATABASE_NAME;<br />print("n##################################################### MONGODB_SOURCE_WORKLOAD_&amp;_ASSESSMENT_REPORT #####################################################nn");</p>
+<p>shardk=rs.isMaster().msg;<br />if(shardk=="isdbgrid"){<br />mdb=db.getSiblingDB("config");<br />a=mdb.shards.find({},{_id: 1,host: 1}).toArray();<br />print("n");</p>
+<p>print("***************SHARDED MONGO CLUSTER WITH",a.length,"SHARDS******************","n")</p>
+<p>space1='xa0'.repeat(30);<br />print("SHARD_NAME",space1,"SHARD_REPLICA_DETAILS")<br />for(i=0;i&lt;a.length;i++){<br />t1=a[i]._id;<br />t2=a[i].host;<br />val1=a[i]._id.length;<br />val2=40-val1;<br />space2='xa0'.repeat(val2);<br />print(t1,space2,t2)<br />}<br />print("n");<br />b=mdb.databases.find({},{_id: 1,primary: 1,partitioned: 1}).toArray();<br />space99='xa0'.repeat(27);<br />space3='xa0'.repeat(36);<br />print("DATABASE_NAME",space99,"PRIMARY_SHARD",space3,"SHARD_ENABLED")<br />for(i=0;i&lt;b.length;i++){<br />t1=b[i]._id;<br />if(t1==VARIABLE_DATABASE)<br />{<br />val3=b[i]._id.length;<br />val5=40-val3;<br />space4='xa0'.repeat(val5);</p>
+<p>t2=b[i].primary;<br />val4=b[i].primary.length;<br />val6=49-val4;<br />space5='xa0'.repeat(val6);<br />t3=b[i].partitioned;<br />print(t1,space4,t2,space5,t3)<br />}<br />}<br />print("n");<br />c=mdb.collections.find({},{_id: 1,key: 1,unique: 1}).toArray();<br />space6='xa0'.repeat(31);<br />space7='xa0'.repeat(40);<br />print("NAMESPACE",space6,"SHARD_KEY",space7,"IF_UNIQUE")<br />for(i=0;i&lt;c.length;i++){<br />t1=c[i]._id;<br />if(!t1.match("config.*") &amp;&amp; !t1.match("admin.*")){<br />try{<br />if(t1.match(""+VARIABLE_DATABASE+".*")){<br />if(!c[i].dropped){<br />t2=c[i].key;<br />t4=JSON.stringify(t2);<br />t3=c[i].unique;<br />val7=t1.length;<br />val8=t4.length;<br />val9=40-val7;<br />val10=49-val8;<br />space8='xa0'.repeat(val9);<br />space9='xa0'.repeat(val10);<br />print(t1,space8,t4,space9,t3)<br />}}}<br />catch (e){<br />t2=null;<br />t4=null;<br />t3=null;<br />}</p>
+<p>}<br />}</p>
+<p><br />print("nn")</p>
+<p>print("*****************OS-DETAILS*********************")</p>
+<p>h1=db.hostInfo().system.numCores;<br />h2=db.hostInfo().system.memSizeMB;<br />print("Vcore=",h1," Memory=",h2,"MB")<br />h3=db.hostInfo().os.type;<br />h4=db.hostInfo().os.name;<br />h5=db.hostInfo().os.version;<br />print(h3);<br />print(h4);<br />print(h5,"n");</p>
+<p>print("****************WORKLOAD-DETAILS****************","n")</p>
+<p>l=db.version()</p>
+<p>print("MongoDB VERSION: ",l)<br />lic=db.serverBuildInfo().modules.toString();<br />if(lic == '')<br />{<br />print("MongoDB LICENCE: Community","nn");<br />}<br />if(lic=="enterprise")<br />{<br />print("MongoDB LICENCE: Enterprise","nn");<br />}</p>
+<p>mdb=db.getSiblingDB(VARIABLE_DATABASE);<br />t2=mdb.stats().dataSize;<br />t3=t2/(1024*1024*1024);<br />t3=t3.toFixed(5);<br />c1=mdb.getCollectionNames();<br />c2=c1.length;<br />v1=mdb.getCollectionInfos({"type": "view"});<br />v2=v1.length;</p>
+<p>print(VARIABLE_DATABASE," TotalSize:",t3,"GB"," Collections:",c2,"Views:",v2)</p>
+<p>spacex1='xa0'.repeat(50);<br />spacex2='xa0'.repeat(2);</p>
+<p>print("COLLECTION_NAME",spacex1,"SIZE_IN_MB",spacex2,"NO_OF_RECORDS",spacex2,"IS_CAPPED",spacex2,"INDEX",spacex2,"INDEX_SIZEIN_MB",spacex2,"AVG_DOC_SIZEIN_KB",spacex2,"SHARD_ENABLED")</p>
+<p>var colln=mdb.getCollectionNames().map(function(a) {<br />try{<br />vcntr=mdb[a].stats().size;<br />}<br />catch (e){<br />vcntr=null;<br />}<br />if(vcntr!=null)<br />{<br />&nbsp; try{<br />&nbsp; b=mdb[a].stats().size;<br />&nbsp; n=mdb[a].stats().count;<br />&nbsp; u=mdb[a].stats().capped;<br />&nbsp; if(u)<br />&nbsp; {<br />&nbsp; &nbsp;u=" true"<br />&nbsp; }<br />&nbsp; v=mdb[a].stats().nindexes;<br />&nbsp; w=mdb[a].stats().totalIndexSize;<br />&nbsp; avg=mdb[a].stats().avgObjSize;<br />&nbsp; s=mdb[a].stats().sharded;<br />&nbsp; }<br />&nbsp; catch (e){<br />&nbsp; s=0;<br />&nbsp; b=0;<br />&nbsp; n=0;<br />&nbsp; u=0;<br />&nbsp; v=0;<br />&nbsp; w=0;<br />&nbsp; avg=0;<br />&nbsp; print("Error in object - ",a,"Error Message",e)<br />&nbsp; }<br />}<br />if(vcntr==null)<br />{<br />&nbsp; b=0;<br />&nbsp; n=0;<br />&nbsp; u=" VIEW";<br />&nbsp; v=0;<br />&nbsp; w=0;<br />&nbsp; avg=0;<br />}</p>
+<p>&nbsp; return [a,b,n,u,v,w,avg,s];<br />});<br />for (i=0;i&lt;colln.length;i++){<br />&nbsp; for (j=i+1;j&lt;colln.length;j++){<br />&nbsp; &nbsp; &nbsp; if(colln[i][2] &lt; colln[j][2])<br />&nbsp; &nbsp; &nbsp; &nbsp;{<br />&nbsp; &nbsp; &nbsp; &nbsp;temp1=colln[i][0];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp2=colln[i][1];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp3=colln[i][2];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp4=colln[i][3];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp5=colln[i][4];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp6=colln[i][5];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp7=colln[i][6];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp8=colln[i][7];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp9=colln[i][7];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][0]= colln[j][0];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][1]= colln[j][1];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][2]= colln[j][2];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][3]= colln[j][3];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][4]= colln[j][4];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][5]= colln[j][5];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][6]= colln[j][6];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][7]= colln[j][7];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][0]= temp1;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][1]= temp2;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][2]= temp3;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][3]= temp4;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][4]= temp5;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][5]= temp6;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][6]= temp7;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][7]= temp8;<br />&nbsp; &nbsp; &nbsp; &nbsp;}<br />&nbsp; &nbsp;}<br />c=colln[i][0];<br />d=(colln[i][1])/(1024*1024);<br />d=d.toFixed(4);<br />r=colln[i][2];<br />g1=colln[i][3];<br />g2=colln[i][4];<br />g3=(colln[i][5])/(1024*1024);<br />g3=g3.toFixed(4);<br />g4=(colln[i][6])/1024;<br />g4=g4.toFixed(4);<br />g5=colln[i][7];<br />valx1=colln[i][0].length;<br />valx2=d.toString().length;<br />valx3=75-(valx1+valx2);<br />spacex3='xa0'.repeat(valx3);<br />spacex4='xa0'.repeat(2);<br />valx4=colln[i][2].toString().length;<br />valx5=5;<br />valx6=24-(valx4+valx5);<br />spacex5='xa0'.repeat(valx6);<br />valx7=g2.toString().length;<br />valx8=g3.toString().length;<br />valx9=22-(valx7+valx8);<br />spacex6='xa0'.repeat(valx9);<br />valx11=g4.toString().length;<br />valx12=19-valx11;<br />spacex7='xa0'.repeat(valx12);<br />print(c,spacex3,d,spacex4,r,spacex5,g1,spacex4,g2,spacex6,g3,spacex7,g4,spacex4,g5);<br />}<br />colln=null;<br />print("n")<br />} else{</p>
+<p>print("***************CLUSTER-DETAILS******************","n")</p>
+<p>try{<br />k1=rs.isMaster().hosts;<br />k2=k1.length;<br />k3=rs.isMaster().setName;<br />}<br />catch (e){<br />k1=0;<br />k2=0;<br />k3=0;<br />}<br />if(k2&gt;0){<br />print("REPLICASET WITH",k2,"MEMBERS =",k3)<br />for(f1=0;f1&lt;k2;f1++){<br />k4=rs.status().members[f1].stateStr;<br />k5=rs.status().members[f1].name;<br />print(k5," ",k4)<br />}<br />print("n");<br />}<br />if(k2==0){<br />print("STANDALONE INSTANCE","n")<br />}</p>
+<p><br />print("*****************OS-DETAILS*********************")</p>
+<p>h1=db.hostInfo().system.numCores;<br />h2=db.hostInfo().system.memSizeMB;<br />print("Vcore=",h1," Memory=",h2,"MB")<br />h3=db.hostInfo().os.type;<br />h4=db.hostInfo().os.name;<br />h5=db.hostInfo().os.version;<br />print(h3);<br />print(h4);<br />print(h5,"n");</p>
+<p>print("****************WORKLOAD-DETAILS****************","n")</p>
+<p>l=db.version()</p>
+<p>print("MongoDB VERSION: ",l)<br />lic=db.serverBuildInfo().modules.toString();<br />if(lic == '')<br />{<br />print("MongoDB LICENCE: Community","nn");<br />}<br />if(lic=="enterprise")<br />{<br />print("MongoDB LICENCE: Enterprise","nn");<br />}<br />mdb=db.getSiblingDB(VARIABLE_DATABASE);<br />t2=mdb.stats().dataSize;<br />t3=t2/(1024*1024*1024);<br />t3=t3.toFixed(5);<br />t4=mdb.stats().collections;<br />t5=mdb.stats().views;</p>
+<p>&nbsp;</p>
+<p>print(VARIABLE_DATABASE," TotalSize:",t3,"GB"," Collections:",t4," Views:",t5)</p>
+<p><br />space1='xa0'.repeat(50);<br />space2='xa0'.repeat(2);</p>
+<p>print("COLLECTION_NAME",space1,"SIZE_IN_MB",space2,"NO_OF_RECORDS",space2,"IS_CAPPED",space2,"INDEX",space2,"INDEX_SIZEIN_MB",space2,"AVG_DOC_SIZEIN_KB")</p>
+<p>var colln=mdb.getCollectionNames().map(function(a) {<br />try{<br />vcntr=mdb[a].stats().size;<br />}<br />catch (e){<br />vcntr=null;<br />}<br />if(vcntr!=null)<br />{<br />&nbsp; try{<br />&nbsp; b=mdb[a].stats().size;<br />&nbsp; n=mdb[a].stats().count;<br />&nbsp; u=mdb[a].stats().capped;<br />&nbsp; if(u)<br />&nbsp; {<br />&nbsp; &nbsp;u=" true"<br />&nbsp; }<br />&nbsp; v=mdb[a].stats().nindexes;<br />&nbsp; w=mdb[a].stats().totalIndexSize;<br />&nbsp; avg=mdb[a].stats().avgObjSize;<br />&nbsp; }<br />&nbsp; catch (e){<br />&nbsp; b=0;<br />&nbsp; n=0;<br />&nbsp; u=0;<br />&nbsp; v=0;<br />&nbsp; w=0;<br />&nbsp; avg=0;<br />&nbsp; print("Error in object - ",a,"Error Message",e)<br />&nbsp; }<br />}<br />if(vcntr==null)<br />{<br />&nbsp; b=0;<br />&nbsp; n=0;<br />&nbsp; u=" VIEW";<br />&nbsp; v=0;<br />&nbsp; w=0;<br />&nbsp; avg=0;<br />}<br />&nbsp; return [a,b,n,u,v,w,avg];<br />});<br />for (i=0;i&lt;colln.length;i++){<br />&nbsp; for (j=i+1;j&lt;colln.length;j++){<br />&nbsp; &nbsp; &nbsp; if(colln[i][2] &lt; colln[j][2])<br />&nbsp; &nbsp; &nbsp; &nbsp;{<br />&nbsp; &nbsp; &nbsp; &nbsp;temp1=colln[i][0];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp2=colln[i][1];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp3=colln[i][2];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp4=colln[i][3];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp5=colln[i][4];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp6=colln[i][5];<br />&nbsp; &nbsp; &nbsp; &nbsp;temp7=colln[i][6];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][0]= colln[j][0];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][1]= colln[j][1];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][2]= colln[j][2];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][3]= colln[j][3];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][4]= colln[j][4];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][5]= colln[j][5];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[i][6]= colln[j][6];<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][0]= temp1;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][1]= temp2;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][2]= temp3;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][3]= temp4;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][4]= temp5;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][5]= temp6;<br />&nbsp; &nbsp; &nbsp; &nbsp;colln[j][6]= temp7;<br />&nbsp; &nbsp; &nbsp; &nbsp;}<br />&nbsp; &nbsp;}<br />c=colln[i][0];<br />d=(colln[i][1])/(1024*1024);<br />d=d.toFixed(4);<br />r=colln[i][2];<br />g1=colln[i][3];<br />g2=colln[i][4];<br />g3=(colln[i][5])/(1024*1024);<br />g3=g3.toFixed(4);<br />g4=(colln[i][6])/1024;<br />g4=g4.toFixed(4);<br />val1=colln[i][0].length;<br />val2=d.toString().length;<br />val3=75-(val1+val2);<br />space3='xa0'.repeat(val3);<br />space4='xa0'.repeat(2);<br />val4=colln[i][2].toString().length;<br />val5=5;<br />val6=24-(val4+val5);<br />space5='xa0'.repeat(val6);<br />val7=g2.toString().length;<br />val8=g3.toString().length;<br />val9=22-(val7+val8);<br />space6='xa0'.repeat(val9);<br />val11=g4.toString().length;<br />val12=19-val11;<br />space7='xa0'.repeat(val12);<br />print(c,space3,d,space4,r,space5,g1,space4,g2,space6,g3,space7,g4);<br />}<br />colln=null;<br />print("n")<br />}<br />print("nn****************************** ALL_INDEX_LIST ********************************n");</p>
+<p>mdb=db.getSiblingDB(VARIABLE_DATABASE);<br />print("n### ",VARIABLE_DATABASE," ###n");<br />mdb.getCollectionNames().map(function(a) {<br />try{<br />vcntr1=mdb[a].stats().size;<br />}<br />catch (e){<br />vcntr1=null;<br />}<br />if(vcntr1!=null)<br />{<br />it1=mdb[a].getIndexes().length;<br />itemp1="";<br />itemp1=a;<br />itemp2=itemp1.length;<br />itemp3=75-itemp2;<br />ispace1='xa0'.repeat(itemp3);<br />ispace2='xa0'.repeat(76);<br />for (i=0;i&lt;it1;i++){<br />&nbsp; try{<br />&nbsp; ib=mdb[a].getIndexes()[i];<br />&nbsp; ibb=JSON.stringify(ib);<br />&nbsp; if(i==0){<br />&nbsp; print(itemp1,ispace1,ibb)<br />&nbsp; }<br />&nbsp; if(i&gt;0){<br />&nbsp; print(ispace2,ibb)<br />&nbsp; }<br />&nbsp; }<br />&nbsp; catch (e){<br />&nbsp; ib=0;<br />}<br />}<br />}<br />});<br />print("n&lt;b&gt;*************************ASSESSMENT RESULT of UNSUPPORTED OBJECTS**********************************&lt;/b&gt;")<br />var superglobalun= "";<br />var superglobalnu= "";<br />gb=0;<br />const indexddl=[];<br />print("nn","###################",VARIABLE_DATABASE,"###################")<br />mdb=db.getSiblingDB(VARIABLE_DATABASE);<br />var globalun="";<br />var globalnu="";<br />cc1=mdb.getCollectionNames();<br />cc2=cc1.length;<br />vv1=mdb.getCollectionInfos({"type": "view"});<br />vv2=vv1.length;<br />CCspace='xa0'.repeat(71);<br />CCspace2='xa0'.repeat(100);<br />if (cc2&gt;25)<br />{<br />&nbsp;print("HIGH_NO_OF_COLLECTION_WARNING",CCspace,"Recommended Limit of 25 collections n",CCspace2,"per database for shared throughput.n",CCspace2,"Raise support case for increasing.n",CCspace2,"However if planning for dedicated(collection level)n",CCspace2,"throughput you can go up to 500 collections per database.n")<br />}<br />if (vv2&gt;0)<br />{<br />for (j=0;j&lt;vv2;j++)<br />{<br />&nbsp;vcount=vv1[j].name;<br />&nbsp;vlen=100-(vcount.length);<br />&nbsp;vspace='xa0'.repeat(vlen);<br />&nbsp;print(vcount,vspace,"NOT SUPPORTED: VIEWS are not supported in Cosmos DB.");<br />&nbsp;udb=VARIABLE_DATABASE;<br />&nbsp;ucn=vcount;<br />&nbsp;uns=udb.concat(".",ucn);<br />&nbsp;globalun=globalun.concat(" --nsExclude="",uns,""")<br />}<br />}<br />print("n");<br />mdb.getCollectionNames().map(function(a) {<br />unscounter=0;<br />try{<br />tt2=mdb[a].stats().size;<br />}<br />catch (e){<br />tt2=null;<br />}<br />if(tt2!=null)<br />{<br />tt3=tt2/(1024*1024*1024);<br />tt3=tt3.toFixed(5);<br />capp=mdb[a].stats().capped;<br />ttemp1=mdb[a].stats().ns;<br />ttemp2=ttemp1.length;<br />ttemp3=100-ttemp2;<br />sspace1='xa0'.repeat(ttemp3);<br />if(capp)<br />{<br />print(ttemp1,sspace1,"NOT SUPPORTED: n",CCspace2,"CAPPED COLLECTION is not supported in Cosmos DB.n")<br />unscounter=unscounter+1;<br />}<br />if(tt3&gt;20)<br />{<br />&nbsp;print(ttemp1,sspace1,"WARNING: The maximum size of a fixed (unsharded)n",CCspace2,"collection in Cosmos DB API for MongoDB is 20 GB.n",CCspace2,"This unsharded collection exceeds the limit.n",CCspace2,"You would either need to limit the data sizen",CCspace2,"of the unsharded collection to &lt; 20GB n",CCspace2,"or use sharded collection.n");<br />&nbsp;unscounter=unscounter+1;<br />}<br />if (tt3&gt;15 &amp;&amp; tt3&lt;20)<br />{<br />&nbsp;print(ttemp1,sspace1,"WARNING: The maximum size of a fixed (unsharded)n",CCspace2,"collection in Cosmos DB API for MongoDB is 20 GB.n",CCspace2,"This unsharded collection approaching limit.n",CCspace2,"You would either need to limit the data sizen",CCspace2,"of the unsharded collection to &lt; 20GB n",CCspace2,"or use sharded collection.n");<br />&nbsp;unscounter=unscounter+1;<br />}<br />t1=mdb[a].getIndexes().length;<br />temp1=mdb[a].stats().ns;<br />temp2=temp1.length;<br />temp3=100-temp2;<br />space1='xa0'.repeat(temp3);<br />space2='xa0'.repeat(100);<br />const ddli=[];<br />for (i=0;i&lt;t1;i++){<br />&nbsp; try{<br />&nbsp; b=mdb[a].getIndexes()[i];</p>
+<p>&nbsp; c=Object.keys(b);<br />&nbsp; d=b.key;<br />&nbsp; h=Object.keys(d);<br />&nbsp; rrr=h.length;<br />&nbsp; k=h.toString();<br />&nbsp; var s=Object.keys(d).map(function(key) {<br />&nbsp; return d[key];<br />&nbsp; });<br />&nbsp; }<br />&nbsp; catch (e){<br />&nbsp; b=0;<br />&nbsp; c=0;<br />&nbsp; d=0;<br />&nbsp; s=0;<br />&nbsp; print("Error in object - ",a,"Error Message",e)<br />&nbsp; }<br />if(k.includes(".") &amp;&amp; rrr&gt;1)<br />{<br />&nbsp;print(temp1,space1,"WARNING: Compound Index in Nested Field n",CCspace2,"--&gt;",b.name,"&lt;-- n",CCspace2,"Not supported in Cosmos DB.n");<br />&nbsp;unscounter=unscounter+1;<br />}<br />if (s.includes("text"))<br />{<br />&nbsp; print(temp1,space1,"NOT SUPPORTED: Text Index n",CCspace2,"--&gt;",b.name,"&lt;-- n",CCspace2,"Not supported in Cosmos DB.n");<br />&nbsp; unscounter=unscounter+1;<br />}<br />if (s.includes("2d"))<br />{<br />&nbsp; print(temp1,space1,"NOT SUPPORTED: 2d Index n",CCspace2,"--&gt;",b.name,"&lt;-- n",CCspace2,"Not supported in Cosmos DB.n");<br />&nbsp; unscounter=unscounter+1;<br />}<br />if (s.includes("2dsphere"))<br />{<br />print(temp1,space1,"WARNING: 2dsphere Index with version greater than 1 n",CCspace2,"is sparse by default and not supported in Cosmos DB. n",CCspace2,"Please manually check 2dsphereIndexVersion of Indexn",CCspace2,"--&gt;",b.name,"&lt;--n");<br />unscounter=unscounter+1;<br />}<br />if (c.includes("sparse"))<br />{<br />&nbsp; print(temp1,space1,"WARNING: Sparse true option in Index n",CCspace2,"--&gt;",b.name,"&lt;-- n",CCspace2,"not supported in Cosmos DB.n");<br />&nbsp; unscounter=unscounter+1;<br />}<br />if (c.includes("unique") &amp;&amp; !(k.includes(".")))<br />{<br />&nbsp; print(temp1,space1,"WARNING: Unique option in Index n",CCspace2,"--&gt;",b.name,"&lt;-- n",CCspace2,"requires the collection to be empty in Cosmos DB.n");<br />&nbsp; unscounter=unscounter+1;<br />}<br />if (c.includes("unique") &amp;&amp; k.includes("."))<br />{<br />&nbsp; print(temp1,space1,"WARNING: Unique option in Nested field Index n",CCspace2,"--&gt;",b.name,"&lt;-- n",CCspace2,"not supported &amp; need empty collection in Cosmos DB.n");<br />&nbsp; unscounter=unscounter+1;<br />}<br />if (c.includes("expireAfterSeconds"))<br />{<br />&nbsp; print(temp1,space1,"WARNING: TTL Index n",CCspace2,"--&gt;",b.name,"&lt;-- not supported. n",CCspace2,"TTL Index is supported only for _ts field in Cosmos DB.n");<br />&nbsp; unscounter=unscounter+1;<br />}<br />}<br />if (unscounter&gt;0)<br />{<br />&nbsp;udb=VARIABLE_DATABASE;<br />&nbsp;ucn=a;<br />&nbsp;uns=udb.concat(".",ucn);<br />&nbsp;globalun=globalun.concat(" --nsExclude="",uns,""")<br />&nbsp;if (!capp)<br />&nbsp;{<br />&nbsp;gb=gb+1;<br />&nbsp;vgb=gb-1;<br />&nbsp;globalnu=globalnu.concat(" --nsInclude="",uns,""")<br />&nbsp;mdb[a].getIndexes().forEach(function(index) {<br />&nbsp;if ("_id_" !== index.name) {<br />&nbsp;var indexKey = index.key<br />&nbsp;delete index.v<br />&nbsp;delete index.key<br />&nbsp;index.background = true<br />&nbsp;bulb1="db.getSiblingDB("";<br />&nbsp;bulb2=JSON.stringify(indexKey);<br />&nbsp;bulb3=JSON.stringify(index);<br />&nbsp;indexddl[vgb]=bulb1.concat(VARIABLE_DATABASE,"").",a,".createIndex(",bulb2,",",bulb3,")");<br />&nbsp;}<br />&nbsp;});<br />&nbsp;}<br />}<br />}<br />});<br />superglobalun=superglobalun.concat(globalun);<br />superglobalnu=superglobalnu.concat(globalnu);</p>
+<p><br />print("NON MIGRATED INDEX_DDL FOR MANUAL REBUILD (PLEASE OMIT/MODIFY UNSUPPORTED INDEX CHECKING ABOVE):");<br />print("************************************************************************************************")<br />for(k=0;k&lt;indexddl.length;k++){<br />print(indexddl[k]);<br />}<br />print("n");<br />print("UNSUPPORTED_COLLECTION_EXCLUDE=n",superglobalun,"n");<br />print("UNSUPPORTED_COLLECTION_INCLUDE=n",superglobalnu);<br />print("nn ***IMPORTANT: ALL COLLECTIONS WITH UNSUPPORTED INDEXES ARE DATA ALONE MIGRATED &amp; INDEXES SHOULD BE MANUALLY BUILD AT TARGET CHECKING THE INDEX LIST*** n");<br />print("n *********************************END****************************************")</p>
+</section>
+<section class="article-bottom">
+<div><!-- start post 3 --><span class="box-article-link box-article-facebook-share">
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flefetard.hautetfort.com%2Farchive%2F2023%2F07%2F21%2Fdecouverte-d-une-base-mongodb-6453308.html&amp;t=D%C3%A9couverte+d%27une+base+mongodb" target="_blank" rel="nofollow">
+<span class="icon icon-facebook"></span>
+<span class="social-action">Share</span>
+</a>
+</span><span class="box-article-link box-article-permalink">
+<a href="decouverte-d-une-base-mongodb-6453308.html" id="a"><i class="icon icon-link"></i> Lien permanent</a>
+</span><!-- widget categories on -->
+<span class="box-article-link box-article-categories">Catégories : <a href="mongodb">MongoDB</a>, <a href="professionnel">Professionnel</a></span><!-- widget categories off --><!-- widget tags on -->
+<!-- widget tags off --><span class="box-article-link box-article-comments">
+<a href="decouverte-d-une-base-mongodb-6453308.html#article-comments" rel="nofollow">
+<span class="article-comments-pre"></span>
+<span class="article-comments-count">0</span>&nbsp;<span class="article-comments-post">commentaire</span>
+</a>
+</span>
+<!-- end post 3 --></div>
+</section>
+<footer class="box-footer">
+<p>Les commentaires sont fermés.</p>
+</footer>
+</article>
+<!-- widget article off --></div>
+</section>
+</main>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer-main" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="main-inner">
+<!-- start bottom --><div class="row-fluid"><div class="span6"><!-- widget heading on -->
+<div class="box box-heading" id="box-heading-101347">
+<div class="box-header">
+<h1><a href="index-0.html">The Best of DBA</a></h1>
+</div>
+<div class="box-body">
+<h2>Maîtriser les bases de données, maximiser les performances.</h2>
+</div>
+</div>
+<!-- widget heading off --></div><div class="span6"><!-- widget sharing on -->
+<div class="box box-sharing" id="box-sharing-101349">
+<div class="box-body">
+<ul role="list" class="sharing-list">
+<li role="listitem"><a href="index.php" title="Email"><span class="icon-container"><i class="icon icon-envelope"></i><span class="mask-text">Email</span></span></a></li>
+</ul>
+</div>
+</div>
+<!-- widget sharing off --></div></div><!-- end bottom --></div>
+</footer>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages_fr.js"></script><script src="bs.js"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="https://static.hautetfort.com/backend/javascript/front/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+<script src="https://static.hautetfort.com/backend/javascript/front/jquery.placeholder.js"></script>
+<script>
+jQuery('input, textarea').placeholder();
+</script>
+<![endif]-->
+<!-- start script -->
+<script>
+(function() {
+var po = document.createElement('script'); po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js?onload=onLoadCallback';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<!-- end script --><script>
+if(typeof jQuery == 'function' && jQuery('div[data-cookie]').length) {
+  jQuery('p[data-close] a').on('click', function (event) {
+    event.preventDefault();
+    jQuery('div[data-cookie]').attr('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+} else if(typeof $$ == 'function' && $$('div[data-cookie]').length) {
+  $$('p[data-close] a')[0].observe('click', function (event) {
+    event.preventDefault();
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'off');
+    var d = new Date();
+    d.setTime(d.getTime() + (86400000 * 365));
+    document.cookie = 'cookies_message=hide; expires=' + d.toGMTString() + '; path=/';
+  });
+}
+if (!document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*cookies_message\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) {
+  if(typeof jQuery == 'function') {
+    jQuery('div[data-cookie]').attr('data-cookie', 'on');
+  } else if(typeof $$ == 'function') {
+    $$('div[data-cookie]')[0].setAttribute('data-cookie', 'on');
+  }
+}
+</script>
+<input type='hidden' id='_videoStepTitleText+11' value=' Videos We Recommend' /><input type='hidden' id='_videoStepTitleStyle+11' value='font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-size: 16px;color: #FFFFFF;text-align: center;font-weight: normal;font-style: normal;text-decoration: none;' /><input type='hidden' id='_videoStepBackgroundColor+11' value='#404d55' /><input type='hidden' id='_videoStepHasBorder+11' value='True' /><input type='hidden' id='_videoStepCountry+11' value='FR' /><input type='hidden' id='_videoStepScriptType' value='3' /><div id='divVideoStep+11' class='divVideoStep'></div><script type='text/javascript'>(function (){var vs = document.createElement('script'); vs.type = 'text/javascript';vs.async = true;vs.src = 'http://kweb.videostep.com/GetLink';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vs, s);})();</script>
+<input type='hidden' id='_videoStepPublisherId' value='111' />
+<div id="footer">
+<a href="http://www.hautetfort.com/create_account.php">Créer un blog</a> sur <a href="http://www.hautetfort.com/">Hautetfort</a>
+<br />
+<a href="http://www.hautetfort.com/explore/blogs">Les derniers blogs mis à jour</a>&nbsp;|
+<a href="http://www.hautetfort.com/explore/posts">Les dernières notes publiées</a>&nbsp;|
+<a href="http://www.hautetfort.com/explore/posts/tags">Les tags les plus populaires</a>
+<br />
+<a href="http://www.hautetfort.com/moderate.php?blog_url=http%3A%2F%2Flefetard.hautetfort.com%2F">Déclarer un contenu illicite</a>&nbsp;|
+<a href="mentions-legales.html">Mentions légales de ce blog</a>
+&nbsp;|
+<a href="http://www.hautetfort.com/">Hautetfort</a> est une marque déposée de la société talkSpirit
+&nbsp;|
+Créez votre <a href="http://www.hautetfort.com/">blog</a> !
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-351048-6']);
+  _gaq.push(['_trackPageview']);
+_gaq.push(['_trackEvent', 'Free plan', 'Rencontres, Amour', 'lefetard.hautetfort.com']);
+_gaq.push(['_trackEvent', 'Free plan1', 'MultiCategories', 'lefetard.hautetfort.com']);
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

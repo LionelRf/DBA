@@ -1,0 +1,12 @@
+-- -----------------------------------------------------------------------------------
+-- File Name    : http://lefetard.hautetfort.com/triPDB.sql
+-- Author       : Josselin Joly
+-- Description  : Déclencheur qui démarre automatiquement les PDBs après le démarrage de la CDB.
+-- Requirements : Avoir les droits DBA.
+-- Call Syntax  : @triPDB.sql
+-- Last Modified: 30-AUG-2016
+-- -----------------------------------------------------------------------------------
+CREATE OR REPLACE TRIGGER STARTUP_PDB
+AFTER STARTUP ON DATABASE DECLARE
+BEGIN EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE ALL OPEN'; END;
+/
